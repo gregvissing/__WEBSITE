@@ -1,0 +1,6260 @@
+*.BBAnonymousSubscriptionTitle,
+*.BBDocumentFormTitle,
+*.BBFormTitle,
+*.BBMembershipFormTitle,
+*.BBVolOpJobDetailTitle,
+*.BBVolOpJobListTitle,
+*.CHFormTitle,
+*.CalendarFormLegend,
+*.CalendarViewTopMiddle,
+*.ClassPageHeaderClassName,
+*.ClassPageHeaderPageName,
+*.ClassPageHeaderTeacherEmail,
+*.ClassPageHeaderTeacherName,
+*.DetailCaption,
+*.DetailEventTitle,
+*.DiscussionGroupHeadingText,
+*.DiscussionTopicSubject,
+*.DonationCaptureListingHeading,
+*.DonationListingHeading,
+*.ECardWizardHeading,
+*.EventCalendarName,
+*.EventItemRegistrantsEventName,
+*.EventItemRegistrationsHeader,
+*.EventItemTitleName,
+*.EventItemTitleTime,
+*.EventSectionHeader,
+*.FRCommentsFieldSet .FRFieldSetCaption,
+*.FRDonorListSetCaption,
+*.FRFieldSetCaption,
+*.FRSectionHeader,
+*.JobResultsHeading,
+*.ListViewDateLabel,
+*.ListViewEventDate,
+*.LoginFormTitle,
+*.LoginSectionHeader,
+*.NCC_Forms_Subtitle,
+*.NCC_Forms_Title,
+*.NewsChannelItemTitle,
+*.NewsReaderFormTitle,
+*.OCCHeader,
+*.PaymentPart_SectionHeading,
+*.PostChannelStoryFormTitle,
+*.PostDiscussionPreviewHeading,
+*.PostDiscussionReplyHeading,
+*.RecentEventTitle,
+*.ReportListingHeading,
+*.ReportTitle,
+*.ReportsLandingTable caption,
+*.SearchFormTable .SearchFormTitle,
+*.SearchJobHeading,
+*.SpellFormTitle,
+*.SpellHeading,
+*.SubscriptionFormTitle,
+*.SurveyTitle,
+*.SurveySubTitle,
+*.UPMPartEditToolbarTitle,
+*.UpcomingEventTitle,
+*.myHomeBox th,
+.Ev2_DateLabel,
+.Ev2_RegistrationEventDate,
+.Ev2_RegistrationEventTime,
+.Ev2_RegistrationEventTitle,
+.Ev2_TimeLabels *,
+.Ev2_TitleLabel,
+fieldset .CHFormTitle,
+table.ReportFormTable legend,
+td[id$="InfoTitle"].BBVolOpSignUpCaption,
+td[id$="SectionTitle"].BBVolOpSignUpCaption {
+    color: #444;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: inherit;
+    line-height: 1.2;
+    margin: 1.414rem 0 1rem;
+    text-align: left
+}
+
+*.BBAnonymousSubscriptionTitle,
+*.BBDocumentFormTitle,
+*.BBFormTitle,
+*.BBMembershipFormTitle,
+*.BBVolOpJobDetailTitle,
+*.BBVolOpJobListTitle,
+*.CHFormTitle,
+*.ClassPageHeaderClassName,
+*.DonationCaptureListingHeading,
+*.DonationListingHeading,
+*.ECardWizardHeading,
+*.EventCalendarName,
+*.EventSectionHeader,
+*.FRCommentsFieldSet .FRFieldSetCaption,
+*.FRDonorListSetCaption,
+*.JobResultsHeading,
+*.LoginFormTitle,
+*.LoginSectionHeader,
+*.NCC_Forms_Title,
+*.PaymentPart_SectionHeading,
+*.PostChannelStoryFormTitle,
+*.RecentEventTitle,
+*.ReportTitle,
+*.ReportsLandingTable caption,
+*.SearchFormTable .SearchFormTitle,
+*.SearchJobHeading,
+*.SpellFormTitle,
+*.SubscriptionFormTitle,
+*.SurveyTitle,
+*.UPMPartEditToolbarTitle,
+*.UpcomingEventTitle,
+*.myHomeBox th,
+.Ev2_RegistrationEventTitle,
+.Ev2_TitleLabel,
+td[id$="InfoTitle"].BBVolOpSignUpCaption,
+td[id$="SectionTitle"].BBVolOpSignUpCaption {
+    font-size: 1.728rem
+}
+
+*.CalendarFormLegend,
+*.CalendarViewTopMiddle,
+*.ClassPageHeaderPageName,
+*.DetailCaption,
+*.DiscussionGroupHeadingText,
+*.DiscussionTopicSubject,
+*.EventItemRegistrantsEventName,
+*.EventItemRegistrationsHeader,
+*.EventItemTitleName,
+*.EventItemTitleTime,
+*.FRFieldSetCaption,
+*.FRSectionHeader,
+*.ListViewDateLabel,
+*.NCC_Forms_Subtitle,
+*.NewsChannelItemTitle,
+*.NewsReaderFormTitle,
+*.OCCHeader,
+*.PostDiscussionPreviewHeading,
+*.PostDiscussionReplyHeading,
+*.ReportListingHeading,
+*.SpellHeading,
+*.SurveySubTitle,
+.Ev2_DateLabel,
+.Ev2_RegistrationEventDate,
+.Ev2_RegistrationEventTime,
+.Ev2_TimeLabels *,
+fieldset .CHFormTitle,
+table.ReportFormTable legend {
+    font-size: 1.44rem
+}
+
+*.ClassPageHeaderTeacherEmail,
+*.ClassPageHeaderTeacherName,
+*.DetailEventTitle,
+*.ListViewEventDate {
+    font-size: 1.2rem
+}
+
+.BBFormValidatorSummary {
+    background-color: #ffd9cf;
+    border-width: 0;
+    color: #d04a28;
+    font-family: inherit;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding: 0 !important
+}
+
+.BBFormValidatorSummary:not(.ProfileFormValidatorSummary),
+.BBFormValidatorSummary>div {
+    padding: 15px !important
+}
+
+.BBFormValidatorSummary ul {
+    color: #333;
+    list-style-type: disc;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.BBFormValidatorSummary ul li {
+    margin-bottom: 0
+}
+
+.BBMessage {
+    color: #d04a28
+}
+
+.BBPager {
+    margin-top: 1rem;
+    text-align: center
+}
+
+a.BBPagerPageLink,
+a.BBPagerNextPageLink,
+a.BBPagerPrevPageLink {
+    background-color: #0c8346;
+    border: none;
+    color: #fff;
+    margin: 3px;
+    padding: 5px 10px;
+    text-decoration: none
+}
+
+a.BBPagerPageLink:hover,
+a.BBPagerNextPageLink:hover,
+a.BBPagerPrevPageLink:hover {
+    background-color: #0a6938;
+    color: #fff
+}
+
+a.BBPagerPageSelectedLink {
+    cursor: default;
+    text-decoration: none;
+    margin: 3px;
+    padding: 5px 10px
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:600px) {
+    a.BBPagerPageLink,
+    a.BBPagerNextPageLink,
+    a.BBPagerPrevPageLink,
+    a.BBPagerPageSelectedLink {
+        padding: 4px 8px
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    a.BBPagerPageLink,
+    a.BBPagerNextPageLink,
+    a.BBPagerPrevPageLink,
+    a.BBPagerPageSelectedLink {
+        padding: 2px 6px
+    }
+}
+
+.DCFieldCaption {
+    margin-bottom: .25rem;
+    margin-top: .25rem;
+    width: 33%
+}
+
+.BBDivFieldContainer .DCTextboxWide,
+.BBDivFieldContainer .BBFormTextArea {
+    width: 66%
+}
+
+.BBDivFieldContainer .BBFormTextArea {
+    min-height: 6.25rem
+}
+
+.BBSequenceMapContentContainer {
+    margin: 20px 0 20px
+}
+
+.BBFormCheckListContainer {
+    font-family: inherit;
+    font-weight: 700;
+    height: auto
+}
+
+.BBFieldCaption {
+    background-color: transparent !important;
+    font-family: inherit;
+    padding: 0 .5rem 0 0;
+    text-align: right;
+    vertical-align: middle;
+    white-space: normal;
+    width: 33%
+}
+
+.BBFieldCaption label {
+    font-weight: 400
+}
+
+label.BBFieldCaption {
+    padding: 0;
+    margin-right: .5rem
+}
+
+.BBFieldCheckboxCaption {
+    font-family: inherit;
+    font-weight: 400;
+    white-space: nowrap
+}
+
+.BBFieldCheckboxCaption input {
+    background-color: transparent
+}
+
+.BBFieldControlCell {
+    font-family: inherit;
+    padding: 0
+}
+
+.BBListingTable {
+    border: none
+}
+
+.BBFormButtonRow {
+    background: transparent !important
+}
+
+.BBFormCheckbox {
+    font-family: inherit;
+    font-weight: 400
+}
+
+.BBFormChecklist {
+    border: 0 !important;
+    font-family: inherit;
+    font-weight: 400
+}
+
+.BBFormErrorMessage {
+    color: #d04a28;
+    font-family: inherit;
+    font-weight: 400
+}
+
+.BBFormReadonlyValue {
+    font-family: inherit;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    white-space: normal
+}
+
+.BBFormRequiredFieldMarker {
+    display: none
+}
+
+.BBFormRequiredFieldMissingText {
+    color: #d04a28;
+    font-family: inherit;
+    font-weight: 400
+}
+
+.BBFormSelectList {
+    font-family: inherit;
+    margin: .5rem 0
+}
+
+table.BBFormSelectList {
+    background-color: transparent
+}
+
+.BBFormTable {
+    border-collapse: collapse;
+    border: 0 !important;
+    clear: both;
+    font-family: inherit;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    padding: 0
+}
+
+table.BBFormTable {
+    font-size: 1rem
+}
+
+table.BBFormTable table.BBFormTable {
+    font-size: 1rem
+}
+
+select.BBFormTable {
+    border-collapse: separate;
+    border: 2px inset #fff !important;
+    clear: both;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0
+}
+
+.BBFormTextArea,
+.BBFormTextbox,
+.BBFormSelectList,
+.BBFormTextArea {
+    font-family: inherit;
+    font-size: 1rem;
+    margin: .5rem 0;
+    width: 100%
+}
+
+.BBFormTitle {
+    border: none;
+    display: block;
+    text-align: left
+}
+
+.BBFormCheckListContainer {
+    overflow: visible
+}
+
+.BBFieldCaption[valign="top"] {
+    vertical-align: top
+}
+
+span.SurveyQuestion.required::before,
+span.SurveyAnswerRequiredMessage.required::before,
+span.SurveyQuestionSequence.required::before {
+    content: "" !important
+}
+
+.BBFormTable label.required::before,
+.BBFormTable span.required::before,
+.PaymentPart_FormContainer label.required::before,
+.PaymentPart_FormContainer span.required::before,
+.Ev2_RegistrationStepContainer label.required::before,
+div[id$="formWizard"] label.required::before,
+span.SurveyQuestion.required::after,
+span.SurveyAnswerRequiredMessage::after {
+    color: #d04a28;
+    content: "* "
+}
+
+.BBFormTable .BBFormSelectList.required,
+.PaymentPart_FormContainer .BBFormSelectList.required,
+.Ev2_RegistrationStepContainer .Ev2_RegistrantDropDown {
+    background-position: left center
+}
+
+.hiddenRequiredField {
+    display: none
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    td.BBFieldCaption .BBDivFieldCaption {
+        padding-top: 15px
+    }
+    td.BBFieldCaption,
+    td.BBFieldControlCell,
+    td.BBFieldCaption+td,
+    span.BBFieldCaption,
+    .BBDivFieldCaption {
+        display: block;
+        text-align: left;
+        width: 100%
+    }
+    .BBFormTextArea,
+    .BBFormTextbox,
+    input[id$="txtEmailAddress"],
+    .BBFormTextbox,
+    input[type="text"] {
+        width: 100%
+    }
+    .BBFieldControlCell input[type="checkbox"] {
+        display: block;
+        float: left;
+        height: 1.5rem
+    }
+    .BBFieldControlCell input[type="checkbox"]+label {
+        display: inline-block;
+        float: left;
+        white-space: normal;
+        width: auto
+    }
+    td.BBListingHeading span:first-of-type {
+        display: block;
+        color: #444;
+        padding-bottom: .2em;
+        font-weight: 400;
+        font-size: 1.3rem
+    }
+    .BBFormTable td select,
+    .BBFormTable td select option {
+        width: 100%
+    }
+    .BBListingHeadingSortedAscending,
+    .BBListingHeadingSortedDescending {
+        background-image: none
+    }
+    .checkboxLabel,
+    .radioLabel {
+        background-color: #0c8346;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 1rem;
+        width: auto
+    }
+    .checkboxLabel.boxChecked,
+    .radioLabel.boxChecked {
+        background-color: #0a6938;
+        color: #eee;
+        position: relative
+    }
+    .checkboxLabel::before,
+    .radioLabel::before {
+        border: 1px solid #eee;
+        border-radius: 1px;
+        content: "";
+        display: inline-block;
+        height: 16px;
+        margin-right: 8px;
+        position: relative;
+        top: 2px;
+        width: 16px
+    }
+    .checkboxLabel.boxChecked::after,
+    .radioLabel.boxChecked::after {
+        background-color: transparent;
+        border-style: none none solid solid;
+        border-width: 0 0 2px 2px;
+        content: "";
+        height: 5px;
+        left: 19px;
+        position: absolute;
+        top: 23px;
+        transform: rotate(-45deg);
+        width: 10px
+    }
+    .LoginFormTable .BBFieldControlCell label[for$="cbRememberLogin"] {
+        float: none
+    }
+    .SubscriptionFormTable .SubscriptionFormCheckList label[for*="cblNewsLetters"],
+    .SubscriptionFormTable .Ev2_AttributeCheckList label[for*="cblAttribute"] {
+        margin-bottom: 10px;
+        width: 100%
+    }
+    .EventTable input[type="checkbox"]+label,
+    .PaymentPart_FormContainer input[type="checkbox"]+label {
+        display: inline-block;
+        margin-bottom: 10px
+    }
+    .DonationFormTable input[type="checkbox"],
+    .LoginFormTable input[type="checkbox"],
+    .SubscriptionFormTable input[type="checkbox"],
+    .PaymentPart_FormContainer input[type="checkbox"],
+    .DonationFormTable input[type="radio"],
+    .LoginFormTable input[type="radio"],
+    .SubscriptionFormTable input[type="radio"],
+    .PaymentPart_FormContainer input[type="radio"] {
+        display: none !important
+    }
+}
+
+.skyContainer div[id$="trRegistrationRequest"] .LoginFormTable+div[class*="EmailSignupTitleDesc"]+div {
+    display: none
+}
+
+.skyContainer .EmailSignupFieldCaption>label {
+    display: inline-block;
+    margin-top: .7rem
+}
+
+.skyContainer .EmailSignupRequiredFieldMarker {
+    color: #d04a28;
+    margin-left: 5px
+}
+
+.skyContainer .signupElements {
+    margin: .5rem .25rem .5rem 0
+}
+
+.skyContainer .signupElements+.ui-datepicker-trigger {
+    cursor: pointer;
+    padding: 1.175rem;
+    position: absolute;
+    right: 2px;
+    top: 2px
+}
+
+.BBAnonymousSubscriptionFormTable,
+.BBAnonymousSubscriptionFormTable table {
+    width: 100%
+}
+
+.BBAnonymousSubscriptionCaption {
+    padding-bottom: 0 !important
+}
+
+.BBAnonymousSubscriptionCaption label {
+    bottom: .65rem;
+    position: relative
+}
+
+.BBAnonymousSubscriptionControlCell {
+    margin: 0
+}
+
+.BBAnonymousSubscriptionButtonCell {
+    text-align: right
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .BBAnonymousSubscriptionCaption label {
+        bottom: 0
+    }
+}
+
+.BBListingHeading a {
+    color: #fff;
+    padding: 1rem 0
+}
+
+.DirectoryFormTitle {
+    margin: 0 !important;
+    padding: 0 !important
+}
+
+.DirectoryFormSelectList {
+    display: block !important;
+    height: 89px
+}
+
+.DirectoryFormSelectList+span {
+    display: none !important
+}
+
+.DirectoryFormTitle {
+    padding: 1.414rem 0 .5rem
+}
+
+.DirectorySearchForm {
+    margin: 0 auto;
+    width: 100%
+}
+
+.DirectoryFieldCaption {
+    display: block;
+    padding: 0 .5rem 0 0;
+    text-align: left;
+    width: auto
+}
+
+.DirectoryFieldControlCell {
+    display: block;
+    width: auto
+}
+
+.DirectoryFieldControlCell input,
+.DirectoryFieldControlCell select {
+    margin-top: 0
+}
+
+.DirectoryFormButtonCell {
+    padding: 1rem 0 0 !important;
+    text-align: right
+}
+
+.DirectoryPagingButton {
+    margin: .5rem .25rem;
+    width: auto
+}
+
+.DirectoryFormTable {
+    width: 100%
+}
+
+.DirectoryFormTextBox {
+    width: 90%
+}
+
+.DirectoryListingHeading {
+    border: none;
+    padding: .5rem;
+    text-align: left
+}
+
+.DirectoryListingHeading a {
+    color: #000
+}
+
+.DirectoryListingItem {
+    border: none;
+    padding: .5rem 2rem .5rem .5rem;
+    text-align: left !important;
+    white-space: normal !important
+}
+
+.DirectoryListingTable {
+    border: none;
+    margin: 0 0 1.5rem;
+    width: 100%
+}
+
+.DirectoryListingTable>tbody>tr>td>table>tbody>tr>td:first-of-type {
+    display: inline-block;
+    margin: .5rem 0 1.5rem
+}
+
+div[id*="directoryOutputGridView_Results"] {
+    text-align: center;
+    font-size: 1rem
+}
+
+div[id$="directoryOutputGridView_ResultsAbove"] {
+    width: 100%
+}
+
+div[id$="directoryOutputGridView_ResultsBelow"] {
+    margin-bottom: 1rem;
+    margin-top: -1.5rem
+}
+
+.AlphaIndexDescription {
+    display: block;
+    margin-bottom: .5rem
+}
+
+.AlphaIndex .AlphaIndexItem {
+    background-color: #0c8346;
+    color: #fff !important;
+    display: inline-block;
+    font-family: inherit;
+    margin: 2px 0;
+    min-width: 2%;
+    padding: 5px 10px;
+    text-decoration: none
+}
+
+.AlphaIndex .AlphaIndexItem:hover {
+    background-color: #0a6938
+}
+
+.DirectoryListingTable>tbody>tr:nth-child(even) {
+    background-color: #eee
+}
+
+.DirectoryListingTable>tbody>tr:nth-child(even):last-child {
+    background-color: transparent
+}
+
+.ui-widget-content .BBDirectoryMessageDialogForm {
+    font-family: "Open Sans", arial, sans-serif !important;
+    font-size: 1rem
+}
+
+.BBDirectoryMessageDialogForm .BBDirectoryFieldset[style="float:right;"] {
+    float: none !important;
+    text-align: center !important;
+    width: 100% !important
+}
+
+.BBDirectoryMessageDialogForm input[type="submit"],
+.BBDirectoryMessageDialogForm input[type="button"] {
+    font-family: "Open Sans", arial, sans-serif !important;
+    width: auto !important
+}
+
+.BBDirectoryMessageDialogForm .BBDirectoryFieldset .BBDirectoryControl {
+    padding: 0 !important;
+    width: 100% !important
+}
+
+.BBDirectoryMessageDialogForm .BBDirectoryControl>input[type="text"],
+.BBDirectoryMessageDialogForm .BBDirectoryControl>.BBDirectoryTextArea,
+.BBDirectoryMessageDialogForm .BBDirectoryControl>.BBMultiEmailAddressSelect {
+    border: 2px solid #d8d8d8 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: "Open Sans", arial, sans-serif !important;
+    font-size: 1rem !important;
+    height: auto !important;
+    padding: .65rem !important;
+    width: 100% !important
+}
+
+.BBDirectoryMessageDialogForm .BBDirectoryFieldset .BBDirectoryControl {
+    position: relative !important
+}
+
+.BBDirectoryMessageDialogForm .BBDirectoryFieldset .BBDirectoryControl>.BBRequired {
+    left: -12px !important;
+    position: absolute !important;
+    top: 0 !important
+}
+
+.BBDirectoryMessageDialogForm .BBRevieverEmail {
+    display: inline-block !important;
+    font-weight: 600 !important;
+    margin-bottom: .5rem !important;
+    padding-left: 0 !important
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .DirectoryFieldCaption {
+        padding: .5rem 0 0
+    }
+    .DirectoryFormButtonCell {
+        padding-bottom: 0;
+        text-align: center
+    }
+    .DirectoryFormTable tr[id$="trDirectoryCriteria"]+tr {
+        display: none
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:600px) {
+    .DirectoryListingTable>tbody>tr:nth-child(2),
+    .DirectoryListingTable tr th {
+        display: none
+    }
+    .DirectoryListingTable tr td {
+        display: block;
+        width: 33%;
+        padding-right: 0
+    }
+    .DirectoryListingTable tr:not(:first-of-type) {
+        display: block;
+        padding: .5rem
+    }
+    .DirectoryListingTable td {
+        width: 100% !important;
+        padding: 0 !important
+    }
+    .AlphaIndexDescription {
+        text-align: center
+    }
+    .AlphaIndex .AlphaIndexItem {
+        min-width: 24%
+    }
+}
+
+.DiscussionGroupListingTable .PagedListFooter {
+    font: inherit
+}
+
+.DiscussionGroupHeadingCell {
+    background-color: transparent;
+    padding: 1em 0;
+    width: 100%
+}
+
+.DiscussionGroupSearchTextCell {
+    vertical-align: middle
+}
+
+.DiscussionMessageSepHR,
+.DiscussionTopicSepHR {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%
+}
+
+.DiscussionReplyBody {
+    white-space: normal
+}
+
+.DiscussionReplyFieldValue {
+    font-family: inherit;
+    font-size: 1rem;
+    white-space: normal
+}
+
+.DiscussionReplyBody .DiscussionReplyBody .DiscussionReplyFieldValue {
+    display: block;
+    padding: 1rem 2rem
+}
+
+.DiscussionReplyHeading {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    height: auto;
+    padding: 0
+}
+
+.DiscussionReplySubject {
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.DiscussionReplyTable {
+    border-collapse: collapse;
+    margin: 0 0 1rem
+}
+
+.DiscussionThreadLBracket,
+.DiscussionThreadRBracket,
+.DiscussionThreadTBracket {
+    display: block
+}
+
+.DiscussionTopicBody {
+    background-color: transparent;
+    padding: 0;
+    white-space: normal
+}
+
+.DiscussionTopicBody table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.DiscussionTopicFieldValue {
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem 0;
+    white-space: normal
+}
+
+.DiscussionTopicBody table.w100p .DiscussionTopicFieldValue {
+    display: inline;
+    padding: 0
+}
+
+.DiscussionTopicHeading {
+    background-color: transparent;
+    color: #000;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    padding: .25rem
+}
+
+.DiscussionTopicList,
+.DiscussionTopicNumReplies,
+.PostDiscussionPreviewLegend,
+.DiscussionFilterFieldCaption,
+.PostDiscussionPreviewFormTable,
+.PostDiscussionReplyFormTable,
+.PostDiscussionTopicFormTable,
+.DiscussionThreadList {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.DiscussionThreadList .w1p {
+    display: none
+}
+
+.DiscussionTopicListHeader {
+    background-color: #0c8346;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.DiscussionTopicListHeader td {
+    padding: .5rem
+}
+
+.DiscussionTopicSubject {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.DiscussionTopicTable {
+    margin: 0 0 .5rem
+}
+
+.PostDiscussionPreviewHeadingCell,
+.PostDiscussionReplyHeadingCell,
+.PostDiscussionTopicHeadingCell {
+    background-color: transparent
+}
+
+.DiscussionReplyFieldCaption,
+.DiscussionTopicFieldCaption,
+.PostReplyFieldCaption,
+.PostTopicFieldCaption {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400
+}
+
+.DiscussionGroupButtonCell {
+    padding: .5rem 0
+}
+
+.DiscussionTopicsEvenRowStyle,
+.DiscussionTopicsOddRowStyle {
+    position: relative
+}
+
+.DiscussionTopicsEvenRowStyle td,
+.DiscussionTopicsOddRowStyle td {
+    padding: .5rem;
+    vertical-align: top;
+    white-space: normal !important
+}
+
+.DiscussionGroupMessage {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 0 0
+}
+
+.DiscussionGroupDeleteButtonWAI,
+.DiscussionGroupPruneButton,
+.DiscussionGroupBlockButton,
+.DiscussionGroupReplyButtonWAI {
+    margin: 0
+}
+
+.DiscussionGroupPruneButton,
+.DiscussionGroupBlockButton,
+.DiscussionGroupReplyButtonWAI {
+    padding-bottom: 5px;
+    padding-top: 5px
+}
+
+.DiscussionTopicLink:link {
+    color: #0c8346
+}
+
+.DiscussionTopicLink:hover {
+    text-decoration: underline
+}
+
+.DiscussionNew,
+.DiscussionMessageNew {
+    color: #d04a28;
+    margin-left: .25rem
+}
+
+.DiscussionGroupButtonCell {
+    padding: 0
+}
+
+.DiscussionTopicBody table.w100p .DiscussionTopicFieldValue,
+.DiscussionMessageNew {
+    font: inherit;
+    vertical-align: middle
+}
+
+.DiscussionSearchList tr td {
+    padding: .5rem
+}
+
+.DiscussionSearchHeader td {
+    background-color: #0c8346;
+    color: #fff;
+    font-weight: 700
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .DiscussionGroupButtonCell {
+        padding-top: 0
+    }
+    .DiscussionGroupButtonCell>input {
+        margin-top: 0
+    }
+    .DiscussionTopicListHeader {
+        display: none
+    }
+    .DiscussionTopicList tr td {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0 0 0 10px;
+        width: 100%
+    }
+    .DiscussionTopicList tr td:first-of-type {
+        padding-top: 10px
+    }
+    .DiscussionTopicList tr td:nth-child(2)::before {
+        content: "Posted by:"
+    }
+    .DiscussionTopicList tr td:nth-child(3)::before {
+        content: "Replies:"
+    }
+    .DiscussionTopicList tr td:nth-child(4) {
+        padding-bottom: 10px
+    }
+    .DiscussionTopicList tr td:nth-child(4)::before {
+        content: "Posted On:"
+    }
+    .DiscussionTopicsOddRowStyle>td:last-child,
+    .DiscussionTopicsEvenRowStyle>td:last-child {
+        float: none;
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        width: auto
+    }
+    table.DiscussionTopicList {
+        padding: 10px
+    }
+    span.DiscussionTopicFieldCaption,
+    span.DiscussionTopicFieldValue {
+        display: inline
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .DiscussionGroupHeadingCell table td {
+        display: block;
+        text-align: left
+    }
+    tr.DiscussionTopicBody table tr:nth-child(2) td {
+        display: block
+    }
+    tr.DiscussionTopicBody table tr:nth-child(2) td:nth-child(3),
+    tr.DiscussionTopicBody table tr:nth-child(2) td:nth-child(4),
+    tr.DiscussionTopicBody table tr:nth-child(2) td:nth-child(5) {
+        float: left;
+        text-align: left;
+        width: auto
+    }
+    .DiscussionSearchList tr td {
+        display: block
+    }
+    .DiscussionSearchPostDate::before {
+        content: "Post Date:"
+    }
+    .DiscussionSearchHeader {
+        display: none
+    }
+}
+
+.BBDocumentDisplayDescriptionStyle {
+    font-size: .75rem;
+    font-style: normal
+}
+
+.BBDocumentDisplayDescriptionStyle td {
+    padding: 0 .5rem .5rem !important
+}
+
+.BBDocumentDisplayHeaderRow td {
+    background-color: #0c8346;
+    color: #fff;
+    padding: .5rem
+}
+
+.BBDocumentDisplayHeaderRow td a {
+    color: #fff;
+    cursor: pointer !important;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.BBDocumentDisplayTable {
+    margin: 1rem 0
+}
+
+.BBDocumentTabButtons {
+    display: block;
+    padding: 0;
+    text-align: right
+}
+
+.BBDocumentAddDescription {
+    font-size: 1rem
+}
+
+.BBDocumentDisplayOddRowStyle td,
+.BBDocumentDisplayEvenRowStyle td {
+    padding: .9rem .5rem .5rem
+}
+
+.BBDocumentDisplaySeparator {
+    display: none
+}
+
+.BBDocumentEditButtonWAI,
+.BBDocumentDeleteButtonWAI {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .BBDocumentDisplayTable tr td {
+        display: block;
+        padding: 0 10px
+    }
+    .BBDocumentDisplayTable tr>td:first-child {
+        margin-top: .5rem
+    }
+    .BBDocumentDisplayTable tr td:nth-child(4),
+    .BBDocumentDisplayTable tr td:nth-child(5) {
+        margin-right: 0;
+        margin-top: -61px;
+        position: absolute;
+        right: 0;
+        width: auto
+    }
+    .BBDocumentDisplayTable tr td:nth-child(5) {
+        margin-top: -34px
+    }
+    .BBDocumentDisplayHeaderRow {
+        display: none
+    }
+    .BBDocumentDisplayTable .Owner::before {
+        content: "Owner:"
+    }
+    .BBDocumentDisplayTable .UploadDate::before {
+        content: "Upload Date:"
+    }
+    .BBDocumentDisplayDescriptionStyle td:first-of-type {
+        font-style: italic;
+        left: 2px;
+        position: relative
+    }
+    .BBDocumentTabButtons {
+        text-align: left
+    }
+    .BBDocumentTabButtons a {
+        margin-left: 0
+    }
+    .BBDocumentDisplayOddRowStyle,
+    .BBDocumentDisplayEvenRowStyle {
+        position: relative
+    }
+    .BBDocumentDisplayOddRowStyle td,
+    .BBDocumentDisplayEvenRowStyle td {
+        padding: .9rem .5rem .5rem
+    }
+}
+
+.DonationCaptureFieldControlCellAmount {
+    font-size: 1rem;
+    width: auto
+}
+
+.DonationCaptureFieldControlCellAmount .BBFieldCaption {
+    vertical-align: top
+}
+
+.DonationFieldCaption {
+    background: transparent;
+    white-space: normal
+}
+
+.DonationFieldCaption label[for$="txtInstallments"] {
+    bottom: 11px;
+    position: relative
+}
+
+label.DonationFieldCaption {
+    display: block
+}
+
+.DonationFieldCheckboxCaption {
+    display: block;
+    padding: .5rem 0;
+    position: relative
+}
+
+.DonationFieldCheckboxCaption label {
+    font-weight: 400
+}
+
+.DonationCaptureFieldControlCell {
+    width: auto
+}
+
+.DonationCaptureFieldControlCell table {
+    margin: 0 !important;
+    width: auto !important
+}
+
+.DonationCaptureFieldControlCell table td {
+    padding: 0
+}
+
+.DonationCaptureFieldControlCell label {
+    font-weight: 400;
+    margin: 0 .5rem 0 0;
+    vertical-align: middle
+}
+
+.DonationCaptureFieldControlCell input {
+    margin: .5rem .25rem .5rem 0;
+    vertical-align: middle
+}
+
+.DonationCaptureFieldControlCell input[id$="txtCSC"] {
+    width: 100px
+}
+
+.DonationFieldControlCell {
+    width: auto
+}
+
+.DonationFieldControlCell label {
+    font-weight: 400
+}
+
+.DonationFieldControlCell input {
+    margin: .5rem .25rem .5rem 0
+}
+
+.DonationFieldControlCell span[id$="lblSymbol"] {
+    bottom: 10px;
+    margin-right: 10px;
+    position: relative
+}
+
+.DonationFieldControlCell input[id$="rdoOther"] {
+    bottom: 10px;
+    position: relative
+}
+
+.DonationFormTable table .DonationFieldControlCell {
+    padding: .25rem .5rem .25rem 0
+}
+
+table[id$="rdoGiftType"] td {
+    padding: 0
+}
+
+label[for$="rdoOther"] {
+    margin-left: 10px;
+    position: relative;
+    top: -10px
+}
+
+.DonationButtonCell {
+    padding: 1rem 0;
+    text-align: center
+}
+
+.DonationCaptureReadonlyValue {
+    font-size: 1rem
+}
+
+.DonationCaptureRequiredFieldMarker,
+.DonationRequiredFieldMarker {
+    display: none
+}
+
+.DonationCaptureSelectListNarrow {
+    margin-right: 10px;
+    min-width: 100px;
+    width: auto
+}
+
+.DonationCaptureSelectListNarrow+label[id$="lblTxtYear"] {
+    display: none
+}
+
+.DonationSelectList {
+    display: inline-block;
+    width: 100%
+}
+
+.DonationGridEvenRow .DonationSubmitButton,
+.DonationGridOddRow .DonationSubmitButton {
+    margin: 0
+}
+
+.DonationFormTable {
+    margin: 0;
+    width: 100%
+}
+
+.DonationFormTable table {
+    border-collapse: collapse;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0;
+    margin: 0 !important;
+    width: auto
+}
+
+.DonationFormTable table td {
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0
+}
+
+.DonationFormTable tr[id$="trDesignationOther"][style="visibility: hidden;"] {
+    display: none
+}
+
+.DonationFormTable label {
+    white-space: normal
+}
+
+.DonationFormTable label[id$="lblAmountCaption"] {
+    position: relative;
+    top: 5px
+}
+
+.DonationFormTable label[id$="lblFrequencyCaption"] {
+    position: relative;
+    top: 10px
+}
+
+.DonationFormTable label[id$="lblSecCode"] {
+    position: relative;
+    top: -10px
+}
+
+.DonationFormTable tr[id$="trMonthlyQuarterly"] td.DonationFieldControlCell select[id*="Recurrence_ddlDayNumber"]+label {
+    display: none
+}
+
+.DonationFormTable label.BBFieldCaption {
+    display: block;
+    margin: .5rem 0;
+    text-align: left
+}
+
+.DonationFormTable .vaTop {
+    vertical-align: middle
+}
+
+.DonationTextboxNarrow {
+    width: 180px !important
+}
+
+.DonationGridFooter td {
+    border-color: #fff;
+    padding: .25rem;
+    vertical-align: top
+}
+
+.DonationGridHeader td {
+    border-color: #fff;
+    font-weight: 700;
+    vertical-align: top
+}
+
+.DonationGridEvenRow td,
+.DonationGridOddRow td {
+    border-color: #fff;
+    padding: .25rem;
+    vertical-align: middle
+}
+
+.DonationListingHeading,
+.DonationCaptureListingHeading {
+    background: transparent;
+    border: none;
+    height: auto;
+    margin: 0;
+    padding: 1rem 0 .5rem;
+    text-align: left
+}
+
+.DonationMessage {
+    padding: 0
+}
+
+.DonationFormTable img.ui-datepicker-trigger {
+    bottom: 45px;
+    margin-left: -33px;
+    position: relative
+}
+
+.labelRecurrenceStartingOn,
+.emptyTDBelowOnLabel {
+    display: none
+}
+
+img[cssclass="BBLinkHelpIconImg"] {
+    display: none
+}
+
+table[id*="rdoGiftType"] tr {
+    display: inline-block
+}
+
+table[id*="rdoGiftType"] tr label[for*="rdoGiftType"] {
+    margin: 0 .5rem 0 0
+}
+
+.DonationFormTable .BBLinkHelpIcon::after {
+    content: "what's this?"
+}
+
+tr[id*="Recurrence"] select[id$="Recurrence_ddlMonth"],
+tr[id*="Recurrence"] select[id*="Recurrence_ddlDayOfWeek"] {
+    left: -4px;
+    position: relative
+}
+
+#spanTruePledgePaymentAmount {
+    display: block
+}
+
+#spanTruePledgePaymentAmount::before,
+span[id*="_lblPaymentAmountCaption"]::before,
+span[id*="_lblTruePledgeInstallments"]::before {
+    content: "" !important
+}
+
+.DonationGridHeader {
+    display: none
+}
+
+.ColumnNoWrapHelper>label {
+    display: inline-block
+}
+
+.ColumnNoWrapHelper>input {
+    display: inline-block;
+    width: 120px
+}
+
+select[id$="cboCardType"] {
+    position: relative;
+    top: 12px
+}
+
+#divModalPage .AdminModalTitle {
+    height: auto;
+    padding: 10px
+}
+
+#divModalPage #divContentPane {
+    padding: 5px 18px;
+    position: static
+}
+
+.MatchFinderMessage {
+    color: #444;
+    line-height: 1.5rem
+}
+
+tr[class*="MatchFinder"]>td {
+    text-align: left
+}
+
+tr[class*="MatchFinder"]>td>a {
+    font-size: 1.5rem;
+    line-height: 1.5rem
+}
+
+.MatchFinderResultsList[class$="RowStyle"] {
+    background-color: transparent;
+    border-bottom-width: 0
+}
+
+.MatchFinderFormTable div.w100p {
+    border-width: 0 !important;
+    height: auto !important
+}
+
+.MatchFinderFormTable input.BBFormSubmitButton {
+    width: 100px !important
+}
+
+body#myBody[onload*="doLoad"],
+body#myBody[onload*="doLoad"] form#Form1 {
+    overflow: visible
+}
+
+div#divModalPage.page {
+    position: static
+}
+
+span[id$="lblTxtMatchFinderMessage1"] br {
+    display: none
+}
+
+.DonationCaptchaControlCell {
+    margin-left: 0
+}
+
+.DonationCaptchaControlCell input {
+    width: 300px
+}
+
+.CaptchaName {
+    text-align: left !important
+}
+
+.DonationCaptchaImageContainer {
+    border: none
+}
+
+.DonationCaptchaActionLinkContainer {
+    text-align: left
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    td.DonationFieldCaption+td {
+        display: block;
+        text-align: left;
+        width: 100%
+    }
+    td.DonationFieldCaption,
+    td.DonationCaptureFieldCaption {
+        margin-top: .7rem
+    }
+    .DonationFormTable label[id$="lblAmountCaption"] {
+        top: 0
+    }
+    table[id$="tblAmount"] {
+        width: 100%
+    }
+    table[id$="tblAmount"] tr {
+        display: inline-block;
+        width: 50%
+    }
+    table[id$="tblAmount"] tr:nth-child(even) td {
+        padding-right: 0
+    }
+    table[id$="tblAmount"] tr:last-child {
+        display: block;
+        width: 100%
+    }
+    table[id$="tblAmount"] td {
+        width: 100%
+    }
+    table[id$="rdoGiftType"] td {
+        padding: .3rem .5rem .5rem 0
+    }
+    td.DonationFieldControlCell.givingAmountInputTD,
+    td.DonationFieldControlCell.givingAmountInputTD input,
+    td.DonationFieldControlCell.givingAmountInputTD label {
+        display: none
+    }
+    .radioLabel {
+        line-height: normal;
+        padding: 1rem;
+        width: 100%
+    }
+    tr[id$="trOther"] td[id$="tdOther"] {
+        display: inline-block;
+        padding-right: 0
+    }
+    tr[id$="trOther"] td[id$="tdOther"] label.givingAmount {
+        display: inline-block;
+        top: 0
+    }
+    td[id$="tdOther"]+td.DonationFieldControlCell {
+        display: none
+    }
+    td[id$="tdOther"]+td.DonationFieldControlCell.checked {
+        display: inline-block
+    }
+    td[id$="tdOther"]+td.DonationFieldControlCell td[id$="Td1"] {
+        display: table-cell
+    }
+    label[for$="rdoOther"] {
+        margin-left: 0
+    }
+    .DonationGridCell:not(:nth-child(1)) {
+        display: inline-block;
+        padding: .5rem;
+        text-align: left
+    }
+    .DonationFormTable span[id$="lblDesTotal"] {
+        position: relative;
+        top: .25rem
+    }
+    td[id$="tdFrequencyCaption"]+td>table {
+        width: 100%
+    }
+    label[id$="lblTxtEnding"] {
+        white-space: pre
+    }
+    .BBFormTable td[id$="FrequencyCaption"] {
+        width: auto
+    }
+    select[id$="Recurrence_ddlFrequency"] {
+        display: block;
+        float: left
+    }
+    tr[id$="Recurrence_trRange"] input[id$="DatePickerStart"],
+    tr[id$="Recurrence_trRange"] input[id$="DatePickerEnd"] {
+        display: block;
+        float: left
+    }
+    label[id$="Recurrence_lblTxtOnWeek"],
+    label[id$="Recurrence_lblTxtOnMonthlyQuarterly"],
+    label[id$="Recurrence_lblTxtOnMonth"],
+    label[id$="Recurrence_lblTxtStarting"],
+    label[id$="Recurrence_lblTxtEnding"] {
+        display: block;
+        float: left;
+        padding-top: 15px;
+        width: 90px
+    }
+    select[id$="Recurrence_ddlDayOfWeek1"] {
+        display: block;
+        float: left
+    }
+    select[id$="Recurrence_ddlDayOfWeek1"],
+    .DonationFormTable tr[id$="trMonthlyQuarterly"] td.DonationFieldControlCell select[id*="Recurrence_ddlDayNumber"] {
+        min-width: 100px;
+        width: auto
+    }
+    .DonationFormTable tr[id$="trMonthlyQuarterly"] td.DonationFieldControlCell select[id*="Recurrence_ddlDayNumber"] {
+        margin-right: 6px
+    }
+    .DonationFormTable td select[id$="Recurrence_ddlPosition"],
+    .DonationFormTable td select[id$="Recurrence_ddlPosition"] option,
+    .DonationFormTable td select[id$="Recurrence_ddlDayOfWeek2"],
+    .DonationFormTable td select[id$="Recurrence_ddlDayOfWeek2"] option,
+    .DonationFormTable td select[id$="Recurrence_ddlMonth"],
+    .DonationFormTable td select[id$="Recurrence_ddlMonth"] option,
+    .DonationFormTable td select[id$="Recurrence_ddlDayNumber1"],
+    .DonationFormTable td select[id$="Recurrence_ddlDayNumber1"] option {
+        width: auto
+    }
+    .DonationFormTable>tbody>tr>td {
+        padding-bottom: 0
+    }
+    label[id$="lblTxtEnding"] {
+        clear: both
+    }
+    .DonationFormTable img.ui-datepicker-trigger {
+        bottom: -24px;
+        display: block;
+        float: left;
+        margin-left: -2.5rem
+    }
+    div[id$="Recurrence_divFrequency"] {
+        clear: both
+    }
+    div[id$="Recurrence_divFrequency"]>table {
+        width: 100%
+    }
+    div[id$="Recurrence_divFrequency"] td {
+        padding-top: 10px
+    }
+    .DonationFormTable label[id$="lblFrequencyCaption"] {
+        top: 0
+    }
+    .DonationFormTable label[id$="Recurrence_lblTxtStarting"],
+    .DonationFormTable label[id$="Recurrence_lblTxtEnding"] {
+        margin-top: 0;
+        padding-top: 20px
+    }
+    .DonationFormTable label[id$="Recurrence_lblTxtStarting"],
+    .DonationFormTable label[id$="Recurrence_lblTxtEnding"] {
+        margin-top: 0;
+        padding-top: 20px
+    }
+    .DonationFormTable label[id$="Recurrence_lblTxtEnding"] {
+        padding-top: 28px
+    }
+    .DonationFormTable img.ui-datepicker-trigger[title^="Start"] {
+        margin-top: 0
+    }
+    tr[id$="Recurrence_trRange"] input[id$="DatePickerEnd"] {
+        margin-top: 15px
+    }
+    .DonationFormTable img.ui-datepicker-trigger[title^="End"] {
+        margin-top: 11px
+    }
+    .labelRecurrenceStartingOn,
+    .emptyTDBelowOnLabel {
+        display: none
+    }
+    .DonationFormTable .radioRecurrenceDay,
+    .DonationFormTable .inputDayOfMonth,
+    .DonationFormTable .radioRecurrenceDayFrequency,
+    .DonationFormTable .inputRecurrenceDayFrequency,
+    .DonationFormTable .annualRecurrenceTD {
+        display: table-cell;
+        position: relative
+    }
+    .DonationFormTable table .radioRecurrenceDay {
+        min-width: 100px
+    }
+    .DonationFormTable table .radioRecurrenceDay,
+    .DonationFormTable table .radioRecurrenceDayFrequency {
+        padding-right: 6px
+    }
+    #tributeCheckbox,
+    .tributeLabel {
+        display: block;
+        float: left;
+        margin-top: 15px
+    }
+    #tributeCheckbox {
+        height: 1.5rem
+    }
+    table[id$="rdoPaymentOption"] label.radioLabel {
+        margin-right: 1rem
+    }
+    .DonationFormTable>tbody[id$="tbdyPaymentInfo"]>tr:last-child>.DonationCaptureFieldControlCell {
+        margin-top: -24px
+    }
+    select[id$="cboCardType"] {
+        top: 0
+    }
+    .DonationFormTable select[id$="cboYear"] {
+        margin-left: 20px
+    }
+    .DonationFormTable input[id$="txtCSC"] {
+        position: relative;
+        top: .8rem;
+        width: 50%
+    }
+    .DonationFormTable a[id$="lnkcsc_help"] img {
+        display: none
+    }
+    .DonationFormTable .BBLinkHelpIcon::after {
+        position: relative;
+        top: .5rem
+    }
+    label[for$="chkAcknowledge"] {
+        margin-top: 1rem
+    }
+    .DonationFieldCheckboxCaption {
+        padding: 0
+    }
+    .DonationFieldCheckboxCaption label.checkboxLabel {
+        margin-bottom: 1rem;
+        margin-left: 0
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    tbody[id$="tbdyMatchingGifts"]>tr>td.DonationCaptureFieldControlCell td,
+    .DonationCaptureFieldControlCell table td {
+        display: block
+    }
+    .DonationCaptchaControlCell img {
+        height: auto;
+        max-width: 288px;
+        min-width: 100%
+    }
+    .DonationCaptchaControlCell input {
+        width: 100%
+    }
+    .DonationCaptchaActionLinkContainer a {
+        font-size: .8rem
+    }
+}
+
+.ECardPreviewBlock>.eCardTable img {
+    height: auto;
+    min-width: 100%;
+    width: 100%
+}
+
+.ECardWizardSubheading {
+    margin-bottom: 1rem
+}
+
+.ECardWizardNavigationButton {
+    background-color: #0c8346;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    margin-right: .5rem;
+    margin-top: 0;
+    padding: .5rem 1rem
+}
+
+.ECardWizardNavigationButton:hover {
+    background-color: #0a6938;
+    color: #fff
+}
+
+.ECardSection {
+    background-color: #f9fff9;
+    margin-top: -.5rem;
+    padding: 1rem;
+    position: relative
+}
+
+.ECardSection input[id$="chkSendCopyToSelf"] {
+    margin-left: -17px;
+    margin-right: 8px
+}
+
+.ECardSection input[id$="rbSend"] {
+    display: none
+}
+
+.ECardSection label[for$="rbSend"] {
+    padding: 0
+}
+
+.ECardSection input[id$="rbPrint"] {
+    margin-left: 0;
+    margin-right: 8px
+}
+
+.ECardSection .hasDatepicker {
+    margin-bottom: 15px
+}
+
+.ECardSection table[id$="gvRecipientInfo"],
+.ECardSection table[id$="gvSenderInfo"] {
+    width: 100%
+}
+
+.ECardSection th[scope="col"] {
+    text-align: left
+}
+
+.ECardSectionSeparator {
+    background-color: #0c8346;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+    width: auto
+}
+
+.ECardPreviewBlock {
+    border: none;
+    margin: .5rem 0;
+    padding: 0
+}
+
+.ECardPreviewBlock table {
+    width: auto !important
+}
+
+.ECardPreviewBlock span[id$="lblPreviewFromCaption"],
+.ECardPreviewBlock span[id$="lblPreviewToCaption"],
+.ECardPreviewBlock span[id$="lblPreviewSubjectCaption"],
+.ECardPreviewBlock span[id$="lblFinalPreviewFromCaption"],
+.ECardPreviewBlock span[id$="lblFinalPreviewToCaption"],
+.ECardPreviewBlock span[id$="lblFinalPreviewSubjectCaption"],
+.ECardPreviewBlock span[id$="lblSubjectCaption"] {
+    font-weight: 700;
+    padding-right: .5rem;
+    text-align: right;
+    width: 60px
+}
+
+.ECardThumbnail {
+    border: none;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 1rem;
+    opacity: .75;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle
+}
+
+.ECardThumbnail tbody tr td {
+    width: 100% !important;
+    height: auto !important
+}
+
+.ECardCurrentStep {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #000;
+    color: #000;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.ECardPastStep {
+    border: none;
+    border-bottom: 3px solid #ccc;
+    color: #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.ECardFutureStep {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #ccc;
+    color: #999;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.ECardThumbnail:hover {
+    border: none;
+    opacity: 1
+}
+
+.ECardProgressIndicator div[class$="Step"] {
+    font-weight: 400
+}
+
+.ECardPreviewBlock>.eCardTable {
+    width: 100% !important
+}
+
+.ECardTextBox {
+    width: 100% !important
+}
+
+.ECardCaptcha {
+    display: table;
+    width: 100%
+}
+
+.ECardCaptchaControlCell {
+    display: table;
+    margin: 0;
+    width: 100%
+}
+
+.ECardCaptchaActionLinkContainer {
+    text-align: left
+}
+
+.ECardCaptchaImageContainer {
+    border: none
+}
+
+.ECardCaptchaImageContainer img {
+    height: auto;
+    width: 100%
+}
+
+label[for$="myCaptcha_txtResponse"] {
+    display: none
+}
+
+div[id$="pnlECardFromKey"]>div>.eCardTable {
+    margin-bottom: 2rem;
+    width: 100% !important
+}
+
+div[id$="pnlECardFromKey"]>div>.eCardTable img {
+    height: auto;
+    width: 100% !important
+}
+
+.ECardPrintableLink {
+    margin-bottom: 15px !important
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .ECardProgressIndicator div[class$="Step"] span {
+        display: none
+    }
+    .ECardProgressIndicator td {
+        color: #fff;
+        counter-increment: step-counter;
+        padding-top: 15px
+    }
+    .ECardProgressIndicator td::before {
+        background-color: #0c8346;
+        border-radius: 100%;
+        content: counter(step-counter, decimal);
+        margin-top: 4px;
+        padding: 3px 10px
+    }
+    .ECardPastStep {
+        background: none
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .ECardSection img.ui-datepicker-trigger {
+        display: block;
+        margin-left: -2.1rem;
+        position: absolute;
+        right: 25px;
+        top: 52px
+    }
+    .ECardPrintableLink {
+        display: block;
+        float: none !important;
+        text-align: left
+    }
+    .ECardSection label[for$="rbPrint"] {
+        background-color: #0c8346;
+        border-radius: 0;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        margin-top: 15px;
+        padding: .5rem;
+        text-align: center
+    }
+    .ECardSection label[for$="rbPrint"]:hover {
+        background-color: #0a6938;
+        color: #fff
+    }
+}
+
+.CalendarViewCalendarContainer {
+    display: table
+}
+
+.CalendarViewEventItemContainer {
+    margin: .5rem 0 .5rem .5rem
+}
+
+.CalendarViewCalendarContainer {
+    border: 1px solid #b8b799;
+    margin: 1rem 0 !important
+}
+
+.CalendarViewBottomIcons {
+    text-align: left
+}
+
+.ListViewDateLabel {
+    font-size: 1rem;
+    margin: 0 0 1rem
+}
+
+.ListViewEventItemContainer {
+    font-size: 1rem;
+    padding-left: 0
+}
+
+.ListViewEventItemContainer div {
+    background-color: #f5f5f5;
+    padding: 1rem !important
+}
+
+.CalendarViewMonthYearLabel {
+    font-size: 1rem;
+    height: auto;
+    line-height: 1rem;
+    vertical-align: top
+}
+
+.CalendarViewDayHeader {
+    background-color: #0c8346;
+    color: #fff;
+    font-size: 1rem;
+    padding: .75rem;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.CalendarViewOtherMonthDay {
+    background-color: #ccc;
+    border: 1px dashed #b8b799;
+    border-top: none;
+    color: #333;
+    height: 100px;
+    text-align: right
+}
+
+.CalendarViewWeekendDay,
+.CalendarViewDay {
+    background-color: #fff;
+    border: 1px dashed #b8b799;
+    border-top: none;
+    height: 100px;
+    text-align: right
+}
+
+.ListViewDateRangeGoButton {
+    bottom: -10px;
+    margin: 0 0 0 1rem !important;
+    position: relative
+}
+
+.ListViewEventDate {
+    color: #333;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.ListViewEventTitle {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: none
+}
+
+span[id*="SpanTitle"] .BBFormSubmitButton {
+    display: block
+}
+
+span[id*="SpanTitle"] .BBFormSubmitButton+img {
+    position: relative;
+    top: 3px
+}
+
+.ListViewEventSubtitle {
+    color: #333;
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    vertical-align: top
+}
+
+.ListViewEventTime {
+    display: block;
+    font-size: 1rem
+}
+
+.ListViewEventLocation {
+    display: block;
+    font-size: 1rem
+}
+
+.EventCalendarName {
+    display: block;
+    font-size: 1.375rem;
+    text-align: left;
+    white-space: nowrap
+}
+
+.DetailEventTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left
+}
+
+.DetailEventSubtitle {
+    color: #333;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400
+}
+
+.DetailCaptionContainer {
+    background-color: transparent;
+    border-bottom: 1px solid #aaa;
+    padding: .5rem 0
+}
+
+.DetailCaption {
+    color: #000;
+    font-size: 1.125rem
+}
+
+.CalendarViewToday {
+    background-color: #eee;
+    border: 1px dashed #b8b799;
+    color: #333;
+    font-weight: 700;
+    text-align: right
+}
+
+.CalendarViewAllDayEvent {
+    border: 0
+}
+
+.CalendarFilterContainer span.CalendarFilterSaveMsg {
+    display: none;
+    margin-bottom: 0
+}
+
+.CalendarFilterContainer span {
+    display: block;
+    margin-bottom: 0;
+    overflow: hidden
+}
+
+.CalendarFilterContainer label {
+    display: block;
+    float: left;
+    padding: 3px !important
+}
+
+.CalendarFilterContainer input[type="checkbox"] {
+    clear: left;
+    float: left;
+    height: 23px;
+    margin-right: 10px
+}
+
+.CalendarFilterContainer input[type="checkbox"]+label {
+    padding: 0
+}
+
+td[id$="TDCalView"]>table {
+    width: 100% !important
+}
+
+.EventCalFilter_Show {
+    background-color: #f5f5f5;
+    border: none !important;
+    display: block !important;
+    padding: 1rem !important;
+    position: relative !important
+}
+
+.EventCalFilter_Show>br {
+    display: none
+}
+
+.CalendarFilterSaveButton {
+    color: #000;
+    font-size: .75rem;
+    width: auto
+}
+
+.CalendarFilterHorizontalDividers {
+    clear: both
+}
+
+.EventCalendarPartContainer table {
+    border-collapse: collapse;
+    margin: auto
+}
+
+.EventCalendarPartContainer table table {
+    margin: .25rem 0
+}
+
+table[id$="CalendarEvent1_rblMapLink"] {
+    margin-bottom: .5rem
+}
+
+.EventCalFilter_Show,
+.EventCalFilter_Hide {
+    border: none;
+    font-size: 1rem;
+    padding: 0
+}
+
+span[id$="lblCalName"] {
+    display: block;
+    font-weight: 700;
+    padding: 0
+}
+
+.ListViewTopLeft {
+    border-bottom: none;
+    display: block
+}
+
+.ListViewTopRight {
+    border-bottom: none;
+    display: block;
+    margin: 0 0 1rem;
+    text-align: left
+}
+
+td.ListViewTopGap .BBFormTextbox {
+    margin: 0 0 .25rem
+}
+
+td.ListViewTopGap {
+    font-weight: 700
+}
+
+.ListViewEventDivider {
+    display: block;
+    font-size: 1rem
+}
+
+.CalendarViewContainer {
+    font-size: 1rem
+}
+
+.CalendarViewTopLeft {
+    font-weight: 700;
+    padding: 0
+}
+
+.CalendarViewTopMiddle {
+    text-align: center !important;
+    vertical-align: middle;
+    width: 30%
+}
+
+.CalendarViewTopRight {
+    vertical-align: bottom
+}
+
+.CalendarViewTodayText {
+    display: block;
+    padding: 0
+}
+
+.CalendarFilterSaveContainer input {
+    display: inline;
+    float: left;
+    margin-left: 0
+}
+
+.CalendarEventRecurMsg {
+    padding: 0
+}
+
+.CalendarEventRecurContainer {
+    border: none
+}
+
+.CalendarFormCategoryContainer {
+    border-collapse: collapse;
+    width: 85%
+}
+
+.CalendarFormCategoryContainer td {
+    padding: 0
+}
+
+.CalendarFormCategoryContainer input,
+.CalendarFormCategoryContainer select,
+.CalendarFormCategoryContainer textarea {
+    margin: .25rem 0
+}
+
+.CalendarFormCategoryContainer label {
+    margin: 0 .5rem 0 0
+}
+
+.CalendarFormDateTimeContainer {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.CalendarFormDateTimeContainer table {
+    margin: 0
+}
+
+.CalendarFormDateTimeContainer td {
+    display: inline-block;
+    padding: 0;
+    position: relative
+}
+
+.CalendarFormDateTimeContainer input,
+.CalendarFormDateTimeContainer select,
+.CalendarFormDateTimeContainer textarea {
+    display: inline;
+    margin: .25rem 0;
+    width: auto
+}
+
+.CalendarFormDateTimeContainer .BBFormTextbox {
+    margin-right: .25rem
+}
+
+.CalendarFormDateTimeContainer img {
+    vertical-align: middle
+}
+
+.CalendarFormDateTimeContainer label {
+    margin: 0 .5rem 0 0
+}
+
+.CalendarFormOptionalText {
+    vertical-align: middle
+}
+
+.CalendarFormEventInfoContainer {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.CalendarFormEventInfoContainer td {
+    padding: 0
+}
+
+.CalendarFormEventInfoContainer input,
+.CalendarFormEventInfoContainer select,
+.CalendarFormEventInfoContainer textarea {
+    margin: .25rem 0
+}
+
+.CalendarFormEventInfoContainer input[type="radio"] {
+    margin: 0 .5rem
+}
+
+.CalendarFormEventInfoContainer label {
+    margin: 0 .5rem 0 0
+}
+
+.CalendarFormEventInfoContainer table[id$="rblMapLink"] {
+    margin-left: .7rem
+}
+
+.CalendarFormHTMLEditor {
+    height: auto !important;
+    min-width: 475px
+}
+
+.EventCalendarButtonBar {
+    height: auto;
+    padding: 0 0 1rem;
+    text-align: left
+}
+
+.EventCalendarButtons {
+    display: inline-block;
+    float: left;
+    font-size: .9rem;
+    line-height: 1rem;
+    padding: 0 10px 0 6px;
+    width: 77px
+}
+
+a[id$="lbtnNewEvent"],
+a[id$="lbtnListView"],
+a[id$="lbtnPrintView"] {
+    width: 60px
+}
+
+.CalendarFormFieldCaption {
+    vertical-align: middle;
+    width: 33%
+}
+
+.DetailLeft {
+    font-weight: 700;
+    text-align: right;
+    vertical-align: middle
+}
+
+.DetailDateTime {
+    border-bottom: none;
+    color: #333;
+    font-size: .92rem;
+    font-weight: 700;
+    padding: 0
+}
+
+.DetailEventDetails {
+    border: none
+}
+
+.DetailRight {
+    padding: .25rem 0 0;
+    vertical-align: middle
+}
+
+.EventCalendarPartContainer .EditEventLocation,
+.EventCalendarPartContainer .EditEventContactInfo,
+.EventCalendarPartContainer .EditEventTextBox,
+.EventCalendarPartContainer .EditEventFees {
+    height: auto;
+    width: 100%
+}
+
+.EventCalendarButtonBar input[type="image"],
+.EventCalendarPartContainer input[id$="ImageButtonFilterEvents2"][type="image"] {
+    border-width: 0;
+    padding-left: 0;
+    padding-right: 0
+}
+
+span[id$="lblCalName"] {
+    display: none
+}
+
+.CalendarFilterSaveContainer {
+    margin-top: -.5rem
+}
+
+.CalendarViewTopLeft label[for$="ddlMonthYear"] {
+    display: none
+}
+
+.CalendarViewEvent {
+    line-height: 1.1rem
+}
+
+input[id*="ImageButtonFilterEvents"] {
+    display: none
+}
+
+.CalendarFormDateTimeContainer img.ui-datepicker-trigger {
+    margin-left: -26px;
+    position: absolute;
+    top: 15px
+}
+
+.EventCalendarButtonBar>input[type="image"],
+a[id$="ImageButtonPrint"] {
+    background: url("image/css/newEvent.png") no-repeat scroll center 3px #fff;
+    display: block;
+    float: left;
+    height: 0;
+    padding-right: 3px;
+    padding-top: 30px;
+    vertical-align: top;
+    width: 25px
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonImportEvents"] {
+    background-image: url("image/css/importEvents.png")
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonImportEvents"]+a {
+    width: 70px
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonViewList"] {
+    background-image: url("image/css/listView.png")
+}
+
+.EventCalendarButtonBar>a[id$="ImageButtonPrint"] {
+    background-image: url("image/css/printView.png");
+    display: inline-block
+}
+
+.EventCalendarButtonBar>a[id$="ImageButtonPrint"] img {
+    display: none
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonExportEvent"] {
+    background-image: url("image/css/exportEvents.png")
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonExportEvent"]+a {
+    width: 85px
+}
+
+.EventCalendarButtonBar>input[id$="ImageButtonViewCalendar"] {
+    background-image: url("image/css/calendarView.png")
+}
+
+.EventCalendarButtonBar>a[id$="lbtnCalView"] {
+    width: 80px
+}
+
+a[id*="lbtnFilterEvents"] {
+    float: none;
+    padding: 0;
+    width: auto
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:1050px) {
+    .EventCalendarButtonBar input[type="image"],
+    .EventCalendarPartContainer input[id$="ImageButtonFilterEvents2"][type="image"],
+    a[id$="ImageButtonPrint"] {
+        display: none !important
+    }
+    .EventCalendarButtons {
+        background-color: #f5f5f5;
+        margin: .5rem .5rem 0 0;
+        padding: .5rem
+    }
+    a[id*="lbtnFilterEvents"] {
+        background-color: transparent;
+        padding: 0
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .CalendarViewCalendarContainer {
+        display: none
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    input[id$="ImageButtonViewCalendar"],
+    a[id$="lbtnCalView"] {
+        display: none
+    }
+    .ListViewEventTitle {
+        color: #0c8346;
+        font-size: 1.2rem
+    }
+}
+
+.UpcomingEventTitle,
+.RecentEventTitle {
+    background-color: #0c8346;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: .75rem;
+    width: 100%
+}
+
+.UpcomingEventContainer,
+.RecentEventContainer {
+    background-color: transparent
+}
+
+.UpcomingEventContainer br,
+.RecentEventContainer br,
+#printStart br {
+    display: none
+}
+
+.UpcomingEventContainer>div,
+.RecentEventContainer>div {
+    background-color: rgba(0, 0, 0, .05);
+    display: block;
+    padding: 1rem 1.25rem 0
+}
+
+.UpcomingEventContainer>div>div,
+.RecentEventContainer>div>div {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.25rem
+}
+
+.UpcomingEventContainer>div>div:last-child,
+.RecentEventContainer>div>div:last-child {
+    border: none
+}
+
+.HighlightEventTitle {
+    color: #0c8346;
+    display: block;
+    font-size: .85rem;
+    font-weight: 400;
+    margin-bottom: .5rem
+}
+
+.HighlightEventDate {
+    display: block;
+    font-size: .85rem
+}
+
+.HighlightEventTime {
+    display: inline-block;
+    font-size: .85rem;
+    margin-bottom: 1rem
+}
+
+.HighlightEventCancelled,
+.HighlightEventScore {
+    display: block
+}
+
+#printStart+p.taRight {
+    background-color: rgba(0, 0, 0, .05);
+    clear: both;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0;
+    padding: 1rem 1.25rem;
+    width: 100%
+}
+
+.hidden-xs,
+#btnPopupCheckoutComplete {
+    display: none
+}
+
+.Ev3_EventWizard {
+    line-height: 1.4;
+    margin-right: 0 !important
+}
+
+.Ev3_EventWizard .container {
+    max-width: 100% !important;
+    width: 100% !important
+}
+
+.Ev3_EventWizard *:not(.fa) {
+    font-family: inherit !important
+}
+
+.Ev3_EventWizard .labelContainer {
+    height: auto !important;
+    margin-top: 12px !important
+}
+
+.Ev3_EventWizard .BBDivFieldContainer {
+    padding-bottom: 0
+}
+
+.Ev3_RegistrantFieldCell {
+    display: inline-block !important;
+    float: none !important;
+    min-height: auto !important;
+    min-width: auto !important;
+    padding: 0 !important;
+    width: 100% !important
+}
+
+.Ev3_RegistrantFieldCell label,
+.Ev3_RegistrantFieldCell span.BBDivFieldCaption,
+.labelContainer label {
+    display: initial
+}
+
+.Ev3_RegistrantAddressContainer input,
+.Ev3_RegistrantAddressContainer select,
+.Ev3_RegistrantAddressContainer textarea {
+    width: 100% !important
+}
+
+.Ev3_RegistrantContent .Ev3_RegistrationFieldCellWithInlineError input[type="text"],
+.Ev3_RegistrationFieldCellWithInlineError .BBFormSelectList,
+.Ev3_RegistrationFieldCellWithInlineError .Ev3_RegistrantAddressControlDropDown,
+.Ev3_RegistrationFieldCellWithInlineError .Ev3_RegistrantContent textarea {
+    width: 100% !important
+}
+
+.Ev3_RegistrantContent input[type="text"],
+.Ev3_EventWizard .BBFormSelectList,
+.Ev3_RegistrantAddressControlDropDown,
+.Ev3_RegistrantContent textarea,
+.EventDropdownlist,
+.EventQuantity {
+    background-color: #fff !important;
+    border: 2px solid #d8d8d8 !important;
+    color: #444 !important;
+    display: block !important;
+    font-family: "Open Sans", arial, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    height: 49px !important;
+    max-width: 100% !important;
+    padding: .65rem !important;
+    width: 100% !important
+}
+
+.Ev3_RegistrantContent input[type="text"]:focus,
+.BBFormSelectList:focus,
+.Ev3_RegistrantAddressControlDropDown:focus,
+.Ev3_RegistrantContent textarea:focus,
+.EventDropdownlist:focus,
+.EventQuantity:focus {
+    border-color: #0c8346 !important
+}
+
+.Ev2_ValidationSummary {
+    margin-bottom: 1.5rem
+}
+
+.Ev3_InlineError {
+    display: block;
+    font-size: .9rem;
+    height: auto;
+    min-height: auto;
+    position: relative;
+    top: -5px;
+    width: 100%
+}
+
+.spanRequiredFields,
+.Ev3_InlineError label,
+.Ev3_InlineError span,
+.Ev3_ValidationErrorLabel,
+label.Ev3_ValidationErrorLabel,
+.Ev3_AttributesItem .Ev3_ValidationErrorLabel,
+.Ev3_AttributesItemRequired,
+.EventValidationError {
+    color: #d04a28 !important
+}
+
+.Ev3_InlineError+br {
+    display: none
+}
+
+.Ev3_EventWizard .BBFormRequiredFieldMarker {
+    color: #d04a28;
+    display: initial;
+    vertical-align: top
+}
+
+.Ev3_RegistrantContent input[type="text"].Ev3_ValidationErrorField,
+.Ev3_EventWizard select.BBFormSelectList.Ev3_ValidationErrorField {
+    border: 2px solid #d04a28 !important
+}
+
+.Ev3_ErrorSummary {
+    color: #d04a28 !important;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center !important
+}
+
+.BBSequenceMapNavigationContainer,
+.BBSequenceMapOptionalContainer {
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    text-align: center
+}
+
+.BBEventRegSequenceMapStep {
+    list-style-type: none !important
+}
+
+.BBEventRegSequenceMapStepItem span.mob-content {
+    position: relative !important;
+    top: 2px !important
+}
+
+.BBEventRegSequenceMapStepItem.BBEventRegSequenceMapStepLink .mob-content {
+    color: #000;
+    position: relative !important;
+    top: -5px !important
+}
+
+.BBEventRegSequenceMapStepItem {
+    font-weight: 600
+}
+
+.BBEventRegSequenceMapCurrentStepItem {
+    background-color: #0c8346 !important;
+    color: #fff !important
+}
+
+.BBSequenceMapPreviousStep>.BBEventRegSequenceMapStepItem {
+    background-color: #eee !important;
+    color: #0c8346 !important
+}
+
+.BBEventRegSequenceMapPreviousStep>.BBEventRegSequenceMapStepLink {
+    color: #000 !important
+}
+
+.BBEventRegSequenceMapPreviousStep>.BBEventRegSequenceMapStepLink:hover {
+    background-color: #ccc !important
+}
+
+.BBEventRegSequenceMapNavigationNextButton {
+    font-size: inherit
+}
+
+.Ev3_AttendeeHeading {
+    font-size: 1.5rem !important
+}
+
+.Ev3_RegisterLaterText {
+    color: inherit !important;
+    font-weight: inherit !important;
+    vertical-align: text-top !important
+}
+
+.Ev3_DivLaterChk,
+.Ev3_DivRegLaterChk {
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.Ev3_RegisterLaterChk {
+    display: inline-block !important
+}
+
+.Ev3_RegisterLaterText {
+    vertical-align: text-top !important
+}
+
+.Ev3_RegisterLaterChk+.Ev3_RegisterLaterLbl {
+    display: none !important
+}
+
+#divAddAttendee .AddAttendeeButton,
+.Ev3_NotConstituent>a {
+    color: #0c8346 !important
+}
+
+#divAddAttendee .AddAttendeeButton:hover {
+    background: transparent
+}
+
+.Ev3_ConfirmText {
+    display: block;
+    padding-bottom: 0 !important
+}
+
+.EventName {
+    text-decoration: underline
+}
+
+.EventDetail {
+    word-break: normal
+}
+
+.EventPopUpHeaderCell .EventTicketTypeHeading {
+    font-size: 1.15rem !important;
+    margin: 0
+}
+
+.EventAttendeeHeading {
+    text-align: right
+}
+
+.EventPopUpDetails {
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important
+}
+
+.EventPopUpDivFirstColumn label {
+    display: block;
+    font-size: .9rem;
+    line-height: 1.2
+}
+
+input[type="button"].EventAttendButton,
+.Ev3_ContentPopup input[type="button"] {
+    padding: 0
+}
+
+.EventLabelAttending {
+    display: block;
+    text-align: left
+}
+
+.EventAttendingLinks,
+.EventNameTextColor {
+    color: #0c8346 !important
+}
+
+.EventLinkButton {
+    color: #0c8346 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important
+}
+
+.EventLinkButton::before {
+    color: #0c8346 !important
+}
+
+.EventDropdownlist {
+    width: auto !important
+}
+
+.Ev3_Row_OptionHeader {
+    display: none
+}
+
+.Ev3_Column_Options {
+    padding: 0 !important
+}
+
+.Ev3_Row_OptionItem.row:not(:first-child) {
+    border-bottom: none !important
+}
+
+.Ev3_Row_OptionItem.row:nth-child(2n+1) {
+    background-color: transparent !important
+}
+
+.Ev3_EventName {
+    color: #0c8346 !important;
+    display: inline-block !important
+}
+
+.Ev3_Column_Event {
+    padding: 0 !important
+}
+
+.Ev3_EventRemoveLnk {
+    display: inline-block !important;
+    margin: 0 0 10px !important;
+    font-size: inherit !important;
+    color: #0c8346 !important
+}
+
+.Ev3_StepNameHeader {
+    display: none !important
+}
+
+.Ev3_Row_OptionHeader>th {
+    text-align: left
+}
+
+.EventSelectedEventDetails>div:nth-child(2n+1) {
+    background-color: transparent !important
+}
+
+.Ev3_EventName:hover {
+    color: #0c8346 !important
+}
+
+.Ev3_DivRegLaterChk input[type="checkbox"] {
+    display: inline-block !important
+}
+
+.Ev3_RegLaterLbl {
+    display: none !important
+}
+
+.Ev3_AdPopup {
+    z-index: 100 !important
+}
+
+.Ev3_AdContentPopup {
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 10px 30px !important
+}
+
+.Ev3_AdContentPopup .AdditionalDonation_Designation {
+    margin: 0 !important;
+    height: auto
+}
+
+.Ev3_DivDelete button {
+    background: #fff !important;
+    color: #0c8346 !important;
+    left: -15px;
+    position: relative;
+    top: 5px
+}
+
+.Ev3_AdDesc {
+    text-align: center !important
+}
+
+div[id$="eventUIStep5_ctlAd_dvGivingLevels"],
+.Ev3_AdGivingLevels>div {
+    display: flex
+}
+
+div[id$="divDesignation"] {
+    margin: 0 !important;
+    width: 100%
+}
+
+.Ev3_DivAdAmtbox {
+    flex: 1 1 0;
+    flex-basis: 100%;
+    float: none !important;
+    margin-bottom: 20px !important;
+    margin-right: 0 !important
+}
+
+.Ev3_DivAdAmtbox~div {
+    margin-left: 10px
+}
+
+.Ev3_AdAmtbox {
+    border-radius: 0 !important;
+    border: 1px solid #0c8346 !important;
+    color: #0c8346 !important;
+    float: none !important;
+    height: auto !important;
+    min-width: auto !important
+}
+
+html[class*="-ms-"] .Ev3_AdAmtbox {
+    height: 44px
+}
+
+.Ev3_AdAmtbox:not(.Ev3_AdOtherAmtbox):hover {
+    background-color: #0c8346 !important;
+    color: #fff !important
+}
+
+.Ev3_AdOtherAmtbox {
+    width: 100% !important
+}
+
+.Ev3_AdSelectedAmt {
+    background-color: #0c8346 !important;
+    color: #fff !important
+}
+
+.Ev3_TotalGift {
+    float: none !important;
+    text-align: center !important
+}
+
+.Ev3_TotalGift span:last-child {
+    border: none !important;
+    font-size: 3rem
+}
+
+.Ev3_AdButtons {
+    float: none !important;
+    margin-top: 0 !important;
+    text-align: center
+}
+
+.Ev3_ConfirmButton,
+.Ev3_CancelButton {
+    background-color: #0c8346 !important;
+    border-color: #0c8346 !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    height: auto !important;
+    padding: .75rem !important;
+    width: auto !important
+}
+
+.Ev3_AdOtherAmtbox {
+    width: 100%
+}
+
+.Ev3_AdOtherAmtbox::-webkit-input-placeholder {
+    color: #0c8346 !important
+}
+
+.Ev3_AdOtherAmtbox::-moz-placeholder {
+    color: #0c8346 !important
+}
+
+.Ev3_AdOtherAmtbox:-ms-input-placeholder {
+    color: #0c8346 !important
+}
+
+.Ev3_AdOtherAmtbox:-moz-placeholder {
+    color: #0c8346 !important
+}
+
+.ui-widget-content {
+    border-radius: 0 !important;
+    border: none !important
+}
+
+.ui-widget-content * {
+    font-family: inherit !important
+}
+
+.ui-widget-content a {
+    color: #0c8346
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    background-color: inherit !important;
+    background-image: none !important
+}
+
+.ui-dialog-buttonset button[type="button"].ui-button {
+    background-color: #0c8346 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block;
+    font-family: "Open Sans", arial, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    height: auto !important;
+    line-height: normal !important;
+    padding: .65rem 1rem !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    width: auto !important
+}
+
+.ui-dialog-buttonset button[type="button"].ui-button:hover {
+    background-color: #0a6938;
+    color: #fff
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(min-width:480px) {
+    .BBEventRegSequenceMapStepLink:link {
+        border: none !important;
+        line-height: inherit !important;
+        text-decoration: none !important
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .BBEventRegSequenceMap>li {
+        flex: 1 1 1 !important
+    }
+    .BBSequenceMapNavigationNextButton,
+    .BBSequenceMapNavigationFinishButton {
+        margin: 0 !important
+    }
+    .BBEventRegSequenceMapStepItem {
+        font-size: 1rem !important
+    }
+    .BBEventRegSequenceMapStep .span-round {
+        border-width: 2px !important;
+        margin: 0 auto
+    }
+    .BBEventRegSequenceMapStep .span-round::after {
+        margin-top: 13px !important;
+        width: 33% !important
+    }
+    .BBEventRegSequenceMapCurrentStep .span-round {
+        border-color: #0c8346 !important
+    }
+    .BBEventRegSequenceMapFutureStep .span-round {
+        color: #a9a9a9;
+        border-color: #a9a9a9
+    }
+    .BBEventRegSequenceMapStepLink:link {
+        border-style: solid !important;
+        line-height: inherit !important;
+        text-decoration: none !important
+    }
+    .BBEventRegSequenceMapStepLink:link:hover {
+        color: #fff !important
+    }
+    .AlignLeft,
+    .EventDivAttending {
+        float: none !important
+    }
+    .EventDetail:empty {
+        display: none
+    }
+    .EventPopUpDivFirstColumnHeader {
+        width: 45% !important
+    }
+    .EventPopUpDivSecondColumnHeader {
+        width: 25% !important
+    }
+    .EventPopUpDivThirdColumnHeader {
+        width: 30% !important
+    }
+    .EventPopUpTicketTypeColumn {
+        padding: 0 !important
+    }
+    .Ev3_ContentPopup {
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 5rem 5% 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%
+    }
+    .EventTable>.EventRow>div {
+        display: block !important;
+        float: none !important;
+        margin: 0 0 .5rem !important;
+        padding: 0 !important
+    }
+    .EventRow {
+        background-color: transparent !important;
+        border: none !important;
+        color: inherit !important;
+        display: block !important
+    }
+    .EventRow.EventGridColor>.EventColumn>span::before,
+    .EventRow.EventGridColor>.EventColumn>label::before {
+        display: inline-block;
+        font-weight: 600;
+        margin-right: .25rem
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(2)>span::before {
+        content: "Start time: "
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(3)>span::before {
+        content: "End time: "
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(4)>span::before {
+        content: "Event name: "
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(5)>label::before {
+        content: "Ticket price: "
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(8)>span::before {
+        content: "Subtotal: "
+    }
+    .EventRow.EventGridColor>.EventColumn:nth-child(5),
+    .EventRow.EventGridColor>.EventColumn:nth-child(7) {
+        display: inline-block !important
+    }
+    .EventDetail.EventMobileDescription.EventDesktopHideCell {
+        display: none !important
+    }
+    .Ev3_AttendeeHeader {
+        margin-bottom: 10px !important
+    }
+    .EventMobileEdit {
+        border: none !important;
+        display: table-cell !important;
+        height: auto !important;
+        padding: 0 10px 10px 0 !important
+    }
+    #divEventPopUpPage1 .EventHeader,
+    #divEventPopUpPage2>.EventTable,
+    .Ev3_Row_OptionHeader {
+        display: none
+    }
+    #divReviewHeader+table .EventRowItem>td {
+        border: none;
+        display: block;
+        width: 100%
+    }
+    .EventSelectedEventDetails {
+        border: none
+    }
+    .EventDivReviewDetail {
+        padding: 5px 0 5px
+    }
+    .EventDivReviewDetail>div {
+        display: block;
+        padding: 0 !important;
+        width: 100% !important
+    }
+    .EventSelectedEventDetails>div:last-child {
+        padding-bottom: 10px
+    }
+    .EventAttendeeItem .EventReviewDetailWordWrap::before {
+        content: "Attendee: "
+    }
+    .EventOptionsItem .EventReviewDetailWordWrap::before {
+        content: "Event Options: "
+    }
+    .EventPriceItem .EventReviewDetailWordWrap::before {
+        content: "Event Price: "
+    }
+    .Ev3_TotalGift span:last-child {
+        font-size: 2rem
+    }
+}
+
+.EventAttendeesComplete {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0
+}
+
+.EventAttendeesCurrent {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0
+}
+
+.EventAttendeesCurrent .taRight.vaTop {
+    display: none
+}
+
+.EventAttendeesFuture {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0
+}
+
+.EventAttendeesGrid {
+    color: #333;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding-right: 0;
+    vertical-align: top
+}
+
+.EventTable .DonationCaptureFieldControlCell,
+.EventTable .DonationCaptureFieldCaption {
+    padding-bottom: .65rem
+}
+
+.EventAttendeesOverallTotal {
+    font-size: inherit;
+    font-weight: 400;
+    padding-right: .25rem
+}
+
+.EventTable table[id$="Wizard1_dgEventItems3"]>tbody>tr:first-child>td {
+    display: none
+}
+
+.EventItemRegistrantsEventName {
+    background-color: transparent;
+    font-style: normal;
+    padding: 0
+}
+
+.EventItemsSelectionGrid {
+    border: none;
+    margin: 0
+}
+
+.EventSectionHeader {
+    background-color: transparent;
+    border: none;
+    font-weight: inherit;
+    padding: 0
+}
+
+.EventTicketsBodyCell {
+    color: #333;
+    font-size: inherit;
+    font-weight: 400;
+    padding-right: .25rem
+}
+
+.EventTicketsHeaderCell {
+    color: #333;
+    font-size: inherit;
+    font-weight: 700;
+    padding: 0 .25rem .5rem 0
+}
+
+.SummaryGridEventTitle {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    padding: .5rem 1rem
+}
+
+.EventItemRegistrantControlCellName {
+    padding-bottom: 10px;
+    text-align: right;
+    width: 33%
+}
+
+.EventItemRegistrantControlCellName .BBFieldCaption {
+    white-space: nowrap
+}
+
+.EventItemRegistrantsHeader {
+    border-bottom: none;
+    color: #454e5c;
+    padding: 0
+}
+
+.EventItemRegistrationControlCellDescription {
+    padding: 0 1rem;
+    vertical-align: middle;
+    width: 50%
+}
+
+.EventItemRegistrationControlCellNumParticipants {
+    white-space: nowrap;
+    width: 15%
+}
+
+.EventItemRegistrationControlCellPrice {
+    width: 20%
+}
+
+.EventItemRegistrationsHeader:empty {
+    display: none
+}
+
+.EventProgressCell {
+    background-color: transparent;
+    border-bottom: 3px solid #000;
+    color: #fff !important;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    height: auto;
+    line-height: normal;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.EventProgressCellFuture {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 3px solid #ccc;
+    color: #999;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    height: auto;
+    line-height: normal;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.EventProgressCellPast {
+    background: transparent;
+    border-bottom: 3px solid #ccc;
+    color: #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    height: auto;
+    line-height: normal;
+    padding: .5rem 1%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.EventItemRegistrantControlCell {
+    padding-bottom: 10px;
+    white-space: nowrap
+}
+
+.EventItemRegistrantsTable {
+    font-size: 1rem
+}
+
+.EventItemRegistrationsTable {
+    font-size: 1rem;
+    margin: 0;
+    width: 100%
+}
+
+.EventItemsTable {
+    border: none;
+    border-collapse: collapse
+}
+
+.EventTable {
+    margin: 0;
+    width: 100%
+}
+
+.EventTable .BBFieldCheckboxCaption {
+    display: block;
+    margin: 0
+}
+
+.EventTable .BBFieldCheckboxCaption input {
+    height: 23px
+}
+
+.EventTable table table {
+    padding: 0 1rem;
+    width: 100%
+}
+
+.EventTable .BBFormSubmitButton {
+    display: block;
+    margin: 1rem 0 1rem auto
+}
+
+.EventTable .BBListOddRowStyle,
+.EventTable .BBListEvenRowStyle {
+    background-color: transparent
+}
+
+.EventTable .LoginFormTextbox {
+    width: 100%
+}
+
+.EventTable .prevNextContainerTable {
+    width: auto
+}
+
+.prevNextContainerTable td:first-child {
+    padding-right: 1rem
+}
+
+.EventItemRegistrantTextbox {
+    width: 100%
+}
+
+.EventItemTitleDescription {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    font-style: normal;
+    text-transform: none !important
+}
+
+table.EventItemsTable .EventItemTitleDescription {
+    border: none;
+    color: #333;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    margin: .5rem 0;
+    padding: 0;
+    text-transform: none
+}
+
+.EventItemTitleTime {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    font-style: italic;
+    text-transform: none !important
+}
+
+table.EventItemsTable .EventItemTitleTime {
+    border: none;
+    color: #333;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-transform: none
+}
+
+table[id$="tblProgress"] {
+    background-color: #f5f5f5;
+    width: 100%
+}
+
+.EventProgressCell {
+    background: url("image/css/stepbg.png") no-repeat right center;
+    border: 0
+}
+
+.EventProgressCellFuture,
+.EventProgressCellPast {
+    border: 0;
+    color: #999;
+    margin-left: -10px;
+    padding-left: 20px
+}
+
+.EventProgressCell,
+.EventProgressCellFuture,
+.EventProgressCellPast {
+    padding: 10px;
+    text-align: center
+}
+
+.EventProgressCell.last {
+    background-color: #0c8346
+}
+
+.EventItemsSelectionGrid {
+    min-width: 0
+}
+
+.EventTable table[id*="dgEventItems"] td.EventItemRegistrationsHeader {
+    padding-bottom: 0
+}
+
+.EventTable table[id*="dgEventItems"] td.EventItemRegistrantsHeader {
+    padding-top: 15px
+}
+
+input[id*="Attributes"][type="checkbox"] {
+    height: 23px
+}
+
+input[id*="Attributes"][type="checkbox"]+label {
+    line-height: 23px;
+    padding-left: 10px
+}
+
+td.EventItemRegistrationControlCellQuantity select[id*="ddlQuantity"] {
+    width: 100px !important
+}
+
+td.EventAttendeesOverallTotal>hr {
+    display: none
+}
+
+.DonationCaptureFormTable tr[id$="trAmount"]>td {
+    padding-bottom: .5rem
+}
+
+.sDonationCaptureFieldControlCell>table {
+    margin-left: 0 !important;
+    width: auto !important
+}
+
+.sDonationCaptureFieldControlCell td {
+    display: inline-block
+}
+
+.EventTable .DonationCaptureFieldControlCell input[id$="txtCSC"] {
+    margin-top: .35rem
+}
+
+td.checklistLabelContainer {
+    padding-top: 0;
+    vertical-align: top
+}
+
+.EventTable td[style*="25px"] {
+    display: none
+}
+
+.EventTable td[style*="25px"]+td.taLeft:not(.SummaryGridEventTitle) {
+    background-color: #f5f5f5;
+    display: block;
+    padding: 1rem
+}
+
+.EventAttendeesFuture>td>table>tbody>tr:first-child>td:first-child {
+    display: none
+}
+
+.EventAttendeesOverallTotal>span[id$="lblEventTotal"] {
+    display: block;
+    padding: .5rem 1rem;
+    text-align: right
+}
+
+.EventAttendeesOverallTotal>span[id$="lblEventTotal"]::before {
+    content: "Overall Total:\20";
+    font-weight: 700
+}
+
+.EventTable input[id$="txtAdditionalDonation"] {
+    display: inline-block;
+    margin-left: .25rem
+}
+
+.stepIndex {
+    background-color: #fff;
+    border-radius: 50%;
+    color: #444;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 5px;
+    text-align: center;
+    width: 25px
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:850px) {
+    .stepText {
+        display: block
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .EventTable .DonationCaptureFieldControlCell,
+    .EventTable .DonationCaptureFieldCaption {
+        padding-bottom: 0
+    }
+    .EventItemRegistrationsTable td.BBFieldCaption,
+    .EventItemRegistrationsTable td.BBFieldControlCell {
+        display: table-cell;
+        width: auto
+    }
+    .EventItemRegistrationsTable td.EventItemRegistrationControlCellDescription {
+        width: 35%
+    }
+    .EventItemRegistrationsTable td.EventItemRegistrationControlCellNumParticipants {
+        width: 25%
+    }
+    .EventItemRegistrationsTable td.EventItemRegistrationControlCellPrice {
+        width: 25%
+    }
+    .EventTable td.empty {
+        display: none
+    }
+    .EventTable select[id$="cboYear"] {
+        margin-left: 20px
+    }
+    .EventTable .BBFormSubmitButton {
+        margin: 1em auto
+    }
+    .EventTable input[type="text"] {
+        width: 100% !important
+    }
+    .DonationCaptureFieldControlCellAmount .BBFieldCaption {
+        display: inline;
+        padding-right: .5rem
+    }
+    .EventTable table[id*="dgEventItems"] .EventItemRegistrantControlCellName,
+    .EventTable table.eventAttributeContainer .BBFieldCaption {
+        display: block;
+        padding: 5px 0 0;
+        text-align: left
+    }
+    .EventTable .prevNextContainerTable {
+        margin: 0 auto
+    }
+    .stepText {
+        display: inline
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:585px) {
+    .EventTable th[class^="EventProgressCell"] {
+        font-size: .8rem
+    }
+    .EventTable input[id$="txtAdditionalDonation"] {
+        display: block;
+        margin-left: 0
+    }
+    .stepIndex {
+        height: 22px;
+        line-height: 22px;
+        width: 22px
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .EventTable th[class^="EventProgressCell"] {
+        font-size: 1rem
+    }
+    .EventItemRegistrationsTable td.BBFieldCaption,
+    .EventItemRegistrationsTable td.BBFieldControlCell {
+        display: block;
+        width: 50%
+    }
+    .EventItemRegistrationsTable td.EventItemRegistrationControlCellDescription {
+        padding: 0
+    }
+    .EventItemRegistrationsTable td.EventItemRegistrationControlCellQuantity {
+        display: block;
+        float: right;
+        width: auto
+    }
+    .EventItemRegistrationsTable {
+        margin-bottom: 10px
+    }
+    .EventItemRegistrationControlCellPrice {
+        padding-bottom: 10px
+    }
+    tr[id$="trAdditionalDonation"] td {
+        white-space: normal
+    }
+    input[id$="txtAdditionalDonation"] {
+        display: block
+    }
+    .EventAttendeesOverallTotal>span[id$="lblEventTotal"] {
+        text-align: left
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr:first-of-type,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr:first-of-type {
+        display: none
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td {
+        display: block;
+        text-align: left;
+        width: 100% !important
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"]:not(:last-child),
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"]:not(:last-child) {
+        display: block;
+        margin-bottom: 1rem
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td::before {
+        font-weight: 700
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td:nth-child(1)::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td:nth-child(1)::before {
+        content: "Qty:\20"
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td:nth-child(2)::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td:nth-child(2)::before {
+        content: "Selection:\20"
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td:nth-child(3)::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td:nth-child(3)::before {
+        content: "Attendees:\20"
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td:nth-child(4)::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td:nth-child(4)::before {
+        content: "Price:\20"
+    }
+    table[id*="dgAttendeesSummary_dgEventTickets"] tr[align="left"] td:nth-child(5)::before,
+    table[id*="dgAttendeesSummary2_dgEventTickets2"] tr[align="left"] td:nth-child(5)::before {
+        content: "Total:\20"
+    }
+    .stepText {
+        display: none
+    }
+    .stepIndex {
+        width: 25px;
+        height: 25px
+    }
+}
+
+.BBFormDisplaySequenceMapContent .BBFormDisplayTextbox,
+.BBFormDisplaySequenceMapContent .BBFormDisplayEmail,
+.BBFormDisplaySequenceMapContent .BBFormDisplayTextArea {
+    width: 100%
+}
+
+.BBFormDisplaySectionLabel {
+    color: #444;
+    font-size: 1.44rem;
+    font-weight: inherit;
+    margin: 2rem 0 0
+}
+
+.BBFormDisplaySequenceMapContent label {
+    display: inline-block;
+    font-size: inherit;
+    margin: 1rem 0 .25rem;
+    width: auto
+}
+
+.BBFormDisplayRadioButtonList input[type="radio"] {
+    display: inline-block
+}
+
+.BBFormRequiredFieldMissingText.BBFormDisplayRequiredFieldMissingText {
+    clear: both;
+    float: right;
+    margin: .5rem 0 0 0
+}
+
+.BBFormDisplayHelp {
+    position: absolute;
+    z-index: 100
+}
+
+.BBFormDisplayHelpImage {
+    background-image: url("image/css/help.png");
+    height: 25px;
+    margin: 7px 5px 0 5px
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    div[id$="formWizard"] .BBFormDisplaySequenceMapContent label {
+        text-align: left
+    }
+    div[id$="formWizard"] .BBFormDisplayHelpContainer {
+        display: none
+    }
+}
+
+.GivingSearchFormTable {
+    width: 100%
+}
+
+.GivingSearchSearchForm {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.GivingSearchResultsHeader {
+    color: #333;
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0;
+    padding: 0 0 .25rem;
+    text-align: center;
+    text-transform: none
+}
+
+.GivingSearchResultCount {
+    color: #666;
+    float: left;
+    margin: 0 0 1rem;
+    text-transform: none;
+    width: 100%
+}
+
+.GivingSearchResultOddRow {
+    background-color: #f5f5f5;
+    clear: both;
+    padding: .5rem 1rem
+}
+
+.GivingSearchResultEvenRow {
+    background-color: #f9f9f9;
+    border: none;
+    clear: both;
+    padding: .5rem 1rem
+}
+
+.GivingSearchFieldCaption {
+    padding: .5rem;
+    text-align: right;
+    width: 40%
+}
+
+.GivingSearchFieldControlCell {
+    padding: .5rem 15% .5rem 0;
+    width: 60%
+}
+
+.GivingSearchFieldCaption:first-of-type,
+.GivingSearchFieldCaption:first-of-type+td {
+    padding-top: 1rem
+}
+
+.GivingSearchFormButtonCell {
+    padding: .5rem;
+    text-align: center
+}
+
+.GivingSearchFormTextBox {
+    width: 100%
+}
+
+.GivingSearchFormTable br {
+    display: none
+}
+
+.GivingSearchPagination {
+    text-align: center
+}
+
+.GivingSearchPagingButtons {
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    text-align: center
+}
+
+.GivingSearchResultLink {
+    padding: .5rem 0 .5rem 0;
+    text-decoration: none
+}
+
+.GivingSearchResultDetails {
+    padding-bottom: .5rem
+}
+
+.GivingSearchResultLink>a {
+    font-weight: 600;
+    text-decoration: none
+}
+
+.GivingSearchResultLink>a:hover {
+    text-decoration: underline
+}
+
+.GivingSearchFieldControlCell input,
+.GivingSearchFieldControlCell select {
+    width: 100%
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .GivingSearchFieldCaption {
+        padding-bottom: 0;
+        padding-left: 0
+    }
+    .GivingSearchFieldControlCell {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: .5rem
+    }
+    .GivingSearchPagingButton {
+        margin: .5rem .5rem 0 0;
+        padding: .3rem .5rem
+    }
+    .GivingSearchFieldCaption:first-of-type+td {
+        padding-top: .5rem
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .GivingSearchPagingButtons {
+        margin-top: 1rem
+    }
+    .GivingSearchPagingButtons input {
+        display: block;
+        margin-left: 0;
+        width: 100%
+    }
+}
+
+.BBDesignationSearchContainer,
+.BBDesignationSearchButtonContainer {
+    width: 100% !important
+}
+
+.BBDesignationSearchCriteriaContainer {
+    margin-bottom: .5rem
+}
+
+.BBDesignationSearchCriteriaCaption {
+    display: block;
+    font-size: 1rem;
+    font-weight: initial
+}
+
+.BBDesignationSearchResultContainer {
+    font-size: 0;
+    margin-top: 1rem
+}
+
+.BBDesignationSearchResult {
+    background-color: #f5f5f5;
+    border-radius: 0;
+    display: inline-block;
+    font-size: 100%;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    vertical-align: top;
+    width: calc(50% - .5rem)
+}
+
+.BBDesignationSearchResult:nth-child(2n) {
+    margin-left: 1rem
+}
+
+.BBDesignationSearchResult>hr {
+    display: none
+}
+
+.BBDesignationSearchResult>p:not(:nth-child(2)) {
+    margin-bottom: 0
+}
+
+.BBDesignationSearchResult>p>strong {
+    font-weight: 400
+}
+
+.BBDesignationSearchResult>p>strong>span {
+    color: #0c8346;
+    font-weight: 500
+}
+
+.BBDesignationSearchResult>p>a::after {
+    content: "\20»";
+    font-size: 1rem;
+    position: relative
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .BBDesignationSearchResult {
+        display: block;
+        width: 100%
+    }
+    .BBDesignationSearchResult:nth-child(2n) {
+        margin-left: 0
+    }
+}
+
+.JobDetailHeadingCell {
+    background-color: transparent;
+    font-weight: 700;
+    padding: .5rem 0;
+    width: 100%
+}
+
+.JobPostDetailFieldCaption {
+    background-color: transparent;
+    color: #000;
+    font-weight: 700;
+    padding: .5rem .5rem .5rem 0;
+    width: 33%
+}
+
+.JobPostDetailFieldValue {
+    background-color: transparent;
+    padding: 0;
+    width: auto
+}
+
+.JobPostDetailFieldValue span {
+    display: block;
+    margin: .5rem 0
+}
+
+.JobResultsFilterFieldCaption {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.JobResultsHeadingCell {
+    background-color: transparent;
+    font-weight: 700;
+    padding: .5rem 0;
+    width: 100%
+}
+
+.JobResultsLegend,
+.JobResultsList {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.JobResultsListHeader {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.JobPostDetailTable,
+.PostJobHeadingCell {
+    background-color: transparent;
+    font-weight: 700;
+    padding: .5rem 0;
+    width: 100%
+}
+
+.JobBoardLegend,
+.JobDetailLegend,
+.PostJobLegend,
+.PreviewJobLegend,
+.SearchJobLegend,
+.JobBoardValidationSummary {
+    font-size: 1rem
+}
+
+.PreviewJobHeadingCell,
+.SearchJobHeadingCell {
+    background-color: transparent;
+    font-weight: 700;
+    padding: .5rem 0;
+    width: 100%
+}
+
+.JobSearchFieldCaption {
+    background-color: transparent;
+    width: 33%
+}
+
+.JobPostFieldControlCell {
+    width: auto
+}
+
+.JobSearchFieldControlCell {
+    width: 60%
+}
+
+.JobPostSelectList,
+.JobSearchSelectList {
+    width: auto
+}
+
+.JobResultsHeading,
+.JobBoardFormTable,
+.JobDetailFormTable,
+.PreviewJobFormTable,
+.SearchJobFormTable {
+    font-family: inherit
+}
+
+.PostJobFormTable {
+    font-family: inherit;
+    width: 100%
+}
+
+.JobPostTextArea,
+.JobPostTextboxWide,
+.JobSearchTextboxWide {
+    width: 95%
+}
+
+.JobResultsListHeader td,
+.JobResultsEvenRowStyle td,
+.JobResultsOddRowStyle td {
+    display: inline-block;
+    padding: 0 .5rem 0 0;
+    white-space: normal !important;
+    width: 17%
+}
+
+.JobResultsListHeader td:nth-child(4),
+.JobResultsEvenRowStyle td:nth-child(4),
+.JobResultsOddRowStyle td:nth-child(4),
+.JobResultsListHeader td:nth-child(5),
+.JobResultsEvenRowStyle td:nth-child(5),
+.JobResultsOddRowStyle td:nth-child(5) {
+    text-align: center
+}
+
+.JobResultsListHeader td:nth-child(6) {
+    display: none
+}
+
+.JobResultsLink:link {
+    display: inline-block;
+    line-height: 13px;
+    padding-left: 5px
+}
+
+.JobResultsEvenRowStyle td,
+.JobResultsOddRowStyle td,
+.JobResultsEvenRowStyle td span,
+.JobResultsOddRowStyle td span {
+    font-size: 14px
+}
+
+.JobResultsListHeader td:last-of-type,
+.JobResultsEvenRowStyle td:last-of-type,
+.JobResultsOddRowStyle td:last-of-type {
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 15%
+}
+
+span[id*="lblSalaryRange"] {
+    padding-right: 15px
+}
+
+#MembershipDisplay .MembershipDisplay_LevelContainer {
+    background-color: #f5f5f5;
+    border-radius: 0;
+    border: none;
+    display: block;
+    float: left;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    min-height: auto;
+    min-width: auto;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: calc(100%/3 - 1.35rem)
+}
+
+#MembershipDisplay .MembershipDisplay_LevelContainer:nth-child(3n) {
+    margin-right: 0
+}
+
+#MembershipDisplay .MembershipDisplay_LevelName {
+    color: #0c8346;
+    display: block;
+    font-family: inherit;
+    font-size: 1.65rem;
+    font-style: normal;
+    font-weight: 700;
+    padding: 1rem;
+    text-decoration: none
+}
+
+#MembershipDisplay .MembershipDisplay_InnerTermContainer {
+    display: block
+}
+
+#MembershipDisplay .MembershipDisplay_TermGroup {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 100%
+}
+
+#MembershipDisplay .MembershipDisplay_TermControl {
+    background: #0c8346;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: inherit;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    width: 100%
+}
+
+#MembershipDisplay .MembershipDisplay_TermControl:hover {
+    background: #690521;
+    border: none;
+    box-shadow: none
+}
+
+#MembershipDisplay .MembershipDisplay_TermControlSelected {
+    background: #999;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: inherit;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    width: 100%
+}
+
+#MembershipDisplay .MembershipDisplay_TermLevelName {
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+#MembershipDisplay .MembershipDisplay_TermName {
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none
+}
+
+#MembershipDisplay .MembershipDisplay_TermPrice {
+    color: #fff;
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+    width: auto
+}
+
+#MembershipDisplay .MembershipDisplay_LevelDescription {
+    display: block;
+    float: none;
+    max-width: none;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    text-align: center
+}
+
+#MembershipDisplay .MembershipDisplay_TermRenewLabel {
+    color: inherit;
+    display: initial;
+    min-height: auto
+}
+
+#MembershipDisplay .MembershipDisplay_TermRenewLabel:empty {
+    display: none
+}
+
+#MembershipDisplay .MembershipDisplay_Separator {
+    border-bottom: 1px solid #f5f5f5;
+    display: block
+}
+
+#MembershipDisplay .MembershipDisplay_AddToCartButtonContainer {
+    height: auto;
+    margin: 2rem 0;
+    overflow: hidden
+}
+
+#MembershipDisplay .MembershipDisplay_Total {
+    color: #333;
+    display: block;
+    float: right;
+    font-family: inherit;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 1rem;
+    overflow: hidden;
+    padding-top: 7px;
+    text-decoration: none
+}
+
+#MembershipDisplay .MembershipDisplay_CartButton {
+    margin-right: 2rem;
+    position: relative;
+    top: -8px
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:1100px) {
+    #MembershipDisplay .MembershipDisplay_LevelContainer {
+        max-width: 100%;
+        width: calc(50% - 1rem)
+    }
+    #MembershipDisplay .MembershipDisplay_LevelContainer:nth-child(3n) {
+        margin-right: 2rem
+    }
+    #MembershipDisplay .MembershipDisplay_LevelContainer:nth-child(even) {
+        margin-right: 0 !important
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    #MembershipDisplay .MembershipDisplay_LevelContainer {
+        width: 100%
+    }
+    #MembershipDisplay .MembershipDisplay_Total {
+        font-size: 2rem;
+        padding-top: 13px
+    }
+}
+
+.mini-donation .bbminiform-segmented-control {
+    margin: 0;
+    width: 100%
+}
+
+.mini-donation .bbminiform-amtboxmain {
+    display: inline-block;
+    float: none;
+    font-size: 1rem;
+    height: auto !important;
+    margin-right: .5rem;
+    padding: 0;
+    text-align: center
+}
+
+.mini-donation .bbminiform-amtbox {
+    border: 1px solid #0c8346;
+    border-radius: 0;
+    color: #0c8346;
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 45px;
+    line-height: normal;
+    margin: 0 .5rem .5rem 0;
+    max-width: 100%;
+    min-width: auto;
+    padding: .65rem 1rem
+}
+
+.mini-donation .bbminiform-amtbox:hover,
+.mini-donation .bbminiform-button:hover,
+.mini-donation .bbminiform-selectedamount {
+    background-color: #0c8346;
+    color: #fff;
+    font-weight: 600
+}
+
+.mini-donation .bbminiform-otheramount {
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #0c8346;
+    color: #444;
+    cursor: pointer;
+    font-family: "Open Sans", arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 45px;
+    line-height: normal;
+    margin: 0 .5rem .5rem 0;
+    padding: .65rem 1rem
+}
+
+.mini-donation .bbminiform-amtboxcaption {
+    display: none
+}
+
+.mini-donation .bbminiform-donatenowplaceholder {
+    height: auto !important
+}
+
+.mini-donation .bbminiform-button {
+    background-color: #0c8346;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    height: auto;
+    line-height: normal;
+    margin: 1rem .5rem .5rem 0;
+    padding: .65rem 1rem;
+    width: auto
+}
+
+.mini-donation .bbminiform-button:hover {
+    background-color: #0a6938;
+    color: #fff;
+    font-weight: 600
+}
+
+.mini-donation .bbminiform-errorsummary {
+    background-color: #ffd9cf;
+    border-width: 0;
+    color: #d04a28;
+    font-family: inherit;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding: 15px !important
+}
+
+.mini-donation .bbminiform-errorsummary ul {
+    color: #333;
+    list-style-type: disc;
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.mini-donation .bbminiform-errorsummary ul li {
+    margin-bottom: 0
+}
+
+.paymentPart,
+.paymentPart table {
+    text-align: left;
+    width: 100%
+}
+
+.PaymentPartGrid_Header {
+    background-color: #0c8346;
+    color: #fff
+}
+
+.PaymentPartGrid_Header>th {
+    font-weight: 600;
+    padding: .25rem .5rem
+}
+
+.PaymentPartGrid tr[class^="PaymentPartGrid"][class$="Rows"]>td[style="width:18px;"] {
+    padding-left: .5rem;
+    position: relative;
+    top: 5px
+}
+
+.PaymentPartGrid tr[class^="PaymentPartGrid"][class$="Rows"]>td,
+.PaymentPartGrid>tbody>tr:last-child>td {
+    padding: 0 .5rem
+}
+
+.PaymentPartGrid_OddRows {
+    background-color: #f5f5f5
+}
+
+a.PaymentPartClearLink {
+    color: #fff;
+    text-decoration: none
+}
+
+.PaymentPartSubmitButton {
+    width: auto !important
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .paymentPart>tbody>tr:last-child>td {
+        display: block;
+        text-align: center;
+        width: 100%
+    }
+    a.PaymentPartClearLink {
+        margin-bottom: 0
+    }
+}
+
+.PaymentPart_ValidationSummary {
+    background-color: #f5f5f5;
+    border-width: 0;
+    color: #d04a28;
+    font-family: inherit;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding: 15px
+}
+
+.PaymentPart_ValidationSummary ul {
+    color: #333;
+    list-style-type: disc
+}
+
+.PaymentPart_Cart {
+    background-color: #f5f5f5;
+    padding: 1rem
+}
+
+.PaymentPart_CartOptions {
+    font-size: 0;
+    margin-bottom: 1rem;
+    text-align: right
+}
+
+.PaymentPart_Controls {
+    display: block !important;
+    float: none !important;
+    margin-right: 0 !important;
+    text-align: center !important
+}
+
+.PaymentPart_FormContainer a[id$="lbRemoveAll"],
+.PaymentPart_FormContainer a.PaymentPart_CartItemRemoveText,
+.PaymentPart_FormContainer a.PaymentPart_UpdateCartLink,
+.PaymentPart_FormContainer a.PaymentPart_CartItemRemoveText {
+    color: #fff;
+    background-color: #0c8346;
+    padding: 12px;
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+    text-decoration: none
+}
+
+.PaymentPart_FormContainer a[id$="lbRemoveAll"]:hover,
+.PaymentPart_FormContainer a.PaymentPart_CartItemRemoveText:hover,
+.PaymentPart_FormContainer a.PaymentPart_UpdateCartLink:hover,
+.PaymentPart_FormContainer a.PaymentPart_CartItemRemoveText:hover {
+    background-color: #0a6938;
+    color: #fff
+}
+
+.PaymentPart_FormContainer a.PaymentPart_UpdateCartLink {
+    margin-left: 1rem
+}
+
+.PaymentPart_CartList {
+    background-color: #f5f5f5;
+    border: none !important;
+    width: 100%
+}
+
+.PaymentPart_CartItemType {
+    display: none
+}
+
+.PaymentPart_CartHeaderCell {
+    font-weight: 700;
+    padding: 0 .5rem 0 0 !important
+}
+
+.PaymentPart_CartThumbnailCell {
+    padding: 0
+}
+
+.PaymentPart_CartCell:not(:first-child) {
+    padding: .5rem .5rem 0 0 !important;
+    vertical-align: middle !important
+}
+
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell {
+    padding-right: 0 !important;
+    text-align: right
+}
+
+.PaymentPart_CartSummaryCaptionContainer,
+.PaymentPart_CartSummaryFieldContainer {
+    display: inline-block;
+    margin-top: 1rem
+}
+
+.PaymentPart_CartSummary {
+    margin-bottom: 10px;
+    text-align: right
+}
+
+.PaymentPart_CartItemUnitPrice {
+    width: 90% !important
+}
+
+.PaymentPart_CartItemRemoveImage {
+    display: none
+}
+
+div[id$="upPayment"] .PaymentPart_FormContainer {
+    overflow: auto
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .DCFieldCaption,
+    .BBDivFieldContainer .DCTextboxWide,
+    .BBDivFieldContainer .BBFormTextArea {
+        width: 100%
+    }
+    .PaymentPart_FormContainer div[id$="BottomLinkBar"] {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        clear: both;
+        padding-top: 30px
+    }
+    .PaymentPart_FormContainer div[id$="BottomLinkBar"] .PaymentPartSubmitButton {
+        margin: 0 auto
+    }
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .PaymentPart_Cart {
+        clear: both
+    }
+    .PaymentPart_CartSummary,
+    .PaymentPart_CartOptions {
+        text-align: left
+    }
+    .PaymentPart_CartRows th {
+        display: none
+    }
+    .PaymentPart_CartBody tr {
+        display: block
+    }
+    .PaymentPart_CartBody tr:not(:first-child) {
+        margin-bottom: 1rem
+    }
+    .PaymentPart_CartCell {
+        display: block
+    }
+    td[id*="tdCartQuantityCell"]::before {
+        content: "Quantity:\20"
+    }
+    td[id*="tdUnitPrice"]::before {
+        content: "Unit Price:\20"
+    }
+    td[id*="tdCartItemTotalCell"]::before {
+        content: "Total Price:\20"
+    }
+    .PaymentPart_CartRows .PaymentPart_CartRemoveCell {
+        float: right;
+        margin-bottom: 0;
+        margin-top: -89px;
+        width: auto
+    }
+    .PaymentPart_CartItemUnitPrice {
+        width: 50% !important
+    }
+    a.PaymentPart_CartItemLink {
+        font-size: 1rem;
+        font-weight: 700
+    }
+    .PaymentPart_CartThumbnailCell {
+        display: none
+    }
+}
+
+.PaymentPartSummary_Container {
+    border: none;
+    margin-bottom: 0;
+    padding: .35rem 0;
+    text-align: right;
+    width: 100%
+}
+
+.PaymentPartSummary_Container span[id$="lblHTMLContent"] p {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: right
+}
+
+.PaymentPartSummary_Container span[id$="lblHTMLContent"] p a {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-decoration: none
+}
+
+.PaymentPartSummary_Container span[id$="lblHTMLContent"] p span:first-of-type {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: .8rem;
+    height: 20px;
+    position: relative;
+    right: 8px;
+    text-align: center;
+    width: 20px
+}
+
+.PaymentPartSummary_Container span[id$="lblHTMLContent"] p span:last-of-type {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 0;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem;
+    position: relative;
+    top: 10px
+}
+
+.BBNotesNoteTopicCell {
+    font-weight: 700;
+    padding: 0;
+    width: 25%
+}
+
+.BBNotesNoteNameCell {
+    font-weight: 700;
+    padding: 0;
+    text-align: center;
+    width: 50%
+}
+
+.BBNotesNoteDateCell {
+    font-weight: 700;
+    padding: 0
+}
+
+.BBNotesNoteLinkCell {
+    padding: 0
+}
+
+.BBNotesNoteCell {
+    padding: .5rem 0 0 2rem;
+    text-align: left
+}
+
+.BBNotesInstructions {
+    font-style: normal
+}
+
+.BBNotesSearchFormTable {
+    margin: 1rem 0 0
+}
+
+.BBNotesTabSelected {
+    background: transparent none;
+    font-weight: 700;
+    padding: .5rem 1rem .5rem 0
+}
+
+.BBNotesTabUnselected {
+    padding: .5rem 1rem .5rem 0
+}
+
+.BBNotesFieldCaption {
+    font-weight: 700
+}
+
+.BBNotesNoteTable {
+    margin: 15px 0
+}
+
+.BBNotesLayoutTable {
+    margin: 1rem 0
+}
+
+.BBNotesSearchFormLayoutTable {
+    margin: 1rem 0 0;
+    width: 100%
+}
+
+.BBNotesTextBox {
+    border: 1px solid #f5f5f5;
+    font-size: 1rem;
+    margin: .25rem 0;
+    width: auto
+}
+
+.BBNotesListOddRow {
+    background-color: transparent
+}
+
+.BBPollAnswersRadioList,
+.BBPollAnswersTable {
+    border-collapse: collapse
+}
+
+.BBPollAnswersRadioList td {
+    padding: 0 0 .5rem
+}
+
+.BBPollAnswersTableCell,
+.BBPollResultsTableCell {
+    padding: 0
+}
+
+.BBPollResultsTable {
+    border-collapse: collapse
+}
+
+.BBPollsQuestionCell {
+    font-size: 1rem;
+    padding: .5rem 0 1rem
+}
+
+.BBPollsQuestionRow {
+    font-weight: 400
+}
+
+.BBPollsSubmitButtonCell {
+    padding: 1rem 0 0
+}
+
+.BBPollsSubmitButton {
+    font-weight: 400
+}
+
+.BBPollsFormTable {
+    margin: 0 0 1rem
+}
+
+.BBPollsFormTitle {
+    padding: 0;
+    text-align: left
+}
+
+.BBPollAnswersRadioList input[id*="lstAnswers"] {
+    margin-right: 10px
+}
+
+table.ProfileDisplayFormTable tr th,
+table.ProfileDisplayFormTable tr td {
+    padding-bottom: .5rem
+}
+
+.ProfileFormTable {
+    width: 100%
+}
+
+.ProfileFieldControlCell div {
+    border: 2px solid #f5f5f5;
+    height: 250px;
+    margin-bottom: 1rem;
+    overflow: auto;
+    width: 100%
+}
+
+.ProfileFormButtonCell {
+    text-align: center
+}
+
+.ProfileFormCheckbox input {
+    margin-right: 5px;
+    margin-left: 10px
+}
+
+.ProfileFormCheckBoxList input {
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.ProfileFormTable input[id$="private"]+label::before {
+    display: none
+}
+
+.ProfileFormTitle[style] {
+    display: none
+}
+
+#spnFuzzyDateControl {
+    font-size: 0
+}
+
+#spnFuzzyDateControl select {
+    display: inline-block;
+    margin-left: 1rem;
+    width: calc(100%/3 - .66666rem)
+}
+
+#spnFuzzyDateControl select:first-child {
+    margin-left: 0
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .ProfileFormTable td.ProfileFieldCaption,
+    .ProfileFormTable td.ProfileFieldControlCell,
+    .ProfileFormTable td.ProfileFieldCaptionDisabled,
+    .ProfileFormTable td.ProfileFormPrivateControlCell {
+        display: block;
+        float: left
+    }
+    .ProfileFormTable td.ProfileFormPrivateControlCell {
+        margin-left: 1rem
+    }
+}
+
+#search .QuickSearchFormTable {
+    float: right;
+    position: relative;
+    width: 100%
+}
+
+#search .QuickSearchFormTable td {
+    padding: 0;
+    vertical-align: middle
+}
+
+#search .QuickSearchFormTable td:last-child {
+    position: absolute;
+    right: 0
+}
+
+#search .QuickSearchButton {
+    background-color: #0c8346;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 400;
+    margin: 0;
+    padding: .8rem 1rem;
+    transition: all 300ms ease
+}
+
+#search .QuickSearchButton:hover {
+    background-color: #0a6938;
+    color: #fff
+}
+
+#search .QuickSearchFieldCaption {
+    display: none
+}
+
+#search .QuickSearchTextbox {
+    background-color: transparent !important;
+    border-radius: 0;
+    border: 1px solid #0c8346;
+    box-shadow: none;
+    color: #fff;
+    font-size: .9rem;
+    margin: 0;
+    padding: .75rem;
+    width: calc(100% - 44px)
+}
+
+#search .QuickSearchTextbox:focus {
+    background-color: transparent !important
+}
+
+#search .QuickSearchButton:active {
+    top: 0
+}
+
+
+/* @media screen and */
+
+
+/*!YUI Compressor */
+
+
+/* (-webkit-min-device-pixel-ratio:0) {
+    #search .QuickSearchTextbox {
+        padding:
+    }
+} */
+
+
+/* html[class*="ms"] #search .QuickSearchTextbox {
+    padding:
+} */
+
+.myHomeBox {
+    width: 100%
+}
+
+.myHomeBox .right {
+    float: none !important
+}
+
+.rightCol .myHomeBox {
+    margin-left: 15px
+}
+
+.myHomeBox>tbody>tr>th:first-of-type,
+.myHomeBox>tbody>tr>.left {
+    display: none
+}
+
+.myHomeBox table.profileDisplay th,
+.myHomeBox table.profileDisplay td {
+    line-height: 22px
+}
+
+.myHomeBox table.profileDisplay th,
+.myHomeBox table.profileDisplay td span,
+.myHomeBox table.profileDisplay td span a,
+.myHomeBox ul.listMenu a {
+    font-size: 14px
+}
+
+.myHomeBox ul.listMenu {
+    margin-top: 0
+}
+
+.SearchTable {
+    white-space: normal !important
+}
+
+tr.SearchHeaderRow td {
+    padding: 12px 0
+}
+
+.BBSearchDescriptionStyle {
+    padding: 0 0 1rem;
+    white-space: normal !important
+}
+
+.SearchFormDescription {
+    padding: .5rem 0
+}
+
+.SearchButton {
+    margin: 0
+}
+
+.SearchFormTable td.wsNowrap {
+    white-space: normal
+}
+
+.SearchFieldCaption {
+    display: block
+}
+
+.SearchEvenRowStyle td a,
+.SearchOddRowStyle td a {
+    border: none;
+    display: inline-block;
+    padding: .25rem 0
+}
+
+.SearchFormTable input[id$="btnSearch"] {
+    margin: 1rem 0 1rem 1rem
+}
+
+.BBListOddRowStyle.SearchOddRowStyle a,
+.BBListEvenRowStyle.SearchEvenRowStyle a {
+    text-decoration: underline
+}
+
+.SearchFormTable .BBListOddRowStyle {
+    background-color: transparent
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .SearchFormTable td {
+        display: block;
+        width: 100%
+    }
+    .SearchFieldCaption {
+        text-align: left
+    }
+    .SearchFormTable input[id$="btnSearch"] {
+        margin: 1rem 0
+    }
+}
+
+.SurveyFormTable[id*="tblMain"] {
+    width: 100% !important
+}
+
+.SurveyFormTable,
+.SurveyQuestionTable {
+    width: 100%
+}
+
+.SurveyQuestion {
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .5rem
+}
+
+.SurveyQuestionSequence {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+    top: -4px
+}
+
+.SurveyAnswer {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0
+}
+
+.SurveyAnswerColumnHeading {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0 .5rem
+}
+
+.SurveyQuestionSeparator {
+    background-color: transparent;
+    font-size: 0
+}
+
+.SurveyResponseColumnHeading {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.SurveyResponseCell {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.SurveyAnswerTableHeaderRow {
+    background-color: transparent;
+    font-weight: 700
+}
+
+.SurveyTestModeMessage {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.SurveyAnswerRequiredMessage {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400
+}
+
+.SurveyFormTable {
+    width: 100%
+}
+
+.SurveyQuestionTable td {
+    padding: 0 0 .25rem
+}
+
+.SurveyAnswerTable {
+    width: 100%
+}
+
+.SurveyOpenEndedEssayTextArea {
+    width: 100%
+}
+
+.SurveyOpenEndedAnswerTextbox {
+    width: 250px;
+    float: left;
+    clear: both
+}
+
+.SurveyCompleteMessage {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.SurveyErrorMessage {
+    display: block;
+    font-size: 1rem;
+    margin: 2rem 0 .5rem
+}
+
+.SurveyErrorMessage:empty {
+    display: none
+}
+
+.SurveyQuestionTable input[id*="mySurveyQuestion"][type="radio"],
+.SurveyQuestionTable input[id*="mySurveyQuestion"][type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px
+}
+
+.SurveyAnswerTable .SurveyAnswer {
+    max-width: 25%
+}
+
+.SurveyAnswerTable .SurveyOpenEndedAnswerTextbox {
+    width: 100%
+}
+
+table[id*="mySurveyQuestion"]+span:empty {
+    display: none
+}
+
+table[id*="mySurveyQuestion"] td {
+    padding: 0 1rem 0 0
+}
+
+select[name*="mySurveyQuestion"][onchange*="Other"] {
+    display: inline-block;
+    float: none
+}
+
+select[name*="mySurveyQuestion"][onchange*="Other"]+span {
+    display: inline-block;
+    float: none;
+    font-style: italic;
+    padding: 0 1rem 0 0
+}
+
+select[name*="mySurveyQuestion"][onchange*="Other"]+span+input {
+    display: inline-block;
+    float: none
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:479px) {
+    .BBFormSubmitButton.SurveyButton {
+        display: block;
+        margin-left: 0
+    }
+    .BBFormSubmitButton.SurveyButton:first-child {
+        margin-bottom: 0
+    }
+}
+
+.TransactionManagerTabsContainer {
+    background-color: transparent;
+    border: none;
+    margin-left: 15px
+}
+
+.TransactionManagerTab {
+    background-clip: padding-box;
+    background-color: #f5f5f5;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    font-weight: bold;
+    left: -3px;
+    margin-left: 0;
+    padding: 5px 17px 4px 17px;
+    position: relative;
+    top: 1px;
+    z-index: 0
+}
+
+.TransactionManagerTab:first-of-type {
+    left: 0
+}
+
+.TransactionManagerTabLink {
+    border-bottom: none;
+    color: #afafaf;
+    font-size: 1.1rem;
+    text-decoration: none !important
+}
+
+.TransactionManagerCurrentTab {
+    background-color: #fff;
+    border-bottom-color: #fff;
+    margin-top: 0;
+    z-index: 2
+}
+
+.TransactionManagerCurrentTabLink {
+    color: #0c8346
+}
+
+.TransactionManagerTabContent {
+    background-color: #fff;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    position: relative;
+    z-index: 1
+}
+
+.TransactionManagerTabContentActiveGifts,
+.TransactionManagerTabContentFullHistoryGifts {
+    padding: 10px
+}
+
+.TransactionManagerHelpTextDiv {
+    padding: 0
+}
+
+.TransactionManagerFilterContainer {
+    border: none;
+    margin-bottom: 0;
+    padding: 10px;
+    width: 100%
+}
+
+.TransactionManagerFieldContainer select {
+    margin: 0
+}
+
+.TransactionManagerFilterItem {
+    margin: 0 0 1rem 0
+}
+
+.TransactionManagerSpecificDateDiv {
+    display: block;
+    float: none;
+    text-align: left;
+    width: auto
+}
+
+.TransactionManagerSpecificDateDivSelected {
+    margin-left: 0;
+    margin-top: 0;
+    margin-top: 20px
+}
+
+.TransactionManagerSpecificDateDivSelected .TransactionManagerFieldContainer {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top
+}
+
+.TransactionManagerSpecificDateDivSelected .TransactionManagerFieldContainer:nth-child(2) {
+    margin: 7px 1rem 0
+}
+
+.TransactionManagerFieldContainer .hasDatepicker {
+    width: auto
+}
+
+.TransactionManagerFieldContainer img.ui-datepicker-trigger {
+    left: calc(100% - 33px);
+    position: relative;
+    top: -30px
+}
+
+.TransactionManagerDatePickerFieldCaption,
+.TransactionManagerFundPickerFieldCaption,
+.TransactionManagerGroupPickerCaption {
+    display: block;
+    float: none;
+    text-align: left;
+    width: auto
+}
+
+.TransactionManagerSpecificDateDivNotSelected {
+    display: none
+}
+
+.TransactionManagerFilterActions {
+    margin-left: 0;
+    text-align: left
+}
+
+.TransactionManagerFilterActions input[id$="btnFilter"] {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 3px
+}
+
+.TransactionManagerGrid tr[id$="headerRow"] th,
+.TransactionManagerSummaryTable th {
+    background-color: #0c8346;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left
+}
+
+.TransactionManagerInformationGrid {
+    width: 100%
+}
+
+.TransactionManagerGrid {
+    width: 100%
+}
+
+.TransactionManagerGrid tr[id*="mainRow"] td,
+.TransactionManagerGrid tr[id*="detailsRow"],
+.TransactionManagerSummaryTable td {
+    font-size: inherit
+}
+
+td.TransactionManagerGridDetailCell dl {
+    background-color: #fff;
+    border-color: #eee;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+    padding: 5px
+}
+
+.TransactionManagerGridDetailCell br {
+    display: none
+}
+
+.TransactionManagerGridDetailSet {
+    float: none;
+    width: 100%
+}
+
+.TransactionManagerGridDetailLabel {
+    text-align: right
+}
+
+.TransactionManagerGridDetailSet dt.TransactionManagerGridDetailLabel {
+    float: left;
+    width: 35%
+}
+
+.TransactionManagerGridDetailSet dd.TransactionManagerGridDetailValue {
+    float: none;
+    text-align: left;
+    width: auto
+}
+
+.PledgePaymentLink {
+    margin-left: 5px
+}
+
+.TransactionManagerExportOptionsContainer {
+    display: block !important;
+    float: left
+}
+
+.TransactionManagerExportOptionsContainer ul {
+    float: left;
+    list-style-type: none;
+    margin: 0
+}
+
+.TransactionManagerExportOptionsContainer li {
+    float: left;
+    margin: 5px
+}
+
+span[id$="ExportTitleLabel"] {
+    display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 29px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+span[id$="ExportTitleLabel"]::after {
+    content: ":"
+}
+
+a.TransactionManagerExportButton {
+    display: none !important
+}
+
+a.TransactionManagerExportLink,
+a.TransactionManagerExportButton {
+    border-bottom: none
+}
+
+.TransactionManagerExportContainer {
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin: 0;
+    position: static;
+    width: auto
+}
+
+.TransactionManagerExportOptionsContainer {
+    background-color: transparent;
+    width: auto
+}
+
+.TransactionManagerExportOptionsContainer ul li {
+    font-size: 14px;
+    line-height: 29px;
+    margin: 0 5px
+}
+
+span[id$="ExportTitleLabel"],
+a.TransactionManagerExportLink {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px
+}
+
+.Pager {
+    border: none
+}
+
+.PagerInfo {
+    background-color: transparent
+}
+
+.TransactionManagerSummaryContainer {
+    width: 100%
+}
+
+.TransactionManagerSummaryTable {
+    border: 1px solid #eee
+}
+
+.TransactionManagerSummaryHeaderRow {
+    background-color: #0c8346;
+    color: #fff;
+    font-size: .883rem
+}
+
+.TransactionManagerSummaryTable th,
+.TransactionManagerSummaryTable td {
+    padding: 5px 15px;
+    text-align: left !important
+}
+
+.TransactionManagerSummaryTable th {
+    text-align: center
+}
+
+.TransactionManagerAccDD {
+    margin: 0;
+    position: relative
+}
+
+.TransactionManagerAccDD>li {
+    margin: 0
+}
+
+.TransactionManagerAccDD .acc-section {
+    width: 165px
+}
+
+.TransactionManagerAccDD .acc-section br {
+    display: none
+}
+
+.TransactionManagerGridEditGiftDiv {
+    float: none;
+    margin-right: 0
+}
+
+.TransactionManagerGridEditGiftLink {
+    color: inherit;
+    text-decoration: none
+}
+
+.TransactionManagerGridHeaderCell {
+    padding: 5px 15px 5px 5px
+}
+
+.TransactionManagerGridHeaderCellSortedAscending,
+.TransactionManagerGridHeaderCellSortedDescending {
+    background-position: right 20px center
+}
+
+.TransactionManagerAccDD h3 {
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    height: 0;
+    margin: 0 0 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: -25px;
+    width: 25px
+}
+
+.TransactionManagerAccDD h3 .required::before,
+.TransactionManagerGridCellAmount.required::before,
+.TransactionManagerGridCellAmountLink.required::before {
+    display: none
+}
+
+.TransactionManagerGridCell a {
+    border: none
+}
+
+#divPaymentMethod>select>option:last-child {
+    display: none
+}
+
+.TransactionManagerEditFormBody .DCFieldCaption {
+    text-align: left;
+    width: 100%
+}
+
+.TransactionManagerEditFormHelpText {
+    margin-left: 0
+}
+
+.TransactionManagerRecurrenceScheduleRadioButtonListContainer {
+    margin-left: 0
+}
+
+.TransactionManagerRecurrenceScheduleSelectedAreaInner input[id*="givingHistoryAll"] {
+    width: 100% !important
+}
+
+.TransactionManagerEditFormHelpText {
+    margin-left: 0
+}
+
+.TransactionManagerRecurrenceScheduleRadioButtonListContainer {
+    margin-left: 0
+}
+
+.TransactionManagerRecurrenceScheduleRadioGrouping {
+    width: 166px
+}
+
+.TransactionManagerRecurrenceScheduleSelectedArea {
+    margin: 0 0 10px 165px;
+    min-height: 165px;
+    width: auto
+}
+
+.TransactionManagerRecurrenceScheduleSelectedAreaInner {
+    min-height: 165px
+}
+
+.TransactionManagerRecurrenceScheduleSelectedAreaInner li.Monthly_DayOf input,
+.TransactionManagerRecurrenceScheduleSelectedAreaInner li.Yearly_FixedDate input {
+    width: 100% !important
+}
+
+.TransactionManagerRecurrenceScheduleSelectedAreaInner input[id*="givingHistoryAll"] {
+    width: 100% !important
+}
+
+.TransactionManagerEditFormAmount label[id*="lblCurrencySymbol"] {
+    display: none
+}
+
+.TransactionManagerEditFormStartDate,
+.TransactionManagerEditFormEndDate {
+    position: relative
+}
+
+.TransactionManagerEditFormStartDate input[id*="dpStartDate"],
+.TransactionManagerEditFormEndDate input[id*="dpEndDate"],
+.TransactionManagerEditFormStartDate input[id*="txtStartDate"],
+.TransactionManagerEditFormEndDate input[id*="txtEndDate"] {
+    width: auto !important
+}
+
+.TransactionManagerEditFormStartDate .ui-datepicker-trigger,
+.TransactionManagerEditFormEndDate .ui-datepicker-trigger {
+    position: absolute;
+    left: 158px;
+    top: 38px
+}
+
+.TransactionManagerEditFormAmount input[id*="tbGiftAmt"] {
+    width: auto !important
+}
+
+.EducationListHeader {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.EducationFormFieldSet {
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+.EducationListEvenRowStyle {
+    font-size: 1rem;
+    font-family: inherit
+}
+
+.EducationListOddRowStyle {
+    font-size: 1rem;
+    font-family: inherit
+}
+
+.SubscriptionFormCheckList,
+.SubscriptionFormTable {
+    border: none
+}
+
+.SubscriptionFormTable table {
+    border-collapse: collapse;
+    margin: 0
+}
+
+.SubscriptionFormTable td {
+    margin: 0;
+    padding: 0
+}
+
+.SubscriptionFormTable td:empty {
+    display: none
+}
+
+.SubscriptionFormList input {
+    margin: 0 .25rem 0 0
+}
+
+.SubscriptionFormList label {
+    padding: 0 0 0 .7rem
+}
+
+.SubscriptionFormTitle {
+    border: none;
+    margin: 0
+}
+
+.SubscriptionFormTitle>span:empty {
+    display: none
+}
+
+.SubscriptionFormListHeaderTitle {
+    border: none;
+    font-family: inherit;
+    padding: .5rem 0 .25rem
+}
+
+.SubscriptionFormListHeaderTitle+td>img {
+    display: none
+}
+
+.SubscriptionFormListHeader {
+    border-collapse: collapse;
+    margin: 1rem 0 0
+}
+
+div[id$="divUserAttributes"]>div>span {
+    font-weight: 600
+}
+
+td.SubscriptionFormMessage {
+    padding: 1rem 0
+}
+
+.BSubscriptionFormMessage input {
+    display: block;
+    float: left
+}
+
+input[id*="rptUserAttributes_cblAttribute"][type="checkbox"],
+input[id$="chkOpting"],
+input[id$="chkDirOpting"] {
+    height: auto;
+    margin-right: .25rem;
+    margin-top: 6px
+}
+
+label[for*="rptUserAttributes_cblAttribute"],
+label[for$="chkOpting"],
+label[for$="chkDirOpting"] {
+    padding-left: .7rem
+}
+
+label[for$="chkOpting"],
+label[for$="chkDirOpting"] {
+    display: block;
+    float: left;
+    width: 80%
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    .SubscriptionFormCheckList,
+    .SubscriptionFormTable .Ev2_AttributeCheckList {
+        width: 100%
+    }
+    .SubscriptionFormTable .SubscriptionFormCheckList label[for*="cblNewsLetters"],
+    .SubscriptionFormTable .Ev2_AttributeCheckList label[for*="cblAttribute"] {
+        display: inline-block;
+        padding-left: 1rem;
+        width: 100%
+    }
+    .SubscriptionFormTable .checkboxLabel {
+        margin-left: 0;
+        padding-left: 1rem;
+        width: 100%
+    }
+    label[for$="chkOpting"],
+    label[for$="chkDirOpting"] {
+        width: 100%
+    }
+}
+
+.LoginSectionHeader {
+    background: transparent;
+    font-style: normal;
+    padding: 0;
+    text-align: left
+}
+
+.LoginLink {
+    font-family: inherit;
+    font-size: 1rem
+}
+
+.LoginFieldCaption input {
+    margin: 0 .5rem 0 0
+}
+
+.LoginFieldMessage {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem 0;
+    text-align: center
+}
+
+.LoginFormCheckList input {
+    float: left
+}
+
+.LoginFormTable {
+    width: auto
+}
+
+.LoginFormTable table.taCenter {
+    text-align: left
+}
+
+.LoginFormTable tr.taCenter td {
+    text-align: center
+}
+
+.LoginFormTable tr.taCenter td table {
+    width: 100%
+}
+
+.LoginFormTable tr.taCenter td table td {
+    text-align: left
+}
+
+.LoginFormTextArea,
+.LoginFormTextBox {
+    margin-right: .5rem
+}
+
+.LoginFormTextboxNarrow {
+    width: 150px
+}
+
+.LoginFormTitle {
+    background: transparent
+}
+
+table.userLoginPart,
+table.userLoginPart table {
+    width: 100%
+}
+
+.LoginFormTable>tbody>tr:nth-last-child(-n+3),
+.userLoginPart tr[id$="trSignInBody"] {
+    text-align: center
+}
+
+.LoginFormNormalMessage {
+    display: inline-block;
+    margin-top: 1rem
+}
+
+.LoginFormTable tr .BBFormButtonCell {
+    padding-bottom: 1rem
+}
+
+.pnlConsentPopup+table,
+.pnlConsentPopup+table table {
+    width: 100%
+}
+
+.LoginFormTable td[id$="emailAddressControlCell"] input {
+    margin: .5rem 0
+}
+
+tr[id$="trLogout"]+tr>td {
+    text-align: center
+}
+
+@media only screen and
+/*!YUI Compressor */
+
+(max-width:800px) {
+    tr[id$="trSignInBody"] table {
+        width: 100%
+    }
+    .LoginFormTable .rememberLoginContainer {
+        margin-top: 1rem;
+        text-align: center
+    }
+    .userLoginPart,
+    .userLoginValidationContainer {
+        width: 100%
+    }
+    .LoginFormTable .BBFieldControlCell input {
+        width: 100%
+    }
+    td[id$="LastName"]+td {
+        margin-left: 0 !important
+    }
+}
+
+form[action*="pagedesign"] {
+    min-height: 3000px
+}
+
+#scriptWrapper {
+    display: none
+}
+
+*.DesignPane {
+    position: relative
+}
+
+*.bb_mainMenu a {
+    font-weight: normal
+}
+
+div[id$="AdminMenuDiv"] img {
+    box-sizing: content-box
+}
+
+div[id*="_designPaneCloak"],
+div[id*="_panelPopup"] {
+    left: 0 !important;
+    top: 0 !important
+}
+
+form[action*="pagedesign"] #scriptWrapper {
+    display: block;
+    margin-top: 20px
+}
+
+table.DesignMenuTable a {
+    color: #666 !important
+}
+
+.ui-datepicker {
+    border: 2px solid #d8d8d8 !important
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border-radius: 0
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    display: inline-block
+}
+
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover {
+    top: 2px !important
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    width: 50% !important
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    border: 1px solid #0c8346;
+    color: #0c8346
+}
