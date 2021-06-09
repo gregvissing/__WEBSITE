@@ -310,7 +310,7 @@
     var $text = $('<p></p>');
   	var $link = $('<a href="#">Test Link</a>');
   
-  	var $cardImage = $('<img src="" >');
+  	var $image = $('<img src="" >');
   	var $cardTitle = $('<p class="large"></p>');
   
   	var $accordionText = $('<label class="tab-label large" data-aria-accordion-heading></label>');
@@ -331,6 +331,7 @@
     $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
+  	$fieldtemplate["image"] = $('<div class="image"></div>');
   	$fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
     $fieldtemplate["blockquote"] = $('<blockquote></blockquote>');
     $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
@@ -391,10 +392,28 @@
                     console.log("card!");
                   	var $newRow = $row.clone()
                         .append(( $fieldtemplate[item.type].clone()
-                                 .append($cardImage.clone().attr("src", item.cardImgSrc.trim()))
+                                 .append($image.clone().attr("src", item.cardImgSrc.trim()))
                                  .append($cardTitle.clone().text(item.cardTitle.trim()))
                                  .append($text.clone().text(item.cardText.trim()))
                                  .append($link.clone().attr("href", item.cardLinkUrl.trim()).text(item.cardLinkText.trim()))
+                        ));
+                } else if (item.type == "image") {
+                    console.log("image!");
+                  	var marginVals;
+                  	switch (item.imageAlign) {
+                    	case "left":
+                      		marginVals = "0 auto 0 0";
+                      		break;
+                    	case "center":
+                      		marginVals = "0 auto";
+                      		break;
+                    	case "right":
+                      		marginVals = "0 0 0 auto";
+                  	}
+                  	var $newRow = $row.clone().css('margin', marginVals)
+                        .append(( $fieldtemplate[item.type].clone()
+                                 .append($image.clone().attr("src", item.imageSrc.trim()))
+                                 .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
                         ));
                 } else if (item.type == "accordion") {
                     console.log("accordion!");
