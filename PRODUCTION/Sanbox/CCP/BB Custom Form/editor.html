@@ -608,6 +608,10 @@
     	height: auto;
   	}
     
+  	textarea {
+    	display: block;
+    	width: 100%;
+  	}
 </style>
 
 <div id="BBTabs">
@@ -664,8 +668,8 @@
                                     </div>
                                   
                                   	 <div class="TextEditor" id="DivTextEditor_0">
-                                        <label for="TextEditor_0">Content:</label>
-                                       	<textarea class="form-control required tinymce" type="text" name="TextEditor_0" id="TextEditor_0" ></textarea>
+                                        <label for="TextEditor_0">Content: </label>
+                                       	<textarea class="tinymce" type="text" name="TextEditor_0" id="TextEditor_0" ></textarea>
                                     </div>
 
                                     <div class="Blockquote" id="Blockquote_0">
@@ -898,7 +902,7 @@
 			<optgroup label="Text Field">
 				<option value="text">Text</option>
 				<option value="blockquote">Blockquote</option>
-              	<option value="texteditor">Text Editor</option>
+              	<!--<option value="texteditor">Text Editor</option>-->
 			</optgroup>
 			<optgroup label="Headings">
 				<option value="heading1">Heading 1</option>
@@ -918,6 +922,7 @@
 <script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=u1z7mud98ppwucag8wv1vgvzl6uxxsth7l3qbv1go17ighu0'>
 </script>
 <script>
+
     tinymce.init({
         selector: 'textarea.tinymce',
         theme: 'modern',
@@ -930,6 +935,7 @@
             "/file/css/template.css"
         ]
     });
+
 </script>
 <script>
     //variables etc.
@@ -1192,7 +1198,7 @@
 
         BuildConditionalSelects();
         $('select[id^=ddDisplayConditionCompare]').each(BuildConditionCompare);
-        BuildMatrix();
+        BuildMatrix();      
 
     });
 
@@ -1344,8 +1350,8 @@
                 }
             }
         });
-
-      	tinymce.EditorManager.execCommand('mceAddEditor', true, '#TextEditor_' + count);
+      
+      	tinymce.EditorManager.execCommand('mceAddEditor', true, '.tinymce#TextEditor_' + count);
       // tinymce.EditorManager.execCommand('mceAddEditor', true, 'textarea.tinymce');
 
         $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
