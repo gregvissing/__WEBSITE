@@ -319,6 +319,7 @@
     
     div.Question,
   	div.Card,
+  	div.Image,
   	div.ButtonLink,
   	div.Accordion,
   	div.Blockquote {
@@ -661,6 +662,11 @@
                                         <label>Content: <input class="form-control required" type="text"
 												name="Question_0" id="Question_0" /></label>
                                     </div>
+                                  
+                                  	 <div class="TextEditor" id="DivTextEditor_0">
+                                        <label for="TextEditor_0">Content:</label>
+                                       	<textarea class="form-control required tinymce" type="text" name="TextEditor_0" id="TextEditor_0" ></textarea>
+                                    </div>
 
                                     <div class="Blockquote" id="Blockquote_0">
                                         <label>Quote Text: <input class="form-control required quoteText"
@@ -709,7 +715,7 @@
                                             <div class="FieldContent">
                                                 <div class="SearchFieldContainer">
                                                     <div class="SearchFieldBox">
-                                                        <a href="#" class="SearchField ImagePicker">
+                                                        <a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
                                                             <span class="SearchFieldIcon">
 																<img src="/images/pencil_16.gif" alt="" />
 															</span>
@@ -727,6 +733,46 @@
                                             <img src="">
                                         </div>
 
+                                    </div>
+                                  
+                                  	<div class="Image" id="Image_0">
+                                      	<label for="ImageAlign_0">Image Alignment: 
+                                      	<select id="ImageAlign_0" class="imageAlign">
+                                        	<option value="left">Left</option>  
+                                          	<option value="center">Center</option>  
+                                          	<option value="right">Right</option>  
+                                      	</select></label>
+                                      
+                                        <label>Image Caption: <input class="form-control required imageCaption"
+												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
+                                        <hr>
+
+                                        <div class="Field">
+                                            <div class="FieldHeading">
+                                                <label for="field-highlighter-image" class="FieldLabel">Image:</label>
+                                                <span class="FieldRequired">*</span>
+                                                <span class="clear"></span>
+                                            </div>
+                                            <div class="FieldContent">
+                                                <div class="SearchFieldContainer">
+                                                    <div class="SearchFieldBox">
+                                                        <a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
+                                                            <span class="SearchFieldIcon">
+																<img src="/images/pencil_16.gif" alt="" />
+															</span>
+                                                            <span class="SearchFieldText"></span>
+                                                            <span class="SearchFieldButton">
+																<img src="/images/Admin/Buttons/search.gif" alt="" />
+															</span>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
+                                            <img src="">
+                                        </div>
                                     </div>
 
                                     <div class="Accordion" id="Accordion_0">
@@ -852,6 +898,7 @@
 			<optgroup label="Text Field">
 				<option value="text">Text</option>
 				<option value="blockquote">Blockquote</option>
+              	<option value="texteditor">Text Editor</option>
 			</optgroup>
 			<optgroup label="Headings">
 				<option value="heading1">Heading 1</option>
@@ -859,6 +906,7 @@
 				<option value="heading3">Heading 3</option>
 			</optgroup>
 			<optgroup label="Components">
+              	<option value="image">Image</option>
 				<option value="card">Card</option>
 				<option value="accordion">Accordion</option>
 			</optgroup>
@@ -893,9 +941,11 @@
     var Fields = {};
 
     Fields["heading1"] = {
+      	"TextEditor": false,
         "Question": true,
         "Blockquote": false,
         "Card": false,
+      	"Image": false,
         "Accordion": false,
         "QuoteSource": false,
         "Help": false,
@@ -910,9 +960,11 @@
         "ColumnWidth": false
     }
     Fields["heading2"] = {
+      	"TextEditor": false,
         "Question": true,
         "Blockquote": false,
         "Card": false,
+      	"Image": false,
         "Accordion": false,
         "QuoteSource": false,
         "Help": false,
@@ -927,6 +979,7 @@
         "ColumnWidth": false
     }
     Fields["heading3"] = {
+      	"TextEditor": false,
         "Question": true,
         "Blockquote": false,
         "Card": false,
@@ -943,10 +996,31 @@
         "ConditionFieldType": "text",
         "ColumnWidth": false
     }
+    Fields["texteditor"] = {
+      	"TextEditor": true,
+        "Question": false,
+        "Blockquote": false,
+        "Card": false,
+      	"Image": false,
+        "Accordion": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": true,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false
+    }
     Fields["text"] = {
+      	"TextEditor": false,
         "Question": true,
         "Blockquote": false,
         "Card": false,
+      	"Image": false,
         "Accordion": false,
         "QuoteSource": false,
         "Help": true,
@@ -961,9 +1035,30 @@
         "ColumnWidth": true
     }
     Fields["card"] = {
+      	"TextEditor": false,
         "Question": false,
         "Blockquote": false,
         "Card": true,
+      	"Image": false,
+        "Accordion": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": true,
+        "MaxLength": false,
+        "LinkAttribute": true,
+        "DisplayCondition": true,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": true
+    }
+    Fields["image"] = {
+      	"TextEditor": false,
+        "Question": false,
+        "Blockquote": false,
+        "Card": false,
+      	"Image": true,
         "Accordion": false,
         "QuoteSource": false,
         "Help": false,
@@ -978,9 +1073,11 @@
         "ColumnWidth": true
     }
     Fields["accordion"] = {
+      	"TextEditor": false,
         "Question": false,
         "Blockquote": false,
         "Card": false,
+      	"Image": false,
         "Accordion": true,
         "QuoteSource": false,
         "Help": false,
@@ -995,9 +1092,11 @@
         "ColumnWidth": true
     }
     Fields["blockquote"] = {
+      	"TextEditor": false,
         "Question": false,
         "Blockquote": true,
         "Card": false,
+      	"Image": false,
         "Accordion": false,
         "QuoteSource": false,
         "Help": false,
@@ -1012,9 +1111,11 @@
         "ColumnWidth": true
     }
     Fields["page break"] = {
+      	"TextEditor": false,
         "Question": false,
         "Blockquote": false,
         "Card": false,
+      	"Image": false,
         "Accordion": false,
         "QuoteSource": false,
         "Help": false,
@@ -1131,7 +1232,12 @@
                     cardLinkUrl: $(this).find('.Card .selected-link-url').text(),
                     cardLinkText: $(this).find('.Card input.cardLinkText').val(),
                     cardImgText: $(this).find('.Card .Field .SearchFieldText').text(),
-                    cardImgSrc: $(this).find('.Card .Field.ImagePickerRender img').attr('src'),
+                    cardImgSrc: $(this).find('.Card .Field.ImagePickerRender img').attr('src'),                  
+                  
+                  	imageCaption: $(this).find('.Image input.imageCaption').val(),
+                    imageText: $(this).find('.Image .Field .SearchFieldText').text(),
+                    imageSrc: $(this).find('.Image .Field.ImagePickerRender img').attr('src'),
+                  	imageAlign: $(this).find('.Image select.imageAlign').val(),
 
                     accordionText: $(this).find('.Accordion input.accordionText').val(),
                     accordionContent: $(this).find('.Accordion .accordionContent').val(),
@@ -1221,7 +1327,7 @@
             count = item.index;
         }
 
-        $newRow.find('div, select, input').each(function() {
+        $newRow.find('div, select, input, a, button, textarea').each(function() {
             var ID = $(this).attr('id');
             var name = $(this).attr('name');
 
@@ -1239,7 +1345,8 @@
             }
         });
 
-        tinymce.EditorManager.execCommand('mceAddEditor', true, 'textarea.tinymce');
+      	tinymce.EditorManager.execCommand('mceAddEditor', true, '#TextEditor_' + count);
+      // tinymce.EditorManager.execCommand('mceAddEditor', true, 'textarea.tinymce');
 
         $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
 
@@ -1254,15 +1361,22 @@
           	$newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
             $newRow.find('.Card .selected-link-name').text(item.cardLinkName);
-              //.addClass('link-name_' + item.index);
             $newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
-              //.addClass('link-url_' + item.index);
             $newRow.find('.Card .cardLinkText').val(item.cardLinkText);
             $newRow.find('.Card .Field .SearchFieldText').text(item.cardImgText);
             $newRow.find('.Card .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);            
+            $newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);   
+          
+          	$newRow.find('.Image input.imageCaption').val(item.imageCaption);
+            $newRow.find('.Image .Field .SearchFieldText').text(item.imageText);
+            $newRow.find('.Image .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
+            $newRow.find('.Image .Field.ImagePickerRender img').attr('src', item.imageSrc);   
+          	$newRow.find('.Image select.imageAlign').val(item.imageAlign);
 	
-          	$newRow.find('.Card .btn-select').attr('id', 'linkPicker_' + item.index);
+          //$newRow.find('.Card .btn-select').attr('id', 'linkPicker_' + item.index);
+          
+          //$newRow.find('.Card .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
+          //$newRow.find('.Image .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
           
             $newRow.find('.Accordion input.accordionText').val(item.accordionText);
             $newRow.find('.Accordion .accordionContent').val(item.accordionContent);
@@ -1362,13 +1476,18 @@
             alert('You do not have permission to launch the link picker.');
         } else {
             // Launch the link picker, passing in our callback
-            var thisIdVal = $(this).parents('.Card').attr('id').split("_")[1];
+          // var thisIdVal = $(this).parents('.Card').attr('id').split("_")[1];
+          	var thisIdVal = $(this).parents('.Field').parent().attr('id'),
+                thisSplitId = thisIdVal.split("_")[1];
 			console.log(thisIdVal);
           
             BLACKBAUD.api.customPartEditor.links.launchLinkPicker({
                 callback: function(selectedLink) {
-                  $('#CardTitle_' + thisIdVal + ' .selected-link-name').text(selectedLink.name);
-                  $('#CardTitle_' + thisIdVal + ' .selected-link-url').text(selectedLink.url);
+                  $('#' + thisIdVal + ' .selected-link-name').text(selectedLink.name);
+                  $('#' + thisIdVal + ' .selected-link-url').text(selectedLink.url);
+                  
+                  //$('#CardTitle_' + thisIdVal + ' .selected-link-name').text(selectedLink.name);
+                  //$('#CardTitle_' + thisIdVal + ' .selected-link-url').text(selectedLink.url);
                 }
             });
         }
@@ -1377,27 +1496,36 @@
 
     $(document).on('click', 'a.ImagePicker', function(e) {
         e.preventDefault();
-        var thisIdVal = $(this).attr('id').split("_")[1];
-
+      
+      /*
+      	if ($(this).attr('id')) {
+      		var thisIdVal = $(this).attr('id').split("_")[1];
+      	} else {
+          	var thisIdVal = $(this).parents('.Field').parent().attr('id').split("_")[1];
+          	$(this).attr('id', 'ImagePicker_' + thisIdVal);
+          	console.log(thisIdVal);
+          	return;
+        } */   
 
         if (!BLACKBAUD.api.customPartEditor.images.canLaunchImagePicker) {
             //$('.error-permission').show();
         } else {
           // var thisIdVal = $(this).attr('id').split("_")[1]
-            var thisIdVal = $(this).parents('.Card').attr('id').split("_")[1];
+          //var thisIdVal = $(this).parents('.Card').attr('id').split("_")[1];
+          
+          	var thisIdVal = $(this).parents('.Field').parent().attr('id'),
+                thisSplitId = thisIdVal.split("_")[1];
 			console.log(thisIdVal);
 
             BLACKBAUD.api.customPartEditor.images.launchImagePicker({
                 callback: function(selectedImage) {
                     console.log(selectedImage.url);
-                    $('#CardTitle_' + thisIdVal + ' .ImagePickerRender img').attr('src', selectedImage.url);
-                    $('#CardTitle_' + thisIdVal + ' .ImagePicker .SearchFieldText').text(selectedImage.name);
-
-                    //$('.selected-link-name').text(selectedLink.name);
-                    //$('.selected-link-url').text(selectedLink.url);
-                }
-
-                // callback: renderImage(thisIdVal)     	
+                  	$('#' + thisIdVal + ' .ImagePickerRender img').attr('src', selectedImage.url);
+                  	$('#' + thisIdVal + ' .ImagePicker .SearchFieldText').text(selectedImage.name);
+                  
+                  //$('#CardTitle_' + thisIdVal + ' .ImagePickerRender img').attr('src', selectedImage.url);
+                  //$('#CardTitle_' + thisIdVal + ' .ImagePicker .SearchFieldText').text(selectedImage.name);
+                }  	
             });
         }
     });
