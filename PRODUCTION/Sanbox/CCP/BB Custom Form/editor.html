@@ -1,5 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/jquery.validate.min.js"></script>
+
+<link rel="stylesheet" href="https://foundation.uc.edu/file/redesign/css/tinymce_styles.css" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="/client/styles/Admin/GenericUI.css" type="text/css" />
@@ -705,11 +707,8 @@
                                             <p>
                                                 <button class="btn-select" name="btn-select_0" id="btn-select_0">Select Link</button>
                                             </p>
-                                        </div>
-                                        
-
+                                        </div>                                      
                                         <hr>
-
                                         <div class="Field">
                                             <div class="FieldHeading">
                                                 <label for="field-highlighter-image" class="FieldLabel">Image:</label>
@@ -736,7 +735,6 @@
                                         <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
                                             <img src="">
                                         </div>
-
                                     </div>
                                   
                                   	<div class="Image" id="Image_0">
@@ -746,11 +744,9 @@
                                           	<option value="center">Center</option>  
                                           	<option value="right">Right</option>  
                                       	</select></label>
-                                      
-                                        <label>Image Caption: <input class="form-control required imageCaption"
+                                      	<label>Image Caption: <input class="form-control required imageCaption"
 												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
                                         <hr>
-
                                         <div class="Field">
                                             <div class="FieldHeading">
                                                 <label for="field-highlighter-image" class="FieldLabel">Image:</label>
@@ -783,11 +779,9 @@
                                         <label>Accordion Text: <input class="form-control required
 												accordionText" type="text"
 												name="AccordionText_0" id="AccordionText_0" /></label>
-                                        <!--<label>Accordion Content: <input class="form-control required accordionContent" type="text"
-												name="AccordionContent_0" id="AccordionContent_0" /></label>-->
                                         <div class="FieldContent">
                                             <label>Accordion Content: </label>
-                                            <textarea class="form-control required accordionContent tinymce" id="AccordionContent_0" name="AccordionContent_0" rows="15" style="width: 100%;"></textarea>
+                                            <textarea class="accordionContent tinymce" id="AccordionContent_0" name="AccordionContent_0" rows="15" style="width: 100%;"></textarea>
                                         </div>
                                     </div>
 
