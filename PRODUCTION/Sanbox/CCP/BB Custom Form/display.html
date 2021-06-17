@@ -148,35 +148,6 @@
                 }
 
 
-                /* if (item.type == "heading") {
-                  console.log("heading!");
-                    var $newRow = $row.clone()
-                        .append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($fieldtemplate[item.type].clone().attr('id', 'customField' + item.index).attr('name', 'customField' + item.index).text(item.question));
-                } else if (item.type == "code table" && item.codeTableMulti == "on") {
-                    var $newRow = $row.clone()
-                        .append($label.clone().attr('for', 'customField' + item.index).text(item.question))
-                        .append($('<input type="hidden" />').attr('id', 'customField' + item.index).attr('name', 'customField' + item.index));
-                    $.get("/WebAPI/CodeTable/" + item.codeTableID, function(data) {
-                        $.each(data, function() {
-                            $newRow.append($('<div class="form-check"><label class="form-check-label"><input type="checkbox" value="' + this.Id + '" class="form-check-input"><span>' + this.Description + '</span></label></div>'));
-                        });
-                    });
-                } else if (item.type == "single line address") {
-                    var $newRow = $row.clone().addClass('address-search-container')
-                        .append($label.clone().attr('for', 'customField' + item.index).text(item.question))
-                        .append('<input id="customField' + item.index + '" name="customField' + item.index + '" type="text" placeholder="Street address" autocomplete="new-password" class="address_search form-control"/><div class="address-results-container"><ul class="address-results"></ul>      <span class="helper" style="display: none;">Address not found?  <a>Click here</a> to enter it manually.</span>    </div>');
-                    $.each(item.AddressMap, function(key, value) {
-                        if (value !== "unampped" && value != "") {
-                            $newRow.find('.address_search').attr("data-map-" + key, value);
-                        }
-                    });
-                } else if (item.type !== "yes\/no") {
-                    var $newRow = $row.clone()
-                        .append($label.clone().attr('for', 'customField' + item.index).text(item.question))
-                        .append($fieldtemplate[item.type].clone().attr('autocomplete', item.question).attr('id', 'customField' + item.index).attr('name', 'customField' + item.index));
-				*/
-
                 if (item.help != null) {
                     if (item.help.trim().length > 0) {
                         $newRow.append($help.clone().text(item.help.trim()));
