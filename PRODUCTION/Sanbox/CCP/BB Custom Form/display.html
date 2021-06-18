@@ -21,6 +21,12 @@
   	var $accordionText = $('<label class="tab-label large" data-aria-accordion-heading></label>');
   	var $accordionContent = $('<div class="tab-content" data-aria-accordion-panel><p></p></div>');
   
+  	var $byline = $('<div class="byline"></div>');
+  	var $bylineAuthorDiv = $('<div class="author"></div>');
+  	var $bylineName = $('<span class="name"></span>');
+  	var $bylinePhone = $('<span class="phone"></span>');
+  	var $bylineEmail = $('<span class="email"></span>');
+  
     var $option = $('<option></option>');
     var $button = $('<button type="button" class="button-primary next btn btn-lg btn-block btn-primary"></button>');
     var $help = $('<small id="passwordHelpBlock" class="form-text text-muted"></small>');
@@ -136,6 +142,19 @@
                     console.log("formattedtext!");
                     var $newRow = $row.clone()
                         .append( $div.clone().html(item.formattedText.trim()) );     
+                } else if (item.type == "byline") {
+                    console.log("byline!");
+                    var $newRow = $row.clone()
+                        .append( $byline.clone()
+                        	.append( $bylineAuthorDiv.clone()
+                        	.append( $bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>") )
+                        		.append( $bylineEmail.clone()
+                        			.append( $link.clone()
+                        				.attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0] ) )
+                        		)
+                        		.append( $bylinePhone.clone().text(item.authorPhone.trim()) )                        		
+                    		)
+                        );
                 } else if (item.type == "hr") {
                     console.log("hr!");
                   	var $newRow = $row.clone().css('margin', '0 auto')
