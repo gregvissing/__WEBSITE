@@ -182,6 +182,15 @@
                                             <textarea class="tinymce" id="AccordionContent_0" name="AccordionContent_0" cols="80"></textarea>
                                         </div>
                                     </div>
+                                  
+                                  	<div class="Byline" id="Byline_0">
+                                        <label>Author Name: <input class="form-control required authorName" type="text"
+												name="AuthorName_0" id="AuthorName_0" /></label>
+                                      	<label>Author Phone #: <input class="form-control authorPhone" type="text"
+												name="AuthorPhone_0" id="AuthorPhone_0" /></label>
+                                      	<label>Author Email: <input class="form-control authorEmail" type="text"
+												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
+                                    </div>
 
                                     <div class="Formattedtext" id="Formattedtext_0">
                                         <div class="FieldContent">
@@ -301,6 +310,7 @@
 				<option value="blockquote">Blockquote</option>
 				<option value="formattedtext">Formatted Text</option>
 				<option value="text">Text</option>
+              	<option value="byline">Byline</option>
 				<!--<option value="texteditor">Text Editor</option>-->
 			</optgroup>
 			<optgroup label="Headings">
@@ -333,6 +343,7 @@
     var Fields = {};
 
     Fields["heading1"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": true,
         "Blockquote": false,
@@ -354,6 +365,7 @@
         "ColumnWidth": false
     }
     Fields["heading2"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": true,
         "Blockquote": false,
@@ -375,6 +387,7 @@
         "ColumnWidth": false
     }
     Fields["heading3"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": true,
         "Blockquote": false,
@@ -396,6 +409,7 @@
         "ColumnWidth": false
     }
     Fields["texteditor"] = {
+      	"Byline": false,
         "TextEditor": true,
         "Question": false,
         "Blockquote": false,
@@ -417,6 +431,7 @@
         "ColumnWidth": false
     }
     Fields["text"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": true,
         "Blockquote": false,
@@ -437,7 +452,32 @@
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
+     
+    Fields["byline"] = {
+      	"Byline": true,
+        "TextEditor": false,
+        "Question": false,
+        "Blockquote": false,
+        "Card": false,
+        "HR": false,
+        "Image": false,
+        "Accordion": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": true,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false
+    }
+      
     Fields["card"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -459,6 +499,7 @@
         "ColumnWidth": true
     }
     Fields["hr"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -480,6 +521,7 @@
         "ColumnWidth": true
     }
     Fields["image"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -501,6 +543,7 @@
         "ColumnWidth": true
     }
     Fields["accordion"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -523,6 +566,7 @@
     }
 
     Fields["formattedtext"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -544,6 +588,7 @@
         "ColumnWidth": true
     }
     Fields["blockquote"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": true,
@@ -565,6 +610,7 @@
         "ColumnWidth": true
     }
     Fields["page break"] = {
+      	"Byline": false,
         "TextEditor": false,
         "Question": false,
         "Blockquote": false,
@@ -702,13 +748,10 @@
                     accordionContent: $(this).find('.Accordion .tinymce').val(),
 
                     formattedText: $(this).find('.Formattedtext .tinymce').val(),
-
-                    //accordionContent: tinyVal,
-
-                    //$(this).find('.Accordion textarea').val(),
-                    //document.getElementById("AccordionContent_" + i).value,
-
-                    //$(this).tinymce.get("AccordionContent_" + i).getContent(),
+                  
+                  	authorName: $(this).find('.Byline input.authorName').val(),
+                  	authorPhone: $(this).find('.Byline input.authorPhone').val(),
+                  	authorEmail: $(this).find('.Byline input.authorEmail').val(),
 
                     help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
@@ -844,6 +887,10 @@
             $newRow.find('.Accordion .tinymce').val(item.accordionContent);
 
             $newRow.find('.Formattedtext .tinymce').val(item.formattedText);
+          
+          	$newRow.find('.Byline input.authorName').val(item.authorName);
+          	$newRow.find('.Byline input.authorPhone').val(item.authorPhone);
+          	$newRow.find('.Byline input.authorEmail').val(item.authorEmail);
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
