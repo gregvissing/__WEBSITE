@@ -26,6 +26,7 @@
 
     var $byline = $('<div class="byline"></div>');
     var $bylineAuthorDiv = $('<div class="author"></div>');
+  	var $bylineDate = $('<span class="date"></span>');
     var $bylineName = $('<span class="name"></span>');
     var $bylinePhone = $('<span class="phone"></span>');
     var $bylineEmail = $('<span class="email"></span>');
@@ -142,7 +143,8 @@
                 } else if (item.type == "byline") {
                     var $newRow = $row.clone()
                         .append($byline.clone()
-                            .append($bylineAuthorDiv.clone()
+                            .append($bylineAuthorDiv.clone()                        
+                        .append($bylineDate.clone().html("<em>" + item.datePublished.trim() + "</em>" ))
                                 .append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
                                 .append($bylineEmail.clone()
                                     .append($link.clone()
