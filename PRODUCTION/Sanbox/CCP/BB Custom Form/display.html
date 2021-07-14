@@ -12,25 +12,28 @@
     var $row = $('<div class="form-field-complex custom-form col-md-12"></div>');
     var $label = $('<label></label>');
     var $text = $('<p></p>');
-  	var $div = $('<div></div>');
-  	var $link = $('<a href="#">Test Link</a>');
-  
-  	var $image = $('<img src="" >');
-  	var $cardTitle = $('<p class="large"></p>');
-  
-  	var $accordionText = $('<label class="tab-label large" data-aria-accordion-heading></label>');
-  	var $accordionContent = $('<div class="tab-content" data-aria-accordion-panel><p></p></div>');
-  
-  	var $byline = $('<div class="byline"></div>');
-  	var $bylineAuthorDiv = $('<div class="author"></div>');
-  	var $bylineName = $('<span class="name"></span>');
-  	var $bylinePhone = $('<span class="phone"></span>');
-  	var $bylineEmail = $('<span class="email"></span>');
-  
+    var $div = $('<div></div>');
+    var $link = $('<a href="#">Test Link</a>');
+
+    var $image = $('<img src="" >');
+    var $cardTitle = $('<p class="large"></p>');
+
+    // var $accordionText = $('<label class="tab-label large" data-aria-accordion-heading></label>');
+    var $accordionText = $('<h3><button aria-expanded="true" class="Accordion-trigger" aria-controls="sect1" id="accordion1id"><span class="Accordion-title"><span class="Accordion-icon"></span></span></button></h3>');
+
+    // var $accordionContent = $('<div class="tab-content" data-aria-accordion-panel><p></p></div>');
+    var $accordionContent = $('<div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel"></div>');
+
+    var $byline = $('<div class="byline"></div>');
+    var $bylineAuthorDiv = $('<div class="author"></div>');
+    var $bylineName = $('<span class="name"></span>');
+    var $bylinePhone = $('<span class="phone"></span>');
+    var $bylineEmail = $('<span class="email"></span>');
+
     var $option = $('<option></option>');
     var $button = $('<button type="button" class="button-primary next btn btn-lg btn-block btn-primary"></button>');
     var $help = $('<small id="passwordHelpBlock" class="form-text text-muted"></small>');
-  
+
     var $quotesource = $('<span></span>');
 
     var $page = $('<div class="form-page row"></div>');
@@ -39,12 +42,16 @@
     $fieldtemplate["heading1"] = $('<h1></h1>');
     $fieldtemplate["heading2"] = $('<h2></h2>');
     $fieldtemplate["heading3"] = $('<h3></h3>');
+
     $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
-  	$fieldtemplate["hr"] = $('<hr>');
-  	$fieldtemplate["image"] = $('<div class="image"></div>');
-  	$fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
+    $fieldtemplate["hr"] = $('<hr>');
+    $fieldtemplate["image"] = $('<div class="image"></div>');
+
+    // $fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
+    $fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
+
     $fieldtemplate["blockquote"] = $('<blockquote></blockquote>');
     $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
     $fieldtemplate["email"] = $('<input type="email" class="form-control email" />');
@@ -78,88 +85,75 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-            console.log(item);
+          // console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
-                    console.log("heading 3!");
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
                         .append($fieldtemplate[item.type].clone().text(item.question));
                 } else if (item.type == "heading2") {
-                    console.log("heading 3!");
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
                         .append($fieldtemplate[item.type].clone().text(item.question));
                 } else if (item.type == "heading3") {
-                    console.log("heading 3!");
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
                         .append($fieldtemplate[item.type].clone().text(item.question));
                 } else if (item.type == "blockquote") {
-                    console.log("blockquote!");
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append(($fieldtemplate[item.type].clone().text(item.quoteText)).append($cardTitle.clone().html("&mdash; " + item.quoteSource.trim())));
+                        .append(($fieldtemplate[item.type].clone().text(item.quoteText)).append($text.clone().html("&mdash; " + item.quoteSource.trim())));
                 } else if (item.type == "card") {
-                    console.log("card!");
-                  	var $newRow = $row.clone()
-                        .append(( $fieldtemplate[item.type].clone()
-                                 .append($image.clone().attr("src", item.cardImgSrc.trim()))
-                                 .append($div.clone()
-                                 	.append($cardTitle.clone().text(item.cardTitle.trim()))
-                                 	.append($text.clone().text(item.cardText.trim()))
-                                 	.append($link.clone().attr("href", item.cardLinkUrl.trim()).text(item.cardLinkText.trim()))
-                                 )
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($image.clone().attr("src", item.cardImgSrc.trim()))
+                            .append($div.clone()
+                                .append($cardTitle.clone().text(item.cardTitle.trim()))
+                                .append($text.clone().text(item.cardText.trim()))
+                                .append($link.clone().attr("href", item.cardLinkUrl.trim()).text(item.cardLinkText.trim()))
+                            )
                         ));
                 } else if (item.type == "image") {
-                    console.log("image!");
-                  	var marginVals;
-                  	switch (item.imageAlign) {
-                    	case "left":
-                      		marginVals = "0 auto 0 0";
-                      		break;
-                    	case "center":
-                      		marginVals = "0 auto";
-                      		break;
-                    	case "right":
-                      		marginVals = "0 0 0 auto";
-                  	}
-                  	var $newRow = $row.clone().css('margin', marginVals)
-                        .append(( $fieldtemplate[item.type].clone()
-                                 .append($image.clone().attr("src", item.imageSrc.trim()))
-                                 .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
+                    var marginVals;
+                    switch (item.imageAlign) {
+                        case "left":
+                            marginVals = "0 auto 0 0";
+                            break;
+                        case "center":
+                            marginVals = "0 auto";
+                            break;
+                        case "right":
+                            marginVals = "0 0 0 auto";
+                    }
+                    var $newRow = $row.clone().css('margin', marginVals)
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($image.clone().attr("src", item.imageSrc.trim()))
+                            .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
                         ));
                 } else if (item.type == "accordion") {
-                    console.log("accordion!");
-                  	var $newRow = $row.clone()
-                        .append(( $fieldtemplate[item.type].clone()
-                        		// .append('<input type="checkbox" id="accordionChck' + item.index + '">')
-                                 .append($accordionText.clone().attr('for', 'accordionChck' + item.index).text(item.accordionText.trim()))
-                                 // .append($accordionContent.clone().text(item.accordionContent.trim()))
-                                 .append($accordionContent.clone().html(item.accordionContent.trim()))
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                        	.append('<h3><buttton aria-expanded="false" class="Accordion-trigger" aria-controls="sect' + item.index + '" id="accordion' + item.index + 'id"><span class="Accordion-title">' + item.accordionText.trim() + '<span class="Accordion-icon"></span></span></button></h3>')
+                            .append('<div id="sect' + item.index + '" role="region" aria-labelledby="accordion' + item.index + 'id" class="Accordion-panel" hidden>' + item.accordionContent.trim() + '</div>')
                         ));
                 } else if (item.type == "formattedtext") {
-                    console.log("formattedtext!");
                     var $newRow = $row.clone()
-                        .append( $div.clone().html(item.formattedText.trim()) );     
+                        .append($div.clone().html(item.formattedText.trim()));
                 } else if (item.type == "byline") {
-                    console.log("byline!");
                     var $newRow = $row.clone()
-                        .append( $byline.clone()
-                        	.append( $bylineAuthorDiv.clone()
-                        	.append( $bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>") )
-                        		.append( $bylineEmail.clone()
-                        			.append( $link.clone()
-                        				.attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0] ) )
-                        		)
-                        		.append( $bylinePhone.clone().text(item.authorPhone.trim()) )                        		
-                    		)
+                        .append($byline.clone()
+                            .append($bylineAuthorDiv.clone()
+                                .append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
+                                .append($bylineEmail.clone()
+                                    .append($link.clone()
+                                        .attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0]))
+                                )
+                                .append($bylinePhone.clone().text(item.authorPhone.trim()))
+                            )
                         );
                 } else if (item.type == "hr") {
-                    console.log("hr!");
-                  	var $newRow = $row.clone().css('margin', '0 auto')
-                        .append(( $fieldtemplate[item.type].clone()
-                        ));
+                    var $newRow = $row.clone().css('margin', '0 auto')
+                        .append(($fieldtemplate[item.type].clone()));
                 } else {
                     var $newRow = $row.clone()
                         .append($text.clone().text(item.question));
@@ -439,67 +433,67 @@
 
 
         //QAS
-        EDQ.current = 0;
-        EDQ.length = 0;
-        EDQ.limit = data.settings.txtLimit || 25;
-        EDQ.show = data.settings.txtShow || 4;
-        EDQ.country = "";
-        EDQ.term = "";
-        EDQ.results = "";
-        EDQ.resultscontainer = "";
-        EDQ.client = new EXP.DQ.Address.Client({
-            token: data.settings.txtAPI
-        });
-        EDQ.enabledCountries = data.settings.ddCountries;
-        EDQ.countries = {
-            "United States of America": "USA"
-        };
+        // EDQ.current = 0;
+        // EDQ.length = 0;
+        // EDQ.limit = data.settings.txtLimit || 25;
+        // EDQ.show = data.settings.txtShow || 4;
+        // EDQ.country = "";
+        // EDQ.term = "";
+        // EDQ.results = "";
+        // EDQ.resultscontainer = "";
+        // EDQ.client = new EXP.DQ.Address.Client({
+        //     token: data.settings.txtAPI
+        // });
+        // EDQ.enabledCountries = data.settings.ddCountries;
+        // EDQ.countries = {
+        //     "United States of America": "USA"
+        // };
 
-        EDQ.showFields = function(hideInput) {
-            hideInput = hideInput || false;
+        // EDQ.showFields = function(hideInput) {
+        //     hideInput = hideInput || false;
 
-            if (hideInput) {
-                EDQ.resultscontainer.prev('input').hide();
-                EDQ.resultscontainer.prev('input').prev('label').hide();
-            }
+        //     if (hideInput) {
+        //         EDQ.resultscontainer.prev('input').hide();
+        //         EDQ.resultscontainer.prev('input').prev('label').hide();
+        //     }
 
-            EDQ.resultscontainer.prev('input').each(function() {
-                $.each(this.attributes, function(i, attrib) {
-                    var name = attrib.name;
-                    var value = attrib.value;
-                    if (name == "data-map-address" || name == "data-map-suburb" || name == "data-map-state" || name == "data-map-postcode") {
-                        $('#customField' + value).parents('.custom-form').show();
-                    }
-                });
-            });
-        }
+        //     EDQ.resultscontainer.prev('input').each(function() {
+        //         $.each(this.attributes, function(i, attrib) {
+        //             var name = attrib.name;
+        //             var value = attrib.value;
+        //             if (name == "data-map-address" || name == "data-map-suburb" || name == "data-map-state" || name == "data-map-postcode") {
+        //                 $('#customField' + value).parents('.custom-form').show();
+        //             }
+        //         });
+        //     });
+        // }
 
-        EDQ.selectResult = function(i, scroll) {
-            $('.address-results li').removeClass('active');
-            $('.address-results li').eq(i).addClass('active');
-            if (scroll) {
-                EDQ.scrollResult();
-            }
-        }
+        // EDQ.selectResult = function(i, scroll) {
+        //     $('.address-results li').removeClass('active');
+        //     $('.address-results li').eq(i).addClass('active');
+        //     if (scroll) {
+        //         EDQ.scrollResult();
+        //     }
+        // }
 
-        EDQ.scrollResult = function() {
+        // EDQ.scrollResult = function() {
 
-                var resultT = $('.address-results:visible').offset().top;
-                var resultH = $('.address-results:visible').height();
-                var resultS = $('.address-results:visible').scrollTop();
+        //         var resultT = $('.address-results:visible').offset().top;
+        //         var resultH = $('.address-results:visible').height();
+        //         var resultS = $('.address-results:visible').scrollTop();
 
-                var activeT = $('.address-results:visible li.active').offset().top;
-                var activeH = $('.address-results:visible li.active').height();
+        //         var activeT = $('.address-results:visible li.active').offset().top;
+        //         var activeH = $('.address-results:visible li.active').height();
 
-                if (activeT < resultT) {
-                    var dif = resultT - activeT - activeH;
-                    $('.address-results:visible').scrollTop(dif);
-                } else if (((activeT + resultS) + activeH) > (resultT + resultH)) {
-                    var dif = resultS + activeT + activeH - resultH - resultT;
-                    $('.address-results:visible').scrollTop(dif);
-                }
-            }
-            /*
+        //         if (activeT < resultT) {
+        //             var dif = resultT - activeT - activeH;
+        //             $('.address-results:visible').scrollTop(dif);
+        //         } else if (((activeT + resultS) + activeH) > (resultT + resultH)) {
+        //             var dif = resultS + activeT + activeH - resultH - resultT;
+        //             $('.address-results:visible').scrollTop(dif);
+        //         }
+        //     }
+        /*
         $(document).on('focus input', '.address-search-container input', function() {
             var value = $(this).val();
             var length = value.length;
@@ -589,7 +583,7 @@
         });
 	  */
 
-
+      /*
         $("body").click(function(e) {
             if (!$(e.target).is('.address-search-container') && EDQ.results.length && !$(e.target).is('.address_search')) {
                 EDQ.resultscontainer.find('.helper').hide();
@@ -619,6 +613,7 @@
                 EDQ.resultscontainer.find('.helper').hide();
             }
         });
+		*/
 
         $(document).on('change input blur', '#InteractionAdd input, #InteractionAdd select', function() {
             $(this).valid();
