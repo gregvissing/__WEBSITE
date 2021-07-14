@@ -1,11 +1,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.12.0/jquery.validate.min.js"></script>
+
 <link rel="stylesheet" href="https://foundation.uc.edu/file/redesign/css/tinymce_styles.css" type="text/css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="/client/styles/Admin/GenericUI.css" type="text/css" />
 
 <link rel="stylesheet" href="https://foundation.uc.edu/file/custom-content-parts/css/bb-custom-form_editor.css" type="text/css" />
+<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'> 
+
+<style>
+.ui-datepicker td {
+    border: 0;
+    padding: 1px !important;
+}  
+  
+</style>
 
 <div id="BBTabs">
 
@@ -83,6 +93,8 @@
 												name="AuthorPhone_0" id="AuthorPhone_0" /></label>
                                       	<label>Author Email: <input class="form-control authorEmail" type="text"
 												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
+                                      	<label>Date Published: <input class="form-control datePublished" type="text"
+												name="DatePublished_0" id="DatePublished_0" /></label>
                                     </div>
 
                                     <div class="HR" id="DivHr_0">
@@ -196,9 +208,6 @@
                                     </div>
                                   
                                   	
-
-                                    
-
                                     <div class="MaxLength" id="DivMaxLength_0">
                                         <label>Max length: <input class="form-control" type="number" step="1"
 												value="255" name="MaxLength_0" id="MaxLength_0" /></label>
@@ -617,12 +626,12 @@
     $item.Container = $('.ItemContainer');
     $item.Table = $('.ItemTable');
 
-    $('#ItemRowTemplate').remove();
+    $('#ItemRowTemplate').remove();      	
 
     //loop through saved settings, and set text fields, select lists, textareas, and checkboxes (NB: not currently updating radio buttons as none have been required yet)
     $(document).ready(function() {
-
-        //$('#ddCountries').val(BLACKBAUD.api.customPartEditor.settings["ddCountries"]);
+      
+      	//$('#ddCountries').val(BLACKBAUD.api.customPartEditor.settings["ddCountries"]);
         //$('#ddCountries').multiSelect()
 
         //load Event Categories
@@ -717,6 +726,7 @@
                   	authorName: $(this).find('.Byline input.authorName').val(),
                   	authorPhone: $(this).find('.Byline input.authorPhone').val(),
                   	authorEmail: $(this).find('.Byline input.authorEmail').val(),
+                  	datePublished: $(this).find('.Byline input.datePublished').val(),
 
                     help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
@@ -856,6 +866,7 @@
           	$newRow.find('.Byline input.authorName').val(item.authorName);
           	$newRow.find('.Byline input.authorPhone').val(item.authorPhone);
           	$newRow.find('.Byline input.authorEmail').val(item.authorEmail);
+          	$newRow.find('.Byline input.datePublished').val(item.datePublished);
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
@@ -930,6 +941,12 @@
         }
 
         applyMCE();
+      
+      	$(function() {
+          	$( ".datePublished" ).datepicker({
+            	dateFormat: "MM d, yy"
+            });
+      	});
 
         BuildConditionalSelects();
         BuildMatrix();
@@ -1184,4 +1201,5 @@
     $(document).on('change', '.AddressMap div[data-map] select', function() {
         $(this).attr('data-value', $(this).val());
     });
+  	      
 </script>
