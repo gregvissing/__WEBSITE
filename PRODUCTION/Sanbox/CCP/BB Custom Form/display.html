@@ -9,7 +9,7 @@
     //templates
     var BBCustomFormPage = 1;
     var BBCustomFormPages = 1;
-    var $row = $('<div class="form-field-complex custom-form col-md-12"></div>');
+  	var $row = $('<div class="form-field-complex col-md-12"></div>'); // removed class 'custom-form'
     var $label = $('<label></label>');
     var $text = $('<p></p>');
     var $div = $('<div></div>');
@@ -43,6 +43,7 @@
     $fieldtemplate["heading1"] = $('<h1></h1>');
     $fieldtemplate["heading2"] = $('<h2></h2>');
     $fieldtemplate["heading3"] = $('<h3></h3>');
+  	$fieldtemplate["subheading"] = $('<p class="large"></p>');
 
     $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
@@ -100,6 +101,10 @@
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
                         .append($fieldtemplate[item.type].clone().text(item.question));
+                } else if (item.type == "subheading") {
+                    var $newRow = $row.clone()
+                        .append($label.clone().attr('for', 'customField' + item.index).text())
+                        .append($fieldtemplate[item.type].clone().text(item.question));
                 } else if (item.type == "blockquote") {
                     var $newRow = $row.clone()
                         .append($label.clone().attr('for', 'customField' + item.index).text())
@@ -144,7 +149,7 @@
                     var $newRow = $row.clone()
                         .append($byline.clone()
                             .append($bylineAuthorDiv.clone()                        
-                        .append($bylineDate.clone().html("<em>" + item.datePublished.trim() + "</em>" ))
+                        		.append($bylineDate.clone().html("<em>" + item.datePublished.trim() + "</em>" ))
                                 .append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
                                 .append($bylineEmail.clone()
                                     .append($link.clone()
@@ -152,7 +157,10 @@
                                 )
                                 .append($bylinePhone.clone().text(item.authorPhone.trim()))
                             )
-                        );
+                        )
+                      	.append("<div class='story'><em>" + item.datePublished.trim() + "</em> <a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a></div>");
+                        // .append($bylineName.clone().html("<p><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a></p>" ))
+                        // .append($bylineName.clone().html("<p><a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a></p>" ));
                 } else if (item.type == "hr") {
                     var $newRow = $row.clone().css('margin', '0 auto')
                         .append(($fieldtemplate[item.type].clone()));
