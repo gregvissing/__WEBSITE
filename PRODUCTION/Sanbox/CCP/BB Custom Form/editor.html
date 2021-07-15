@@ -95,6 +95,21 @@
 												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
                                       	<label>Date Published: <input class="form-control datePublished" type="text"
 												name="DatePublished_0" id="DatePublished_0" /></label>
+                                      	<hr>
+                                        <div class="Field">
+                                            <p>
+                                                <label>Selected Link Name:</label>
+                                                <span class="selected-link-name"></span>
+                                            </p>
+                                            <p>
+                                                <label>Selected Link URL:</label>
+                                                <span class="selected-link-url"></span>
+                                            </p>
+                                            <p>
+                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
+													Link</button>
+                                            </p>
+                                        </div>
                                     </div>
 
                                     <div class="HR" id="DivHr_0">
@@ -115,7 +130,7 @@
 												type="text"
 												name="cardLinkText_0" id="cardLinkText_0" /></label>
                                         <hr>
-                                        <div>
+                                        <div class="Field">
                                             <p>
                                                 <label>Selected Link Name:</label>
                                                 <span class="selected-link-name"></span>
@@ -325,6 +340,7 @@
 				<option value="heading1">Heading 1</option>
 				<option value="heading2">Heading 2</option>
 				<option value="heading3">Heading 3</option>
+              	<option value="subheading">Sub-Heading</option>
 			</optgroup>
 			<optgroup label="Components">
 				<option value="accordion">Accordion</option>
@@ -402,7 +418,7 @@
         "Accordion": false,
         "Formattedtext": false,
         "QuoteSource": false,
-        "Help": true,
+        "Help": false,
         "QuestionRequired": false,
         "MaxLength": false,
         "LinkAttribute": false,
@@ -478,6 +494,27 @@
         "ColumnWidth": false
     }
     Fields["heading3"] = {
+      	"Byline": false,
+        "Question": true,
+        "Blockquote": false,
+        "Card": false,
+        "HR": false,
+        "Image": false,
+        "Accordion": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false
+    }   
+    Fields["subheading"] = {
       	"Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -727,6 +764,8 @@
                   	authorPhone: $(this).find('.Byline input.authorPhone').val(),
                   	authorEmail: $(this).find('.Byline input.authorEmail').val(),
                   	datePublished: $(this).find('.Byline input.datePublished').val(),
+                  	storyLinkName: $(this).find('.Byline .selected-link-name').text(),
+                    storyLinkUrl: $(this).find('.Byline .selected-link-url').text(),
 
                     help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
@@ -866,7 +905,9 @@
           	$newRow.find('.Byline input.authorName').val(item.authorName);
           	$newRow.find('.Byline input.authorPhone').val(item.authorPhone);
           	$newRow.find('.Byline input.authorEmail').val(item.authorEmail);
-          	$newRow.find('.Byline input.datePublished').val(item.datePublished);
+          	$newRow.find('.Byline input.datePublished').val(item.datePublished);          
+          	$newRow.find('.Byline .selected-link-name').text(item.storyLinkName);
+            $newRow.find('.Byline .selected-link-url').text(item.storyLinkUrl);
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
