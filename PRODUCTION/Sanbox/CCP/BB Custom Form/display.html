@@ -1,5 +1,16 @@
 <link rel="stylesheet" href="/client/styles/jquery/smoothness/jquery-ui-1.7.1.all.css?&iuqt=1">
 <link rel="stylesheet" href="https://foundation.uc.edu/file/custom-content-parts/css/bb-custom-form_display.css" type="text/css" />
+<style>
+  
+  .form-page.row {
+  		margin: 0;
+  }
+  
+  .form-page.row > .form-field-complex {
+  		padding: 0;
+  }
+  
+</style>
 
 <div class="message-form "></div> <!-- Removed class: container -->
 
@@ -10,6 +21,7 @@
     var BBCustomFormPage = 1;
     var BBCustomFormPages = 1;
   	var $row = $('<div class="form-field-complex col-md-12"></div>'); // removed class 'custom-form'
+  	var $contentwrapper = $('<div class="content-wrapper"></div>');
     var $label = $('<label></label>');
     var $text = $('<p></p>');
     var $div = $('<div></div>');
@@ -90,31 +102,35 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-          // console.log(item);
+          	console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
-                    var $newRow = $row.clone()
-                        //.append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($fieldtemplate[item.type].clone().text(item.question));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($fieldtemplate[item.type].clone().text(item.question))
+                        );
                 } else if (item.type == "heading2") {
-                    var $newRow = $row.clone()
-                        //.append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($fieldtemplate[item.type].clone().text(item.question));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($fieldtemplate[item.type].clone().text(item.question))
+                        );
                 } else if (item.type == "heading3") {
-                    var $newRow = $row.clone()
-                        //.append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($fieldtemplate[item.type].clone().text(item.question));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($fieldtemplate[item.type].clone().text(item.question))
+                        );
                 } else if (item.type == "subheading") {
-                    var $newRow = $row.clone()
-                        //.append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($fieldtemplate[item.type].clone().text(item.question));
-                  
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($fieldtemplate[item.type].clone().text(item.question))
+                        );                  
                 } else if (item.type == "blockquote") {
-                    var $newRow = $row.clone()
-                        //.append($label.clone().attr('for', 'customField' + item.index).text())
-                        .append($pullquote.clone()
-                        	.append(($fieldtemplate[item.type].clone().text(item.quoteText)))
-                                .append("<p class='pull-quote-attribution'><span>" + item.quoteSource.trim() + "</span><p>")
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($pullquote.clone()
+                        		.append(($fieldtemplate[item.type].clone().text(item.quoteText)))
+                                	.append("<p class='pull-quote-attribution'><span>" + item.quoteSource.trim() + "</span><p>")
+                        	)
                         );
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
@@ -138,54 +154,71 @@
                         case "right":
                             marginVals = "0 0 0 auto";
                     }
-                    var $newRow = $row.clone().css('margin', marginVals)
-                        .append(($fieldtemplate[item.type].clone()
-                            .append($image.clone().attr("src", item.imageSrc.trim()))
-                            .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
-                        ));
+                    if (item.fullPageWidth =='Yes' ) {
+                 	    var $newRow = $row.clone().css('margin', marginVals)
+                        	.append(($fieldtemplate[item.type].clone()
+                            	.append($image.clone().attr("src", item.imageSrc.trim()))
+                            	.append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
+                        	));
+                	} else {
+                    	var $newRow = $contentwrapper.clone()
+                        	.append($row.clone().css('margin', marginVals)
+                        		.append(($fieldtemplate[item.type].clone()
+                            		.append($image.clone().attr("src", item.imageSrc.trim()))
+                            		.append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
+                        	)));
+                    }
                         
                 } else if (item.type == "accordion") {
-                    var $newRow = $row.clone()
-                        .append(($fieldtemplate[item.type].clone()
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append(($fieldtemplate[item.type].clone()
                         	.append('<h3><buttton aria-expanded="false" class="Accordion-trigger" aria-controls="sect' + item.index + '" id="accordion' + item.index + 'id"><span class="Accordion-title">' + item.accordionText.trim() + '<span class="Accordion-icon"></span></span></button></h3>')
                             .append('<div id="sect' + item.index + '" role="region" aria-labelledby="accordion' + item.index + 'id" class="Accordion-panel" hidden>' + item.accordionContent.trim() + '</div>')
-                        ));                    
+                        )));                    
                         
                 } else if (item.type == "formattedtext") {
-                    var $newRow = $row.clone()
-                        .append($div.clone().html(item.formattedText.trim()));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($div.clone().html(item.formattedText.trim())));
                         
                 } else if (item.type == "nextfrontiers") {
-                    var $newRow = $row.clone()
-                        .append($calloutcard.clone().html("<p class='card-header'>Explore Our Next Frontiers</p><p>As the thriving research nexus of our region, the University of Cincinnati is solving problems with unrivaled talent who push the boundaries of discovery and innovation for the greater good. Your investment in <strong><em>Next, <span style='color: #e00122; font-weight: inherit;'>Now</span>: The Campaign for Cincinnati</em></strong> can launch UC research and innovation to the next frontiers that await us.</p>"));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($calloutcard.clone().html("<p class='card-header'>Explore Our Next Frontiers</p><p>As the thriving research nexus of our region, the University of Cincinnati is solving problems with unrivaled talent who push the boundaries of discovery and innovation for the greater good. Your investment in <strong><em>Next, <span style='color: #e00122; font-weight: inherit;'>Now</span>: The Campaign for Cincinnati</em></strong> can launch UC research and innovation to the next frontiers that await us.</p>")));
                 } else if (item.type == "nextnow") {
-                    var $newRow = $row.clone()
-                        .append($calloutcard.clone().html("<p class='card-header'><em>NEXT, NOW</em></p><p>With its focus on innovation and impact, <strong><em>Next, <span style='color: #e00122; font-weight: inherit;'>Now</span>: The Campaign for Cincinnati</em></strong> is where ambition meets action. At the University of Cincinnati and UC Health, we’re driven by next; thinking bolder and dreaming bigger to create the tomorrow we envision, today.<br>What’s NEXT, starts with you.</p>"));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($calloutcard.clone().html("<p class='card-header'><em>NEXT, NOW</em></p><p>With its focus on innovation and impact, <strong><em>Next, <span style='color: #e00122; font-weight: inherit;'>Now</span>: The Campaign for Cincinnati</em></strong> is where ambition meets action. At the University of Cincinnati and UC Health, we’re driven by next; thinking bolder and dreaming bigger to create the tomorrow we envision, today.<br>What’s NEXT, starts with you.</p>")));
                 } else if (item.type == "empowernext") {
-                    var $newRow = $row.clone()
-                        .append($calloutcard.clone().html("<p class='card-header'>Who will you empower <em>NEXT</em>?</p><p>Scholarships, fellowships and enrichment programs provide opportunities for students to attend, grow and graduate from UC. You can empower our next leaders through support for scholarships and signature programs in career-based education, co-op or professional development.</p>"));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        .append($calloutcard.clone().html("<p class='card-header'>Who will you empower <em>NEXT</em>?</p><p>Scholarships, fellowships and enrichment programs provide opportunities for students to attend, grow and graduate from UC. You can empower our next leaders through support for scholarships and signature programs in career-based education, co-op or professional development.</p>")));
                         
                 } else if (item.type == "byline") {
-                    var $newRow = $row.clone()
-                        .append($byline.clone()
-                            .append($bylineAuthorDiv.clone()                        
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($byline.clone()
+                            	.append($bylineAuthorDiv.clone()                        
                         // .append($bylineDate.clone().html("<em>" + item.datePublished.trim() + "</em>" ))
-                                .append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
-                                .append($bylineEmail.clone()
-                                    .append($link.clone()
-                                        .attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0]))
-                                )
-                                .append($bylinePhone.clone().text(item.authorPhone.trim()))
+                                	.append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
+                                	.append($bylineEmail.clone()
+                                    	.append($link.clone()
+                                        	.attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0]))
+                                	)
+                                	.append($bylinePhone.clone().text(item.authorPhone.trim()))
                         		
-                            )
-                        ).append("<div class='story'><span class='dateline'>" + item.datePublished.trim() + "</span><span class='sharing'><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-linkedin-square' aria-hidden='true'></i><span class='sr-only'>Share on LinkedIn</span></a> <a href='#' class='printPage'><i class='fa fa-print' aria-hidden='true'></i></a></span></div>");
+                            	)
+                        	).append("<div class='story'><span class='dateline'>" + item.datePublished.trim() + "</span><span class='sharing'><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-linkedin-square' aria-hidden='true'></i><span class='sr-only'>Share on LinkedIn</span></a> <a href='#' class='printPage'><i class='fa fa-print' aria-hidden='true'></i></a></span></div>"));
                         
                 } else if (item.type == "hr") {
-                    var $newRow = $row.clone().css('margin', '0 auto')
-                        .append(($fieldtemplate[item.type].clone()));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone().css('margin', '0 auto')
+                        	.append(($fieldtemplate[item.type].clone())));
                 } else {
-                    var $newRow = $row.clone()
-                        .append($text.clone().text(item.question));
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($text.clone().text(item.question)));
                     //.prepend($fieldtemplate[item.type].clone().attr('id', 'customField' + item.index).attr('name', 'customField' + item.index)));
                 }
 
@@ -196,9 +229,10 @@
                     }
                 }
                 if (item.columns != null) {
-                    $newRow.removeClass('col-md-12');
-                    $newRow.addClass('col-md-' + item.columns);
+                    $newRow.find('form-field-complex').removeClass('col-md-12');
+                    $newRow.find('form-field-complex').addClass('col-md-' + item.columns);
                 }
+                        
                 if (item.required == "on") {
                     $newRow.find('input, select').addClass('required');
                     $newRow.children('label').append(' <abbr title="Field is required">*</abbr>');
@@ -537,15 +571,11 @@
             EDQ.results = EDQ.resultscontainer.find('.address-results');
             EDQ.country = EDQ.enabledCountries[0]; //$('select[id$="_dd_Country"]').val();
             EDQ.term = value;
-
             var field = $(this);
             var address = $(this).attr('data-map-address');
             var suburb = $(this).attr('data-map-suburb');
             var state = $(this).attr('data-map-state');
             var postcode = $(this).attr('data-map-postcode');
-
-
-
             if (length >= 4) {
                 EDQ.client.search(value, EDQ.countries[EDQ.country]).done(function(results) {
                     EDQ.results.empty();
@@ -560,7 +590,6 @@
                     EDQ.results.css('max-height', function() {
                         return EDQ.show * EDQ.results.find('li').first().height() + 'px';
                     });
-
                     $('a[data-moniker]').off('click').on('click', function() {
                         EDQ.term = $(this).text();
                         EDQ.client.format($(this).attr('data-moniker'), EDQ.countries[EDQ.country], 'IntuitiveDefault').done(function(result) {
@@ -574,7 +603,6 @@
                                 };
                                 return value;
                             }).trigger('change');
-
                             $('#customField' + suburb).val(result.address.locality).trigger('change');
                             $('#customField' + postcode).val(result.address.postalCode).trigger('change');
                             $('#customField' + state + ' option:contains("' + result.address.province + '")').prop('selected', true).trigger('change');
@@ -585,7 +613,6 @@
                 });
             }
         });
-
         $(document).on('hover', '.address-search-container .address-results .address-result', function() {
             EDQ.current = $(this).attr('id').split("-")[2];
             EDQ.selectResult(EDQ.current, false);
@@ -615,7 +642,6 @@
                 default: //other
                     return true;
             }
-
         });
 	  */
 
@@ -626,7 +652,6 @@
                 EDQ.results.empty();
             }
         });
-
         $(document).on('click', 'span.helper a', function() {
             EDQ.resultscontainer = $(this).parents('.address-results-container');
             if (!EDQ.resultscontainer.prev('input[data-map-address]').length) {
@@ -636,10 +661,8 @@
                 EDQ.showFields(true);
             }
         });
-
         Sys.Application.add_load(function() {
             EDQ.country = EDQ.enabledCountries[0]; //$('select[id$="_dd_Country"]').val();
-
             if (jQuery.inArray(EDQ.country, EDQ.enabledCountries) < 0) {
                 // already has an address in the field
                 EDQ.showFields(true);
