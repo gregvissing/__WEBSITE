@@ -14,7 +14,8 @@
 
 <div class="message-form "></div> <!-- Removed class: container -->
 
-<script src="/file/js/edq-validate.js" type="text/javascript"></script>
+<!--<script src="/file/js/edq-validate.js" type="text/javascript"></script>-->
+<script src="https://foundation.uc.edu/file/custom-content-parts/js/accordion.js"></script>
 
 <script>
     //templates
@@ -65,6 +66,7 @@
     $fieldtemplate["card"] = $('<div class="card"></div>');
     $fieldtemplate["hr"] = $('<hr>');
     $fieldtemplate["image"] = $('<div class="image"></div>');
+  	$fieldtemplate["pagetitle"] = $('<div class="page-title"></div>');
 
     // $fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
     $fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
@@ -83,7 +85,7 @@
 
     var hasPageBreak = false;
 
-    var EDQ = {};
+  // var EDQ = {};
 
     function initBBCustomForm(data) {
         /*
@@ -109,6 +111,13 @@
                         .append($row.clone()
                         	.append($fieldtemplate[item.type].clone().text(item.question))
                         );
+                  
+                } else if (item.type == "pagetitle") {
+                     var $newRow = $fieldtemplate[item.type].clone()
+                        .append($contentwrapper.clone()
+                        	.append("<h1>" + item.pageTitle.trim() + "</h1>")
+                        );
+                  
                 } else if (item.type == "heading2") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
@@ -181,6 +190,10 @@
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                         	.append($div.clone().html(item.formattedText.trim())));
+                } else if (item.type == "calloutbox") {
+                    var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                        	.append($calloutcard.clone().html(item.calloutText.trim())));
                         
                 } else if (item.type == "nextfrontiers") {
                     var $newRow = $contentwrapper.clone()
@@ -200,7 +213,6 @@
                         .append($row.clone()
                         	.append($byline.clone()
                             	.append($bylineAuthorDiv.clone()                        
-                        // .append($bylineDate.clone().html("<em>" + item.datePublished.trim() + "</em>" ))
                                 	.append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
                                 	.append($bylineEmail.clone()
                                     	.append($link.clone()
@@ -215,11 +227,11 @@
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone().css('margin', '0 auto')
                         	.append(($fieldtemplate[item.type].clone())));
-                } else {
+                        
+               	} else {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                         	.append($text.clone().text(item.question)));
-                    //.prepend($fieldtemplate[item.type].clone().attr('id', 'customField' + item.index).attr('name', 'customField' + item.index)));
                 }
 
 
@@ -375,7 +387,7 @@
 
                     });
                 }
-
+                        
                 $form.find('.form-page').last().append($newRow);
                         
                 $("main").find("p.large").first().addClass("sub-heading");
@@ -467,8 +479,6 @@
                 if ($('.form-page:visible > div:visible').length == 0) {
                     $('#btnPrev:visible').click();
                 }
-
-
 
             });
 
