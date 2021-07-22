@@ -136,14 +136,15 @@
                         );
                   
                 } else if (item.type == "relatedstory") {
-                    var $newRow = $row.clone()
-                        .append(($fieldtemplate[item.type].clone()
-                            .append($image.clone().attr("src", item.relatedStoryImgSrc.trim()))
+                  var $newRow = $fieldtemplate[item.type].clone() //$row.clone()
+                      //.append(($fieldtemplate[item.type].clone()
+                      //.append($image.clone().attr("src", item.relatedStoryImgSrc.trim()))
+                      		.append($div.clone().addClass("related-image").css("background-image", "url(" + item.relatedStoryImgSrc.trim() + ")"))
                             .append($div.clone()
                                 .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
                                 .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
                             )
-                        ));
+                                 //);
                   
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
@@ -170,16 +171,12 @@
                         ));
                     
                 } else if (item.type == "subfooter") {
-                  	console.log("subfooter");
-                    var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.subFooterImgSrc.trim() + ")")
-                        // .append(($fieldtemplate[item.type].clone()
-                        //.append($image.clone().attr("src", item.subFooterImgSrc.trim()))
+                  	var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.subFooterImgSrc.trim() + ")")
                             .append($contentwrapper.clone()
                                 .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                                 .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
                                 .append($link.clone().attr("href", item.subFooterLinkUrl.trim()).text(item.subfooterLinkText.trim()))
                             );
-                  //));
                   
                 } else if (item.type == "pagetitle") {
                      var $newRow = $fieldtemplate[item.type].clone()
@@ -217,7 +214,6 @@
                 } else if (item.type == "accordion") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
-                        //.append(($fieldtemplate[item.type].clone()
                        		.append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
                         	.append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.accordionContent.trim() + '</div>')
                         );             
@@ -277,8 +273,12 @@
                     }
                 }
                 if (item.columns != null) {
-                    $newRow.find('form-field-complex').removeClass('col-md-12');
-                    $newRow.find('form-field-complex').addClass('col-md-' + item.columns);
+                    $newRow.removeClass('col-md-12');
+                    if ( $($newRow).is( ".content-wrapper" ) ) {
+ 						//console.log($newRow);                        
+                    } else {
+                    	$newRow.addClass('col-md-' + item.columns);
+                    }                    
                 }
                         
                 if (item.required == "on") {
@@ -435,7 +435,8 @@
             }
 
         });
-                        
+                 
+       	// accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion__button');
         const accordionSections = document.querySelectorAll('.accordion__section');
                         
@@ -465,6 +466,8 @@
                 }
          	})
      	})
+                        
+        $( ".related" ).wrapAll( "<div class='content-wrapper' />").wrapAll( "<div class='row related-story-container' />");
                         
         $('a.printPage').click(function(){
            	window.print();
