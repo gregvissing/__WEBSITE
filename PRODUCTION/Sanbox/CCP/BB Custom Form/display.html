@@ -25,8 +25,10 @@
     var $label = $('<label></label>');
     var $text = $('<p></p>');
     var $div = $('<div></div>');
+  	var $fullWidthDiv = $('<div class="full-width"></div>');
     var $link = $('<a href="#">Test Link</a>');
   	var $calloutcard = $('<div class="callout-card background-gray"></div>');
+  	var $largeParagraph = $('<p class="large"></p>');
 
     var $image = $('<img src="" >');
     var $cardTitle = $('<p class="large"></p>');
@@ -60,10 +62,13 @@
 
     $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
+  	$fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
+  	$fieldtemplate["rowcard"] = $('<div class="card row"></div>');
     $fieldtemplate["hr"] = $('<hr>');
     $fieldtemplate["image"] = $('<div class="image"></div>');
   	$fieldtemplate["pagetitle"] = $('<div class="page-title"></div>');
+  	$fieldtemplate["subfooter"] = $('<div class="sub-footer"></div>');
 
     // $fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
   	$fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
@@ -99,7 +104,7 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-          	console.log(item);
+          // console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
                     var $newRow = $contentwrapper.clone()
@@ -129,6 +134,17 @@
                                 	.append("<p class='pull-quote-attribution'><span>" + item.quoteSource.trim() + "</span><p>")
                         	)
                         );
+                  
+                } else if (item.type == "relatedStory") {
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($image.clone().attr("src", item.relatedStoryImgSrc.trim()))
+                            .append($div.clone()
+                                .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
+                                .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
+                            )
+                        ));
+                  
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
                         .append(($fieldtemplate[item.type].clone()
@@ -139,8 +155,32 @@
                                 .append($link.clone().attr("href", item.cardLinkUrl.trim()).text(item.cardLinkText.trim()))
                             )
                         ));
-                
-                
+                  
+                } else if (item.type == "rowcard") {
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($contentwrapper.clone()
+                            	.append($image.clone().attr("src", item.rowCardImgSrc.trim()))
+                            	.append($div.clone()
+                                	.append($cardTitle.clone().text(item.rowCardTitle.trim()))
+                                	.append($text.clone().text(item.rowCardText.trim()))
+                                	.append($link.clone().attr("href", item.rowCardLinkUrl.trim()).text(item.rowCardLinkText.trim()))
+                            	)
+                           	)
+                        ));
+                    
+                } else if (item.type == "subfooter") {
+                  	console.log("subfooter");
+                    var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.subFooterImgSrc.trim() + ")")
+                        // .append(($fieldtemplate[item.type].clone()
+                        //.append($image.clone().attr("src", item.subFooterImgSrc.trim()))
+                            .append($contentwrapper.clone()
+                                .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
+                                .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
+                                .append($link.clone().attr("href", item.subFooterLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                            );
+                  //));
+                  
                 } else if (item.type == "pagetitle") {
                      var $newRow = $fieldtemplate[item.type].clone()
                         .append($contentwrapper.clone()
