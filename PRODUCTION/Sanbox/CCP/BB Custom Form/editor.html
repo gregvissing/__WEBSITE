@@ -1603,9 +1603,30 @@
             tinyMCE.init({
                 mode: "textareas",
                 editor_selector: "tinymce",
+              
+              	automatic_uploads: false,
+              	file_picker_types: 'image file',
+              	file_picker_callback: function(callback, value, meta) {
+                  	if (meta.filetype === 'image') {
+      					BLACKBAUD.api.customPartEditor.images.launchImagePicker({
+                			callback: function(selectedImage) {
+                    			callback(selectedImage.url, {alt: selectedImage.alt});
+                			}
+            			});
+    				}
+                  
+                  	if (meta.filetype === 'file') {
+                     	BLACKBAUD.api.customPartEditor.links.launchLinkPicker({
+          					callback: function(selectedLink) {
+                              	console.log(selectedLink);
+                              	callback(selectedLink.url, {text: ''});
+          					}
+        				});
+    				}
+                },
 
                 plugins: 'code print preview searchreplace autolink directionality visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
-                toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+                toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | image | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
                 image_advtab: true,
                 content_css: [
                     "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
