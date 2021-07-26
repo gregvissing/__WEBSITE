@@ -473,16 +473,6 @@
            	window.print();
            	return false;
 		});
-                        
-        $("main p > img").each(function() {
-         	if ($(this).css("float") == "left") {
-               	$(this).addClass("imgLeft");
-          	} else if ($(this).css("float") == "right") {
-               	$(this).addClass("imgRight");
-           	} else {
-               	// do nothing
-           	}
-        });
 
         //trigger required checkboxes to set attribute value by default
         $('.custom-form select, .custom-form input[type="checkbox"]').trigger('change');
