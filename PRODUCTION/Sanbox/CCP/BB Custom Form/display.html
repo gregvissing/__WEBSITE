@@ -68,11 +68,12 @@
     $fieldtemplate["hr"] = $('<hr>');
     $fieldtemplate["image"] = $('<div class="image"></div>');
   	$fieldtemplate["pagetitle"] = $('<div class="page-title"></div>');
+  
   	$fieldtemplate["subfooter"] = $('<div class="sub-footer"></div>');
+  	$fieldtemplate["footer"] = $('<footer></footer>');
 
-    // $fieldtemplate["accordion"] = $('<div class="accordion" data-aria-accordion></div>');
   	$fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
-
+  
     $fieldtemplate["blockquote"] = $('<blockquote class="pull-quote"></blockquote>');
     $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
     $fieldtemplate["email"] = $('<input type="email" class="form-control email" />');
@@ -173,6 +174,15 @@
                                 .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                                 .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
                                 .append($link.clone().attr("href", item.subFooterLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                            );
+                  
+                } else if (item.type == "footer") {
+                  	var $newRow = $fieldtemplate[item.type].clone()
+                        	.append($image.clone().attr("src", item.footerImgSrc.trim()))
+                            .append($contentwrapper.clone().addClass("flex pad-bottom-1000 pad-top-1000")
+                             	.append($div.clone().text(item.footerColOneHeading.trim()))
+                                .append($div.clone().text(item.footerColTwoHeading.trim()))
+                                .append($div.clone().text(item.footerColThreeHeading.trim()))
                             );
                   
                 } else if (item.type == "pagetitle") {
