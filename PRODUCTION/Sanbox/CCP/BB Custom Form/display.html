@@ -104,7 +104,7 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-          // console.log(item);
+          	console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
                     var $newRow = $contentwrapper.clone()
@@ -137,14 +137,11 @@
                   
                 } else if (item.type == "relatedstory") {
                   var $newRow = $fieldtemplate[item.type].clone() //$row.clone()
-                      //.append(($fieldtemplate[item.type].clone()
-                      //.append($image.clone().attr("src", item.relatedStoryImgSrc.trim()))
                       		.append($div.clone().addClass("related-image").css("background-image", "url(" + item.relatedStoryImgSrc.trim() + ")"))
                             .append($div.clone()
                                 .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
                                 .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
                             )
-                                 //);
                   
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
@@ -212,11 +209,23 @@
                     }
                         
                 } else if (item.type == "accordion") {
-                    var $newRow = $contentwrapper.clone()
+                        
+                    if (item.columns == 12) {
+                        console.log(item.columns);
+                        var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                        		.append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
                         	.append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.accordionContent.trim() + '</div>')
-                        );             
+                        ); 
+                        
+                    } else {
+                        console.log("else " + item.columns);
+                    	var $newRow = $row.clone().addClass("accordion-container")
+                        //.append($row.clone()
+                       		.append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
+                        	.append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.accordionContent.trim() + '</div>')
+                        //);                         
+                    }                
                         
                 } else if (item.type == "formattedtext") {
                     var $newRow = $contentwrapper.clone()
@@ -468,6 +477,18 @@
      	})
                         
         $( ".related" ).wrapAll( "<div class='content-wrapper' />").wrapAll( "<div class='row related-story-container' />");
+                        
+        $( ".accordion-container.col-md-6" ).wrapAll( "<div class='content-wrapper' />").wrapAll( "<div class='row accordion-outer-container' />");
+                        
+        $("main p > img").each(function() {
+      		if ($(this).css("float") == "left") {
+        		$(this).addClass("imgLeft");
+      		} else if ($(this).css("float") == "right") {
+        		$(this).addClass("imgRight");
+      		} else {
+        		// do nothing
+      		}      
+    	});                
                         
         $('a.printPage').click(function(){
            	window.print();
