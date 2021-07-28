@@ -105,7 +105,7 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-          	console.log(item);
+          // console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
                     var $newRow = $contentwrapper.clone()
