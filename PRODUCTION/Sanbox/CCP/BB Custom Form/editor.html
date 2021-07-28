@@ -61,13 +61,19 @@
                                 </div>
 
                                 <div class="top">
-									<!-- TEXT FIELD -->
+									<div class="AdvancedDonationForm" id="DivAdvancedDonationForm_0">
+                                        <label>Content: <input class="form-control required" type="text"
+												name="AdvancedDonationForm_0" id="AdvancedDonationForm_0" /></label>
+                                    </div>
+                                  
                                   	<div class="Question" id="DivQuestion_0">
+                                      	<div><em>Tip: Text displays based on font assigment.</em></div>
                                         <label>Content: <input class="form-control required" type="text"
 												name="Question_0" id="Question_0" /></label>
                                     </div>
                                   
                                     <div class="Blockquote" id="DivBlockquote_0">
+                                      	<div><em>Tip: Quote text wrapped inside quotations so no need to wrap. Dash in front of source is automatically added.</em></div>
                                         <label>Quote Text: <input class="form-control required quoteText"
 												type="text"
 												name="QuoteText_0" id="QuoteText_0" /></label>
@@ -115,6 +121,7 @@
                                   
                                   
                                   	<div class="CalloutBox" id="DivCalloutBox_0">
+                                      	<div><em>Tip: Text displays at a max-width of 1024 pixels and has a gray background.</em></div>
                                         <div class="FieldContent">
                                             <label>Custom Call-Out Box Content: </label>
                                             <textarea class="tinymce" id="CalloutBox_0" name="CalloutBox_0" cols="80"></textarea>
@@ -230,6 +237,28 @@
                                         </div>
                                         <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
                                             <img src="">
+                                        </div>
+                                    </div>
+                                  
+                                  	<div class="ButtonLink" id="DivButtonLink_0">
+                                        <label>Button Link Text: <input class="form-control required
+												cardLinkText"
+												type="text"
+												name="cardLinkText_0" id="cardLinkText_0" /></label>
+                                        <hr>
+                                        <div class="Field">
+                                            <p>
+                                                <label>Selected Link Name:</label>
+                                                <span class="selected-link-name"></span>
+                                            </p>
+                                            <p>
+                                                <label>Selected Link URL:</label>
+                                                <span class="selected-link-url"></span>
+                                            </p>
+                                            <p>
+                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
+													Link</button>
+                                            </p>
                                         </div>
                                     </div>
                                   
@@ -584,6 +613,9 @@
 <div id="newItem" title="Add a new question">
     <label>Field type:<br />
 		<select id="NewItemFieldType">
+          	<optgroup label="Donation Form">
+              	<option value="adf">Advanced Donation Form</option>
+			</optgroup>
 			<optgroup label="Text Field">
 				<option value="blockquote">Blockquote</option>
 				<option value="formattedtext">Formatted Text</option>
@@ -600,6 +632,7 @@
 				<option value="accordion">Accordion</option>
               	<option value="calloutbox">Call-Out Box</option>
 				<option value="card">Grid Card</option>
+              	<option value="buttonlink">Button Link</option>
               	<option value="rowcard">Row Card</option>
 				<option value="hr">Horizontal Rule</option>
 				<option value="image">Image</option>
@@ -632,7 +665,41 @@
     //FIELD SETTINGS
     var Fields = {};
 
-    Fields["blockquote"] = {
+    Fields["adf"] = {
+      	"AdvancedDonationForm": true,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": true,
+      	"RelatedStory": false,
+        "Card": false,
+      	"RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+      	"PageTitle": false,
+      	"SubFooter": false,
+      	"Footer": false,
+        "Accordion": false,
+      	"CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false,
+        "FullPageWidth": false
+    }
+      
+  	Fields["blockquote"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": true,
@@ -664,6 +731,7 @@
         "FullPageWidth": false
     }
     Fields["formattedtext"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -695,6 +763,7 @@
         "FullPageWidth": false
     }
     Fields["calloutbox"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -726,6 +795,7 @@
         "FullPageWidth": false
     }
     Fields["text"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -757,6 +827,7 @@
         "FullPageWidth": false
     }
     Fields["byline"] = {
+      	"AdvancedDonationForm": false,
         "Byline": true,
         "Question": false,
         "Blockquote": false,
@@ -789,6 +860,7 @@
     }
 
     Fields["heading1"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -820,6 +892,7 @@
         "FullPageWidth": false
     }
     Fields["heading2"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -851,6 +924,7 @@
         "FullPageWidth": false
     }
     Fields["heading3"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -882,6 +956,7 @@
         "FullPageWidth": false
     }
     Fields["subheading"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
         "Blockquote": false,
@@ -914,6 +989,7 @@
     }
 
     Fields["accordion"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -945,6 +1021,7 @@
         "FullPageWidth": false
     }
     Fields["relatedstory"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -976,6 +1053,7 @@
         "FullPageWidth": false
     }
     Fields["card"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1007,6 +1085,7 @@
         "FullPageWidth": false
     }
     Fields["rowcard"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1038,6 +1117,7 @@
         "FullPageWidth": false
     }
     Fields["hr"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1069,6 +1149,7 @@
         "FullPageWidth": false
     }
     Fields["image"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1100,6 +1181,7 @@
         "FullPageWidth": true
     }
     Fields["pagetitle"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1132,6 +1214,7 @@
     }
       
     Fields["subfooter"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1163,6 +1246,7 @@
         "FullPageWidth": false
     }
      Fields["footer"] = {
+       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1195,6 +1279,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1226,6 +1311,7 @@
         "FullPageWidth": false
     }
     Fields["nextnow"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1257,6 +1343,7 @@
         "FullPageWidth": false
     }
     Fields["empowernext"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1289,6 +1376,7 @@
     }
 
     Fields["page break"] = {
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1416,6 +1504,8 @@
                 var rowdata = {
                     type: $(this).attr('data-type'),
                     question: $(this).find('.Question input').val(),
+                  
+                  	adfText: $(this).find('.AdvancedDonationForm input').val(),
 
                     quoteText: $(this).find('.Blockquote input.quoteText').val(),
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
@@ -1590,6 +1680,8 @@
             console.log(item);
 
             $newRow.find('.Question input').val(item.question);
+          
+          	$newRow.find('.AdvancedDonationForm input').val(item.adfText);
 
             $newRow.find('.Blockquote input.quoteText').val(item.quoteText);
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
@@ -1815,6 +1907,7 @@
 
     $(document).on('click', '.ItemActionAdd', function(e) {
         e.preventDefault();
+      	$("#NewItemFieldType").prop("selectedIndex", 0);
         $newItem.dialog("open");
     });
 
