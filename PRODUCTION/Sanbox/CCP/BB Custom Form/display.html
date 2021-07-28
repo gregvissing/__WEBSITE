@@ -68,6 +68,7 @@
     $fieldtemplate["hr"] = $('<hr>');
     $fieldtemplate["image"] = $('<div class="image"></div>');
   	$fieldtemplate["pagetitle"] = $('<div class="page-title"></div>');
+  	$fieldtemplate["buttonlink"] = $('<a href="" class="button button-primary"></a>');
   
   	$fieldtemplate["subfooter"] = $('<div class="sub-footer"></div>');
   	$fieldtemplate["footer"] = $('<footer></footer>');
@@ -143,6 +144,12 @@
                                 .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
                                 .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
                             )
+                      
+                } else if (item.type == "buttonlink") {
+                    var $newRow = $row.clone()
+                        .append($div.clone().addClass("text-center")
+                                .append($fieldtemplate[item.type].clone().attr("href", item.buttonLinkUrl.trim()).text(item.buttonLinkText.trim()))
+                        );
                   
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
