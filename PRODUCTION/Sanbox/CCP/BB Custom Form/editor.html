@@ -242,9 +242,9 @@
                                   
                                   	<div class="ButtonLink" id="DivButtonLink_0">
                                         <label>Button Link Text: <input class="form-control required
-												cardLinkText"
+												linkText"
 												type="text"
-												name="cardLinkText_0" id="cardLinkText_0" /></label>
+												name="linkText_0" id="linkText_0" /></label>
                                         <hr>
                                         <div class="Field">
                                             <p>
@@ -665,11 +665,12 @@
     //FIELD SETTINGS
     var Fields = {};
 
-    Fields["adf"] = {
-      	"AdvancedDonationForm": true,
+    Fields["buttonlink"] = {
+      	"ButtonLink": true,
+      	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
-        "Blockquote": true,
+        "Blockquote": false,
       	"RelatedStory": false,
         "Card": false,
       	"RowCard": false,
@@ -697,8 +698,41 @@
         "ColumnWidth": false,
         "FullPageWidth": false
     }
-      
+  	Fields["adf"] = {
+      	"ButtonLink": false,
+      	"AdvancedDonationForm": true,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+      	"RelatedStory": false,
+        "Card": false,
+      	"RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+      	"PageTitle": false,
+      	"SubFooter": false,
+      	"Footer": false,
+        "Accordion": false,
+      	"CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false,
+        "FullPageWidth": false
+    }      
   	Fields["blockquote"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -731,6 +765,7 @@
         "FullPageWidth": false
     }
     Fields["formattedtext"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -763,6 +798,7 @@
         "FullPageWidth": false
     }
     Fields["calloutbox"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -795,6 +831,7 @@
         "FullPageWidth": false
     }
     Fields["text"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
@@ -827,6 +864,7 @@
         "FullPageWidth": false
     }
     Fields["byline"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": true,
         "Question": false,
@@ -860,6 +898,7 @@
     }
 
     Fields["heading1"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
@@ -892,6 +931,7 @@
         "FullPageWidth": false
     }
     Fields["heading2"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
@@ -924,6 +964,7 @@
         "FullPageWidth": false
     }
     Fields["heading3"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
@@ -956,6 +997,7 @@
         "FullPageWidth": false
     }
     Fields["subheading"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": true,
@@ -989,6 +1031,7 @@
     }
 
     Fields["accordion"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1021,6 +1064,7 @@
         "FullPageWidth": false
     }
     Fields["relatedstory"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1053,6 +1097,7 @@
         "FullPageWidth": false
     }
     Fields["card"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1085,6 +1130,7 @@
         "FullPageWidth": false
     }
     Fields["rowcard"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1117,6 +1163,7 @@
         "FullPageWidth": false
     }
     Fields["hr"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1149,6 +1196,7 @@
         "FullPageWidth": false
     }
     Fields["image"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1181,6 +1229,7 @@
         "FullPageWidth": true
     }
     Fields["pagetitle"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1214,6 +1263,7 @@
     }
       
     Fields["subfooter"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1246,6 +1296,7 @@
         "FullPageWidth": false
     }
      Fields["footer"] = {
+       	"ButtonLink": false,
        	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1279,6 +1330,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1311,6 +1363,7 @@
         "FullPageWidth": false
     }
     Fields["nextnow"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1343,6 +1396,7 @@
         "FullPageWidth": false
     }
     Fields["empowernext"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1376,6 +1430,7 @@
     }
 
     Fields["page break"] = {
+      	"ButtonLink": false,
       	"AdvancedDonationForm": false,
         "Byline": false,
         "Question": false,
@@ -1511,6 +1566,10 @@
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
                   
                   	calloutText: $(this).find('.CalloutBox .tinymce').val(),
+                  
+                  	buttonLinkName: $(this).find('.ButtonLink .selected-link-name').text(),
+                    buttonLinkUrl: $(this).find('.ButtonLink .selected-link-url').text(),
+                    buttonLinkText: $(this).find('.ButtonLink input.linkText').val(),
                   
                   	relatedStoryTitle: $(this).find('.RelatedStory input.relatedStoryTitle').val(),
                     relatedStoryLinkName: $(this).find('.RelatedStory .selected-link-name').text(),
@@ -1688,6 +1747,10 @@
           
           	$newRow.find('.CalloutBox .tinymce').val(item.calloutText);
           
+          	$newRow.find('.ButtonLink .selected-link-name').text(item.buttonLinkName);
+            $newRow.find('.ButtonLink .selected-link-url').text(item.buttonLinkUrl);
+            $newRow.find('.ButtonLink .linkText').val(item.buttonLinkText);
+          
           	$newRow.find('.RelatedStory input.relatedStoryTitle').val(item.relatedStoryTitle);
             $newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
             $newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
@@ -1809,7 +1872,26 @@
             tinyMCE.init({
                 mode: "textareas",
                 editor_selector: "tinymce",
-
+              
+              	file_picker_types: "file image media",
+				file_picker_callback: function(callback, value, meta) {
+                  	// Provide image and alt text for the image dialog
+                  	if (meta.filetype == "image") {
+                      	BLACKBAUD.api.customPartEditor.images.launchImagePicker({
+    				    	callback: function(selectedImage) {
+              					callback(selectedImage.url, {alt: selectedImage.alt});
+            				}
+        				});
+                  	}
+                  
+                  	if (meta.filetype == "file") {
+                      	BLACKBAUD.api.customPartEditor.links.launchLinkPicker({
+    				    	callback: function(selectedLink) {
+              					callback(selectedLink.url, {text: selectedLink.name});
+            				}
+        				});
+                  	}
+                },
                 plugins: 'code print preview searchreplace autolink directionality visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
                 toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
                 image_advtab: true,
