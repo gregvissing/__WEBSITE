@@ -61,11 +61,6 @@
                                 </div>
 
                                 <div class="top">
-                                    <div class="AdvancedDonationForm" id="DivAdvancedDonationForm_0">
-                                        <label>Content: <input class="form-control required" type="text"
-												name="AdvancedDonationForm_0" id="AdvancedDonationForm_0" /></label>
-                                    </div>
-
                                     <div class="Question" id="DivQuestion_0">
                                         <div class="tip"><em>Tip: Text displays based on font assigment.</em></div>
                                         <label>Content: <input class="form-control required" type="text"
@@ -73,7 +68,7 @@
                                     </div>
 
                                     <div class="Blockquote" id="DivBlockquote_0">
-                                        <div><em>Tip: Quote text wrapped inside quotations so no need to wrap.
+                                        <div class="tip"><em>Tip: Quote text wrapped inside quotations so no need to wrap.
 												Dash in front of source is automatically added.</em></div>
                                         <label>Quote Text: <input class="form-control required quoteText"
 												type="text"
@@ -621,9 +616,6 @@
     <label>Field type:<br />
 		<select id="NewItemFieldType">
 			<option disabled selected>-- Select an Option --</option>
-			<optgroup label="Donation Form">
-				<option value="adf">Advanced Donation Form</option>
-			</optgroup>
 			<optgroup label="Text Field">
 				<option value="blockquote">Blockquote</option>
 				<option value="formattedtext">Formatted Text</option>
@@ -676,39 +668,6 @@
     Fields["buttonlink"] = {
         "ButtonLink": true,
         "AdvancedDonationForm": false,
-        "Byline": false,
-        "Question": false,
-        "Blockquote": false,
-        "RelatedStory": false,
-        "Card": false,
-        "RowCard": false,
-        "HR": false,
-        "NextFrontiers": false,
-        "NextNow": false,
-        "EmpowerNext": false,
-        "Image": false,
-        "PageTitle": false,
-        "SubFooter": false,
-        "Footer": false,
-        "Accordion": false,
-        "CalloutBox": false,
-        "Formattedtext": false,
-        "QuoteSource": false,
-        "Help": false,
-        "QuestionRequired": false,
-        "MaxLength": false,
-        "LinkAttribute": false,
-        "DisplayCondition": false,
-        "TextFieldType": "text",
-        "EventCateogry": false,
-        "QAS": false,
-        "ConditionFieldType": "text",
-        "ColumnWidth": false,
-        "FullPageWidth": false
-    }
-    Fields["adf"] = {
-        "ButtonLink": false,
-        "AdvancedDonationForm": true,
         "Byline": false,
         "Question": false,
         "Blockquote": false,
@@ -1568,8 +1527,6 @@
                     type: $(this).attr('data-type'),
                     question: $(this).find('.Question input').val(),
 
-                    adfText: $(this).find('.AdvancedDonationForm input').val(),
-
                     quoteText: $(this).find('.Blockquote input.quoteText').val(),
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
 
@@ -1747,8 +1704,6 @@
             console.log(item);
 
             $newRow.find('.Question input').val(item.question);
-
-            $newRow.find('.AdvancedDonationForm input').val(item.adfText);
 
             $newRow.find('.Blockquote input.quoteText').val(item.quoteText);
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
