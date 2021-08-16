@@ -9,10 +9,28 @@
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
 
 <style>
+  	.ui-state-highlight { 
+    	height: 200px; 
+  	}
+  
     .ui-datepicker td {
         border: 0;
         padding: 1px !important;
     }
+  
+  	.tip {
+    	background-color: #0dcaf0 !important;
+    	margin-bottom: 0.5em;
+    	padding: 10px;
+	}
+  
+  	.ui-widget-header {
+    	border: 1px solid #ddd;
+    	background: #e9e9e9 !important;
+    	color: #333 !important;
+    	font-weight: bold;
+  	}
+  
 </style>
 <div id="BBTabs">
 
@@ -62,23 +80,47 @@
 
                                 <div class="top">
                                     <div class="Question" id="DivQuestion_0">
-                                        <div class="tip"><em>Tip: Text displays based on font assigment.</em></div>
+                                        <div class="tip"><em>Tip: Text displays based on font assignment.</em></div>
                                         <label>Content: <input class="form-control required" type="text"
 												name="Question_0" id="Question_0" /></label>
+                                    </div>
+                                  
+                                  	<div class="Video" id="DivVideo_0">
+                                        <div class="tip"><em>Tip: Copy YouTube URL into text field.</em></div>
+                                        <label>YouTube URL: <input class="form-control required videoUrl" type="text"
+												name="Video_0" id="Video_0" /></label>
+                                      
+                                      	<label>Link Text: <input class="form-control required
+												linkText"
+												type="text"
+												name="linkText_0" id="linkText_0" /></label>
+                                      
+                                      	<label for="_0">Display as Button?:
+											<select id="ImageAlign_0" class="imageAlign">
+												<option value="no">No</option>
+												<option value="yes">Yes</option>
+											</select></label>
                                     </div>
 
                                     <div class="Blockquote" id="DivBlockquote_0">
                                         <div class="tip"><em>Tip: Quote text wrapped inside quotations so no need to wrap.
 												Dash in front of source is automatically added.</em></div>
-                                        <label>Quote Text: <input class="form-control required quoteText"
-												type="text"
-												name="QuoteText_0" id="QuoteText_0" /></label>
+                                        <!--<label>Quote Text: <input class="form-control required quoteText"
+												type="text"	name="QuoteText_0" id="QuoteText_0" /></label>-->
+                                      
+                                      	<div class="FieldContent">
+                                            <label>Quote Text: </label>
+                                      		<textarea class="required quoteText tinymce" id="Blockquote_0" name="Blockquote_0" cols="80"></textarea>
+                                        </div>
+                                      
                                         <label>Quote Source: <input class="form-control quoteSource"
 												type="text"
 												name="QuoteSource_0" id="QuoteSource_0" /></label>
                                     </div>
 
                                     <div class="ButtonLink" id="DivButtonLink_0">
+                                      	<div class="tip"><em>Tip: Button Link allows you to enter button text and assign destination link.</em></div>
+                                      
                                         <label>Button Link Text: <input class="form-control required
 												linkText"
 												type="text"
@@ -101,12 +143,11 @@
                                     </div>
 
                                     <div class="Byline" id="DivByline_0">
+                                      	<div class="tip"><em>Tip: Byline allows you to display author information.</em></div>
+                                      
                                         <label>Author Name: <input class="form-control required authorName"
 												type="text"
 												name="AuthorName_0" id="AuthorName_0" /></label>
-                                        <label>Author Phone #: <input class="form-control authorPhone"
-												type="text"
-												name="AuthorPhone_0" id="AuthorPhone_0" /></label>
                                         <label>Author Email: <input class="form-control authorEmail"
 												type="text"
 												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
@@ -133,6 +174,7 @@
                                     <div class="CalloutBox" id="DivCalloutBox_0">
                                         <div class="tip"><em>Tip: Text displays at a max-width of 1024 pixels and has a
 												gray background.</em></div>
+                                      
                                         <div class="FieldContent">
                                             <label>Custom Call-Out Box Content: </label>
                                             <textarea class="tinymce" id="CalloutBox_0" name="CalloutBox_0" cols="80"></textarea>
@@ -140,6 +182,8 @@
                                     </div>
 
                                     <div class="Card" id="DivCardTitle_0">
+                                      	<div class="tip"><em>Tip: Card displays stacked in the following order: Image, Heading, Plain Text, Link.</em></div>
+                                      
                                         <label>Card Title: <input class="form-control required cardTitle"
 												type="text"
 												name="CardTitle_0" id="CardTitle_0" /></label>
@@ -195,6 +239,8 @@
                                     </div>
                                   
 									<div class="Formattedtext" id="DivFormattedtext_0">
+                                      	<div class="tip"><em>Tip: Formatted Text allows you to add formatted text similar to how the 'Formatted Text and Image' BBIS part works. You can insert links and images the same way as the BBIS part.</em></div>
+                                      
                                         <div class="FieldContent">
                                             <label>Formatted Content: </label>
                                             <textarea class="tinymce" id="Formattedtext_0" name="Formattedtext_0" cols="80"></textarea>
@@ -202,11 +248,55 @@
                                     </div>
 
                                     <div class="HR" id="DivHr_0">
-                                        <label>HR Tip: Skewed HR is cut off on left/right sides for column
-											width greater than 11</label>
+                                      	<div class="tip"><em>Tip: Skewed HR is cut off on left/right sides for column
+											width greater than 11.</em></div>
+                                    </div>
+
+                                    <div class="Image" id="DivImage_0">
+                                      	<div class="tip"><em>Tip: Image allows you to set the alignment as well as the width. Set 'Full Width of Page?' to 'Yes' to make image stretch across width of browser window.</em></div>
+                                      
+                                        <label for="ImageAlign_0">Image Alignment:
+											<select id="ImageAlign_0" class="imageAlign">
+												<option value="left">Left</option>
+												<option value="center">Center</option>
+												<option value="right">Right</option>
+											</select></label>
+                                        <label>Image Caption (centered under image): <input
+												class="form-control required
+												imageCaption"
+												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
+                                        <hr>
+                                        <div class="Field">
+                                            <div class="FieldHeading">
+                                                <label for="field-highlighter-image" class="FieldLabel">Image:</label>
+                                                <span class="FieldRequired">*</span>
+                                                <span class="clear"></span>
+                                            </div>
+                                            <div class="FieldContent">
+                                                <div class="SearchFieldContainer">
+                                                    <div class="SearchFieldBox">
+                                                        <a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
+                                                            <span class="SearchFieldIcon">
+																<img src="/images/pencil_16.gif" alt="" />
+															</span>
+                                                            <span class="SearchFieldText"></span>
+                                                            <span class="SearchFieldButton">
+																<img src="/images/Admin/Buttons/search.gif" alt="" />
+															</span>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
+                                            <img src="">
+                                        </div>
                                     </div>
 
                                     <div class="RelatedStory" id="DivRelatedStory_0">
+                                      	<div class="tip"><em>Tip: Related Story displays stacked in the following order: Image, Title, Link.</em></div>
+                                      
                                         <label>Title: <input class="form-control required relatedStoryTitle"
 												type="text"
 												name="RelatedStoryTitle_0" id="RelatedStoryTitle_0" /></label>
@@ -259,6 +349,8 @@
                                     </div>
 
                                     <div class="RowCard" id="DivRowCard_0">
+                                      	<div class="tip"><em>Tip: Row Card displays with the Image displayed to the left and stacked to the right is the Title, Text and Link.</em></div>
+                                      
                                         <label>Card Title: <input class="form-control required cardTitle"
 												type="text"
 												name="CardTitle_0" id="CardTitle_0" /></label>
@@ -313,47 +405,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="Image" id="DivImage_0">
-                                        <label for="ImageAlign_0">Image Alignment:
-											<select id="ImageAlign_0" class="imageAlign">
-												<option value="left">Left</option>
-												<option value="center">Center</option>
-												<option value="right">Right</option>
-											</select></label>
-                                        <label>Image Caption (centered under image): <input
-												class="form-control required
-												imageCaption"
-												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
-                                        <hr>
-                                        <div class="Field">
-                                            <div class="FieldHeading">
-                                                <label for="field-highlighter-image" class="FieldLabel">Image:</label>
-                                                <span class="FieldRequired">*</span>
-                                                <span class="clear"></span>
-                                            </div>
-                                            <div class="FieldContent">
-                                                <div class="SearchFieldContainer">
-                                                    <div class="SearchFieldBox">
-                                                        <a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
-                                                            <span class="SearchFieldIcon">
-																<img src="/images/pencil_16.gif" alt="" />
-															</span>
-                                                            <span class="SearchFieldText"></span>
-                                                            <span class="SearchFieldButton">
-																<img src="/images/Admin/Buttons/search.gif" alt="" />
-															</span>
-                                                        </a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
-                                            <img src="">
-                                        </div>
-                                    </div>
-
                                     <div class="PageTitle" id="DivPageTitle_0">
+                                      	<div class="tip"><em>Tip: Page Title is used at the very top of the page under the navigation. There only needs to be one Page Title per page.</em></div>
+                                      
                                         <label>Page Title: <input class="form-control required pageTitle"
 												type="text"
 												name="PageTitle_0" id="PageTitle_0" /></label>
@@ -361,6 +415,8 @@
 
 
                                     <div class="Accordion" id="DivAccordion_0">
+                                      	<div class="tip"><em>Tip: Accordion allows you to enter the text that is initially seen by the user (Accordion Text) and the content (Accordion Content) that is seen when it opens.</em></div>
+                                      
                                         <label>Accordion Text: <input class="form-control required
 												accordionText" type="text"
 												name="AccordionText_0" id="AccordionText_0" /></label>
@@ -372,6 +428,7 @@
 
 
                                     <div class="NextFrontiers" id="DivNextFrontiers_0">
+                                      	<div class="tip"><em>Tip: Text below is formatted and displayed in Call-out Box.</em></div>                                      
                                         <label>As the thriving research nexus of our region, the University of
 											Cincinnati is solving problems with unrivaled talent who push the
 											boundaries of discovery and innovation for the greater good. Your
@@ -380,6 +437,7 @@
                                     </div>
 
                                     <div class="NextNow" id="DivNextNow_0">
+                                      	<div class="tip"><em>Tip: Text below is formatted and displayed in Call-out Box.</em></div>
                                         <label>With its focus on innovation and impact, Next, Now: The
 											Campaign for Cincinnati is where ambition meets action. At the
 											University of Cincinnati and UC Health, we’re driven by next;
@@ -388,6 +446,7 @@
                                     </div>
 
                                     <div class="EmpowerNext" id="DivEmpowerNext_0">
+                                      	<div class="tip"><em>Tip: Text below is formatted and displayed in Call-out Box.</em></div>
                                         <label>Scholarships, fellowships and enrichment programs provide
 											opportunities for students to attend, grow and graduate from UC. You
 											can empower our next leaders through support for scholarships and
@@ -396,6 +455,8 @@
                                     </div>
 
                                     <div class="SubFooter" id="DivSubFooter_0">
+                                      	<div class="tip"><em>Tip: Sub Footer gives you the option to select a background image, Heading, Sub-Heading, Link Text and Link.</em></div>
+                                      
                                         <label>Heading: <input class="form-control required subFooterHeading"
 												type="text"
 												name="SubFooterHeading_0" id="SubFooterHeading_0" /></label>
@@ -452,6 +513,7 @@
                                     </div>
 
                                     <div class="Footer" id="DivFooter_0">
+                                      	<div class="tip"><em>Tip: .</em></div>
                                         <div class="Field">
                                             <div class="FieldHeading">
                                                 <label for="field-highlighter-image" class="FieldLabel">Background
@@ -507,11 +569,11 @@
                                 </div>
 
                                 <div class="middle">
-                                    <div class="QuoteSource" id="DivQuoteSource_0">
+                                    <!--<div class="QuoteSource" id="DivQuoteSource_0">
                                         <label>Quote Source: <input class="form-control" type="text"
 												name="QuoteSource_0"
 												id="QuoteSource_0" /></label>
-                                    </div>
+                                    </div>-->
                                     <div class="Help" id="DivHelp_0">
                                         <label>Help Text: <input class="form-control" type="text"
 												name="Help_0"
@@ -536,7 +598,7 @@
 										</label>
                                     </div>
                                     <div class="FullPageWidth" id="DivFullPageWidth_0">
-                                        <label>Full Width of Page: <select class="form-control"
+                                        <label>Full Width of Page? <select class="form-control"
 												name="FullPageWidth_0"
 												id="FullPageWidth_0">
 												<option>No</option>
@@ -611,7 +673,7 @@
 
 </div>
 
-<div id="newItem" title="Add a new question">
+<div id="newItem" title="Add a new Web Component">
     <label>Field type:<br />
 		<select id="NewItemFieldType">
 			<option disabled selected>-- Select an Option --</option>
@@ -633,10 +695,11 @@
 				<option value="calloutbox">Call-Out Box</option>
 				<option value="card">Grid Card</option>
 				<option value="hr">Horizontal Rule</option>
-				<option value="rowcard">Row Card</option>
 				<option value="image">Image</option>
+				<option value="rowcard">Row Card</option>
 				<option value="pagetitle">Page Title</option>
 				<option value="relatedstory">Related Story</option>
+              	<option value="video">Video embed</option>
 			</optgroup>
 			<optgroup label="Footer options">
 				<option value="subfooter">Sub-Footer Call-Out w/BG</option>
@@ -664,7 +727,42 @@
     //FIELD SETTINGS
     var Fields = {};
 
+  	Fields["video"] = {
+      	"Video": true,
+        "ButtonLink": false,
+        "AdvancedDonationForm": false,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+        "RelatedStory": false,
+        "Card": false,
+        "RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+        "PageTitle": false,
+        "SubFooter": false,
+        "Footer": false,
+        "Accordion": false,
+        "CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": true,
+        "FullPageWidth": false
+    }
     Fields["buttonlink"] = {
+      	"Video": false,
         "ButtonLink": true,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -698,6 +796,7 @@
         "FullPageWidth": false
     }
     Fields["blockquote"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -731,6 +830,7 @@
         "FullPageWidth": false
     }
     Fields["formattedtext"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -764,6 +864,7 @@
         "FullPageWidth": false
     }
     Fields["calloutbox"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -797,6 +898,7 @@
         "FullPageWidth": false
     }
     Fields["text"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -830,6 +932,7 @@
         "FullPageWidth": false
     }
     Fields["byline"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": true,
@@ -864,6 +967,7 @@
     }
 
     Fields["heading1"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -897,6 +1001,7 @@
         "FullPageWidth": false
     }
     Fields["heading2"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -930,6 +1035,7 @@
         "FullPageWidth": false
     }
     Fields["heading3"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -963,6 +1069,7 @@
         "FullPageWidth": false
     }
     Fields["subheading"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -997,6 +1104,7 @@
     }
 
     Fields["accordion"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1030,6 +1138,7 @@
         "FullPageWidth": false
     }
     Fields["relatedstory"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1054,7 +1163,7 @@
         "QuestionRequired": false,
         "MaxLength": false,
         "LinkAttribute": false,
-        "DisplayCondition": true,
+        "DisplayCondition": false,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
@@ -1063,6 +1172,7 @@
         "FullPageWidth": false
     }
     Fields["card"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1087,7 +1197,7 @@
         "QuestionRequired": false,
         "MaxLength": false,
         "LinkAttribute": false,
-        "DisplayCondition": true,
+        "DisplayCondition": false,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
@@ -1096,6 +1206,7 @@
         "FullPageWidth": false
     }
     Fields["rowcard"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1120,7 +1231,7 @@
         "QuestionRequired": false,
         "MaxLength": false,
         "LinkAttribute": false,
-        "DisplayCondition": true,
+        "DisplayCondition": false,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
@@ -1129,6 +1240,7 @@
         "FullPageWidth": false
     }
     Fields["hr"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1162,6 +1274,7 @@
         "FullPageWidth": false
     }
     Fields["image"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1195,6 +1308,7 @@
         "FullPageWidth": true
     }
     Fields["pagetitle"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1229,6 +1343,7 @@
     }
 
     Fields["subfooter"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1262,6 +1377,7 @@
         "FullPageWidth": false
     }
     Fields["footer"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1296,6 +1412,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1329,6 +1446,7 @@
         "FullPageWidth": false
     }
     Fields["nextnow"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1362,6 +1480,7 @@
         "FullPageWidth": false
     }
     Fields["empowernext"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1396,6 +1515,7 @@
     }
 
     Fields["page break"] = {
+      	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
         "Byline": false,
@@ -1480,16 +1600,16 @@
             }
         });
 
-        var CheckReady = setInterval(function() {
+      	var CheckReady = setInterval(function() {
             if (ready) {
                 $.each(BLACKBAUD.api.customPartEditor.settings["items"], function(i) {
                     addRow(BLACKBAUD.api.customPartEditor.settings["items"][i]);
                 });
-                $('.Col3 label input[type="checkbox"]:checked').closest('div').addClass('open');
+              	$('.Col3 label input[type="checkbox"]:checked').closest('div').addClass('open');
                 ready = false;
                 clearInterval(CheckReady);
             }
-        }, 100);
+        }, 0);	// 100
 
         // BuildConditionalSelects();
         // $('select[id^=ddDisplayConditionCompare]').each(BuildConditionCompare);
@@ -1525,9 +1645,14 @@
                 var rowdata = {
                     type: $(this).attr('data-type'),
                     question: $(this).find('.Question input').val(),
+                  
+                  	video: $(this).find('.Video input.videoUrl').val(),
+                  	videoLinkText: $(this).find('.Video input.linkText').val(),
+                  // videoLinkButton: $(this).find('.Video input["checkbox"]').val(),
 
-                    quoteText: $(this).find('.Blockquote input.quoteText').val(),
-                    quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
+                    quoteText: $(this).find('.Blockquote .tinymce').val(),
+                  	quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
+                  // quoteText: $(this).find('.Blockquote input.quoteText').val(),
 
                     calloutText: $(this).find('.CalloutBox .tinymce').val(),
 
@@ -1585,7 +1710,6 @@
                     formattedText: $(this).find('.Formattedtext .tinymce').val(),
 
                     authorName: $(this).find('.Byline input.authorName').val(),
-                    authorPhone: $(this).find('.Byline input.authorPhone').val(),
                     authorEmail: $(this).find('.Byline input.authorEmail').val(),
                     datePublished: $(this).find('.Byline input.datePublished').val(),
                     storyLinkName: $(this).find('.Byline .selected-link-name').text(),
@@ -1655,6 +1779,7 @@
 
     $item.Table.sortable({
         handle: '.ItemActionMove',
+      	placeholder: 'ui-state-highlight',
         cursor: 'move',
         helper: fixHelper,
         update: function(event, ui) {
@@ -1703,8 +1828,13 @@
           // console.log(item);
 
             $newRow.find('.Question input').val(item.question);
+          
+          	$newRow.find('.Video input.videoUrl').val(item.video);
+          	$newRow.find('.Video input.linkText').val(item.videoLinkText);
+          //$newRow.find('.Video input["checkbox"]').val(item.videoLinkButton);
 
-            $newRow.find('.Blockquote input.quoteText').val(item.quoteText);
+          // $newRow.find('.Blockquote input.quoteText').val(item.quoteText);
+          	$newRow.find('.Blockquote .tinymce').val(item.quoteText);
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
 
             $newRow.find('.CalloutBox .tinymce').val(item.calloutText);
@@ -1767,7 +1897,6 @@
             $newRow.find('.Formattedtext .tinymce').val(item.formattedText);
 
             $newRow.find('.Byline input.authorName').val(item.authorName);
-            $newRow.find('.Byline input.authorPhone').val(item.authorPhone);
             $newRow.find('.Byline input.authorEmail').val(item.authorEmail);
             $newRow.find('.Byline input.datePublished').val(item.datePublished);
             $newRow.find('.Byline .selected-link-name').text(item.storyLinkName);
