@@ -8,6 +8,32 @@
     .form-page.row>.form-field-complex {
         padding: 0;
     }
+  
+  	.image > img {
+    	width: 100%;
+  	}
+  
+  	div.text-center>a.button-primary {
+    	text-decoration: none;
+    	text-transform: uppercase;
+    	display: inline-block;
+    	color: var(--color-white) !important;
+    	background-color: var(--color-brand-red);
+    	border-radius: 0 !important;
+    	margin: 0 auto;
+    	font-size: 1.5em !important;
+    	padding: 12px 35px !important;
+    	box-shadow: 0 4px 7px 0 rgb(000/50%) !important;
+  	}
+  
+  	.text-center {
+    	text-align: center;
+  	}
+  
+  	.content-wrapper .col-md-6 {
+    	margin-left: auto;
+    	margin-right: auto;
+  	}
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -47,7 +73,6 @@
     var $help = $('<small id="passwordHelpBlock" class="form-text text-muted"></small>');
 
     var $pullquote = $('<div class="pull-quote"></div>');
-    // var $quotesource = $('<p class="pull-quote-attribution"><span></span></p>');
 
     var $page = $('<div class="form-page row"></div>');
 
@@ -56,8 +81,10 @@
     $fieldtemplate["heading2"] = $('<h2></h2>');
     $fieldtemplate["heading3"] = $('<h3></h3>');
     $fieldtemplate["subheading"] = $('<p class="large"></p>');
+  
+  	$fieldtemplate["video"] = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
-    $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
+  // $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
@@ -73,20 +100,23 @@
     $fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
     $fieldtemplate["blockquote"] = $('<blockquote class="pull-quote"></blockquote>');
 
-    $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
-    $fieldtemplate["email"] = $('<input type="email" class="form-control email" />');
-    $fieldtemplate["date"] = $('<input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" />');
-    $fieldtemplate["time"] = $('<input type="time" class="form-control" />');
-    // $fieldtemplate["code table"] = $('<select class="form-control"></select>');
-    $fieldtemplate["event category"] = $('<select class="event-category form-control"></select>');
-    $fieldtemplate["address"] = $('<input type="text" class="form-control" />');
-    $fieldtemplate["postcode"] = $('<input type="text" class="form-control" />');
-    $fieldtemplate["suburb"] = $('<input type="text" class="form-control" />');
-    $fieldtemplate["state"] = $('<select class="state form-control"></select>');
+  // $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
+  // $fieldtemplate["email"] = $('<input type="email" class="form-control email" />');
+  // $fieldtemplate["date"] = $('<input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" />');
+  // $fieldtemplate["time"] = $('<input type="time" class="form-control" />');
+  // $fieldtemplate["code table"] = $('<select class="form-control"></select>');
+  // $fieldtemplate["event category"] = $('<select class="event-category form-control"></select>');
+  // $fieldtemplate["address"] = $('<input type="text" class="form-control" />');
+  // $fieldtemplate["postcode"] = $('<input type="text" class="form-control" />');
+  // $fieldtemplate["suburb"] = $('<input type="text" class="form-control" />');
+  // $fieldtemplate["state"] = $('<select class="state form-control"></select>');
 
     var hasPageBreak = false;
 
     function initBBCustomForm(data) {
+      
+      	let imageCount = 0;
+      
         /*
 		if (!$('div[id$="_divComment"]').length) {
             console.error("Sorry, the comments field was not enabled.  Please edit the Interaction Form and ensure that the commment is available editable.");
@@ -103,7 +133,7 @@
         $('span.error:contains("required")').siblings('input,select').addClass('required');
 
         $.each(data.settings.items, function(i, item) {
-            // console.log(item);
+          // console.log(item);
             if (item.type !== "page break") {
                 if (item.type == "heading1") {
                     var $newRow = $contentwrapper.clone()
@@ -125,12 +155,26 @@
                         .append($row.clone()
                             .append($fieldtemplate[item.type].clone().text(item.question))
                         );
+                  
+                } else if (item.type == "video") {
+                  // console.log(item.columns);
+                  	var videoId = item.video.split("=")[1];                  	
+                  	var $newRow = $contentwrapper.clone()
+                        .append($row.clone()
+                            .append($fieldtemplate[item.type].clone().attr("src", "https://www.youtube.com/embed/" + videoId))
+                            .append("<p>" + item.videoLinkText + "</p>")
+                        );
+                  
+                  	if (item.columns < 12) {
+                    	$newRow.find('.col-md-12').removeClass('col-md-12').addClass('col-md-' + item.columns);
+                	}
+				
                 } else if (item.type == "blockquote") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($pullquote.clone()
-                                .append(($fieldtemplate[item.type].clone().text(item.quoteText)))
-                                .append("<p class='pull-quote-attribution'><span>" + item.quoteSource.trim() + "</span><p>")
+                                .append(($fieldtemplate[item.type].clone().html(item.quoteText))) // .text removed; added .html
+                                .append("<p class='pull-quote-attribution'><span> " + item.quoteSource.trim() + "</span><p>")
                             )
                         );
 
@@ -151,7 +195,7 @@
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
                         .append(($fieldtemplate[item.type].clone()
-                            .append($image.clone().attr("src", item.cardImgSrc.trim()))
+                            .append($image.clone().attr("src", item.cardImgSrc.trim()).attr("loading", "lazy"))
                             .append($div.clone()
                                 .append($cardTitle.clone().text(item.cardTitle.trim()))
                                 .append($text.clone().text(item.cardText.trim()))
@@ -163,7 +207,7 @@
                     var $newRow = $row.clone()
                         .append(($fieldtemplate[item.type].clone()
                             .append($contentwrapper.clone()
-                                .append($image.clone().attr("src", item.rowCardImgSrc.trim()))
+                                .append($image.clone().attr("src", item.rowCardImgSrc.trim()).attr("loading", "lazy"))
                                 .append($div.clone()
                                     .append($cardTitle.clone().text(item.rowCardTitle.trim()))
                                     .append($text.clone().text(item.rowCardText.trim()))
@@ -182,7 +226,7 @@
 
                 } else if (item.type == "footer") {
                     var $newRow = $fieldtemplate[item.type].clone()
-                        .append($image.clone().attr("src", item.footerImgSrc.trim()))
+                        .append($image.clone().attr("src", item.footerImgSrc.trim()).attr("loading", "eager"))
                         .append($contentwrapper.clone().addClass("flex pad-bottom-1000 pad-top-1000")
                             .append($div.clone().text(item.footerColOneHeading.trim()))
                             .append($div.clone().text(item.footerColTwoHeading.trim()))
@@ -196,6 +240,14 @@
                         );
 
                 } else if (item.type == "image") {
+                  
+                  	imageCount++;
+                  	if (imageCount == 1) {
+                  		var imgHtml = $image.clone().attr("src", item.imageSrc.trim()).attr("loading", "eager");
+                  	} else {
+                      	var imgHtml = $image.clone().attr("src", item.imageSrc.trim()).attr("loading", "lazy");
+                    }
+
                     var marginVals;
                     switch (item.imageAlign) {
                         case "left":
@@ -206,26 +258,27 @@
                             break;
                         case "right":
                             marginVals = "0 0 0 auto";
-                    }
+                    }                    
+                        
                     if (item.fullPageWidth == 'Yes') {
                         var $newRow = $row.clone()
                             .append(($fieldtemplate[item.type].clone()
-                                .append($image.clone().attr("src", item.imageSrc.trim()))
-                                .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
+                                .append(imgHtml)
+                        		.append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))          
                             ));
                     } else {
                         var $newRow = $contentwrapper.clone()
                             .append($row.clone().css('margin', marginVals)
                                 .append(($fieldtemplate[item.type].clone()
-                                    .append($image.clone().attr("src", item.imageSrc.trim()))
-                                    .append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
-                                )));
+                                    .append(imgHtml)
+                        			.append($text.clone().text(item.imageCaption.trim()).css('text-align', 'center'))
+                          	)));
                     }
 
                 } else if (item.type == "accordion") {
 
                     if (item.columns == 12) {
-                        console.log(item.columns);
+                        // console.log(item.columns);
                         var $newRow = $contentwrapper.clone()
                             .append($row.clone()
                                 .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
@@ -233,7 +286,7 @@
                             );
 
                     } else {
-                        console.log("else " + item.columns);
+                        // console.log("else " + item.columns);
                         var $newRow = $row.clone().addClass("accordion-container")
                             //.append($row.clone()
                             .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
@@ -268,13 +321,7 @@
                         .append($row.clone()
                             .append($byline.clone()
                                 .append($bylineAuthorDiv.clone()
-                                    .append($bylineName.clone().html("By <strong>" + item.authorName.trim() + "</strong>"))
-                                    .append($bylineEmail.clone()
-                                        .append($link.clone()
-                                            .attr("href", "mailto:" + item.authorEmail.trim()).text("Email " + item.authorName.trim().split(" ")[0]))
-                                    )
-                                    .append($bylinePhone.clone().text(item.authorPhone.trim()))
-
+                        			.append($bylineName.clone().html("By <strong><a href='mailto:" + item.authorEmail.trim() + "'>" + item.authorName.trim() + "</a></strong>"))
                                 )
                             ).append("<div class='story'><span class='dateline'>" + item.datePublished.trim() + "</span><span class='sharing'><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-linkedin-square' aria-hidden='true'></i><span class='sr-only'>Share on LinkedIn</span></a> <a href='#' class='printPage'><i class='fa fa-print' aria-hidden='true'></i></a></span></div>"));
 
@@ -311,6 +358,8 @@
                 if (item.maxLength != null) {
                     $newRow.find('input').attr('maxlength', item.maxLength);
                 }
+                        
+                /*
                 if (item.type == "event category") {
                     $.each(data.settings.ddEventCategories, function(key, value) {
                         $newRow.find('select').append($option.clone().attr('value', key).text(value));
@@ -445,8 +494,8 @@
                         }
 
                     });
-                }
-
+				} */
+                        
                 $form.find('.form-page').last().append($newRow);
 
                 $("main").find("p.large").first().addClass("sub-heading");
@@ -592,10 +641,10 @@
         } //END PAGEBREAKS
 
         //MATRIX FOR EVENT CATEGORY ON LOAD
-        RunMatrix($('.event-category').val(), data.settings.Matrix);
+               // RunMatrix($('.event-category').val(), data.settings.Matrix);
 
         $(document).on('change', '.event-category', function() {
-            RunMatrix($(this).val(), data.settings.Matrix);
+          // RunMatrix($(this).val(), data.settings.Matrix);
         });
 
         $('input.address_search').each(function() {
@@ -706,7 +755,7 @@
 
     }
 
-    function RunMatrix(EventCategoryID, Data) {
+  	/* function RunMatrix(EventCategoryID, Data) {
         $.each(Data[EventCategoryID], function(key, value) {
             if (!value) {
                 $('#customField' + key).parents('.custom-form').addClass('hideMatrix');
@@ -714,7 +763,7 @@
                 $('#customField' + key).parents('.custom-form').removeClass('hideMatrix');
             }
         });
-    }
+    } */
 
     $(document).on('blur', '#InteractionAdd input[type=date], #InteractionAdd input[type=time]', function() {
         $(this).valid();
