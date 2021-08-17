@@ -77,7 +77,7 @@
     var $page = $('<div class="form-page row"></div>');
 
     var $fieldtemplate = {};
-    $fieldtemplate["heading1"] = $('<h1></h1>');
+  // $fieldtemplate["heading1"] = $('<h1></h1>');
     $fieldtemplate["heading2"] = $('<h2></h2>');
     $fieldtemplate["heading3"] = $('<h3></h3>');
     $fieldtemplate["subheading"] = $('<p class="large"></p>');
@@ -135,12 +135,14 @@
         $.each(data.settings.items, function(i, item) {
           // console.log(item);
             if (item.type !== "page break") {
-                if (item.type == "heading1") {
+              	/*
+				if (item.type == "heading1") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($fieldtemplate[item.type].clone().text(item.question))
                         );
-                } else if (item.type == "heading2") {
+                } else */
+                if (item.type == "heading2") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($fieldtemplate[item.type].clone().text(item.question))
