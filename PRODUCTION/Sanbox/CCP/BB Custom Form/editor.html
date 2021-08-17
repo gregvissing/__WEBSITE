@@ -86,27 +86,17 @@
                                     </div>
                                   
                                   	<div class="Video" id="DivVideo_0">
-                                        <div class="tip"><em>Tip: Copy YouTube URL into text field.</em></div>
+                                        <div class="tip"><em>Tip: Copy YouTube URL into text field. Leave Link Text field blank to show video embedded on web page. Link text will appear as link button that opens video in modal.</em></div>
                                         <label>YouTube URL: <input class="form-control required videoUrl" type="text"
 												name="Video_0" id="Video_0" /></label>
                                       
                                       	<label>Link Text: <input class="form-control required
-												linkText"
-												type="text"
-												name="linkText_0" id="linkText_0" /></label>
-                                      
-                                      	<label for="_0">Display as Button?:
-											<select id="ImageAlign_0" class="imageAlign">
-												<option value="no">No</option>
-												<option value="yes">Yes</option>
-											</select></label>
+												linkText" type="text" name="linkText_0" id="linkText_0" /></label>
                                     </div>
 
                                     <div class="Blockquote" id="DivBlockquote_0">
                                         <div class="tip"><em>Tip: Quote text wrapped inside quotations so no need to wrap.
 												Dash in front of source is automatically added.</em></div>
-                                        <!--<label>Quote Text: <input class="form-control required quoteText"
-												type="text"	name="QuoteText_0" id="QuoteText_0" /></label>-->
                                       
                                       	<div class="FieldContent">
                                             <label>Quote Text: </label>
@@ -1649,7 +1639,6 @@
                   
                   	video: $(this).find('.Video input.videoUrl').val(),
                   	videoLinkText: $(this).find('.Video input.linkText').val(),
-                  // videoLinkButton: $(this).find('.Video input["checkbox"]').val(),
 
                     quoteText: $(this).find('.Blockquote .tinymce').val(),
                   	quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
@@ -1826,13 +1815,12 @@
         // $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
 
         if (item !== undefined) {
-          // console.log(item);
+          	console.log(item);
 
             $newRow.find('.Question input').val(item.question);
           
           	$newRow.find('.Video input.videoUrl').val(item.video);
           	$newRow.find('.Video input.linkText').val(item.videoLinkText);
-          //$newRow.find('.Video input["checkbox"]').val(item.videoLinkButton);
 
           // $newRow.find('.Blockquote input.quoteText').val(item.quoteText);
           	$newRow.find('.Blockquote .tinymce').val(item.quoteText);
