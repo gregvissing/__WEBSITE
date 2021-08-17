@@ -135,14 +135,7 @@
         $.each(data.settings.items, function(i, item) {
           // console.log(item);
             if (item.type !== "page break") {
-              	/*
-				if (item.type == "heading1") {
-                    var $newRow = $contentwrapper.clone()
-                        .append($row.clone()
-                            .append($fieldtemplate[item.type].clone().text(item.question))
-                        );
-                } else */
-                if (item.type == "heading2") {
+              	if (item.type == "heading2") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($fieldtemplate[item.type].clone().text(item.question))
@@ -159,13 +152,26 @@
                         );
                   
                 } else if (item.type == "video") {
-                  // console.log(item.columns);
-                  	var videoId = item.video.split("=")[1];                  	
-                  	var $newRow = $contentwrapper.clone()
-                        .append($row.clone()
-                            .append($fieldtemplate[item.type].clone().attr("src", "https://www.youtube.com/embed/" + videoId))
-                            .append("<p>" + item.videoLinkText + "</p>")
-                        );
+                  
+                  	var videoId = item.video.split("=")[1];  
+                  
+                  	if (item.videoLinkText != "") {
+                      
+                      	var modalHtml = $('<div id="myModal" class="modal"><div class="modal-content"><div class="modal-header"><span class="close">&times;</span></div><div class="modal-body"><iframe width="560" height="560" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>');
+                  		var modalButtonHtml = $link.clone().attr("id", "myBtn").attr("class", "button-primary").attr("href", "#").text(item.videoLinkText.trim());
+                      
+                      	var $newRow = $contentwrapper.clone()
+                        	.append($row.clone().addClass("text-center")
+                            	.append(modalButtonHtml)
+                            	.append(modalHtml)
+                        	);
+                      
+                  	} else {
+                      	var $newRow = $contentwrapper.clone()
+                        	.append($row.clone()
+                            	.append($fieldtemplate[item.type].clone().attr("src", "https://www.youtube.com/embed/" + videoId))
+                        	);
+                    }
                   
                   	if (item.columns < 12) {
                     	$newRow.find('.col-md-12').removeClass('col-md-12').addClass('col-md-' + item.columns);
@@ -509,6 +515,32 @@
             }
 
         });
+                        
+        // Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+		btn.onclick = function() {
+  			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+  			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+  			if (event.target == modal) {
+    			modal.style.display = "none";
+  			}
+		}
 
         // accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion__button');
