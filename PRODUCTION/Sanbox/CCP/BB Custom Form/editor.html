@@ -5,9 +5,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="/client/styles/Admin/GenericUI.css" type="text/css" />
 
+
 <link rel="stylesheet" href="https://foundation.uc.edu/file/custom-content-parts/css/bb-custom-form_editor.css" type="text/css" />
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
 
+<link rel="stylesheet" href="https://foundation.uc.edu/Client/Scripts/tiny_mce_V4_9_6/skins/lightgray/skin.min.css" type="text/css" />
 <style>
   	.ui-state-highlight { 
     	height: 200px; 
@@ -29,8 +31,22 @@
     	background: #e9e9e9 !important;
     	color: #333 !important;
     	font-weight: bold;
+  	}  
+  
+  
+	div[id$="-body"] .mce-widget.mce-btn.mce-first.mce-last button {
+    	padding: 1px 5px !important;
+    	font-size: 12px !important;
+	}
+  
+  	.mce-widget.mce-btn.mce-splitbtn button {
+  		padding: 1px 6px !important;
+    	display: inline;
   	}
   
+  	.mce-grid.mce-grid-border.mce-colorbutton-grid .mce-grid-cell {
+    	padding: 0;
+  	}
 </style>
 <div id="BBTabs">
 
@@ -707,7 +723,9 @@
 
 <!--<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" type="text/javascript"></script>
 <script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=u1z7mud98ppwucag8wv1vgvzl6uxxsth7l3qbv1go17ighu0'></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.8.1/tinymce.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.8.1/tinymce.min.js"></script>-->
+<script src="https://foundation.uc.edu/Client/Scripts/tiny_mce_V4_9_6/tinymce.min.js"></script>
+
 <script>
     //variables etc.
     var count = 0;
@@ -956,41 +974,6 @@
         "FullPageWidth": false
     }
 
-      /*
-	  Fields["heading1"] = {
-      	"Video": false,
-        "ButtonLink": false,
-        "AdvancedDonationForm": false,
-        "Byline": false,
-        "Question": true,
-        "Blockquote": false,
-        "RelatedStory": false,
-        "Card": false,
-        "RowCard": false,
-        "HR": false,
-        "NextFrontiers": false,
-        "NextNow": false,
-        "EmpowerNext": false,
-        "Image": false,
-        "PageTitle": false,
-        "SubFooter": false,
-        "Footer": false,
-        "Accordion": false,
-        "CalloutBox": false,
-        "Formattedtext": false,
-        "QuoteSource": false,
-        "Help": false,
-        "QuestionRequired": false,
-        "MaxLength": false,
-        "LinkAttribute": false,
-        "DisplayCondition": false,
-        "TextFieldType": "text",
-        "EventCateogry": false,
-        "QAS": false,
-        "ConditionFieldType": "text",
-        "ColumnWidth": false,
-        "FullPageWidth": false
-    } */
     Fields["heading2"] = {
       	"Video": false,
         "ButtonLink": false,
@@ -1815,7 +1798,7 @@
         // $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
 
         if (item !== undefined) {
-          	console.log(item);
+          // console.log(item);
 
             $newRow.find('.Question input').val(item.question);
           
@@ -1953,8 +1936,24 @@
                 mode: "textareas",
                 editor_selector: "tinymce",
 
-                file_picker_types: "file image media",
-                file_picker_callback: function(callback, value, meta) {
+                theme: 'modern',
+              	height: "350px",
+              	plugins:'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste, image_tools, advimage, bbimages, bblinks, advhr',
+              	
+				external_plugins: {
+                  	'image_tools': 'https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/image_tools/editor_plugin.js',
+                  	'advimage': 'https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/advimage/editor_plugin.js',
+                  	'bbimages': 'https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/bbimages/editor_plugin.js',
+                  	'bblinks': 'https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/bblinks/editor_plugin.js',
+                  	'advhr': 'https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/advhr/editor_plugin.js'
+                }, 
+				
+              	toolbar1:' undo redo | cut copy paste | styleselect removeformat bullist numlist outdent indent | bold italic underline strikethrough forecolor backcolor alignleft aligncenter alignright alignjustify superscript subscript spellchecker | searchreplace fullpage bbhelp ',toolbar2:' image_edit | bbstyleselect',menu:{insert: {title: 'Insert',items:' inserttable bbimage | bblink unlink anchor | charmap advhr | bbmergefields '},view: {title: 'View',items:' fullscreen preview | code bbstylesheetoptions '},table: {title: 'Table',items:' tableprops deletetable | cell row column '}},
+              // block_formats: "Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3",
+              	
+              	file_picker_types: "file image media",
+              /*
+				file_picker_callback: function(callback, value, meta) {
                     // Provide image and alt text for the image dialog
                     if (meta.filetype == "image") {
                         BLACKBAUD.api.customPartEditor.images.launchImagePicker({
@@ -1975,9 +1974,38 @@
                             }
                         });
                     }
-                },
-                plugins: 'code print preview searchreplace autolink directionality visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools  textpattern help',
-                toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | image | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+				}, */
+              	file_picker_callback: "BBImagePropertiesBrowser",
+              	bb_admin_images: true,
+				setup: function (ed) {
+					ed.on("init", function (e) {
+						var bod = ed.getBody();
+						bod.style.backgroundColor = ed.settings.backColor;
+						bod.style.color = ed.settings.foreColor;
+					});
+					ed.on("GetContent", function (o) {
+						o.content = o.content.replace(
+							/(<style[^>]+|>[\s\S]*?<\/style>)/g,
+							function (v, text) {
+								if (text) {
+									text = text.replace(/\r*\r\n/g, "\r\n");
+								}
+								return text;
+							}
+						);
+					});
+				},
+              	bb_admin_links: true,
+				plugin_preview_pageurl: "../../../Client/Scripts/tiny_mce_V4_9_6/plugins/bbpreview/preview.htm",
+				webmethods_url: "https://foundation.uc.edu/webservices/webmethods.asmx",
+              
+              	style_formats: [
+                  	{title: "Paragraph", block: "p"},
+                  	{title: "Heading 2", block: "h2"},
+                  	{title: "Heading 3", block: "h3"},
+                	{title: "Sub-Heading", block: "p", classes: "large"}
+                ],
+              	spellchecker_languages: "English=en",
                 image_advtab: true,
                 content_css: [
                     "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
