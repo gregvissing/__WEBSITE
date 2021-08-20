@@ -10,7 +10,7 @@
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
 
 <link rel="stylesheet" href="https://foundation.uc.edu/Client/Scripts/tiny_mce_V4_9_6/skins/lightgray/skin.min.css" type="text/css" />
-<style>
+<style>  
   	.ui-state-highlight { 
     	height: 200px; 
   	}
@@ -47,6 +47,10 @@
   	.mce-grid.mce-grid-border.mce-colorbutton-grid .mce-grid-cell {
     	padding: 0;
   	}
+  
+  	table:not([cellpadding]) th, table:not([cellpadding]) td {
+    	padding: 0.1rem;
+	}
 </style>
 <div id="BBTabs">
 
@@ -352,6 +356,42 @@
                                         <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
                                             <img src="">
                                         </div>
+                                    </div>
+                                  
+                                  	<div class="IconTextCard" id="DivIconTextCard_0">
+                                      	<div class="tip"><em>Tip: Icon Text Card displays with the Image displayed to the left and to the right is the Text.</em></div>
+                                      	
+                                      	<div class="Field">
+                                            <div class="FieldHeading">
+                                                <label for="field-highlighter-image" class="FieldLabel">Image:</label>
+                                                <span class="FieldRequired">*</span>
+                                                <span class="clear"></span>
+                                            </div>
+                                            <div class="FieldContent">
+                                                <div class="SearchFieldContainer">
+                                                    <div class="SearchFieldBox">
+                                                        <a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
+                                                            <span class="SearchFieldIcon">
+																<img src="/images/pencil_16.gif" alt="" />
+															</span>
+                                                            <span class="SearchFieldText"></span>
+                                                            <span class="SearchFieldButton">
+																<img src="/images/Admin/Buttons/search.gif" alt="" />
+															</span>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
+                                            <img src="">
+                                        </div>
+                                        <hr>                                      	
+                                      	<div class="FieldContent">
+                                            <label>Card Text: </label>
+                                            <textarea class="tinymce" id="Formattedtext_0" name="Formattedtext_0" cols="80"></textarea>
+                                        </div>                                        
                                     </div>
 
                                     <div class="RowCard" id="DivRowCard_0">
@@ -695,6 +735,7 @@
 				<option value="calloutbox">Call-Out Box</option>
 				<option value="card">Grid Card</option>
 				<option value="hr">Horizontal Rule</option>
+              	<option value="icontextcard">Icon Text Card</option>              	
 				<option value="image">Image</option>
 				<option value="rowcard">Row Card</option>
 				<option value="pagetitle">Page Title</option>
@@ -725,7 +766,43 @@
     //FIELD SETTINGS
     var Fields = {};
 
+  	Fields["icontextcard"] = {
+      	"IconTextCard": true,
+      	"Video": false,
+        "ButtonLink": false,
+        "AdvancedDonationForm": false,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+        "RelatedStory": false,
+        "Card": false,
+        "RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+        "PageTitle": false,
+        "SubFooter": false,
+        "Footer": false,
+        "Accordion": false,
+        "CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": true,
+        "FullPageWidth": false
+    }
   	Fields["video"] = {
+      	"IconTextCard": false,
       	"Video": true,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -760,6 +837,7 @@
         "FullPageWidth": false
     }
     Fields["buttonlink"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": true,
         "AdvancedDonationForm": false,
@@ -794,6 +872,7 @@
         "FullPageWidth": false
     }
     Fields["blockquote"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -828,6 +907,7 @@
         "FullPageWidth": false
     }
     Fields["formattedtext"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -862,6 +942,7 @@
         "FullPageWidth": false
     }
     Fields["calloutbox"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -896,6 +977,7 @@
         "FullPageWidth": false
     }
     Fields["text"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -930,6 +1012,7 @@
         "FullPageWidth": false
     }
     Fields["byline"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -965,6 +1048,7 @@
     }
 
     Fields["heading2"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -999,6 +1083,7 @@
         "FullPageWidth": false
     }
     Fields["heading3"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1033,6 +1118,7 @@
         "FullPageWidth": false
     }
     Fields["subheading"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1068,6 +1154,7 @@
     }
 
     Fields["accordion"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1102,6 +1189,7 @@
         "FullPageWidth": false
     }
     Fields["relatedstory"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1136,6 +1224,7 @@
         "FullPageWidth": false
     }
     Fields["card"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1170,6 +1259,7 @@
         "FullPageWidth": false
     }
     Fields["rowcard"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1204,6 +1294,7 @@
         "FullPageWidth": false
     }
     Fields["hr"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1238,6 +1329,7 @@
         "FullPageWidth": false
     }
     Fields["image"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1272,6 +1364,7 @@
         "FullPageWidth": true
     }
     Fields["pagetitle"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1307,6 +1400,7 @@
     }
 
     Fields["subfooter"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1341,6 +1435,7 @@
         "FullPageWidth": false
     }
     Fields["footer"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1376,6 +1471,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1410,6 +1506,7 @@
         "FullPageWidth": false
     }
     Fields["nextnow"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1444,6 +1541,7 @@
         "FullPageWidth": false
     }
     Fields["empowernext"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1479,6 +1577,7 @@
     }
 
     Fields["page break"] = {
+      	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
         "AdvancedDonationForm": false,
@@ -1636,6 +1735,10 @@
                     cardLinkText: $(this).find('.Card input.cardLinkText').val(),
                     cardImgText: $(this).find('.Card .Field .SearchFieldText').text(),
                     cardImgSrc: $(this).find('.Card .Field.ImagePickerRender img').attr('src'),
+                  
+                  	iconTextRowCardText: $(this).find('.IconTextCard .tinymce').val(),
+                    iconTextRowCardImgText: $(this).find('.IconTextCard .Field .SearchFieldText').text(),
+                    iconTextRowCardImgSrc: $(this).find('.IconTextCard .Field.ImagePickerRender img').attr('src'),
 
                     rowCardTitle: $(this).find('.RowCard input.cardTitle').val(),
                     rowCardText: $(this).find('.RowCard input.cardText').val(),
@@ -1817,6 +1920,11 @@
             $newRow.find('.Card .Field .SearchFieldText').text(item.cardImgText);
             $newRow.find('.Card .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
             $newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);
+          
+          	$newRow.find('.IconTextCard .tinymce').val(item.iconTextRowCardText);
+            $newRow.find('.IconTextCard .Field .SearchFieldText').text(item.iconTextRowCardImgText);
+            $newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
+            $newRow.find('.IconTextCard .Field.ImagePickerRender img').attr('src', item.iconTextRowCardImgSrc);
 
             $newRow.find('.RowCard input.cardTitle').val(item.rowCardTitle);
             $newRow.find('.RowCard input.cardText').val(item.rowCardText);
