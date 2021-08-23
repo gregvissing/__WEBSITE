@@ -195,7 +195,7 @@
 
                 } else if (item.type == "relatedstory") {
                     var $newRow = $fieldtemplate[item.type].clone() //$row.clone()
-                        .append($div.clone().addClass("related-image").css("background-image", "url(" + item.relatedStoryImgSrc.trim() + ")"))
+                        .append($div.clone().addClass("related-image").css("background-image", "url(" + item.imageFieldSrc.trim() + ")"))
                         .append($div.clone()
                             .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
                             .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
@@ -210,7 +210,7 @@
                 } else if (item.type == "card") {
                     var $newRow = $row.clone()
                         .append(($fieldtemplate[item.type].clone()
-                            .append($image.clone().attr("src", item.cardImgSrc.trim()).attr("loading", "lazy"))
+                            .append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
                             .append($div.clone()
                                 .append($cardTitle.clone().text(item.cardTitle.trim()))
                                 .append($text.clone().text(item.cardText.trim()))
@@ -222,7 +222,7 @@
                     var $newRow = $row.clone()
                         .append(($fieldtemplate[item.type].clone()
                             .append($contentwrapper.clone()
-                                .append($image.clone().attr("src", item.rowCardImgSrc.trim()).attr("loading", "lazy"))
+                                .append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
                                 .append($div.clone()
                                     .append($cardTitle.clone().text(item.rowCardTitle.trim()))
                                     .append($text.clone().text(item.rowCardText.trim()))
@@ -236,14 +236,14 @@
                         .append(($fieldtemplate[item.type].clone()
                             .append($contentwrapper.clone()
                                 .append($div.clone()
-                                	.append($image.clone().attr("src", item.iconTextRowCardImgSrc.trim()).attr("loading", "lazy"))
+                                	.append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
                                 )
                                 .append($div.clone().html(item.iconTextRowCardText.trim()))
                             )
                         ));
 
                 } else if (item.type == "subfooter") {
-                    var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.subFooterImgSrc.trim() + ")")
+                    var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
                         .append($contentwrapper.clone()
                             .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                             .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
@@ -269,9 +269,9 @@
                   
                   	imageCount++;
                   	if (imageCount == 1) {
-                  		var imgHtml = $image.clone().attr("src", item.imageSrc.trim()).attr("loading", "eager");
+                  		var imgHtml = $image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "eager");
                   	} else {
-                      	var imgHtml = $image.clone().attr("src", item.imageSrc.trim()).attr("loading", "lazy");
+                      	var imgHtml = $image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy");
                     }
 
                     var marginVals;
@@ -533,7 +533,9 @@
             }
 
         });
-                        
+         
+        /*                        
+
         // Get the modal
 		var modal = document.getElementById("myModal");
 
@@ -561,6 +563,8 @@
     			modal.style.display = "none";
   			}
 		}
+		
+		*/
 
         // accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion__button');
