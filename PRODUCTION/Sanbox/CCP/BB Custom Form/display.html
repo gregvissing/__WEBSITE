@@ -77,10 +77,10 @@
     var $page = $('<div class="form-page row"></div>');
 
     var $fieldtemplate = {};
-  // $fieldtemplate["heading1"] = $('<h1></h1>');
     $fieldtemplate["heading2"] = $('<h2></h2>');
     $fieldtemplate["heading3"] = $('<h3></h3>');
     $fieldtemplate["subheading"] = $('<p class="large"></p>');
+  	$fieldtemplate["sectionheading"] = $('<div class="u-full-width blackBg pad-top-400 pad-bottom-400"></div>');
   
   	$fieldtemplate["video"] = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
@@ -89,6 +89,7 @@
     $fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
     $fieldtemplate["rowcard"] = $('<div class="card row"></div>');
+  	$fieldtemplate["icontextcard"] = $('<div class="icontext card row"></div>');
     $fieldtemplate["hr"] = $('<hr>');
     $fieldtemplate["image"] = $('<div class="image"></div>');
     $fieldtemplate["pagetitle"] = $('<div class="page-title"></div>');
@@ -150,6 +151,12 @@
                         .append($row.clone()
                             .append($fieldtemplate[item.type].clone().text(item.question))
                         );
+                  
+                } else if (item.type == "sectionheading") {
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($fieldtemplate["heading2"].clone().text(item.sectionHeading.trim()).css('text-align', 'center'))          
+                      	));
                   
                 } else if (item.type == "video") {
                   
@@ -221,6 +228,17 @@
                                     .append($text.clone().text(item.rowCardText.trim()))
                                     .append($link.clone().attr("href", item.rowCardLinkUrl.trim()).text(item.rowCardLinkText.trim()))
                                 )
+                            )
+                        ));
+                  
+               	} else if (item.type == "icontextcard") {
+                  	var $newRow = $div.clone().addClass("icontext")
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($contentwrapper.clone()
+                                .append($div.clone()
+                                	.append($image.clone().attr("src", item.iconTextRowCardImgSrc.trim()).attr("loading", "lazy"))
+                                )
+                                .append($div.clone().html(item.iconTextRowCardText.trim()))
                             )
                         ));
 
@@ -526,7 +544,9 @@
 		var span = document.getElementsByClassName("close")[0];
 
 		// When the user clicks on the button, open the modal
-		btn.onclick = function() {
+		btn.onclick = function(e) {
+            e.preventDefault();
+                        
   			modal.style.display = "block";
 		}
 
@@ -574,6 +594,8 @@
         })
 
         $(".related").wrapAll("<div class='content-wrapper' />").wrapAll("<div class='row related-story-container' />");
+                        
+        $(".icontext.col-md-4").wrapAll("<div class='content-wrapper' />").wrapAll("<div class='row icon-text-container' />");
 
         $(".accordion-container.col-md-6").wrapAll("<div class='content-wrapper' />").wrapAll("<div class='row accordion-outer-container' />");
 
