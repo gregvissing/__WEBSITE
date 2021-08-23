@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://foundation.uc.edu/file/custom-content-parts/css/bb-custom-form_editor.css" type="text/css" />
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
 
-<link rel="stylesheet" href="https://foundation.uc.edu/Client/Scripts/tiny_mce_V4_9_6/skins/lightgray/skin.min.css" type="text/css" />
+<link rel="stylesheet" href="/Client/Scripts/tiny_mce_V4_9_6/skins/lightgray/skin.min.css" type="text/css" />
 <style>  
   	.ui-state-highlight { 
     	height: 200px; 
@@ -101,8 +101,16 @@
                                 <div class="top">
                                     <div class="Question" id="DivQuestion_0">
                                         <div class="tip"><em>Tip: Text displays based on font assignment.</em></div>
+                                      
                                         <label>Content: <input class="form-control required" type="text"
 												name="Question_0" id="Question_0" /></label>
+                                    </div>
+                                  
+                                  	<div class="SectionHeading" id="DivSectionHeading_0">
+                                        <div class="tip"><em>Tip: Centered Heading 2 text inside black full with background.</em></div>
+                                      
+                                        <label>Content: <input class="form-control required" type="text"
+												name="SectionHeading_0" id="SectionHeading_0" /></label>
                                     </div>
                                   
                                   	<div class="Video" id="DivVideo_0">
@@ -481,7 +489,6 @@
 											investment in Next, Now: The Campaign for Cincinnati can launch UC
 											research and innovation to the next frontiers that await us.</label>
                                     </div>
-
                                     <div class="NextNow" id="DivNextNow_0">
                                       	<div class="tip"><em>Tip: Text below is formatted and displayed in Call-out Box.</em></div>
                                         <label>With its focus on innovation and impact, Next, Now: The
@@ -490,7 +497,6 @@
 											thinking bolder and dreaming bigger to create the tomorrow we
 											envision, today.<br>What’s NEXT, starts with you.</label>
                                     </div>
-
                                     <div class="EmpowerNext" id="DivEmpowerNext_0">
                                       	<div class="tip"><em>Tip: Text below is formatted and displayed in Call-out Box.</em></div>
                                         <label>Scholarships, fellowships and enrichment programs provide
@@ -613,9 +619,37 @@
                                     </div>
 
                                 </div>
+                              
+                              	<div class="ImageField">
+                                  	<div class="Field">
+                                    	<div class="FieldHeading">
+                                      		<label for="field-highlighter-image" class="FieldLabel">Image:</label>
+                                      		<span class="FieldRequired">*</span>
+                                      		<span class="clear"></span>
+                                    	</div>
+                                    	<div class="FieldContent">
+                                      		<div class="SearchFieldContainer">
+                                        		<div class="SearchFieldBox">
+                                          			<a href="#" class="SearchField ImagePicker" id="ImagePicker_0">
+                                            			<span class="SearchFieldIcon">
+                                              				<img src="/images/pencil_16.gif" alt="" />
+                                            			</span>
+                                            			<span class="SearchFieldText"></span>
+                                            			<span class="SearchFieldButton">
+                                              				<img src="/images/Admin/Buttons/search.gif" alt="" />
+                                            			</span>
+                                          			</a>
+                                        		</div>                                       
+                                      		</div>
+                                    	</div>
+                                  	</div>
+                                  	<div class="Field ImagePickerRender" name="ImagePickerRender_0" id="ImagePickerRender_0">
+                                    	<img src="">
+                                  	</div>                                  
+                              	</div>
 
                                 <div class="middle">
-                                    <div class="Help" id="DivHelp_0">
+                                 	<div class="Help" id="DivHelp_0">
                                         <label>Help Text: <input class="form-control" type="text"
 												name="Help_0"
 												id="Help_0" /></label>
@@ -728,6 +762,7 @@
 				<option value="heading2">Heading 2</option>
 				<option value="heading3">Heading 3</option>
 				<option value="subheading">Sub-Heading</option>
+              	<option value="sectionheading">Section Heading</option>
 			</optgroup>
 			<optgroup label="Components">
 				<option value="accordion">Accordion</option>
@@ -765,8 +800,46 @@
 
     //FIELD SETTINGS
     var Fields = {};
-
+  
+  	Fields["sectionheading"] = {
+      	"SectionHeading": true,
+      	"IconTextCard": false,
+      	"Video": false,
+        "ButtonLink": false,
+        "AdvancedDonationForm": false,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+        "RelatedStory": false,
+        "Card": false,
+        "RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+        "PageTitle": false,
+        "SubFooter": false,
+        "Footer": false,
+        "Accordion": false,
+        "CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "QAS": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false,
+        "FullPageWidth": false,
+      	"ImageField": false
+	}
   	Fields["icontextcard"] = {
+      	"SectionHeading": false,
       	"IconTextCard": true,
       	"Video": false,
         "ButtonLink": false,
@@ -799,9 +872,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
   	Fields["video"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": true,
         "ButtonLink": false,
@@ -834,9 +909,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["buttonlink"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": true,
@@ -869,9 +946,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["blockquote"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -904,9 +983,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["formattedtext"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -939,9 +1020,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["calloutbox"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -974,9 +1057,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["text"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1009,9 +1094,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["byline"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1044,10 +1131,12 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
 
     Fields["heading2"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1080,9 +1169,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["heading3"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1115,9 +1206,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["subheading"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1150,10 +1243,12 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
 
     Fields["accordion"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1186,9 +1281,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["relatedstory"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1221,9 +1318,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["card"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1256,9 +1355,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["rowcard"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1291,9 +1392,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["hr"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1326,9 +1429,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["image"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1361,9 +1466,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true,
-        "FullPageWidth": true
+        "FullPageWidth": true,
+      	"ImageField": true
     }
     Fields["pagetitle"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1396,10 +1503,12 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": true
+        "FullPageWidth": true,
+      	"ImageField": false
     }
 
     Fields["subfooter"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1432,9 +1541,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["footer"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1467,10 +1578,12 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
 
     Fields["nextfrontiers"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1503,9 +1616,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["nextnow"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1538,9 +1653,11 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     Fields["empowernext"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1573,10 +1690,12 @@
         "QAS": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
 
     Fields["page break"] = {
+      	"SectionHeading": false,
       	"IconTextCard": false,
       	"Video": false,
         "ButtonLink": false,
@@ -1609,7 +1728,8 @@
         "QAS": false,
         "ConditionFieldType": null,
         "ColumnWidth": false,
-        "FullPageWidth": false
+        "FullPageWidth": false,
+      	"ImageField": false
     }
     var ConditionFieldType = {};
     ConditionFieldType["text"] = {
@@ -1709,6 +1829,8 @@
                     type: $(this).attr('data-type'),
                     question: $(this).find('.Question input').val(),
                   
+                  	sectionHeading: $(this).find('.SectionHeading input').val(),
+                  
                   	video: $(this).find('.Video input.videoUrl').val(),
                   	videoLinkText: $(this).find('.Video input.linkText').val(),
 
@@ -1779,6 +1901,9 @@
                     datePublished: $(this).find('.Byline input.datePublished').val(),
                     storyLinkName: $(this).find('.Byline .selected-link-name').text(),
                     storyLinkUrl: $(this).find('.Byline .selected-link-url').text(),
+                  
+                  	imageFieldText: $(this).find('.ImageField .Field .SearchFieldText').text(),
+                  	imageFieldSrc: $(this).find('.ImageField .Field.ImagePickerRender img').attr('src'),
 
                     help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
@@ -1892,6 +2017,8 @@
 
             $newRow.find('.Question input').val(item.question);
           
+          	$newRow.find('.SectionHeading input').val(item.sectionHeading);
+          
           	$newRow.find('.Video input.videoUrl').val(item.video);
           	$newRow.find('.Video input.linkText').val(item.videoLinkText);
 
@@ -1970,6 +2097,10 @@
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
+          
+          	$newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
+          	$newRow.find('.ImageField .Field .SearchFieldText').text(item.imageText);
+            $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageSrc);
 
             $newRow.find('.QuestionRequired input').prop('checked', item.required == "on");
             $newRow.find('.Help input').val(item.help);
@@ -2031,7 +2162,7 @@
                 editor_selector: "tinymce",
 
                 theme: 'modern',
-              	height: "350px",
+              	height: "250px",
               	plugins:'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste, image_tools, advimage, bbimages, bblinks, advhr',              	
 				external_plugins: {
                   	image_tools:
