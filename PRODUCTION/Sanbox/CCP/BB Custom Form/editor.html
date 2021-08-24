@@ -51,6 +51,10 @@
     table:not([cellpadding]) td {
         padding: 0.1rem;
     }
+  
+  	.FormattedText > div.mce-tinymce.mce-container.mce-panel {
+   		padding: 5px 0;
+  	}
 </style>
 <div id="BBTabs">
 
@@ -130,11 +134,6 @@
 												need to wrap.
 												Dash in front of source is automatically added.</em></div>
 
-                                        <!-- <div class="FieldContent">
-                                            <label>Quote Text: </label>
-                                            <textarea class="required quoteText tinymce" id="Blockquote_0" name="Blockquote_0" cols="80"></textarea>
-                                        </div> -->
-
                                         <label>Quote Source: <input class="form-control quoteSource"
 												type="text"
 												name="QuoteSource_0" id="QuoteSource_0" /></label>
@@ -199,11 +198,6 @@
                                         <div class="tip"><em>Tip: Text displays at a max-width of 1024 pixels
 												and has a
 												gray background.</em></div>
-
-                                        <!-- <div class="FieldContent">
-                                            <label>Custom Call-Out Box Content: </label>
-                                            <textarea class="tinymce" id="CalloutBox_0" name="CalloutBox_0" cols="80"></textarea>
-                                        </div> -->
                                     </div>
 
                                     <div class="Card" id="DivCardTitle_0">
@@ -242,10 +236,6 @@
                                         <div class="tip"><em>Tip: Formatted Text allows you to add formatted
 												text similar to how the 'Formatted Text and Image' BBIS part works.
 												You can insert links and images the same way as the BBIS part.</em></div>
-                                        <!-- <div class="FieldContent">
-                                            <label>Formatted Content: </label>
-                                            <textarea class="tinymce" id="Formattedtext_0" name="Formattedtext_0" cols="80"></textarea>
-                                        </div> -->
                                     </div>
 
                                     <div class="HR" id="DivHr_0">
@@ -304,11 +294,6 @@
                                     <div class="IconTextCard" id="DivIconTextCard_0">
                                         <div class="tip"><em>Tip: Icon Text Card displays with the Image
 												displayed to the left and to the right is the Text.</em></div>
-
-                                        <!-- <div class="FieldContent">
-                                            <label>Card Text: </label>
-                                            <textarea class="tinymce" id="Formattedtext_0" name="Formattedtext_0" cols="80"></textarea>
-                                        </div> -->
                                     </div>
 
                                     <div class="RowCard" id="DivRowCard_0">
@@ -361,10 +346,6 @@
                                         <label>Accordion Text: <input class="form-control required
 												accordionText" type="text"
 												name="AccordionText_0" id="AccordionText_0" /></label>
-                                        <!-- <div class="FieldContent">
-                                            <label>Accordion Content: </label>
-                                            <textarea class="tinymce" id="AccordionContent_0" name="AccordionContent_0" cols="80"></textarea>
-                                        </div> -->
                                     </div>
 
 
@@ -482,7 +463,24 @@
                                     </div>
 
                                 </div>
-
+                              
+                              	<div class="SelectLink">
+                              		<div class="Field">
+                                        <p>
+                                            <label>Selected Link Name:</label>
+                                        	<span class="selected-link-name"></span>
+                                        </p>
+                                      	<p>
+                                            <label>Selected Link URL:</label>
+                                        	<span class="selected-link-url"></span>
+                                        </p>
+                                      	<p>
+                                        	<button class="btn-select" name="btn-select_0" id="btn-select_0">Select
+													Link</button>
+                                    	</p>
+                              		</div>
+                          		</div>
+												
                                 <div class="FormattedText">
                                     <label>Formatted Text: </label>
                                     <textarea class="required tinymce" id="FormattedText_0" name="FormattedText_0" cols="80"></textarea>
@@ -704,7 +702,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["icontextcard"] = {
         "SectionHeading": false,
@@ -741,7 +740,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": true
+        "FormattedText": true,
+        "SelectLink": false
     }
     Fields["video"] = {
         "SectionHeading": false,
@@ -778,7 +778,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["buttonlink"] = {
         "SectionHeading": false,
@@ -815,7 +816,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["blockquote"] = {
         "SectionHeading": false,
@@ -852,7 +854,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": true
+        "FormattedText": true,
+        "SelectLink": false
     }
     Fields["formattedtext"] = {
         "SectionHeading": false,
@@ -889,7 +892,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": true
+        "FormattedText": true,
+        "SelectLink": false
     }
     Fields["calloutbox"] = {
         "SectionHeading": false,
@@ -926,7 +930,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": true
+        "FormattedText": true,
+        "SelectLink": false
     }
     Fields["text"] = {
         "SectionHeading": false,
@@ -963,7 +968,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["byline"] = {
         "SectionHeading": false,
@@ -1000,7 +1006,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
 
     Fields["heading2"] = {
@@ -1038,7 +1045,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["heading3"] = {
         "SectionHeading": false,
@@ -1075,7 +1083,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["subheading"] = {
         "SectionHeading": false,
@@ -1112,7 +1121,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
 
     Fields["accordion"] = {
@@ -1150,7 +1160,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": true
+        "FormattedText": true,
+        "SelectLink": false
     }
     Fields["relatedstory"] = {
         "SectionHeading": false,
@@ -1187,7 +1198,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["card"] = {
         "SectionHeading": false,
@@ -1224,7 +1236,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["rowcard"] = {
         "SectionHeading": false,
@@ -1261,7 +1274,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["hr"] = {
         "SectionHeading": false,
@@ -1298,7 +1312,8 @@
         "ColumnWidth": true,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["image"] = {
         "SectionHeading": false,
@@ -1335,7 +1350,8 @@
         "ColumnWidth": true,
         "FullPageWidth": true,
         "ImageField": true,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["pagetitle"] = {
         "SectionHeading": false,
@@ -1372,7 +1388,8 @@
         "ColumnWidth": false,
         "FullPageWidth": true,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
 
     Fields["subfooter"] = {
@@ -1410,7 +1427,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["footer"] = {
         "SectionHeading": false,
@@ -1447,7 +1465,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
 
     Fields["nextfrontiers"] = {
@@ -1485,7 +1504,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["nextnow"] = {
         "SectionHeading": false,
@@ -1522,7 +1542,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     Fields["empowernext"] = {
         "SectionHeading": false,
@@ -1559,7 +1580,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
 
     Fields["page break"] = {
@@ -1597,7 +1619,8 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": false,
-        "FormattedText": false
+        "FormattedText": false,
+        "SelectLink": false
     }
     var ConditionFieldType = {};
     ConditionFieldType["text"] = {
@@ -1702,10 +1725,7 @@
                     video: $(this).find('.Video input.videoUrl').val(),
                     videoLinkText: $(this).find('.Video input.linkText').val(),
 
-                  //quoteText: $(this).find('.Blockquote .tinymce').val(),
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
-
-                  //calloutText: $(this).find('.CalloutBox .tinymce').val(),
 
                     buttonLinkName: $(this).find('.ButtonLink .selected-link-name').text(),
                     buttonLinkUrl: $(this).find('.ButtonLink .selected-link-url').text(),
@@ -1721,8 +1741,6 @@
                     cardLinkName: $(this).find('.Card .selected-link-name').text(),
                     cardLinkUrl: $(this).find('.Card .selected-link-url').text(),
                     cardLinkText: $(this).find('.Card input.cardLinkText').val(),
-
-                  //iconTextRowCardText: $(this).find('.IconTextCard .tinymce').val(),
 
                     rowCardTitle: $(this).find('.RowCard input.cardTitle').val(),
                     rowCardText: $(this).find('.RowCard input.cardText').val(),
@@ -1880,10 +1898,7 @@
             $newRow.find('.Video input.videoUrl').val(item.video);
             $newRow.find('.Video input.linkText').val(item.videoLinkText);
 
-          //$newRow.find('.Blockquote .tinymce').val(item.quoteText);
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
-
-          //$newRow.find('.CalloutBox .tinymce').val(item.calloutText);
 
             $newRow.find('.ButtonLink .selected-link-name').text(item.buttonLinkName);
             $newRow.find('.ButtonLink .selected-link-url').text(item.buttonLinkUrl);
@@ -1893,41 +1908,40 @@
             $newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
             $newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
             $newRow.find('.RelatedStory .relatedStoryLinkText').val(item.relatedStoryLinkText);
-            $newRow.find('.RelatedStory .Field .SearchFieldText').text(item.relatedStoryImgText);
+          //$newRow.find('.RelatedStory .Field .SearchFieldText').text(item.relatedStoryImgText);
             $newRow.find('.RelatedStory .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.RelatedStory .Field.ImagePickerRender img').attr('src', item.relatedStoryImgSrc);
+          //$newRow.find('.RelatedStory .Field.ImagePickerRender img').attr('src', item.relatedStoryImgSrc);
 
             $newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
             $newRow.find('.Card .selected-link-name').text(item.cardLinkName);
             $newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
             $newRow.find('.Card .cardLinkText').val(item.cardLinkText);
-            $newRow.find('.Card .Field .SearchFieldText').text(item.cardImgText);
+          //$newRow.find('.Card .Field .SearchFieldText').text(item.cardImgText);
             $newRow.find('.Card .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);
+          //$newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);
 
-          //$newRow.find('.IconTextCard .tinymce').val(item.iconTextRowCardText);
-            $newRow.find('.IconTextCard .Field .SearchFieldText').text(item.iconTextRowCardImgText);
+          //$newRow.find('.IconTextCard .Field .SearchFieldText').text(item.iconTextRowCardImgText);
             $newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.IconTextCard .Field.ImagePickerRender img').attr('src', item.iconTextRowCardImgSrc);
+          //$newRow.find('.IconTextCard .Field.ImagePickerRender img').attr('src', item.iconTextRowCardImgSrc);
 
             $newRow.find('.RowCard input.cardTitle').val(item.rowCardTitle);
             $newRow.find('.RowCard input.cardText').val(item.rowCardText);
             $newRow.find('.RowCard .selected-link-name').text(item.rowCardLinkName);
             $newRow.find('.RowCard .selected-link-url').text(item.rowCardLinkUrl);
             $newRow.find('.RowCard .cardLinkText').val(item.rowCardLinkText);
-            $newRow.find('.RowCard .Field .SearchFieldText').text(item.rowCardImgText);
+          //$newRow.find('.RowCard .Field .SearchFieldText').text(item.rowCardImgText);
             $newRow.find('.RowCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.RowCard .Field.ImagePickerRender img').attr('src', item.rowCardImgSrc);
+          //$newRow.find('.RowCard .Field.ImagePickerRender img').attr('src', item.rowCardImgSrc);
 
             $newRow.find('.SubFooter input.subFooterHeading').val(item.subFooterHeading);
             $newRow.find('.SubFooter input.subFooterSubHeading').val(item.subFooterSubHeading);
             $newRow.find('.SubFooter .selected-link-name').text(item.subFooterLinkName);
             $newRow.find('.SubFooter .selected-link-url').text(item.subFooterLinkUrl);
             $newRow.find('.SubFooter .subfooterLinkText').val(item.subfooterLinkText);
-            $newRow.find('.SubFooter .Field .SearchFieldText').text(item.subFooterImgText);
+          //$newRow.find('.SubFooter .Field .SearchFieldText').text(item.subFooterImgText);
             $newRow.find('.SubFooter .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.SubFooter .Field.ImagePickerRender img').attr('src', item.subFooterImgSrc);
+          //$newRow.find('.SubFooter .Field.ImagePickerRender img').attr('src', item.subFooterImgSrc);
 
             $newRow.find('.Footer .Field .SearchFieldText').text(item.footerImgText);
             $newRow.find('.Footer .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
@@ -1935,9 +1949,9 @@
             $newRow.find('.Footer input.footerColOneHeading').val(item.footerColOneHeading);
 
             $newRow.find('.Image input.imageCaption').val(item.imageCaption);
-            $newRow.find('.Image .Field .SearchFieldText').text(item.imageText);
+          //$newRow.find('.Image .Field .SearchFieldText').text(item.imageText);
             $newRow.find('.Image .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.Image .Field.ImagePickerRender img').attr('src', item.imageSrc);
+          //$newRow.find('.Image .Field.ImagePickerRender img').attr('src', item.imageSrc);
             $newRow.find('.Image select.imageAlign').val(item.imageAlign);
 
             $newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
