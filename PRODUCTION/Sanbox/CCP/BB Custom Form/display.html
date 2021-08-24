@@ -188,7 +188,7 @@
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($pullquote.clone()
-                                .append(($fieldtemplate[item.type].clone().html(item.quoteText))) // .text removed; added .html
+                                .append(($fieldtemplate[item.type].clone().html(item.formattedText))) // .text removed; added .html
                                 .append("<p class='pull-quote-attribution'><span> " + item.quoteSource.trim() + "</span><p>")
                             )
                         );
@@ -238,7 +238,7 @@
                                 .append($div.clone()
                                 	.append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
                                 )
-                                .append($div.clone().html(item.iconTextRowCardText.trim()))
+                                .append($div.clone().html(item.formattedText.trim()))
                             )
                         ));
 
@@ -308,7 +308,7 @@
                         var $newRow = $contentwrapper.clone()
                             .append($row.clone()
                                 .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
-                                .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.accordionContent.trim() + '</div>')
+                                .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.formattedText.trim() + '</div>')
                             );
 
                     } else {
@@ -316,7 +316,7 @@
                         var $newRow = $row.clone().addClass("accordion-container")
                             //.append($row.clone()
                             .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
-                            .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.accordionContent.trim() + '</div>')
+                            .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.formattedText.trim() + '</div>')
                             //);                         
                     }
 
@@ -327,7 +327,7 @@
                 } else if (item.type == "calloutbox") {
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
-                            .append($calloutcard.clone().html(item.calloutText.trim())));
+                            .append($calloutcard.clone().html(item.formattedText.trim())));
 
                 } else if (item.type == "nextfrontiers") {
                     var $newRow = $contentwrapper.clone()
