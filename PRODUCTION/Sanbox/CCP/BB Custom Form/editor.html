@@ -1963,7 +1963,7 @@
 
             $newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
 
-
+          /*
             if (item.type == "formattedtext") {
                 $newRow.find('.FormattedText .tinymce').val(item.formattedText);
             } else if (item.type == "accordion") {
@@ -1976,8 +1976,8 @@
                 $newRow.find('.FormattedText .tinymce').val(item.quoteText);
             } else {
 
-            }
-
+            } */
+			$newRow.find('.FormattedText .tinymce').val(item.formattedText);
 
             $newRow.find('.ImageField .Field .SearchFieldText').text(item.imageFieldText);
             $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageFieldSrc);
