@@ -198,13 +198,13 @@
                         .append($div.clone().addClass("related-image").css("background-image", "url(" + item.imageFieldSrc.trim() + ")"))
                         .append($div.clone()
                             .append($cardTitle.clone().text(item.relatedStoryTitle.trim()))
-                            .append($link.clone().attr("href", item.relatedStoryLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
+                            .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.relatedStoryLinkText.trim()))
                         )
 
                 } else if (item.type == "buttonlink") {
                     var $newRow = $row.clone()
                         .append($div.clone().addClass("text-center")
-                            .append($fieldtemplate[item.type].clone().attr("href", item.buttonLinkUrl.trim()).text(item.buttonLinkText.trim()))
+                            .append($fieldtemplate[item.type].clone().attr("href", item.selectLinkUrl.trim()).text(item.buttonLinkText.trim()))
                         );
 
                 } else if (item.type == "card") {
@@ -214,7 +214,7 @@
                             .append($div.clone()
                                 .append($cardTitle.clone().text(item.cardTitle.trim()))
                                 .append($text.clone().text(item.cardText.trim()))
-                                .append($link.clone().attr("href", item.cardLinkUrl.trim()).text(item.cardLinkText.trim()))
+                                .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.cardLinkText.trim()))
                             )
                         ));
 
@@ -226,7 +226,7 @@
                                 .append($div.clone()
                                     .append($cardTitle.clone().text(item.rowCardTitle.trim()))
                                     .append($text.clone().text(item.rowCardText.trim()))
-                                    .append($link.clone().attr("href", item.rowCardLinkUrl.trim()).text(item.rowCardLinkText.trim()))
+                                    .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.rowCardLinkText.trim()))
                                 )
                             )
                         ));
@@ -247,7 +247,7 @@
                         .append($contentwrapper.clone()
                             .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                             .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
-                            .append($link.clone().attr("href", item.subFooterLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                            .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
                         );
 
                 } else if (item.type == "footer") {
@@ -349,7 +349,7 @@
                                 .append($bylineAuthorDiv.clone()
                         			.append($bylineName.clone().html("By <strong><a href='mailto:" + item.authorEmail.trim() + "'>" + item.authorName.trim() + "</a></strong>"))
                                 )
-                            ).append("<div class='story'><span class='dateline'>" + item.datePublished.trim() + "</span><span class='sharing'><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.storyLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=" + item.storyLinkUrl.trim() + "'><i class='fa fa-linkedin-square' aria-hidden='true'></i><span class='sr-only'>Share on LinkedIn</span></a> <a href='#' class='printPage'><i class='fa fa-print' aria-hidden='true'></i></a></span></div>"));
+                            ).append("<div class='story'><span class='dateline'>" + item.datePublished.trim() + "</span><span class='sharing'><a data-pattern='https://www.facebook.com/sharer/sharer.php?u=URL' href='https://www.facebook.com/sharer/sharer.php?u=" + item.selectLinkUrl.trim() + "'><i class='fa fa-facebook-official' aria-hidden='true'></i><span class='sr-only'>Share on facebook</span></a> <a data-pattern='https://twitter.com/intent/tweet?url=URL' href='https://twitter.com/intent/tweet?url=" + item.selectLinkUrl.trim() + "'><i class='fa fa-twitter' aria-hidden='true'></i><span class='sr-only'>Share on Twitter</span></a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=" + item.selectLinkUrl.trim() + "'><i class='fa fa-linkedin-square' aria-hidden='true'></i><span class='sr-only'>Share on LinkedIn</span></a> <a href='#' class='printPage'><i class='fa fa-print' aria-hidden='true'></i></a></span></div>"));
 
                 } else if (item.type == "hr") {
                     var $newRow = $contentwrapper.clone()
@@ -534,13 +534,13 @@
 
         });
          
-        /*                        
-
+                                
+        /*
         // Get the modal
-		var modal = document.getElementById("myModal");
+		//var modal = document.getElementById("myModal");
 
 		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
+		//var btn = document.getElementById("myBtn");
 
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
@@ -563,8 +563,8 @@
     			modal.style.display = "none";
   			}
 		}
+        */
 		
-		*/
 
         // accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion__button');
