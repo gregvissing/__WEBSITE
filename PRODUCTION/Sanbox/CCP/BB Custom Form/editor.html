@@ -464,7 +464,7 @@
 
                                 </div>
                               
-                              	<div class="SelectLink">
+                              	<div class="SelectLink" id="DivSelectLink_0">
                               		<div class="Field">
                                         <p>
                                             <label>Selected Link Name:</label>
@@ -481,12 +481,12 @@
                               		</div>
                           		</div>
 												
-                                <div class="FormattedText">
+                                <div class="FormattedText" id="DivFormattedText_0">
                                     <label>Formatted Text: </label>
                                     <textarea class="required tinymce" id="FormattedText_0" name="FormattedText_0" cols="80"></textarea>
                                 </div>
 
-                                <div class="ImageField">
+                                <div class="ImageField"  id="DivImageField_0">
                                     <div class="Field">
                                         <div class="FieldHeading">
                                             <label for="field-highlighter-image" class="FieldLabel">Image:</label>
@@ -817,7 +817,7 @@
         "FullPageWidth": false,
         "ImageField": false,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
     Fields["blockquote"] = {
         "SectionHeading": false,
@@ -1007,7 +1007,7 @@
         "FullPageWidth": false,
         "ImageField": false,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
 
     Fields["heading2"] = {
@@ -1199,7 +1199,7 @@
         "FullPageWidth": false,
         "ImageField": true,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
     Fields["card"] = {
         "SectionHeading": false,
@@ -1237,7 +1237,7 @@
         "FullPageWidth": false,
         "ImageField": true,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
     Fields["rowcard"] = {
         "SectionHeading": false,
@@ -1275,7 +1275,7 @@
         "FullPageWidth": false,
         "ImageField": true,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
     Fields["hr"] = {
         "SectionHeading": false,
@@ -1428,7 +1428,7 @@
         "FullPageWidth": false,
         "ImageField": true,
         "FormattedText": false,
-        "SelectLink": false
+        "SelectLink": true
     }
     Fields["footer"] = {
         "SectionHeading": false,
@@ -1766,11 +1766,6 @@
                     pageTitle: $(this).find('.PageTitle input').val(),
 
                     accordionText: $(this).find('.Accordion input.accordionText').val(),
-                  //accordionContent: $(this).find('.Accordion .tinymce').val(),
-
-                    //formattedText: $(this).find('.Formattedtext .tinymce').val(),
-
-                    formattedText: $(this).find('.FormattedText .tinymce').val(),
 
                     authorName: $(this).find('.Byline input.authorName').val(),
                     authorEmail: $(this).find('.Byline input.authorEmail').val(),
@@ -1780,6 +1775,11 @@
 
                     imageFieldText: $(this).find('.ImageField .Field .SearchFieldText').text(),
                     imageFieldSrc: $(this).find('.ImageField .Field.ImagePickerRender img').attr('src'),
+                  
+                  	selectLinkName: $(this).find('.SelectLink .selected-link-name').text(),
+                    selectLinkUrl: $(this).find('.SelectLink .selected-link-url').text(),
+
+                  	formattedText: $(this).find('.FormattedText .tinymce').val(),
 
                     help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
@@ -1908,40 +1908,26 @@
             $newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
             $newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
             $newRow.find('.RelatedStory .relatedStoryLinkText').val(item.relatedStoryLinkText);
-          //$newRow.find('.RelatedStory .Field .SearchFieldText').text(item.relatedStoryImgText);
-            $newRow.find('.RelatedStory .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.RelatedStory .Field.ImagePickerRender img').attr('src', item.relatedStoryImgSrc);
 
             $newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
             $newRow.find('.Card .selected-link-name').text(item.cardLinkName);
             $newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
             $newRow.find('.Card .cardLinkText').val(item.cardLinkText);
-          //$newRow.find('.Card .Field .SearchFieldText').text(item.cardImgText);
-            $newRow.find('.Card .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.Card .Field.ImagePickerRender img').attr('src', item.cardImgSrc);
 
-          //$newRow.find('.IconTextCard .Field .SearchFieldText').text(item.iconTextRowCardImgText);
-            $newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.IconTextCard .Field.ImagePickerRender img').attr('src', item.iconTextRowCardImgSrc);
+          	$newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
 
             $newRow.find('.RowCard input.cardTitle').val(item.rowCardTitle);
             $newRow.find('.RowCard input.cardText').val(item.rowCardText);
             $newRow.find('.RowCard .selected-link-name').text(item.rowCardLinkName);
             $newRow.find('.RowCard .selected-link-url').text(item.rowCardLinkUrl);
             $newRow.find('.RowCard .cardLinkText').val(item.rowCardLinkText);
-          //$newRow.find('.RowCard .Field .SearchFieldText').text(item.rowCardImgText);
-            $newRow.find('.RowCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.RowCard .Field.ImagePickerRender img').attr('src', item.rowCardImgSrc);
 
             $newRow.find('.SubFooter input.subFooterHeading').val(item.subFooterHeading);
             $newRow.find('.SubFooter input.subFooterSubHeading').val(item.subFooterSubHeading);
             $newRow.find('.SubFooter .selected-link-name').text(item.subFooterLinkName);
             $newRow.find('.SubFooter .selected-link-url').text(item.subFooterLinkUrl);
             $newRow.find('.SubFooter .subfooterLinkText').val(item.subfooterLinkText);
-          //$newRow.find('.SubFooter .Field .SearchFieldText').text(item.subFooterImgText);
-            $newRow.find('.SubFooter .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.SubFooter .Field.ImagePickerRender img').attr('src', item.subFooterImgSrc);
 
             $newRow.find('.Footer .Field .SearchFieldText').text(item.footerImgText);
             $newRow.find('.Footer .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
@@ -1949,22 +1935,11 @@
             $newRow.find('.Footer input.footerColOneHeading').val(item.footerColOneHeading);
 
             $newRow.find('.Image input.imageCaption').val(item.imageCaption);
-          //$newRow.find('.Image .Field .SearchFieldText').text(item.imageText);
-            $newRow.find('.Image .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-          //$newRow.find('.Image .Field.ImagePickerRender img').attr('src', item.imageSrc);
             $newRow.find('.Image select.imageAlign').val(item.imageAlign);
-
-            $newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
-            $newRow.find('.ImageField .Field .SearchFieldText').text(item.imageText);
-            $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageSrc);
 
             $newRow.find('.PageTitle input').val(item.pageTitle);
 
             $newRow.find('.Accordion input.accordionText').val(item.accordionText);
-          //$newRow.find('.Accordion .tinymce').val(item.accordionContent);
-
-          //$newRow.find('.Formattedtext .tinymce').val(item.formattedText);
-
 
             $newRow.find('.Byline input.authorName').val(item.authorName);
             $newRow.find('.Byline input.authorEmail').val(item.authorEmail);
@@ -1976,6 +1951,8 @@
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
 
             $newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
+          	$newRow.find('.ImageField .Field .SearchFieldText').text(item.imageFieldText);
+            $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageFieldSrc);
 
           /*
             if (item.type == "formattedtext") {
@@ -1991,10 +1968,11 @@
             } else {
 
             } */
+          
+          	$newRow.find('.SelectLink .selected-link-name').text(item.selectLinkName);
+            $newRow.find('.SelectLink .selected-link-url').text(item.selectLinkUrl);
+          
 			$newRow.find('.FormattedText .tinymce').val(item.formattedText);
-
-            $newRow.find('.ImageField .Field .SearchFieldText').text(item.imageFieldText);
-            $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageFieldSrc);
 
             $newRow.find('.QuestionRequired input').prop('checked', item.required == "on");
             $newRow.find('.Help input').val(item.help);
