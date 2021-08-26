@@ -148,20 +148,6 @@
 												type="text"
 												name="linkText_0" id="linkText_0" /></label>
                                         <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
                                     </div>
 
                                     <div class="Byline" id="DivByline_0">
@@ -178,20 +164,6 @@
 												type="text"
 												name="DatePublished_0" id="DatePublished_0" /></label>
                                         <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
                                     </div>
 
                                     <div class="CalloutBox" id="DivCalloutBox_0">
@@ -214,21 +186,6 @@
 												cardLinkText"
 												type="text"
 												name="cardLinkText_0" id="cardLinkText_0" /></label>
-                                        <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
                                         <hr>
                                     </div>
 
@@ -274,21 +231,6 @@
 												type="text"
 												name="relatedStoryLinkText_0" id="relatedStoryLinkText_0" /></label>
                                         <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
-                                        <hr>
                                     </div>
 
                                     <div class="IconTextCard" id="DivIconTextCard_0">
@@ -309,21 +251,6 @@
 												cardLinkText"
 												type="text"
 												name="cardLinkText_0" id="cardLinkText_0" /></label>
-                                        <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
                                         <hr>
                                     </div>
 
@@ -390,21 +317,6 @@
 												subfooterLinkText"
 												type="text"
 												name="SubfooterLinkText_0" id="SubfooterLinkText_0" /></label>
-                                        <hr>
-                                        <div class="Field">
-                                            <p>
-                                                <label>Selected Link Name:</label>
-                                                <span class="selected-link-name"></span>
-                                            </p>
-                                            <p>
-                                                <label>Selected Link URL:</label>
-                                                <span class="selected-link-url"></span>
-                                            </p>
-                                            <p>
-                                                <button class="btn-select" name="btn-select_0" id="btn-select_0">Select
-													Link</button>
-                                            </p>
-                                        </div>
                                         <hr>
                                     </div>
 
@@ -1727,8 +1639,8 @@
 
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
 
-                    buttonLinkName: $(this).find('.ButtonLink .selected-link-name').text(),
-                    buttonLinkUrl: $(this).find('.ButtonLink .selected-link-url').text(),
+                  //buttonLinkName: $(this).find('.ButtonLink .selected-link-name').text(),
+                  //buttonLinkUrl: $(this).find('.ButtonLink .selected-link-url').text(),
                     buttonLinkText: $(this).find('.ButtonLink input.linkText').val(),
 
                     relatedStoryTitle: $(this).find('.RelatedStory input.relatedStoryTitle').val(),
@@ -1738,20 +1650,20 @@
 
                     cardTitle: $(this).find('.Card input.cardTitle').val(),
                     cardText: $(this).find('.Card input.cardText').val(),
-                    cardLinkName: $(this).find('.Card .selected-link-name').text(),
-                    cardLinkUrl: $(this).find('.Card .selected-link-url').text(),
+                  //cardLinkName: $(this).find('.Card .selected-link-name').text(),
+                  //cardLinkUrl: $(this).find('.Card .selected-link-url').text(),
                     cardLinkText: $(this).find('.Card input.cardLinkText').val(),
 
                     rowCardTitle: $(this).find('.RowCard input.cardTitle').val(),
                     rowCardText: $(this).find('.RowCard input.cardText').val(),
-                    rowCardLinkName: $(this).find('.RowCard .selected-link-name').text(),
-                    rowCardLinkUrl: $(this).find('.RowCard .selected-link-url').text(),
+                  //rowCardLinkName: $(this).find('.RowCard .selected-link-name').text(),
+                  //rowCardLinkUrl: $(this).find('.RowCard .selected-link-url').text(),
                     rowCardLinkText: $(this).find('.RowCard input.cardLinkText').val(),
 
                     subFooterHeading: $(this).find('.SubFooter input.subFooterHeading').val(),
                     subFooterSubHeading: $(this).find('.SubFooter input.subFooterSubHeading').val(),
-                    subFooterLinkName: $(this).find('.SubFooter .selected-link-name').text(),
-                    subFooterLinkUrl: $(this).find('.SubFooter .selected-link-url').text(),
+                  //subFooterLinkName: $(this).find('.SubFooter .selected-link-name').text(),
+                  //subFooterLinkUrl: $(this).find('.SubFooter .selected-link-url').text(),
                     subfooterLinkText: $(this).find('.SubFooter input.subfooterLinkText').val(),
 
                     footerImgText: $(this).find('.Footer .Field .SearchFieldText').text(),
@@ -1770,14 +1682,14 @@
                     authorName: $(this).find('.Byline input.authorName').val(),
                     authorEmail: $(this).find('.Byline input.authorEmail').val(),
                     datePublished: $(this).find('.Byline input.datePublished').val(),
-                    storyLinkName: $(this).find('.Byline .selected-link-name').text(),
-                    storyLinkUrl: $(this).find('.Byline .selected-link-url').text(),
+                  //storyLinkName: $(this).find('.Byline .selected-link-name').text(),
+                  //storyLinkUrl: $(this).find('.Byline .selected-link-url').text(),
 
                     imageFieldText: $(this).find('.ImageField .Field .SearchFieldText').text(),
                     imageFieldSrc: $(this).find('.ImageField .Field.ImagePickerRender img').attr('src'),
                   
                   	selectLinkName: $(this).find('.SelectLink .selected-link-name').text(),
-                    selectLinkUrl: $(this).find('.SelectLink .selected-link-url').text(),
+                  	selectLinkUrl: $(this).find('.SelectLink .selected-link-url').text(),
 
                   	formattedText: $(this).find('.FormattedText .tinymce').val(),
 
@@ -1889,7 +1801,7 @@
         // $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
 
         if (item !== undefined) {
-            console.log(item);
+          	console.log(item);
 
             $newRow.find('.Question input').val(item.question);
 
@@ -1900,33 +1812,33 @@
 
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
 
-            $newRow.find('.ButtonLink .selected-link-name').text(item.buttonLinkName);
-            $newRow.find('.ButtonLink .selected-link-url').text(item.buttonLinkUrl);
+          //$newRow.find('.ButtonLink .selected-link-name').text(item.buttonLinkName);
+          //$newRow.find('.ButtonLink .selected-link-url').text(item.buttonLinkUrl);
             $newRow.find('.ButtonLink .linkText').val(item.buttonLinkText);
 
             $newRow.find('.RelatedStory input.relatedStoryTitle').val(item.relatedStoryTitle);
-            $newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
-            $newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
+          //$newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
+          //$newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
             $newRow.find('.RelatedStory .relatedStoryLinkText').val(item.relatedStoryLinkText);
 
             $newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
-            $newRow.find('.Card .selected-link-name').text(item.cardLinkName);
-            $newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
+          //$newRow.find('.Card .selected-link-name').text(item.cardLinkName);
+          //$newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
             $newRow.find('.Card .cardLinkText').val(item.cardLinkText);
 
           	$newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
 
             $newRow.find('.RowCard input.cardTitle').val(item.rowCardTitle);
             $newRow.find('.RowCard input.cardText').val(item.rowCardText);
-            $newRow.find('.RowCard .selected-link-name').text(item.rowCardLinkName);
-            $newRow.find('.RowCard .selected-link-url').text(item.rowCardLinkUrl);
+          //$newRow.find('.RowCard .selected-link-name').text(item.rowCardLinkName);
+          //$newRow.find('.RowCard .selected-link-url').text(item.rowCardLinkUrl);
             $newRow.find('.RowCard .cardLinkText').val(item.rowCardLinkText);
 
             $newRow.find('.SubFooter input.subFooterHeading').val(item.subFooterHeading);
             $newRow.find('.SubFooter input.subFooterSubHeading').val(item.subFooterSubHeading);
-            $newRow.find('.SubFooter .selected-link-name').text(item.subFooterLinkName);
-            $newRow.find('.SubFooter .selected-link-url').text(item.subFooterLinkUrl);
+          //$newRow.find('.SubFooter .selected-link-name').text(item.subFooterLinkName);
+          //$newRow.find('.SubFooter .selected-link-url').text(item.subFooterLinkUrl);
             $newRow.find('.SubFooter .subfooterLinkText').val(item.subfooterLinkText);
 
             $newRow.find('.Footer .Field .SearchFieldText').text(item.footerImgText);
@@ -1944,8 +1856,8 @@
             $newRow.find('.Byline input.authorName').val(item.authorName);
             $newRow.find('.Byline input.authorEmail').val(item.authorEmail);
             $newRow.find('.Byline input.datePublished').val(item.datePublished);
-            $newRow.find('.Byline .selected-link-name').text(item.storyLinkName);
-            $newRow.find('.Byline .selected-link-url').text(item.storyLinkUrl);
+          //$newRow.find('.Byline .selected-link-name').text(item.storyLinkName);
+          //$newRow.find('.Byline .selected-link-url').text(item.storyLinkUrl);
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
@@ -1953,24 +1865,35 @@
             $newRow.find('.ImageField .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
           	$newRow.find('.ImageField .Field .SearchFieldText').text(item.imageFieldText);
             $newRow.find('.ImageField .Field.ImagePickerRender img').attr('src', item.imageFieldSrc);
-
-          /*
-            if (item.type == "formattedtext") {
-                $newRow.find('.FormattedText .tinymce').val(item.formattedText);
-            } else if (item.type == "accordion") {
-                $newRow.find('.FormattedText .tinymce').val(item.accordionContent);
-            } else if (item.type == "icontextcard") {
-                $newRow.find('.FormattedText .tinymce').val(item.iconTextRowCardText);
-            } else if (item.type == "calloutbox") {
-                $newRow.find('.FormattedText .tinymce').val(item.calloutText);
-            } else if (item.type == "blockquote") {
-                $newRow.find('.FormattedText .tinymce').val(item.quoteText);
+          
+          	/*
+			if (item.type == "buttonlink") {
+              	$newRow.find('.SelectLink .selected-link-name').text(item.buttonLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.buttonLinkUrl);
+            } else if (item.type == "relatedstory") {
+                $newRow.find('.SelectLink .selected-link-name').text(item.relatedStoryLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.relatedStoryLinkUrl);
+            } else if (item.type == "card") {
+                $newRow.find('.SelectLink .selected-link-name').text(item.cardLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.cardLinkUrl);
+            } else if (item.type == "rowcard") {
+                $newRow.find('.SelectLink .selected-link-name').text(item.rowCardLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.rowCardLinkUrl);
+            } else if (item.type == "subfooter") {
+                $newRow.find('.SelectLink .selected-link-name').text(item.subFooterLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.subFooterLinkUrl);
+            } else if (item.type == "byline") {
+                $newRow.find('.SelectLink .selected-link-name').text(item.storyLinkName);
+                $newRow.find('.SelectLink .selected-link-url').text(item.storyLinkUrl);
             } else {
 
-            } */
+            }
+			*/
+              
+          //console.log(item.selectLinkUrl + " " + selectLinkName);
           
           	$newRow.find('.SelectLink .selected-link-name').text(item.selectLinkName);
-            $newRow.find('.SelectLink .selected-link-url').text(item.selectLinkUrl);
+          	$newRow.find('.SelectLink .selected-link-url').text(item.selectLinkUrl);
           
 			$newRow.find('.FormattedText .tinymce').val(item.formattedText);
 
