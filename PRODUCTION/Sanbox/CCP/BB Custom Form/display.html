@@ -84,7 +84,6 @@
   
   	$fieldtemplate["video"] = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
-  // $fieldtemplate["yes/no"] = $('<input type="checkbox" />');
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
@@ -101,31 +100,12 @@
     $fieldtemplate["accordion"] = $('<div id="accordionGroup" class="Accordion" data-allow-toggle>');
     $fieldtemplate["blockquote"] = $('<blockquote class="pull-quote"></blockquote>');
 
-  // $fieldtemplate["phone"] = $('<input type="tel" class="form-control phone" />');
-  // $fieldtemplate["email"] = $('<input type="email" class="form-control email" />');
-  // $fieldtemplate["date"] = $('<input type="text" class="form-control datepicker" placeholder="DD/MM/YYYY" />');
-  // $fieldtemplate["time"] = $('<input type="time" class="form-control" />');
-  // $fieldtemplate["code table"] = $('<select class="form-control"></select>');
-  // $fieldtemplate["event category"] = $('<select class="event-category form-control"></select>');
-  // $fieldtemplate["address"] = $('<input type="text" class="form-control" />');
-  // $fieldtemplate["postcode"] = $('<input type="text" class="form-control" />');
-  // $fieldtemplate["suburb"] = $('<input type="text" class="form-control" />');
-  // $fieldtemplate["state"] = $('<select class="state form-control"></select>');
-
     var hasPageBreak = false;
 
     function initBBCustomForm(data) {
       
       	let imageCount = 0;
       
-        /*
-		if (!$('div[id$="_divComment"]').length) {
-            console.error("Sorry, the comments field was not enabled.  Please edit the Interaction Form and ensure that the commment is available editable.");
-            return false;
-        } else {
-            $('div[id$="_divComment"]').hide();
-        } 
-	  */
         var $form = $('.message-form');
         $form.children().not('.form-wrap').addClass("col-md-12");
 
@@ -384,144 +364,7 @@
                 if (item.maxLength != null) {
                     $newRow.find('input').attr('maxlength', item.maxLength);
                 }
-                        
-                /*
-                if (item.type == "event category") {
-                    $.each(data.settings.ddEventCategories, function(key, value) {
-                        $newRow.find('select').append($option.clone().attr('value', key).text(value));
-                    });
-                }
-                if (item.type == "code table" && item.codeTableMulti == "off") {
-                    $.get("/WebAPI/CodeTable/" + item.codeTableID, function(data) {
-                        if (item.required !== "on") {
-                            $newRow.find('select').append($option.clone());
-                        }
-                        $.each(data, function() {
-                            $newRow.find('select').append($option.clone().attr('value', this.Id).text(this.Description));
-                        });
-                    });
-                }
-                if (item.type == "state") {
-                    $.get("/WebAPI/Country/" + item.countryID + "/State", function(data) {
-                        if (item.required !== "on") {
-                            $newRow.find('select').append($option.clone());
-                        }
-                        $.each(data, function() {
-                            $newRow.find('select').attr('autocomplete', item.question).append($option.clone().attr('value', this.Id).text(this.Abbreviation));
-                        });
-                    });
-                }
-                if (item.linkAttr == "on") {
-                    $('#' + $('#InteractionAdd').find('label').filter(function() {
-                        return $(this).text().trim() == item.linkAttrLabel.trim();
-                    }).first().attr('for')).first().closest('.form-field-complex').hide();
-
-                    $(document).on('change input', '#customField' + item.index, function() {
-
-                        if (item.type == "yes\/no") {
-
-                            var value = $(this).is(":checked");
-                            $('#' + $('#InteractionAdd').find('label').filter(function() {
-                                return $(this).text().trim() == item.linkAttrLabel.trim();
-                            }).first().attr('for')).attr('checked', value);
-
-                        } else {
-
-                            var value = $(this).val();
-                            $('#' + $('#InteractionAdd').find('label').filter(function() {
-                                return $(this).text().trim() == item.linkAttrLabel.trim();
-                            }).first().attr('for')).val(value);
-                        }
-
-                    });
-
-                }
-
-                if (item.conditional == "on") {
-                    $newRow.addClass('hide');
-
-                    var target = data.settings.items.filter(obj => {
-                        return obj.index === item.conditionalCompare
-                    });
-
-                    $(document).on('change input', '#customField' + target[0].index, function() {
-                        if (item.conditionalOperator == "equals") {
-
-                            //checkbox equal to
-                            if (target[0].type == "yes\/no") {
-                                if ((item.conditionalFields.checkbox == "on") == $(this).is(':checked')) {
-                                    $('#customField' + item.index).closest('.custom-form').removeClass('hide');
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //codetable equal to
-                            else if (target[0].type == "code table") {
-                                if (item.conditionalFields.codetable == $(this).val()) {
-                                    $('#customField' + item.index).closest('.custom-form').removeClass('hide');
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //codetable equal to
-                            else if (target[0].type == "event category") {
-                                if (item.conditionalFields.eventcategory == $(this).val()) {
-                                    $('#customField' + item.index).closest('.custom-form').removeClass('hide');
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //other field (text, phone, email etc.)
-                            else {
-                                if (item.conditionalFields.textfield == $(this).val()) {
-
-                                    $('#customField' + item.index).closest('.custom-form').removeClass('hide');
-                                } else {
-
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-
-
-                        }
-                        if (item.conditionalOperator == "not") {
-                            //checkbox not equal to
-                            if (target[0].type == "yes\/no") {
-                                if ((item.conditionalFields.checkbox == "on") != $(this).is(':checked')) {
-                                    $('#customField' + item.index).closest('.custom-form').removeClass('hide');
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //codetable not equal to
-                            else if (target[0].type == "code table") {
-                                if (item.conditionalFields.codetable != $(this).val()) {
-                                    $('#customField' + item.index).closest('.custom-form').show();
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //codetable not equal to
-                            else if (target[0].type == "event category") {
-                                if (item.conditionalFields.eventcategory != $(this).val()) {
-                                    $('#customField' + item.index).closest('.custom-form').show();
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                            //other field (text, phone, email etc.)
-                            else {
-                                if (item.conditionalFields.textfield != $(this).val()) {
-                                    $('#customField' + item.index).closest('.custom-form').show();
-                                } else {
-                                    $('#customField' + item.index).val("").removeAttr('checked').trigger('change').closest('.custom-form').addClass('hide');
-                                }
-                            }
-                        }
-
-                    });
-				} */
-                        
+                                        
                 $form.find('.form-page').last().append($newRow);
 
                 $("main").find("p.large").first().addClass("sub-heading");
@@ -814,16 +657,6 @@
         }
 
     }
-
-  	/* function RunMatrix(EventCategoryID, Data) {
-        $.each(Data[EventCategoryID], function(key, value) {
-            if (!value) {
-                $('#customField' + key).parents('.custom-form').addClass('hideMatrix');
-            } else {
-                $('#customField' + key).parents('.custom-form').removeClass('hideMatrix');
-            }
-        });
-    } */
 
     $(document).on('blur', '#InteractionAdd input[type=date], #InteractionAdd input[type=time]', function() {
         $(this).valid();
