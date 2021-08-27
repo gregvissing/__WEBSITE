@@ -164,6 +164,15 @@
 												type="text"
 												name="DatePublished_0" id="DatePublished_0" /></label>
                                         <hr>
+                                      		<div class="tip"><em>Tip: The title of your page. This is typically the same as your webpage's title 
+                                              tag unless you’d like to present it differently.</em></div>
+                                      		<label>Shared Title: <input class="form-control required
+												ogTitle" type="text" name="linkText_0" id="linkText_0" /></label>
+                                      
+                                      		<div class="tip"><em>Tip: This should be a link to an image that you’d like to represent your content. It should be a 
+                                              high resolution image that the social networks will use in their feeds.</em></div>                                  
+                                      	<hr>
+                                      
                                     </div>
 
                                     <div class="CalloutBox" id="DivCalloutBox_0">
@@ -199,6 +208,17 @@
                                         <div class="tip"><em>Tip: Skewed HR is cut off on left/right sides for
 												column
 												width greater than 11.</em></div>
+                                    </div>
+                                  
+                                  	<div class="FiftyFiftyGrid" id="DivFiftyFiftyGrid_0">
+                                      	<div class="tip"><em>Tip: 50/50 Gride component</em></div>
+
+                                        <label for="ImageAlign_0">Which side of page for Image?
+											<select id="ImageAlign_0" class="imageAlign">
+												<option value="left">Left</option>
+												<option value="right">Right</option>
+											</select></label>
+                                        <hr>
                                     </div>
 
                                     <div class="Image" id="DivImage_0">
@@ -543,6 +563,7 @@
 				<option value="sectionheading">Section Heading</option>
 			</optgroup>
 			<optgroup label="Components">
+              	<option value="fiftyfifty">50/50 Image/Text Grid</option>
 				<option value="accordion">Accordion</option>
 				<option value="buttonlink">Button Link</option>
 				<option value="calloutbox">Call-Out Box</option>
@@ -579,7 +600,47 @@
     //FIELD SETTINGS
     var Fields = {};
 
+  	Fields["fiftyfifty"] = {
+      	"FiftyFiftyGrid": true,
+        "SectionHeading": false,
+        "IconTextCard": false,
+        "Video": false,
+        "ButtonLink": false,
+        "AdvancedDonationForm": false,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+        "RelatedStory": false,
+        "Card": false,
+        "RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+        "PageTitle": false,
+        "SubFooter": false,
+        "Footer": false,
+        "Accordion": false,
+        "CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": false,
+        "FullPageWidth": true,
+        "ImageField": true,
+        "FormattedText": true,
+        "SelectLink": false
+    }
     Fields["sectionheading"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": true,
         "IconTextCard": false,
         "Video": false,
@@ -618,6 +679,7 @@
         "SelectLink": false
     }
     Fields["icontextcard"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": true,
         "Video": false,
@@ -656,6 +718,7 @@
         "SelectLink": false
     }
     Fields["video"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": true,
@@ -694,6 +757,7 @@
         "SelectLink": false
     }
     Fields["buttonlink"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -732,6 +796,7 @@
         "SelectLink": true
     }
     Fields["blockquote"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -770,6 +835,7 @@
         "SelectLink": false
     }
     Fields["formattedtext"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -808,6 +874,7 @@
         "SelectLink": false
     }
     Fields["calloutbox"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -846,6 +913,7 @@
         "SelectLink": false
     }
     Fields["text"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -884,6 +952,7 @@
         "SelectLink": false
     }
     Fields["byline"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -917,12 +986,13 @@
         "ConditionFieldType": "text",
         "ColumnWidth": false,
         "FullPageWidth": false,
-        "ImageField": false,
+        "ImageField": true,
         "FormattedText": false,
         "SelectLink": true
     }
 
     Fields["heading2"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -961,6 +1031,7 @@
         "SelectLink": false
     }
     Fields["heading3"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -999,6 +1070,7 @@
         "SelectLink": false
     }
     Fields["subheading"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1038,6 +1110,7 @@
     }
 
     Fields["accordion"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1076,6 +1149,7 @@
         "SelectLink": false
     }
     Fields["relatedstory"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1114,6 +1188,7 @@
         "SelectLink": true
     }
     Fields["card"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1152,6 +1227,7 @@
         "SelectLink": true
     }
     Fields["rowcard"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1190,6 +1266,7 @@
         "SelectLink": true
     }
     Fields["hr"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1228,6 +1305,7 @@
         "SelectLink": false
     }
     Fields["image"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1266,6 +1344,7 @@
         "SelectLink": false
     }
     Fields["pagetitle"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1305,6 +1384,7 @@
     }
 
     Fields["subfooter"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1343,6 +1423,7 @@
         "SelectLink": true
     }
     Fields["footer"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1382,6 +1463,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1420,6 +1502,7 @@
         "SelectLink": false
     }
     Fields["nextnow"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1458,6 +1541,7 @@
         "SelectLink": false
     }
     Fields["empowernext"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1497,6 +1581,7 @@
     }
 
     Fields["page break"] = {
+      	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
         "Video": false,
@@ -1639,31 +1724,21 @@
 
                     quoteSource: $(this).find('.Blockquote input.quoteSource').val(),
 
-                  //buttonLinkName: $(this).find('.ButtonLink .selected-link-name').text(),
-                  //buttonLinkUrl: $(this).find('.ButtonLink .selected-link-url').text(),
                     buttonLinkText: $(this).find('.ButtonLink input.linkText').val(),
 
                     relatedStoryTitle: $(this).find('.RelatedStory input.relatedStoryTitle').val(),
-                    relatedStoryLinkName: $(this).find('.RelatedStory .selected-link-name').text(),
-                    relatedStoryLinkUrl: $(this).find('.RelatedStory .selected-link-url').text(),
                     relatedStoryLinkText: $(this).find('.RelatedStory input.relatedStoryLinkText').val(),
 
                     cardTitle: $(this).find('.Card input.cardTitle').val(),
                     cardText: $(this).find('.Card input.cardText').val(),
-                  //cardLinkName: $(this).find('.Card .selected-link-name').text(),
-                  //cardLinkUrl: $(this).find('.Card .selected-link-url').text(),
                     cardLinkText: $(this).find('.Card input.cardLinkText').val(),
 
                     rowCardTitle: $(this).find('.RowCard input.cardTitle').val(),
                     rowCardText: $(this).find('.RowCard input.cardText').val(),
-                  //rowCardLinkName: $(this).find('.RowCard .selected-link-name').text(),
-                  //rowCardLinkUrl: $(this).find('.RowCard .selected-link-url').text(),
                     rowCardLinkText: $(this).find('.RowCard input.cardLinkText').val(),
 
                     subFooterHeading: $(this).find('.SubFooter input.subFooterHeading').val(),
                     subFooterSubHeading: $(this).find('.SubFooter input.subFooterSubHeading').val(),
-                  //subFooterLinkName: $(this).find('.SubFooter .selected-link-name').text(),
-                  //subFooterLinkUrl: $(this).find('.SubFooter .selected-link-url').text(),
                     subfooterLinkText: $(this).find('.SubFooter input.subfooterLinkText').val(),
 
                     footerImgText: $(this).find('.Footer .Field .SearchFieldText').text(),
@@ -1674,6 +1749,8 @@
 
                     imageCaption: $(this).find('.Image input.imageCaption').val(),
                     imageAlign: $(this).find('.Image select.imageAlign').val(),
+                  
+                  	fiftyGridImageAlign: $(this).find('.FiftyFiftyGrid select.imageAlign').val(),
 
                     pageTitle: $(this).find('.PageTitle input').val(),
 
@@ -1682,8 +1759,7 @@
                     authorName: $(this).find('.Byline input.authorName').val(),
                     authorEmail: $(this).find('.Byline input.authorEmail').val(),
                     datePublished: $(this).find('.Byline input.datePublished').val(),
-                  //storyLinkName: $(this).find('.Byline .selected-link-name').text(),
-                  //storyLinkUrl: $(this).find('.Byline .selected-link-url').text(),
+                  	ogTitle: $(this).find('.Byline input.ogTitle').val(),
 
                     imageFieldText: $(this).find('.ImageField .Field .SearchFieldText').text(),
                     imageFieldSrc: $(this).find('.ImageField .Field.ImagePickerRender img').attr('src'),
@@ -1812,33 +1888,23 @@
 
             $newRow.find('.Blockquote input.quoteSource').val(item.quoteSource);
 
-          //$newRow.find('.ButtonLink .selected-link-name').text(item.buttonLinkName);
-          //$newRow.find('.ButtonLink .selected-link-url').text(item.buttonLinkUrl);
             $newRow.find('.ButtonLink .linkText').val(item.buttonLinkText);
 
             $newRow.find('.RelatedStory input.relatedStoryTitle').val(item.relatedStoryTitle);
-          //$newRow.find('.RelatedStory .selected-link-name').text(item.relatedStoryLinkName);
-          //$newRow.find('.RelatedStory .selected-link-url').text(item.relatedStoryLinkUrl);
             $newRow.find('.RelatedStory .relatedStoryLinkText').val(item.relatedStoryLinkText);
 
             $newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
-          //$newRow.find('.Card .selected-link-name').text(item.cardLinkName);
-          //$newRow.find('.Card .selected-link-url').text(item.cardLinkUrl);
             $newRow.find('.Card .cardLinkText').val(item.cardLinkText);
 
           	$newRow.find('.IconTextCard .SearchField.ImagePicker').attr('id', 'ImagePicker_' + item.index);
 
             $newRow.find('.RowCard input.cardTitle').val(item.rowCardTitle);
             $newRow.find('.RowCard input.cardText').val(item.rowCardText);
-          //$newRow.find('.RowCard .selected-link-name').text(item.rowCardLinkName);
-          //$newRow.find('.RowCard .selected-link-url').text(item.rowCardLinkUrl);
             $newRow.find('.RowCard .cardLinkText').val(item.rowCardLinkText);
 
             $newRow.find('.SubFooter input.subFooterHeading').val(item.subFooterHeading);
             $newRow.find('.SubFooter input.subFooterSubHeading').val(item.subFooterSubHeading);
-          //$newRow.find('.SubFooter .selected-link-name').text(item.subFooterLinkName);
-          //$newRow.find('.SubFooter .selected-link-url').text(item.subFooterLinkUrl);
             $newRow.find('.SubFooter .subfooterLinkText').val(item.subfooterLinkText);
 
             $newRow.find('.Footer .Field .SearchFieldText').text(item.footerImgText);
@@ -1848,6 +1914,8 @@
 
             $newRow.find('.Image input.imageCaption').val(item.imageCaption);
             $newRow.find('.Image select.imageAlign').val(item.imageAlign);
+          
+          	$newRow.find('.FiftyFiftyGrid select.imageAlign').val(item.fiftyGridImageAlign);          
 
             $newRow.find('.PageTitle input').val(item.pageTitle);
 
@@ -1856,8 +1924,7 @@
             $newRow.find('.Byline input.authorName').val(item.authorName);
             $newRow.find('.Byline input.authorEmail').val(item.authorEmail);
             $newRow.find('.Byline input.datePublished').val(item.datePublished);
-          //$newRow.find('.Byline .selected-link-name').text(item.storyLinkName);
-          //$newRow.find('.Byline .selected-link-url').text(item.storyLinkUrl);
+          	$newRow.find('.Byline input.ogTitle').val(item.ogTitle);
 
             var tinymceId = $newRow.find('.tinymce').attr('id');
             tinymce.EditorManager.execCommand('mceAddEditor', true, '#' + tinymceId);
