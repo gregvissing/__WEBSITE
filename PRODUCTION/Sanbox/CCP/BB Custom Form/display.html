@@ -34,6 +34,28 @@
     	margin-left: auto;
     	margin-right: auto;
   	}
+  
+	/* ==============================
+		50/50 Image-Text Grid styles
+   	============================== */
+
+	.half-grid.row > div.text {
+		padding: 1em !important;
+	}
+  
+  	.half-grid.row > div.text > *:first-child {
+		margin-top: 0 !important;
+    	margin-bottom: 0.5em
+	}
+
+	.half-grid.row > div.image {
+		padding: 0 !important;
+	}
+  
+  	.half-grid.row {
+    	margin: 0 !important;
+  	}
+  
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -84,6 +106,7 @@
   
   	$fieldtemplate["video"] = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
+  	$fieldtemplate["fiftyfifty"] = $('<div class="half-grid row"></div>');
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
@@ -244,6 +267,22 @@
                         .append($contentwrapper.clone()
                             .append("<h1>" + item.pageTitle.trim() + "</h1>")
                         );
+                  
+                } else if (item.type == "fiftyfifty") {
+                    
+                        if (item.fiftyGridImageAlign == "right") {
+                        	var $newRow = $fieldtemplate[item.type].clone()
+                                .append("<div class='col-md-6 text'>" + item.formattedText.trim() + "</div>")
+                                .append($div.clone().addClass("col-md-6 image")
+                        			.append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
+                        		)
+                        } else {
+                        	var $newRow = $fieldtemplate[item.type].clone()                                
+                                .append($div.clone().addClass("col-md-6 image")
+                        			.append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
+                        		)
+                                .append("<div class='col-md-6 text'>" + item.formattedText.trim() + "</div>")
+                        }
 
                 } else if (item.type == "image") {
                   
@@ -323,6 +362,7 @@
                             .append($calloutcard.clone().html("<p class='card-header'>Who will you empower <em>NEXT</em>?</p><p>Scholarships, fellowships and enrichment programs provide opportunities for students to attend, grow and graduate from UC. You can empower our next leaders through support for scholarships and signature programs in career-based education, co-op or professional development.</p>")));
 
                 } else if (item.type == "byline") {
+                   	//$("head").append('<meta property="og:title" content="' + item.ogTitle + '" /><meta property="og:url" content="' + item.selectLinkUrl + '" /><meta property="og:image" content="' + item.imageFieldSrc + '" />');
                     var $newRow = $contentwrapper.clone()
                         .append($row.clone()
                             .append($byline.clone()
