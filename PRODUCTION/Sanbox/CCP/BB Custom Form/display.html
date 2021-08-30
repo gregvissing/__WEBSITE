@@ -56,6 +56,11 @@
     	margin: 0 !important;
   	}
   
+  
+  	.icontext.card.row {
+    	padding-top: 1em !important;
+  	}
+  
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -156,14 +161,24 @@
                         );
                   
                 } else if (item.type == "sectionheading") {
-                    var $newRow = $row.clone()
+                    var $newRow = $row.clone().addClass("section-heading")
                         .append(($fieldtemplate[item.type].clone()
                             .append($fieldtemplate["heading2"].clone().text(item.sectionHeading.trim()).css('text-align', 'center'))          
                       	));
                   
                 } else if (item.type == "video") {
+                  	
+                  	function extractVideoID(url) {
+                      	var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+                      	var match = url.match(regExp);
+                      	if (match && match[7].length == 11) {
+                        	return match[7];
+                      	} else {
+                        	alert("Could not extract video ID.");
+                      	}
+                  	}
                   
-                  	var videoId = item.video.split("=")[1];  
+                  	var videoId = extractVideoID(item.video);
                   
                   	if (item.videoLinkText != "") {
                       
