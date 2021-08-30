@@ -21,7 +21,7 @@
     }
     
     .tip {
-        background-color: #0dcaf0 !important;
+        border: 2px solid #0dcaf0 !important;
         margin-bottom: 0.5em;
         padding: 10px;
     }
@@ -118,9 +118,16 @@
                                     </div>
 
                                     <div class="Video" id="DivVideo_0">
-                                        <div class="tip"><em>Tip: Copy YouTube URL into text field. Leave Link
-												Text field blank to show video embedded on web page. Link text will
-												appear as link button that opens video in modal.</em></div>
+                                      	<div class="tip">
+                                        	<em>Tip: Copy YouTube URL into text field. Video can be in following formats: 
+                                        	<ul>
+                                              	<li>Standard YouTube URL: http://www.youtube.com/watch?v=YouTubeID</li>
+                                              	<li>Shortened URL: http://youtu.be/YouTubeID</li>
+                                              	<li>Standard with multiple paramters: https://www.youtube.com/watch?v=YouTubeID&ab_channel=YouTubeChannel</li>
+                                        	</ul>
+                                          <br>Leave Link Text field blank to show video embedded on web page. Link text will
+												appear as link button that opens video in modal.</em>
+                                      	</div>
                                         <label>YouTube URL: <input class="form-control required videoUrl"
 												type="text"
 												name="Video_0" id="Video_0" /></label>
@@ -163,16 +170,7 @@
                                         <label>Date Published: <input class="form-control datePublished"
 												type="text"
 												name="DatePublished_0" id="DatePublished_0" /></label>
-                                        <hr>
-                                      		<div class="tip"><em>Tip: The title of your page. This is typically the same as your webpage's title 
-                                              tag unless you’d like to present it differently.</em></div>
-                                      		<label>Shared Title: <input class="form-control required
-												ogTitle" type="text" name="linkText_0" id="linkText_0" /></label>
-                                      
-                                      		<div class="tip"><em>Tip: This should be a link to an image that you’d like to represent your content. It should be a 
-                                              high resolution image that the social networks will use in their feeds.</em></div>                                  
-                                      	<hr>
-                                      
+                                        <hr>                                      
                                     </div>
 
                                     <div class="CalloutBox" id="DivCalloutBox_0">
@@ -986,7 +984,7 @@
         "ConditionFieldType": "text",
         "ColumnWidth": false,
         "FullPageWidth": false,
-        "ImageField": true,
+        "ImageField": false,
         "FormattedText": false,
         "SelectLink": true
     }
@@ -2024,7 +2022,7 @@
                 editor_selector: "tinymce",
 
                 theme: 'modern',
-                height: "250px",
+              	height: "150px",
                 plugins: 'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste, image_tools, advimage, bbimages, bblinks, advhr',
                 external_plugins: {
                     image_tools: "https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/image_tools/editor_plugin.js",
