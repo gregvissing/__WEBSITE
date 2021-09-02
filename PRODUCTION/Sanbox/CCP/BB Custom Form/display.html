@@ -515,103 +515,6 @@
         //trigger required checkboxes to set attribute value by default
         $('.custom-form select, .custom-form input[type="checkbox"]').trigger('change');
 
-        if (!$('#btnSubmitProxy').length) {
-            $('<button type="button" id="btnSubmitProxy" class="button-primary next btn btn-lg btn-block btn-primary half-right" onclick="BBCustomFormSubmit();" style="display: none;">' + $('#InteractionAdd .form-wrap input').attr('value') + '</button>').insertBefore('#InteractionAdd .form-wrap input')
-            $('#InteractionAdd .form-wrap input').hide();
-
-        }
-
-        if (!hasPageBreak) {
-            $('#btnSubmitProxy').show();
-        }
-        if (hasPageBreak) {
-            $('<button type="button" id="btnPrev" class="btn-outline-primary prev btn btn-lg btn-block half-left" style="display: none;">' + data.settings.txtButtonPrev + '</button>').insertAfter($form.find('#btnSubmitProxy'));
-            $('<button type="button" id="btnNext" class="btn-primary next btn btn-lg btn-block">' + data.settings.txtButtonNext + '</button>').prependTo($form.find('.form-wrap'));
-            $('#btnSubmitProxy').addClass('half-right').hide();
-
-            $form.find('.form-page').hide().first().show();
-
-            $(document).on('click', '#btnNext', function() {
-
-                if (jQuery.isFunction(jQuery.validator)) {
-                    var valid = $('#form1').validate({
-                        ignore: ":not(:visible)"
-                    }).form();
-
-                    $('#form1').find('label.error:hidden').remove();
-                    $('#form1').find('.error:hidden').removeClass('error');
-
-                    if (valid || $("#form1").find('.error:visible').length == 0) {
-                        BBCustomFormPage++;
-
-                        $form.find('.form-page:visible').hide().next().show();
-                        $('div[id$="_acqIntro"]').hide();
-                        $('#btnPrev').show();
-                        $('#btnNext').addClass('half-right');
-                        if (BBCustomFormPage == BBCustomFormPages) {
-                            $('#btnSubmitProxy').show();
-                            $('#btnNext').hide();
-                        } else {
-                            $('#btnSubmitProxy').hide();
-                        }
-
-                        if ($('.form-page:visible > div:visible').length == 0) {
-                            $('#btnNext:visible').click();
-                        }
-
-                    }
-
-                }
-
-            });
-
-            $(document).on('click', '#btnPrev', function() {
-                BBCustomFormPage--;
-
-                $form.find('.form-page:visible').hide();
-                $('#btnNext').show();
-                $('#btnSubmitProxy').hide();
-
-                if (BBCustomFormPage <= 1) {
-
-                    $('#btnNext').removeClass('half-right');
-                    $form.find('.form-page').first().show();
-                    $('div[id$="_acqIntro"]').show();
-                    $('#btnPrev').hide();
-                } else {
-                    $form.find('.form-page').eq(BBCustomFormPage - 1).show();
-                    $('#btnPrev').show();
-                }
-
-                if ($('.form-page:visible > div:visible').length == 0) {
-                    $('#btnPrev:visible').click();
-                }
-
-            });
-
-
-        } else {
-
-        } //END PAGEBREAKS
-
-        //MATRIX FOR EVENT CATEGORY ON LOAD
-               // RunMatrix($('.event-category').val(), data.settings.Matrix);
-
-        $(document).on('change', '.event-category', function() {
-          // RunMatrix($(this).val(), data.settings.Matrix);
-        });
-
-        $('input.address_search').each(function() {
-            $.each(this.attributes, function(i, attrib) {
-                var name = attrib.name;
-                var value = attrib.value;
-                if (name == "data-map-address" || name == "data-map-suburb" || name == "data-map-state" || "data-map-suburb") {
-                    $('#customField' + value).parents('.custom-form').hide();
-                }
-            });
-        });
-
-
         $('.hasDatepicker').datepicker({
             onClose: function() {
                 $(this).valid();
@@ -623,11 +526,6 @@
         });
 
     }
-    Sys.Application.add_load(function() {
-        $('#btnSubmitProxy').attr('onclick', 'BBCustomFormSubmit();');
-    });
-
-
 
     // add custom validator for phone numbers
     $.validator.addMethod("phone", function(phone_number, element) {
@@ -662,53 +560,6 @@
         return returnString;
     }
 
-    function BBCustomFormSubmit() {
-
-        if (jQuery.isFunction(jQuery.validator)) {
-            var valid = $('#form1').validate({
-                ignore: ":not(:visible)"
-            }).form();
-
-            if (valid || $("#form1").validate().errorList.length == 0) {
-                var text = "";
-                $('.custom-form').not('.hide, .hideMatrix').each(function() {
-                    var label = $(this).children('label').not('.error').text().trim();
-                    var heading = $(this).find('h2').text().trim();
-                    if (!heading.length) {
-                        var value = "";
-                        if ($(this).find('.form-check').length > 0) {
-                            var list = "";
-                            $(this).find('.form-check').each(function() {
-
-                                if ($(this).find('input[type="checkbox"]').is(':checked')) {
-                                    list += $(this).find('label span').text() + ", ";
-                                }
-                            });
-                            value = list.substring(0, list.length - 2);
-                        } else if ($(this).find('input[type="checkbox"]').length) {
-                            value = $(this).find('input[type="checkbox"]').is(':checked') ? "Yes" : "No";
-                        } else if ($(this).find('select').length) {
-                            value = $(this).find('select option:selected').text();
-                        } else if ($(this).find('input').length) {
-                            value = $(this).find('input').val();
-                        }
-                        if (value.length) {
-                            text += label + "\n";
-                            text += value + "\n\n";
-                        }
-                    } else {
-                        text += "===" + heading + "===" + "\n\n"
-                    }
-
-                });
-                $('div[id$="_divComment"] textarea').val(text);
-
-                IAFSubmit();
-            }
-        }
-
-    }
-
     $(document).on('blur', '#InteractionAdd input[type=date], #InteractionAdd input[type=time]', function() {
         $(this).valid();
     });
@@ -717,4 +568,5 @@
     function IAFSubmit() {
         $('#InteractionAdd .form-wrap input').click();
     }
+  
 </script>
