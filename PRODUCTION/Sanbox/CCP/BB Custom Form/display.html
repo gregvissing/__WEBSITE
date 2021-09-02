@@ -181,13 +181,14 @@
                   	var videoId = extractVideoID(item.video);
                   
                   	if (item.videoLinkText != "") {
-                      
+                      	 
                       	var modalHtml = $('<div id="myModal" class="modal"><div class="modal-content"><div class="modal-header"><span class="close">&times;</span></div><div class="modal-body"><iframe width="560" height="560" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></div>');
-                  		var modalButtonHtml = $link.clone().attr("id", "myBtn").attr("class", "button-primary").attr("href", "#").text(item.videoLinkText.trim());
+                  		var modalButtonHtml = $link.clone().attr("id", "myBtn").attr("class", "button-primary").attr("href", "javascript:void(0);").text(item.videoLinkText.trim());
                       
                       	var $newRow = $contentwrapper.clone()
                         	.append($row.clone().addClass("text-center")
-                            	.append(modalButtonHtml)
+                                    //.append(modalScript)
+                                .append(modalButtonHtml)
                             	.append(modalHtml)
                         	);
                       
@@ -338,20 +339,16 @@
                 } else if (item.type == "accordion") {
 
                     if (item.columns == 12) {
-                        // console.log(item.columns);
-                        var $newRow = $contentwrapper.clone()
+                         var $newRow = $contentwrapper.clone()
                             .append($row.clone()
                                 .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
                                 .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.formattedText.trim() + '</div>')
                             );
 
                     } else {
-                        // console.log("else " + item.columns);
                         var $newRow = $row.clone().addClass("accordion-container")
-                            //.append($row.clone()
                             .append('<button id="accordion-open-' + item.index + '" class="accordion__button">' + item.accordionText.trim() + '</button>')
-                            .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.formattedText.trim() + '</div>')
-                            //);                         
+                            .append('<div id="accordion-section-' + item.index + '" class="accordion__section open">' + item.formattedText.trim() + '</div>')                         
                     }
 
                 } else if (item.type == "formattedtext") {
@@ -423,7 +420,7 @@
                 $form.find('.form-page').last().append($newRow);
 
                 $("main").find("p.large").first().addClass("sub-heading");
-
+                        
             } else {
                 $page.clone().insertAfter($form.find('.form-page').last());
                 BBCustomFormPages++;
@@ -432,13 +429,12 @@
 
         });
          
-                                
-        /*
+                        /* 
         // Get the modal
-		//var modal = document.getElementById("myModal");
+		var modal = document.getElementById("myModal");
 
 		// Get the button that opens the modal
-		//var btn = document.getElementById("myBtn");
+		var btn = document.getElementById("myBtn");
 
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
@@ -461,8 +457,8 @@
     			modal.style.display = "none";
   			}
 		}
-        */
-		
+*/
+       
 
         // accordion functionality
         const accordionButtons = document.querySelectorAll('.accordion__button');
