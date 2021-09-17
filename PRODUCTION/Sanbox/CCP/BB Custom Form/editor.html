@@ -8,6 +8,8 @@
 <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
 
 <link rel="stylesheet" href="/Client/Scripts/tiny_mce_V4_9_6/skins/lightgray/skin.min.css" type="text/css" />
+<link rel="stylesheet" href="https://foundation.uc.edu/Client/Scripts/tiny_mce_V4_9_6/plugins/compat3x/css/dialog.css" type="text/css" />
+
 <style>
     .ui-state-highlight {
         height: 200px;
@@ -101,20 +103,178 @@
                                 </div>
 
                                 <div class="top">
+                                  	<!-- Text Field options -->
                                     <div class="Question" id="DivQuestion_0">
                                         <div class="tip"><em>Tip: Text displays based on font assignment.</em></div>
                                         <label>Content: <input class="form-control required" type="text"
 												name="Question_0" id="Question_0" /></label>
-                                    </div>
+                                    </div>                                  
+                                  	<div class="Blockquote" id="DivBlockquote_0">
+                                        <div class="tip"><em>Tip: Quote text wrapped inside quotations so no
+												need to wrap.
+												Dash in front of source is automatically added.</em></div>
 
-                                    <div class="SectionHeading" id="DivSectionHeading_0">
+                                        <label>Quote Source: <input class="form-control quoteSource"
+												type="text"
+												name="QuoteSource_0" id="QuoteSource_0" /></label>
+                                    </div>                                  
+                                  	<div class="Byline" id="DivByline_0">
+                                        <div class="tip"><em>Tip: Byline allows you to display author
+												information.</em></div>
+
+                                        <label>Author Name: <input class="form-control required authorName"
+												type="text"
+												name="AuthorName_0" id="AuthorName_0" /></label>
+                                        <label>Author Email: <input class="form-control authorEmail"
+												type="text"
+												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
+                                        <label>Date Published: <input class="form-control datePublished"
+												type="text"
+												name="DatePublished_0" id="DatePublished_0" /></label>
+                                        <hr>                                      
+                                    </div>                                  
+                                  	<div class="Formattedtext" id="DivFormattedtext_0">
+                                        <div class="tip"><em>Tip: Formatted Text allows you to add formatted
+												text similar to how the 'Formatted Text and Image' BBIS part works.
+												You can insert links and images the same way as the BBIS part.</em></div>
+                                    </div>                                  
+                                  	<div class="SectionHeading" id="DivSectionHeading_0">
                                         <div class="tip"><em>Tip: Centered Heading 2 text inside black full
 												with background.</em></div>
 
                                         <label>Content: <input class="form-control required" type="text"
 												name="SectionHeading_0" id="SectionHeading_0" /></label>
                                     </div>
+                                  
+                                  	<!-- END: Text Field options -->
+                                    
+                                  	<!-- Web Component options -->
+                                  	<div class="Accordion" id="DivAccordion_0">
+                                        <div class="tip"><em>Tip: Accordion allows you to enter the text that
+												is initially seen by the user (Accordion Text) and the content
+												(Accordion Content) that is seen when it opens.</em></div>
 
+                                        <label>Accordion Text: <input class="form-control required
+												accordionText" type="text"
+												name="AccordionText_0" id="AccordionText_0" /></label>
+                                    </div>
+                                  
+                                    <div class="ButtonLink" id="DivButtonLink_0">
+                                        <div class="tip"><em>Tip: Button Link allows you to enter button text
+												and assign destination link.</em></div>
+
+                                        <label>Button Link Text: <input class="form-control required
+												linkText"
+												type="text"
+												name="linkText_0" id="linkText_0" /></label>
+                                        <hr>
+                                    </div>
+                                  
+                                    <div class="Card" id="DivCardTitle_0">
+                                        <div class="tip"><em>Tip: Card displays stacked in the following
+												order: Image, Heading, Plain Text, Link.</em></div>
+
+                                        <label>Card Title: <input class="form-control required cardTitle"
+												type="text"
+												name="CardTitle_0" id="CardTitle_0" /></label>
+                                        <label>Card Text: <input class="form-control required cardText"
+												type="text"
+												name="CardText_0" id="CardText_0" /></label>
+                                        <label>Card Link Text: <input class="form-control required
+												cardLinkText"
+												type="text"
+												name="cardLinkText_0" id="cardLinkText_0" /></label>
+                                        <hr>
+                                    </div>    
+                                  
+                                  	<div class="FiftyFiftyGrid" id="DivFiftyFiftyGrid_0">
+                                      	<div class="tip"><em>Tip: 50/50 Gride component</em></div>
+
+                                        <label for="ImageAlign_0">Which side of page for Image?
+											<select id="ImageAlign_0" class="imageAlign">
+												<option value="left">Left</option>
+												<option value="right">Right</option>
+											</select></label>
+                                        <hr>
+                                    </div>  
+                                  
+                                    <div class="HR" id="DivHr_0">
+                                        <div class="tip"><em>Tip: Skewed HR is cut off on left/right sides for
+												column
+												width greater than 11.</em></div>
+                                    </div>
+                                  
+                                  	<div class="IconTextCard" id="DivIconTextCard_0">
+                                        <div class="tip"><em>Tip: Icon Text Card displays with the Image
+												displayed to the left and to the right is the Text.</em></div>
+                                    </div>
+                                  
+                                  	<div class="ImageTextCard" id="DivImageTextCard_0">
+                                        <div class="tip"><em>Tip: Image Text Card displays with the Image displayed
+												to the left and stacked to the right is the Title and Text.</em></div>
+                                        <label>Card Title: <input class="form-control required cardTitle"
+												type="text"
+												name="CardTitle_0" id="CardTitle_0" /></label>
+                                        <label>Card Text: <input class="form-control required cardText"
+												type="text"
+												name="CardText_0" id="CardText_0" /></label>
+                                        <hr>
+                                    </div>
+                                  
+                                    <div class="Image" id="DivImage_0">
+                                        <div class="tip"><em>Tip: Image allows you to set the alignment as
+												well as the width. Set 'Full Width of Page?' to 'Yes' to make image
+												stretch across width of browser window.</em></div>
+
+                                        <label for="ImageAlign_0">Image Alignment:
+											<select id="ImageAlign_0" class="imageAlign">
+												<option value="left">Left</option>
+												<option value="center">Center</option>
+												<option value="right">Right</option>
+											</select></label>
+                                        <label>Image Caption (centered under image): <input
+												class="form-control required
+												imageCaption"
+												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
+                                        <hr>
+                                    </div>
+                                    <div class="RelatedStory" id="DivRelatedStory_0">
+                                        <div class="tip"><em>Tip: Related Story displays stacked in the
+												following order: Image, Title, Link.</em></div>
+
+                                        <label>Title: <input class="form-control required relatedStoryTitle"
+												type="text"
+												name="RelatedStoryTitle_0" id="RelatedStoryTitle_0" /></label>
+                                        <label>Link Text: <input class="form-control required
+												relatedStoryLinkText"
+												type="text"
+												name="relatedStoryLinkText_0" id="relatedStoryLinkText_0" /></label>
+                                        <hr>
+                                    </div>
+                                    <div class="RowCard" id="DivRowCard_0">
+                                        <div class="tip"><em>Tip: Row Card displays with the Image displayed
+												to the left and stacked to the right is the Title, Text and Link.</em></div>
+                                        <label>Card Title: <input class="form-control required cardTitle"
+												type="text"
+												name="CardTitle_0" id="CardTitle_0" /></label>
+                                        <label>Card Text: <input class="form-control required cardText"
+												type="text"
+												name="CardText_0" id="CardText_0" /></label>
+                                        <label>Card Link Text: <input class="form-control required
+												cardLinkText"
+												type="text"
+												name="cardLinkText_0" id="cardLinkText_0" /></label>
+                                        <hr>
+                                    </div>
+                                    <div class="PageTitle" id="DivPageTitle_0">
+                                        <div class="tip"><em>Tip: Page Title is used at the very top of the
+												page under the navigation. There only needs to be one Page Title per
+												page.</em></div>
+
+                                        <label>Page Title: <input class="form-control required pageTitle"
+												type="text"
+												name="PageTitle_0" id="PageTitle_0" /></label>
+                                    </div>
                                     <div class="Video" id="DivVideo_0">
                                       	<div class="tip">
                                         	<em>Tip: Copy YouTube URL into text field. Video can be in following formats: 
@@ -133,165 +293,14 @@
                                         <label>Link Text: <input class="form-control required
 												linkText" type="text" name="linkText_0" id="linkText_0" /></label>
                                     </div>
-
-                                    <div class="Blockquote" id="DivBlockquote_0">
-                                        <div class="tip"><em>Tip: Quote text wrapped inside quotations so no
-												need to wrap.
-												Dash in front of source is automatically added.</em></div>
-
-                                        <label>Quote Source: <input class="form-control quoteSource"
-												type="text"
-												name="QuoteSource_0" id="QuoteSource_0" /></label>
-                                    </div>
-
-                                    <div class="ButtonLink" id="DivButtonLink_0">
-                                        <div class="tip"><em>Tip: Button Link allows you to enter button text
-												and assign destination link.</em></div>
-
-                                        <label>Button Link Text: <input class="form-control required
-												linkText"
-												type="text"
-												name="linkText_0" id="linkText_0" /></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="Byline" id="DivByline_0">
-                                        <div class="tip"><em>Tip: Byline allows you to display author
-												information.</em></div>
-
-                                        <label>Author Name: <input class="form-control required authorName"
-												type="text"
-												name="AuthorName_0" id="AuthorName_0" /></label>
-                                        <label>Author Email: <input class="form-control authorEmail"
-												type="text"
-												name="AuthorEmail_0" id="AuthorEmail_0" /></label>
-                                        <label>Date Published: <input class="form-control datePublished"
-												type="text"
-												name="DatePublished_0" id="DatePublished_0" /></label>
-                                        <hr>                                      
-                                    </div>
-
-                                    <div class="CalloutBox" id="DivCalloutBox_0">
+									<!-- END: Web Component options -->
+                                  
+									<!-- Call-Out box options -->
+                                  	<div class="CalloutBox" id="DivCalloutBox_0">
                                         <div class="tip"><em>Tip: Text displays at a max-width of 1024 pixels
 												and has a
 												gray background.</em></div>
                                     </div>
-
-                                    <div class="Card" id="DivCardTitle_0">
-                                        <div class="tip"><em>Tip: Card displays stacked in the following
-												order: Image, Heading, Plain Text, Link.</em></div>
-
-                                        <label>Card Title: <input class="form-control required cardTitle"
-												type="text"
-												name="CardTitle_0" id="CardTitle_0" /></label>
-                                        <label>Card Text: <input class="form-control required cardText"
-												type="text"
-												name="CardText_0" id="CardText_0" /></label>
-                                        <label>Card Link Text: <input class="form-control required
-												cardLinkText"
-												type="text"
-												name="cardLinkText_0" id="cardLinkText_0" /></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="Formattedtext" id="DivFormattedtext_0">
-                                        <div class="tip"><em>Tip: Formatted Text allows you to add formatted
-												text similar to how the 'Formatted Text and Image' BBIS part works.
-												You can insert links and images the same way as the BBIS part.</em></div>
-                                    </div>
-
-                                    <div class="HR" id="DivHr_0">
-                                        <div class="tip"><em>Tip: Skewed HR is cut off on left/right sides for
-												column
-												width greater than 11.</em></div>
-                                    </div>
-                                  
-                                  	<div class="FiftyFiftyGrid" id="DivFiftyFiftyGrid_0">
-                                      	<div class="tip"><em>Tip: 50/50 Gride component</em></div>
-
-                                        <label for="ImageAlign_0">Which side of page for Image?
-											<select id="ImageAlign_0" class="imageAlign">
-												<option value="left">Left</option>
-												<option value="right">Right</option>
-											</select></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="Image" id="DivImage_0">
-                                        <div class="tip"><em>Tip: Image allows you to set the alignment as
-												well as the width. Set 'Full Width of Page?' to 'Yes' to make image
-												stretch across width of browser window.</em></div>
-
-                                        <label for="ImageAlign_0">Image Alignment:
-											<select id="ImageAlign_0" class="imageAlign">
-												<option value="left">Left</option>
-												<option value="center">Center</option>
-												<option value="right">Right</option>
-											</select></label>
-                                        <label>Image Caption (centered under image): <input
-												class="form-control required
-												imageCaption"
-												type="text" name="ImageCaption_0" id="ImageCaption_0" /></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="RelatedStory" id="DivRelatedStory_0">
-                                        <div class="tip"><em>Tip: Related Story displays stacked in the
-												following order: Image, Title, Link.</em></div>
-
-                                        <label>Title: <input class="form-control required relatedStoryTitle"
-												type="text"
-												name="RelatedStoryTitle_0" id="RelatedStoryTitle_0" /></label>
-                                        <label>Link Text: <input class="form-control required
-												relatedStoryLinkText"
-												type="text"
-												name="relatedStoryLinkText_0" id="relatedStoryLinkText_0" /></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="IconTextCard" id="DivIconTextCard_0">
-                                        <div class="tip"><em>Tip: Icon Text Card displays with the Image
-												displayed to the left and to the right is the Text.</em></div>
-                                    </div>
-
-                                    <div class="RowCard" id="DivRowCard_0">
-                                        <div class="tip"><em>Tip: Row Card displays with the Image displayed
-												to the left and stacked to the right is the Title, Text and Link.</em></div>
-                                        <label>Card Title: <input class="form-control required cardTitle"
-												type="text"
-												name="CardTitle_0" id="CardTitle_0" /></label>
-                                        <label>Card Text: <input class="form-control required cardText"
-												type="text"
-												name="CardText_0" id="CardText_0" /></label>
-                                        <label>Card Link Text: <input class="form-control required
-												cardLinkText"
-												type="text"
-												name="cardLinkText_0" id="cardLinkText_0" /></label>
-                                        <hr>
-                                    </div>
-
-                                    <div class="PageTitle" id="DivPageTitle_0">
-                                        <div class="tip"><em>Tip: Page Title is used at the very top of the
-												page under the navigation. There only needs to be one Page Title per
-												page.</em></div>
-
-                                        <label>Page Title: <input class="form-control required pageTitle"
-												type="text"
-												name="PageTitle_0" id="PageTitle_0" /></label>
-                                    </div>
-
-
-                                    <div class="Accordion" id="DivAccordion_0">
-                                        <div class="tip"><em>Tip: Accordion allows you to enter the text that
-												is initially seen by the user (Accordion Text) and the content
-												(Accordion Content) that is seen when it opens.</em></div>
-
-                                        <label>Accordion Text: <input class="form-control required
-												accordionText" type="text"
-												name="AccordionText_0" id="AccordionText_0" /></label>
-                                    </div>
-
-
                                     <div class="NextFrontiers" id="DivNextFrontiers_0">
                                         <div class="tip"><em>Tip: Text below is formatted and displayed in
 												Call-out Box.</em></div>
@@ -319,7 +328,9 @@
 											signature programs in career-based education, co-op or professional
 											development.</label>
                                     </div>
-
+                                  	<!-- END: Call-Out box options -->
+	
+                                  	<!-- Sub-Footer -->
                                     <div class="SubFooter" id="DivSubFooter_0">
                                         <div class="tip"><em>Tip: Sub Footer gives you the option to select a
 												background image, Heading, Sub-Heading, Link Text and Link.</em></div>
@@ -335,7 +346,8 @@
 												name="SubfooterLinkText_0" id="SubfooterLinkText_0" /></label>
                                         <hr>
                                     </div>
-
+									<!-- END: Sub-Footer -->
+                                  
                                     <div class="Footer" id="DivFooter_0">
                                         <div class="tip"><em>Tip: .</em></div>
                                         <div class="Field">
@@ -566,6 +578,7 @@
 				<option value="card">Grid Card</option>
 				<option value="hr">Horizontal Rule</option>
 				<option value="icontextcard">Icon Text Card</option>
+              	<option value="imagetextcard">Image Text Card</option>
 				<option value="image">Image</option>
 				<option value="rowcard">Row Card</option>
 				<option value="pagetitle">Page Title</option>
@@ -574,7 +587,7 @@
 			</optgroup>
 			<optgroup label="Footer options">
 				<option value="subfooter">Sub-Footer Call-Out w/BG</option>
-				<option value="footer">Footer</option>
+				<!--<option value="footer">Footer</option>-->
 			</optgroup>
 			<optgroup label="Callout Card">
 				<option value="nextfrontiers">Explore Our Next Frontiers</option>
@@ -595,7 +608,48 @@
     //FIELD SETTINGS
     var Fields = {};
 
+  	Fields["imagetextcard"] = {
+      	"ImageTextCard": true,
+      	"FiftyFiftyGrid": false,
+        "SectionHeading": false,
+        "IconTextCard": false,
+        "Video": false,
+        "ButtonLink": false,
+        "AdvancedDonationForm": false,
+        "Byline": false,
+        "Question": false,
+        "Blockquote": false,
+        "RelatedStory": false,
+        "Card": false,
+        "RowCard": false,
+        "HR": false,
+        "NextFrontiers": false,
+        "NextNow": false,
+        "EmpowerNext": false,
+        "Image": false,
+        "PageTitle": false,
+        "SubFooter": false,
+        "Footer": false,
+        "Accordion": false,
+        "CalloutBox": false,
+        "Formattedtext": false,
+        "QuoteSource": false,
+        "Help": false,
+        "QuestionRequired": false,
+        "MaxLength": false,
+        "LinkAttribute": false,
+        "DisplayCondition": false,
+        "TextFieldType": "text",
+        "EventCateogry": false,
+        "ConditionFieldType": "text",
+        "ColumnWidth": true,
+        "FullPageWidth": false,
+        "ImageField": true,
+        "FormattedText": false,
+        "SelectLink": false
+    }
   	Fields["fiftyfifty"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": true,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -635,6 +689,7 @@
         "SelectLink": false
     }
     Fields["sectionheading"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": true,
         "IconTextCard": false,
@@ -674,6 +729,7 @@
         "SelectLink": false
     }
     Fields["icontextcard"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": true,
@@ -713,6 +769,7 @@
         "SelectLink": false
     }
     Fields["video"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -752,6 +809,7 @@
         "SelectLink": false
     }
     Fields["buttonlink"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -791,6 +849,7 @@
         "SelectLink": true
     }
     Fields["blockquote"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -830,6 +889,7 @@
         "SelectLink": false
     }
     Fields["formattedtext"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -869,6 +929,7 @@
         "SelectLink": false
     }
     Fields["calloutbox"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -908,6 +969,7 @@
         "SelectLink": false
     }
     Fields["text"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -947,6 +1009,7 @@
         "SelectLink": false
     }
     Fields["byline"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -987,6 +1050,7 @@
     }
 
     Fields["heading2"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1026,6 +1090,7 @@
         "SelectLink": false
     }
     Fields["heading3"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1065,6 +1130,7 @@
         "SelectLink": false
     }
     Fields["subheading"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1105,6 +1171,7 @@
     }
 
     Fields["accordion"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1144,6 +1211,7 @@
         "SelectLink": false
     }
     Fields["relatedstory"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1183,6 +1251,7 @@
         "SelectLink": true
     }
     Fields["card"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1222,6 +1291,7 @@
         "SelectLink": true
     }
     Fields["rowcard"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1261,6 +1331,7 @@
         "SelectLink": true
     }
     Fields["hr"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1300,6 +1371,7 @@
         "SelectLink": false
     }
     Fields["image"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1339,6 +1411,7 @@
         "SelectLink": false
     }
     Fields["pagetitle"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1379,6 +1452,7 @@
     }
 
     Fields["subfooter"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1418,6 +1492,7 @@
         "SelectLink": true
     }
     Fields["footer"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1458,6 +1533,7 @@
     }
 
     Fields["nextfrontiers"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1497,6 +1573,7 @@
         "SelectLink": false
     }
     Fields["nextnow"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1536,6 +1613,7 @@
         "SelectLink": false
     }
     Fields["empowernext"] = {
+      	"ImageTextCard": false,
       	"FiftyFiftyGrid": false,
         "SectionHeading": false,
         "IconTextCard": false,
@@ -1684,6 +1762,9 @@
 
                     relatedStoryTitle: $(this).find('.RelatedStory input.relatedStoryTitle').val(),
                     relatedStoryLinkText: $(this).find('.RelatedStory input.relatedStoryLinkText').val(),
+                  
+                  	imageTextCardTitle: $(this).find('.ImageTextCard input.cardTitle').val(),
+                    imageTextCardText: $(this).find('.ImageTextCard input.cardText').val(),
 
                     cardTitle: $(this).find('.Card input.cardTitle').val(),
                     cardText: $(this).find('.Card input.cardText').val(),
@@ -1848,6 +1929,9 @@
 
             $newRow.find('.RelatedStory input.relatedStoryTitle').val(item.relatedStoryTitle);
             $newRow.find('.RelatedStory .relatedStoryLinkText').val(item.relatedStoryLinkText);
+          
+          	$newRow.find('.ImageTextCard input.cardTitle').val(item.imageTextCardTitle);
+            $newRow.find('.ImageTextCard input.cardText').val(item.imageTextCardText);
 
             $newRow.find('.Card input.cardTitle').val(item.cardTitle);
             $newRow.find('.Card input.cardText').val(item.cardText);
@@ -1975,13 +2059,91 @@
         });
 
         function applyMCE() {
+          	tinyMCE.init({
+                mode: "textareas",
+                editor_selector: "tinymce",
+              	theme: 'modern',
+              	elements:'pagecntnt_tmpltcntnt_tabContentTabs__ctl0_ctl00_tabExplorerTabs__ctl0_HTMLEditorControlWrapper1_htmlEditor_tinyMce_TinyTarget',
+              	height: "150px",
+              
+              	menu: {
+                    insert: {
+                        title: "Insert",
+                        items: " inserttable bbimage | bblink unlink anchor | charmap advhr | bbmergefields "
+                    },
+                    view: {
+                        title: "View",
+                        items: " fullscreen preview | code  bbstylesheetoptions "
+                    },
+                    table: {
+                        title: "Table",
+                        items: " tableprops deletetable | cell row column "
+                    }
+                },
+				
+              //plugins: 'code print preview searchreplace autolink directionality visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
+              	bb_admin_images: true,
+              	bb_admin_links: true,
+              	image_advtab: true,
+              	plugins: 'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste', 
+              
+                file_picker_types: "file image media",
+                file_picker_callback: function(callback, value, meta) {
+                    // Provide image and alt text for the image dialog
+                    if (meta.filetype == "image") {
+                        BLACKBAUD.api.customPartEditor.images.launchImagePicker({
+                            callback: function(selectedImage) {
+                                callback(selectedImage.url, {
+                                    alt: selectedImage.alt
+                                });
+                            }
+                        });
+                    }
+
+                    if (meta.filetype == "file") {
+                        BLACKBAUD.api.customPartEditor.links.launchLinkPicker({
+                            callback: function(selectedLink) {
+                                callback(selectedLink.url, {
+                                    text: selectedLink.name
+                                });
+                            }
+                        });
+                    }
+                },
+              
+              // toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | image | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+              	toolbar1: " undo redo | cut copy paste | formatselect removeformat bullist numlist outdent indent ",
+              	toolbar2: " bold italic underline strikethrough forecolor backcolor alignleft aligncenter alignright alignjustify superscript subscript spellchecker | searchreplace fullpage | image | image_edit",
+              //image_advtab: true,
+              	style_formats: [{
+                    title: "Paragraph",
+                    block: "p"
+                }, {
+                    title: "Heading 2",
+                    block: "h2"
+                }, {
+                    title: "Heading 3",
+                    block: "h3"
+                }, {
+                    title: "Sub-Heading",
+                    block: "p",
+                    classes: "large"
+                }],
+                content_css: [
+                    "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+                    //"/file/css/bootstrap.css",
+                    "/file/css/template.css"
+                ]
+            });
+          
+          /*
             tinyMCE.init({
                 mode: "textareas",
                 editor_selector: "tinymce",
 
                 theme: 'modern',
               	height: "150px",
-                plugins: 'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste, image_tools, advimage, bbimages, bblinks, advhr',
+                plugins: 'compat3x lists advlist textcolor colorpicker searchreplace spellchecker table anchor hr image charmap link fullscreen preview code fullpage powerpaste, image_tools,advimage,bbimages,bblinks,advhr',
                 external_plugins: {
                     image_tools: "https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/image_tools/editor_plugin.js",
                     advimage: "https://foundation.uc.edu//Client/Scripts/tiny_mce_V4_9_6/plugins/advimage/editor_plugin.js",
@@ -2072,7 +2234,8 @@
                     //"/file/css/bootstrap.css",
                     "/file/css/template.css"
                 ]
-            });
+            }); 
+			*/
         }
 
         applyMCE();
