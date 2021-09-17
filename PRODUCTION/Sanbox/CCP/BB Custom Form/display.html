@@ -61,6 +61,11 @@
     	padding-top: 1em !important;
   	}
   
+  
+  	.sub-footer.redBg a {
+	    background-color: var(--color-brand-black) !important;
+  	}
+  
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -74,6 +79,9 @@
     var $contentwrapper = $('<div class="content-wrapper"></div>');
     var $label = $('<label></label>');
     var $text = $('<p></p>');
+  	var $span = $('<span></span>');
+  	var $h2 = $('<h2></h2>');
+  	var $h3 = $('<h3></h3>');
     var $div = $('<div></div>');
     var $fullWidthDiv = $('<div class="full-width"></div>');
     var $link = $('<a href="#">Test Link</a>');
@@ -115,6 +123,7 @@
     $fieldtemplate["text"] = $('<p></p>');
     $fieldtemplate["relatedstory"] = $('<div class="related"></div>');
     $fieldtemplate["card"] = $('<div class="card"></div>');
+  	$fieldtemplate["imagetextcard"] = $('<div class="card"></div>');
     $fieldtemplate["rowcard"] = $('<div class="card row"></div>');
   	$fieldtemplate["icontextcard"] = $('<div class="icontext card row"></div>');
     $fieldtemplate["hr"] = $('<hr>');
@@ -236,6 +245,16 @@
                                 .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.cardLinkText.trim()))
                             )
                         ));
+                  
+                } else if (item.type == "imagetextcard") {
+                    var $newRow = $row.clone()
+                        .append(($fieldtemplate[item.type].clone()
+                            .append($image.clone().attr("src", item.imageFieldSrc.trim()).attr("loading", "lazy"))
+                            .append($div.clone().addClass("pad-left-900 pad-right-900")
+                                .append($h3.clone().text(item.imageTextCardTitle.trim()))
+                                .append($text.clone().text(item.imageTextCardText.trim()))
+                            )
+                        ));
 
                 } else if (item.type == "rowcard") {
                     var $newRow = $row.clone()
@@ -262,12 +281,21 @@
                         ));
 
                 } else if (item.type == "subfooter") {
-                    var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
-                        .append($contentwrapper.clone()
-                            .append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
-                            .append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
-                            .append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
-                        );
+                  	if (item.imageFieldSrc == "") {
+                      	var $newRow = $fieldtemplate[item.type].clone().addClass("redBg")
+                        	.append($contentwrapper.clone()
+                            	.append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
+                            	.append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
+                            	.append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                        	);
+                    } else {
+                    	var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
+                        	.append($contentwrapper.clone()
+                            	.append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
+                            	.append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
+                            	.append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                        	);
+                    }
 
                 } else if (item.type == "footer") {
                     var $newRow = $fieldtemplate[item.type].clone()
