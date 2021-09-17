@@ -66,6 +66,21 @@
 	    background-color: var(--color-brand-black) !important;
   	}
   
+  	.sub-footer a {
+    	color: #fff;
+    	font-weight: 700;
+    	text-align: center;
+    	text-decoration: none;
+    	border: 0;
+    	outline: 0;
+    	font-size: 1.5em !important;
+    	padding: 12px 35px;
+    	display: inline-block;
+    	transform: skew(-30deg);
+ 	    border-radius: 0 !important;
+    	box-shadow: 0 4px 7px 0 rgb(0 0 0 / 50%);
+	}
+  
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -84,7 +99,7 @@
   	var $h3 = $('<h3></h3>');
     var $div = $('<div></div>');
     var $fullWidthDiv = $('<div class="full-width"></div>');
-    var $link = $('<a href="#">Test Link</a>');
+    var $link = $('<a href="#"></a>');
     var $calloutcard = $('<div class="callout-card background-gray gap-bottom-700"></div>');
     var $largeParagraph = $('<p class="large"></p>');
 
@@ -286,14 +301,18 @@
                         	.append($contentwrapper.clone()
                             	.append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                             	.append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
-                            	.append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                            	.append($link.clone().addClass("parallelogram").attr("href", item.selectLinkUrl.trim())
+                                        .append($span.clone().addClass("skew-fix").text(item.subfooterLinkText.trim()))
+                            	)
                         	);
                     } else {
                     	var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
                         	.append($contentwrapper.clone()
                             	.append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                             	.append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
-                            	.append($link.clone().attr("href", item.selectLinkUrl.trim()).text(item.subfooterLinkText.trim()))
+                                .append($link.clone().addClass("parallelogram").attr("href", item.selectLinkUrl.trim())
+                                        .append($span.clone().addClass("skew-fix").text(item.subfooterLinkText.trim()))
+                            	)
                         	);
                     }
 
