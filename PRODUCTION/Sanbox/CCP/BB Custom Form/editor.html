@@ -555,7 +555,49 @@
 </div>
 
 <div id="newItem" title="Add a new Web Component">
-    <label>Field type:<br />
+  	<label>Select Component Type:</label>
+  	<div class="flex">
+        <div><label for="itemBlockquote"><input id="itemBlockquote" name="bbis" value="blockquote" type="radio">Blockquote</label></div>
+        <div><label for="itemFormattedText"><input id="itemFormattedText" name="bbis" value="formattedtext" type="radio">Formatted Text</label></div>
+        <div><label for="itemText"><input id="itemText" name="bbis" value="text" type="radio">Text</label></div>
+        <div><label for="itemByline"><input id="itemByline" name="bbis" value="byline" type="radio">Byline</label></div>
+    </div>
+  
+  	<div class="flex">
+        <div><label for="itemHeading2"><input id="itemHeading2" name="bbis" value="heading2" type="radio">Heading 2</label></div>
+        <div><label for="itemHeading3"><input id="itemHeading3" name="bbis" value="heading3" type="radio">Heading 3</label></div>
+        <div><label for="itemSubheading"><input id="itemSubheading" name="bbis" value="subheading" type="radio">Sub-Heading</label></div>
+        <div><label for="itemSectionheading"><input id="itemSectionheading" name="bbis" value="sectionheading" type="radio">Section Heading</label></div>
+    </div>
+  
+  	<div class="flex">
+        <div><label for="itemFiftyfifty"><input id="itemFiftyfifty" name="bbis" value="fiftyfifty" type="radio">50/50 Image/Text Grid</label></div>
+        <div><label for="itemAccordion"><input id="itemAccordion" name="bbis" value="accordion" type="radio">Accordion</label></div>
+        <div><label for="itemButtonlink"><input id="itemButtonlink" name="bbis" value="buttonlink" type="radio">Button Link</label></div>
+        <div><label for="itemCalloutbox"><input id="itemCalloutbox" name="bbis" value="calloutbox" type="radio">Call-Out Box</label></div>
+      	<div><label for="itemCard"><input id="itemCard" name="bbis" value="card" type="radio">Grid Card</label></div>
+        <div><label for="itemHr"><input id="itemHr" name="bbis" value="hr" type="radio">Horizontal Rule</label></div>
+        <div><label for="itemIcontextcard"><input id="itemIcontextcard" name="bbis" value="icontextcard" type="radio">Icon Text Card</label></div>
+        <div><label for="itemImagetextcard"><input id="itemImagetextcard" name="bbis" value="imagetextcard" type="radio">Image Text Card</label></div>
+      	<div><label for="itemImage"><input id="itemImage" name="bbis" value="heading2" type="radio">Image</label></div>
+        <div><label for="itemRowcard"><input id="itemRowcard" name="bbis" value="rowcard" type="radio">Row Card</label></div>
+        <div><label for="itemPagetitle"><input id="itemPagetitle" name="bbis" value="pagetitle" type="radio">Page Title</label></div>
+        <div><label for="itemRelatedstory"><input id="itemRelatedstory" name="bbis" value="relatedstory" type="radio">Related Story</label></div>
+      	<div><label for="itemVideo"><input id="itemVideo" name="bbis" value="video" type="radio">Video embed</label></div>
+    </div>
+  
+  	<div class="flex">
+        <div><label for="itemSubfooter"><input id="itemSubfooter" name="bbis" value="subfooter" type="radio">Sub-Footer Call-Out w/BG</label></div>
+    </div>
+  
+  	<div class="flex">
+        <div><label for="itemNextfrontiers"><input id="itemNextfrontiers" name="bbis" value="nextfrontiers" type="radio">Explore Our Next Frontiers</label></div>
+        <div><label for="itemNextnow"><input id="itemNextnow" name="bbis" value="nextnow" type="radio">NEXT, NOW</label></div>
+        <div><label for="itemEmpowernext"><input id="itemEmpowernext" name="bbis" value="empowernext" type="radio">Who will you empower NEXT?</label></div>
+    </div>
+  
+  
+  	<label style="display: none;">Field type:<br />
 		<select id="NewItemFieldType">
 			<option disabled selected>-- Select an Option --</option>
 			<optgroup label="Text Field">
@@ -2036,17 +2078,20 @@
             $newRow.find('input[id^=ItemIndex]').val(item.index);
         } else {
             $newRow.find('input[id^=ItemIndex]').val(count);
-            $newRow.attr('data-type', $('#NewItemFieldType').val());
-            $newRow.find('.FieldType').text($('#NewItemFieldType').val());
+          // $newRow.attr('data-type', $('#NewItemFieldType').val());
+          // $newRow.find('.FieldType').text($('#NewItemFieldType').val());
+          
+          	$newRow.attr('data-type', $("input[name='bbis']:checked").val());
+          	$newRow.find('.FieldType').text($("input[name='bbis']:checked").val());
         }
 
-      	/* $newRow.find('.LinkAttributeExpand, .DisplayconditionExpand').slideUp(0);
-        if ($newRow.find('.LinkAttribute input[type="checkbox"]').is(':checked')) {
+        $newRow.find('.LinkAttributeExpand, .DisplayconditionExpand').slideUp(0);
+      	/* if ($newRow.find('.LinkAttribute input[type="checkbox"]').is(':checked')) {
             $newRow.find('.LinkAttributeExpand').slideDown(150);
-        }
+        } */
         if ($newRow.find('.DisplayCondition input[type="checkbox"]').is(':checked')) {
             $newRow.find('.DisplayconditionExpand').slideDown(150);
-        } */
+        }
 
         $.each(Fields[$newRow.attr('data-type')], function(key, value) {
             if (!value) {
@@ -2250,7 +2295,7 @@
 
         // BuildConditionalSelects();
         BuildMatrix();
-        $newRow.find('.DisplayCondition select[id^=ddDisplayConditionCompare]').change();
+      	// $newRow.find('.DisplayCondition select[id^=ddDisplayConditionCompare]').change();
         // $newRow.find('.CodeTableMulti input').change();
         $newItem.dialog("close");
     }
@@ -2372,7 +2417,8 @@
         modal: true,
         buttons: {
             "Add": function() {
-              	if ($("#NewItemFieldType").val()) {
+              //if ($("#NewItemFieldType").val()) {
+              	if ($("input[name='bbis']:checked").val()) {
               		addRow();
               	}
             },
@@ -2382,9 +2428,10 @@
         }
     });
 
-    $(document).on('click', '.LinkAttribute label input[type="checkbox"], .DisplayCondition label input[type="checkbox"]', function() {
-        $(this).parent().next().slideToggle(150);
-    });
+  	//$(document).on('click', '.LinkAttribute label input[type="checkbox"], .DisplayCondition label input[type="checkbox"]', function() {
+  	//    $(this).parent().next().slideToggle(150);
+  	//});
+  
     // $(document).on('change', '.Question input', BuildConditionalSelects);
     $(document).on('change', '.Question input', BuildMatrix);
 
