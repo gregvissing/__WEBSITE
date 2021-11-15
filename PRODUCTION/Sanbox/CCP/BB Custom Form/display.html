@@ -62,11 +62,11 @@
   	}
   
   
-  	.sub-footer.redBg a {
+  	.sub-footer.redBg a.parallelogram {
 	    background-color: var(--color-brand-black) !important;
   	}
   
-  	.sub-footer a {
+  	.sub-footer a.parallelogram {
     	color: #fff;
     	font-weight: 700;
     	text-align: center;
@@ -79,8 +79,18 @@
     	transform: skew(-30deg);
  	    border-radius: 0 !important;
     	box-shadow: 0 4px 7px 0 rgb(0 0 0 / 50%);
+    	transition: all 0.4s ease-in-out;
 	}
   
+  	.sub-footer a.parallelogram:hover {
+    	background-color: rgba(0, 0, 0, 0.75) !important;
+    	box-shadow: none;
+	}
+  
+  	.sub-footer .formatted-text a {
+    	transform: skew(0deg);
+	    background-color: transparent !important;
+  	}
 </style>
 <div class="message-form"></div>
 <!-- Removed class: container -->
@@ -295,7 +305,12 @@
                             )
                         ));
 
-                } else if (item.type == "subfooter") {
+                } else if (item.type == "subfooter") {                  	
+                  	var subfooterText = item.formattedText;
+                  	if (item.formattedText != "") {
+                    	subfooterText = $div.clone().addClass("formatted-text pad-top-500").html(item.formattedText.trim())
+                    } else {}
+                  
                   	if (item.imageFieldSrc == "") {
                       	var $newRow = $fieldtemplate[item.type].clone().addClass("redBg")
                         	.append($contentwrapper.clone()
@@ -304,15 +319,17 @@
                             	.append($link.clone().addClass("parallelogram").attr("href", item.selectLinkUrl.trim())
                                         .append($span.clone().addClass("skew-fix").text(item.subfooterLinkText.trim()))
                             	)
+                                .append(subfooterText)
                         	);
                     } else {
-                    	var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
+                      	var $newRow = $fieldtemplate[item.type].clone().css("background-image", "url(" + item.imageFieldSrc.trim() + ")")
                         	.append($contentwrapper.clone()
                             	.append($fieldtemplate["heading2"].clone().text(item.subFooterHeading.trim()))
                             	.append($largeParagraph.clone().text(item.subFooterSubHeading.trim()))
                                 .append($link.clone().addClass("parallelogram").attr("href", item.selectLinkUrl.trim())
                                         .append($span.clone().addClass("skew-fix").text(item.subfooterLinkText.trim()))
                             	)
+                                .append(subfooterText)
                         	);
                     }
 
@@ -544,7 +561,7 @@
 
         $(".accordion-container.col-md-6").wrapAll("<div class='content-wrapper' />").wrapAll("<div class='row accordion-outer-container' />");
 
-        $("main p > img").each(function() {
+        $("main p img").each(function() {
             if ($(this).css("float") == "left") {
                 $(this).addClass("imgLeft");
             } else if ($(this).css("float") == "right") {
