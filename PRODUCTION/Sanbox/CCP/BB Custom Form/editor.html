@@ -188,7 +188,7 @@
                                     </div>    
                                   
                                   	<div class="FiftyFiftyGrid" id="DivFiftyFiftyGrid_0">
-                                      	<div class="tip"><em>Tip: 50/50 Gride component</em></div>
+                                      	<div class="tip"><em>Tip: 50/50 Grid component</em></div>
 
                                         <label for="ImageAlign_0">Which side of page for Image?
 											<select id="ImageAlign_0" class="imageAlign">
@@ -1445,7 +1445,7 @@
         "EventCateogry": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false,
-        "FullPageWidth": true,
+        "FullPageWidth": false,
         "ImageField": false,
         "FormattedText": false,
         "SelectLink": false
@@ -1488,7 +1488,7 @@
         "ColumnWidth": false,
         "FullPageWidth": false,
         "ImageField": true,
-        "FormattedText": false,
+        "FormattedText": true,
         "SelectLink": true
     }
     Fields["footer"] = {
@@ -1888,6 +1888,8 @@
 
         var $newRow = $item.Row.clone();
         var count = GetID();
+      
+      // console.log(item);
 
         if (item !== undefined) {
             count = item.index;
@@ -1914,7 +1916,7 @@
         // $newRow.find('select[id^=ddDisplayConditionEventCategory]').append($('#ddEventCategories option:selected').clone());
 
         if (item !== undefined) {
-          	console.log(item);
+          // console.log(item);
 
             $newRow.find('.Question input').val(item.question);
 
@@ -2038,13 +2040,13 @@
             $newRow.find('.FieldType').text($('#NewItemFieldType').val());
         }
 
-        $newRow.find('.LinkAttributeExpand, .DisplayconditionExpand').slideUp(0);
+      	/* $newRow.find('.LinkAttributeExpand, .DisplayconditionExpand').slideUp(0);
         if ($newRow.find('.LinkAttribute input[type="checkbox"]').is(':checked')) {
             $newRow.find('.LinkAttributeExpand').slideDown(150);
         }
         if ($newRow.find('.DisplayCondition input[type="checkbox"]').is(':checked')) {
             $newRow.find('.DisplayconditionExpand').slideDown(150);
-        }
+        } */
 
         $.each(Fields[$newRow.attr('data-type')], function(key, value) {
             if (!value) {
@@ -2290,7 +2292,7 @@
             // Launch the link picker, passing in our callback
             var thisIdVal = $(this).parents('.Field').parent().attr('id'),
                 thisSplitId = thisIdVal.split("_")[1];
-            console.log(thisIdVal);
+          // console.log(thisIdVal);
 
             BLACKBAUD.api.customPartEditor.links.launchLinkPicker({
                 callback: function(selectedLink) {
@@ -2310,11 +2312,11 @@
         } else {
             var thisIdVal = $(this).parents('.Field').parent().attr('id'),
                 thisSplitId = thisIdVal.split("_")[1];
-            console.log(thisIdVal);
+          // console.log(thisIdVal);
 
             BLACKBAUD.api.customPartEditor.images.launchImagePicker({
                 callback: function(selectedImage) {
-                    console.log(selectedImage.url);
+                  // console.log(selectedImage.url);
                     $('#' + thisIdVal + ' .ImagePickerRender img').attr('src', selectedImage.url);
                     $('#' + thisIdVal + ' .ImagePicker .SearchFieldText').text(selectedImage.name);
                 }
@@ -2370,7 +2372,9 @@
         modal: true,
         buttons: {
             "Add": function() {
-                addRow();
+              	if ($("#NewItemFieldType").val()) {
+              		addRow();
+              	}
             },
             Cancel: function() {
                 $newItem.dialog("close");
