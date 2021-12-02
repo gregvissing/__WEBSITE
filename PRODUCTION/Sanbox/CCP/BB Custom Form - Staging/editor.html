@@ -369,10 +369,6 @@
         padding: 5px;
     }
     
-    .LinkAttribute {
-        padding: 5px;
-    }
-    
     .DisplayCondition {
         padding: 5px;
     }
@@ -439,10 +435,6 @@
         margin-bottom: 10px;
     }
     
-    .LinkAttributeExpand br {
-        display: none;
-    }
-    
     .MaxLength {
         max-width: 140px;
     }
@@ -506,14 +498,6 @@
         transition: all 150ms ease-in-out;
     }
     
-    .CodeTable input,
-    .Country input {
-        min-width: 280px;
-        font-family: consolas, "Courier New", monospace;
-        font-size: 0.8rem;
-        line-height: 1.15rem;
-    }
-    
     .flexgrid {
         display: table;
     }
@@ -565,33 +549,13 @@
         justify-content: stretch;
     }
     
-    div.Help {
-        flex-grow: 1;
-    }
-    
-    div.Help input {
-        width: 100%;
-    }
-    
     .ColumnWidth select {
         width: 100%;
-    }
-    
-    div.Help input {
-        padding: 5px;
-        font-size: 0.8rem;
-        color: #777;
     }
     
     div.ColumnWidth select {
         padding: 5px;
         font-size: 0.8rem;
-    }
-    
-    .CodeTableMulti input {
-        text-align: left;
-        margin-left: 0;
-        width: auto;
     }
     
     .flexgrid .body-header-cell span {
@@ -671,30 +635,10 @@
 												value="255" name="MaxLength_0" id="MaxLength_0" /></label>
                                         <span class="helper">Limited to 255</span>
                                     </div>
-                                    <div class="CodeTable" id="DivCodeTable_0">
-                                        <label>Code Table ID: <input class="form-control required" type="text"
-												name="CodeTable_0" id="CodeTable_0" /></label>
-                                        <span class="helper">GUID of the code table</span>
-                                    </div>
-                                    <div class="CodeTableMulti" id="DivCodeTableMulti_0">
-                                        <label>Allow Multiple: <input class="form-control" type="checkbox"
-												name="CodeTableMulti_0" id="CodeTableMulti_0" /></label>
-                                        <span class="helper">Disables attribute link</span>
-                                    </div>
-                                    <div class="Country" id="DivCountry_0">
-                                        <label>Country ID: <input class="form-control" type="text"
-												name="Country_0" id="Country_0" /></label>
-                                        <span class="helper">GUID of the Country</span>
-                                    </div>
 
                                 </div>
 
                                 <div class="middle">
-                                    <div class="Help" id="DivHelp_0">
-                                        <label>Help Text: <input class="form-control" type="text"
-												name="Help_0"
-												id="Help_0" /></label>
-                                    </div>
                                     <div class="ColumnWidth" id="DivColumnWidth_0">
                                         <label>Columns(/12): <select class="form-control" name="ColumnWidth_0"
 												id="ColumnWidth_0">
@@ -716,24 +660,6 @@
                                 </div>
 
                                 <div class="Col3">
-                                    <div class="QuestionRequired" id="DivQuestionRequired_0">
-                                        <label><input class="form-control" type="checkbox"
-												name="QuestionRequired_0" id="QuestionRequired_0" /> Mark as
-											required</label>
-                                    </div>
-
-                                    <div class="LinkAttribute" id="DivLinkAttribute_0">
-                                        <label><input class="form-control" type="checkbox"
-												name="LinkAttribute_0" id="LinkAttribute_0" /> Link to attribute</label>
-                                        <div class="LinkAttributeExpand" style="display: none;">
-                                            <label>Attribute label: <input class="form-control required"
-													type="text" name="Attribute_0" id="Attribute_0" /></label><br />
-                                            <span class="helper">Must match exactly what has been set up on the
-												Interaction Add form</span>
-                                        </div>
-
-                                    </div>
-
                                     <div class="DisplayCondition" id="DivDisplayCondition_0">
                                         <label><input class="form-control" type="checkbox"
 												name="DisplayCondition_0" id="DisplayCondition_0" /> Display
@@ -753,8 +679,7 @@
                                             <div class="FieldCompare">
                                                 <input class="required" type="text" name="ddDisplayConditionValText_0" id="ddDisplayConditionValText_0" />
                                                 <input type="checkbox" name="ddDisplayConditionIsCheckbox_0" id="ddDisplayConditionIsCheckbox_0" />
-                                                <select class="required" id="ddDisplayConditionCodeTable_0" name="ddDisplayConditionCodeTable_0">
-												</select>
+                                                </select>
                                                 <select class="required" id="ddDisplayConditionEventCategory_0" name="ddDisplayConditionEventCategory_0">
 
 												</select>
@@ -821,240 +746,150 @@
     var Fields = {};
     Fields["heading"] = {
         "Question": true,
-        "Help": false,
-        "QuestionRequired": false,
         "MaxLength": false,
-        "LinkAttribute": false,
         "DisplayCondition": true,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": false
     }
     Fields["text"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": true,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["email"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "email",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["phone"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "tel",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["single line address"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": false,
         "DisplayCondition": true,
         "TextFieldType": false,
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["address"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": true,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text"
     }
     Fields["suburb"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["state"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": false,
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": true,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["postcode"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "tel",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["code table"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": false,
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": true,
-        "CodeTableMulti": true,
-        "Country": false,
         "ConditionFieldType": "code table",
         "ColumnWidth": true
     }
     Fields["date"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "text",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["time"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": true,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": "time",
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "text",
         "ColumnWidth": true
     }
     Fields["yes/no"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": false,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": true,
         "TextFieldType": false,
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "checkbox",
         "ColumnWidth": true
     }
     Fields["event category"] = {
         "Question": true,
-        "Help": true,
-        "QuestionRequired": false,
         "MaxLength": false,
-        "LinkAttribute": true,
         "DisplayCondition": false,
         "TextFieldType": false,
         "EventCateogry": true,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": "event category",
         "ColumnWidth": true
     }
     Fields["page break"] = {
         "Question": false,
-        "Help": false,
-        "QuestionRequired": false,
         "MaxLength": false,
-        "LinkAttribute": false,
         "DisplayCondition": false,
         "TextFieldType": false,
         "EventCateogry": false,
         "QAS": false,
-        "CodeTable": false,
-        "CodeTableMulti": false,
-        "Country": false,
         "ConditionFieldType": null,
         "ColumnWidth": false
     }
@@ -1062,29 +897,23 @@
     ConditionFieldType["text"] = {
         "ddDisplayConditionValText": true,
         "ddDisplayConditionIsCheckbox": false,
-        "ddDisplayConditionCodeTable": false,
         "ddDisplayConditionEventCategory": false
     }
     ConditionFieldType["checkbox"] = {
         "ddDisplayConditionValText": false,
         "ddDisplayConditionIsCheckbox": true,
-        "ddDisplayConditionCodeTable": false,
         "ddDisplayConditionEventCategory": false
     }
     ConditionFieldType["code table"] = {
         "ddDisplayConditionValText": false,
         "ddDisplayConditionIsCheckbox": false,
-        "ddDisplayConditionCodeTable": true,
         "ddDisplayConditionEventCategory": false
     }
     ConditionFieldType["event category"] = {
         "ddDisplayConditionValText": false,
         "ddDisplayConditionIsCheckbox": false,
-        "ddDisplayConditionCodeTable": false,
         "ddDisplayConditionEventCategory": true
     }
-
-
 
     $item.Row = {};
     $item.Container = {};
@@ -1165,12 +994,8 @@
                 var rowdata = {
                     type: $(this).attr('data-type'),
                     question: $(this).find('.Question input').val(),
-                    help: $(this).find('.Help input').val(),
                     columns: $(this).find('.ColumnWidth select').val(),
-                    required: $(this).find('.QuestionRequired input').val(),
                     maxLength: $(this).find('.MaxLength input').val(),
-                    linkAttr: $(this).find('.LinkAttribute input[type="checkbox"]').val(),
-                    linkAttrLabel: $(this).find('.LinkAttribute input[type="text"]').val(),
                     conditional: $(this).find('.DisplayCondition label input').val(),
                     conditionalOperator: $(this).find('.DisplayCondition select[id^=ddDisplayConditionIs]').val(),
                     conditionalCompare: $(this).find('.DisplayCondition select[id^=ddDisplayConditionCompare]').val(),
@@ -1182,7 +1007,6 @@
                     },
                     codeTableID: $(this).find('.CodeTable input[type="text"]').val(),
                     codeTableMulti: $(this).find('.CodeTableMulti input[type="checkbox"]').val(),
-                    countryID: $(this).find('.Country input[type="text"]').val(),
                     index: $(this).find('input[id^=ItemIndex]').val()
 
                 };
@@ -1279,11 +1103,7 @@
 
         if (item !== undefined) {
             $newRow.find('.Question input').val(item.question);
-            $newRow.find('.QuestionRequired input').prop('checked', item.required == "on");
-            $newRow.find('.Help input').val(item.help);
             $newRow.find('.ColumnWidth select').val(item.columns);
-            $newRow.find('.LinkAttribute input[type="checkbox"]').prop('checked', item.linkAttr == "on");
-            $newRow.find('.LinkAttribute input[type="text"]').val(item.linkAttrLabel);
             $newRow.find('.MaxLength input').val(item.maxLength);
             $newRow.find('.CodeTable input').val(item.codeTableID);
             $newRow.find('.CodeTableMulti input').prop('checked', item.codeTableMulti == "on");
@@ -1294,7 +1114,6 @@
             $newRow.find('.DisplayCondition input[id^=ddDisplayConditionIsCheckbox]').prop('checked', item.conditional == "on");
             $newRow.find('.DisplayCondition select[id^=ddDisplayConditionCodeTable]').attr('data-value', item.conditionalFields.codetable);
             $newRow.find('.DisplayCondition input[id^=ddDisplayConditionEventCategory]').val(item.conditionalFields.eventcategory);
-            $newRow.find('.Country input').val(item.countryID);
 
             $newRow.attr('data-type', item.type);
             $newRow.find('.FieldType').text(item.type);
@@ -1305,10 +1124,6 @@
             $newRow.find('.FieldType').text($('#NewItemFieldType').val());
         }
 
-        $newRow.find('.LinkAttributeExpand, .DisplayconditionExpand').slideUp(0);
-        if ($newRow.find('.LinkAttribute input[type="checkbox"]').is(':checked')) {
-            $newRow.find('.LinkAttributeExpand').slideDown(150);
-        }
         if ($newRow.find('.DisplayCondition input[type="checkbox"]').is(':checked')) {
             $newRow.find('.DisplayconditionExpand').slideDown(150);
         }
@@ -1412,7 +1227,7 @@
         }
     });
 
-    $(document).on('click', '.LinkAttribute label input[type="checkbox"], .DisplayCondition label input[type="checkbox"]', function() {
+    $(document).on('click', '.DisplayCondition label input[type="checkbox"]', function() {
         $(this).parent().next().slideToggle(150);
     });
     $(document).on('change', '.Question input', BuildConditionalSelects);
@@ -1454,13 +1269,6 @@
             $(this).closest('div').addClass('open');
         } else {
             $(this).closest('div').removeClass('open');
-        }
-    });
-    $(document).on('change', '.CodeTableMulti input', function() {
-        if ($(this).is(':checked')) {
-            $(this).parents('.ItemRow').find('.LinkAttribute input, .QuestionRequired input').prop('checked', false).trigger('change').parents('.LinkAttribute, .QuestionRequired').removeClass('open').hide();
-        } else {
-            $(this).parents('.ItemRow').find('.LinkAttribute input, .QuestionRequired input').parents('.LinkAttribute, .QuestionRequired').show();
         }
     });
     $(document).on('click', '.header-cell a.all', function() {
